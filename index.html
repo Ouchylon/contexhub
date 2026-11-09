@@ -99,6 +99,7 @@ return {reset:()=>{for(const k in res) delete res[k];}, calc:(id,o)=>{calcs[id]=
   <nav class="cx-tabs" role="tablist" aria-label="Expos">
     <button class="cx-tab" role="tab" id="tab-montreal" aria-selected="true" data-page="montreal">Montréal · 12 nov.</button>
     <button class="cx-tab" role="tab" id="tab-quebec" aria-selected="false" data-page="quebec">Québec · bilan du 22 oct.</button>
+    <button class="cx-tab" role="tab" id="tab-pubs" aria-selected="false" data-page="pubs">Pubs en cours</button>
   </nav>
 
   <section class="cx-page" id="montreal" role="tabpanel" aria-labelledby="tab-montreal">
@@ -195,6 +196,37 @@ return {reset:()=>{for(const k in res) delete res[k];}, calc:(id,o)=>{calcs[id]=
       </article>
     </div>
   </section>
+  <section class="cx-page" id="pubs" role="tabpanel" aria-labelledby="tab-pubs" hidden>
+    <style>
+      .px-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+      .px-grid{display:grid;gap:var(--cds-gap-md);grid-template-columns:repeat(auto-fill,minmax(min(100%,17rem),1fr))}
+      .px-card{background:var(--color-panel);border:1px solid var(--color-border-line);border-radius:var(--cds-radius);overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+      .px-img{position:relative;display:block;aspect-ratio:4/5;background:#F7F3ED;overflow:hidden}
+      .px-img img{width:100%;height:100%;object-fit:contain;display:block;transition:transform .3s}
+      .px-img:hover img{transform:scale(1.03)}
+      .px-play{position:absolute;inset:auto 12px 12px auto;width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.65);display:grid;place-items:center}
+      .px-play::after{content:"";border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+      .px-tag{position:absolute;left:10px;top:10px;box-shadow:0 1px 4px rgba(0,0,0,.25);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border-radius:999px;background:#F7F3ED;color:#000}
+      .px-tag.li{background:#0A66C2;color:#fff}
+      .px-body{padding:14px 16px 16px;display:grid;gap:8px;align-content:start}
+      .px-t{font-family:'Contech Machina',var(--cx-fsans);font-weight:700;font-size:17px;margin:0}
+      .px-meta{font-size:12px;color:var(--color-fg-muted);margin:0}
+      .px-txt{font-size:13px;line-height:1.45;margin:0;color:#333}
+      .px-kpi{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-top:4px}
+      .px-kpi div{background:#FAF8F4;border-radius:10px;padding:8px}
+      .px-kpi b{display:block;font-size:18px;font-variant-numeric:tabular-nums}
+      .px-kpi span{font-size:11px;color:var(--color-fg-muted)}
+      .px-soc{font-size:12px;color:var(--color-fg-muted);margin:0}
+      .px-link{font-size:13px;font-weight:700;color:#000;text-decoration:none;border-bottom:2px solid #E8990F;justify-self:start}
+    </style>
+    <article class="cx-card wide">
+      <div class="px-head"><h2 class="cx-h">Publicités actives : Facebook, Instagram et LinkedIn</h2><p class="cx-note" id="px-periode"></p></div>
+      <p class="cx-note">Cliquez sur un visuel pour voir la pub, la vidéo et les commentaires. Résultats seulement, sans les montants.</p>
+      <div class="cx-tiles" id="px-tot"></div>
+      <div class="px-grid" id="px-list"></div>
+    </article>
+  </section>
+
 
   <article class="cx-card wide" id="groupes">
     <h2 class="cx-h">Inscrits et présents par type de participant</h2>
@@ -281,10 +313,11 @@ return {reset:()=>{for(const k in res) delete res[k];}, calc:(id,o)=>{calcs[id]=
   const showPage = (id) => {
     document.querySelectorAll('.cx-tab').forEach((t) => t.setAttribute('aria-selected', String(t.dataset.page === id)));
     document.querySelectorAll('.cx-page').forEach((p) => { p.hidden = p.id !== id; });
+    { const g=document.getElementById('groupes'); if (g) g.hidden = id === 'pubs'; }
     dash.setLink(id);
   };
   document.querySelectorAll('.cx-tab').forEach((t) => t.addEventListener('click', () => showPage(t.dataset.page)));
-  if (location.hash.slice(1) === 'quebec') showPage('quebec');
+  { const h=location.hash.slice(1); if (h === 'quebec' || h === 'pubs') showPage(h); }
 </script>
 
 <script>
@@ -445,4 +478,26 @@ return {reset:()=>{for(const k in res) delete res[k];}, calc:(id,o)=>{calcs[id]=
  const d=new Date(L.collecte); const f=document.querySelector('.foot');
  if(f) f.textContent='Source : Eventmaker · relevé du '+d.toLocaleDateString('fr-CA',{day:'numeric',month:'long'})+', '+d.toLocaleTimeString('fr-CA',{hour:'numeric',minute:'2-digit'}).replace(':',' h ')+' · mis à jour automatiquement aux 2 heures en semaine.';
  window.dash.reset && window.dash.reset(); }catch(e){} window.dash.run(); })();
-</script></body></html>
+</script><script>
+(async()=>{ try{
+  const P=await (await fetch('data/pubs.json?t='+Date.now(),{cache:'no-store'})).json();
+  const f=n=>n==null?'—':Number(n).toLocaleString('fr-CA');
+  const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const d=new Date(P.releve);
+  document.getElementById('px-periode').textContent='Période : '+P.periode+' · relevé du '+d.toLocaleString('fr-CA',{day:'numeric',month:'long',hour:'numeric',minute:'2-digit',timeZone:'America/Toronto'});
+  const sum=k=>P.pubs.reduce((a,p)=>a+(p[k]||0),0);
+  const tiles=[['Pubs actives',P.pubs.length,'Meta : '+P.pubs.filter(p=>!/LinkedIn/.test(p.plateforme)).length+' · LinkedIn : '+P.pubs.filter(p=>/LinkedIn/.test(p.plateforme)).length],
+    ['Inscriptions (Meta)',sum('inscriptions'),'Inscriptions complétées attribuées aux pubs Meta.'],
+    ['Clics vers le site',sum('clics'),'Clics sur le lien, toutes les pubs.'],
+    ['Commentaires',sum('commentaires'),'Sur les publications des pubs.']];
+  document.getElementById('px-tot').innerHTML=tiles.map(t=>'<div class="cx-tile"><p class="cx-k">'+t[0]+'</p><p class="cx-v">'+f(t[1])+'</p><p class="cx-n">'+t[2]+'</p></div>').join('');
+  document.getElementById('px-list').innerHTML=P.pubs.map(p=>{const li=/LinkedIn/.test(p.plateforme);
+    const k=li?[['Impressions',p.impressions],['Clics',p.clics],['Réactions',p.reactions]]:[['Inscriptions',p.inscriptions],['Portée',p.portee],['Clics',p.clics]];
+    const soc=li?(f(p.commentaires)+' commentaire'+(p.commentaires>1?'s':'')):('Réactions : '+f(p.reactions)+' · Commentaires : '+f(p.commentaires));
+    return '<div class="px-card"><a class="px-img" href="'+esc(p.lien)+'" target="_blank" rel="noopener"><img loading="lazy" src="'+esc(p.image)+'" alt="'+esc(p.titre)+'"><span class="px-tag'+(li?' li':'')+'">'+esc(p.plateforme)+'</span>'+(/Vidéo|vidéo/.test(p.format)?'<span class="px-play"></span>':'')+'</a>'
+     +'<div class="px-body"><p class="px-t">'+esc(p.titre)+'</p><p class="px-meta">'+esc(p.format)+' · '+esc(p.statut)+'</p><p class="px-txt">'+esc(p.texte)+'</p>'
+     +'<div class="px-kpi">'+k.map(x=>'<div><b>'+f(x[1])+'</b><span>'+x[0]+'</span></div>').join('')+'</div>'
+     +'<p class="px-soc">'+soc+'</p><a class="px-link" href="'+esc(p.lien)+'" target="_blank" rel="noopener">'+esc(p.lienTexte||'Voir la pub et les commentaires')+' →</a></div></div>';}).join('');
+ }catch(e){ const l=document.getElementById('px-list'); if(l) l.textContent='Données des pubs indisponibles pour le moment.'; } })();
+</script>
+</body></html>
