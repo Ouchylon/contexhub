@@ -1,6 +1,6 @@
 # Usage : python3 tools/build_live.py '<json compact renvoyé par collect_eventmaker.js>'
 import json, sys, datetime as dt
-m = json.loads(sys.argv[1]); J = dt.date(2026, 11, 12)
+a = sys.argv[1]; m = json.load(open(a)) if not a.lstrip().startswith('{') else json.loads(a); J = dt.date(2026, 11, 12)
 LAB = {'visiteurs': 'Visiteurs', 'etudiants': 'Étudiants', 'exposants': 'Exposants', 'representants': "Représentants d'exposants", 'conferenciers': 'Conférenciers'}
 live = {'collecte': m['collecte'],
         'rythme': [{'expo': 'MTL', 'j': j, 'jour': (J + dt.timedelta(days=j)).isoformat(), 'n': n, 'cumul': c} for j, n, c in m['r']],
