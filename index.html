@@ -471,13 +471,19 @@ return {reset:()=>{for(const k in res) delete res[k];}, calc:(id,o)=>{calcs[id]=
   });
 </script>
 
-<p class="foot">Source : Eventmaker · relevé du 9 novembre 2026, 9 h 40 · mis à jour chaque matin jusqu'à l'Expo.</p>
+<p class="foot">Source : Eventmaker · relevé du 9 novembre 2026, 9 h 40 · mis à jour automatiquement chaque minute.</p>
 </div><script>
-(async()=>{ try{ const L=await (await fetch('data/live.json?t='+Date.now(),{cache:'no-store'})).json();
- for(const k of ['rythme','categories','sources']){ DATA[k]=DATA[k].filter(x=>x.expo!=='MTL').concat(L[k]); }
- const d=new Date(L.collecte); const f=document.querySelector('.foot');
- if(f) f.textContent='Source : Eventmaker · relevé du '+d.toLocaleDateString('fr-CA',{day:'numeric',month:'long'})+', '+d.toLocaleTimeString('fr-CA',{hour:'numeric',minute:'2-digit'}).replace(':',' h ')+' · mis à jour automatiquement aux 2 heures en semaine.';
- window.dash.reset && window.dash.reset(); }catch(e){} window.dash.run(); })();
+(()=>{ const RELAIS='https://contexhub-live.cold-lake-ea4c.workers.dev/';
+ const maj=L=>{ for(const k of ['rythme','categories','sources']){ DATA[k]=DATA[k].filter(x=>x.expo!=='MTL').concat(L[k]); }
+  const d=new Date(L.collecte); const f=document.querySelector('.foot');
+  if(f) f.textContent='Source : Eventmaker · relevé du '+d.toLocaleDateString('fr-CA',{day:'numeric',month:'long'})+', '+d.toLocaleTimeString('fr-CA',{hour:'numeric',minute:'2-digit'}).replace(':',' h ')+' · mis à jour automatiquement chaque minute.';
+  window.dash.reset && window.dash.reset(); window.dash.run(); };
+ const charger=async()=>{ let L=null;
+  try{ const r=await fetch(RELAIS+'?t='+Date.now(),{cache:'no-store'}); if(r.ok){ const j=await r.json(); if(j && j.categories) L=j; } }catch(e){}
+  if(!L){ try{ L=await (await fetch('data/live.json?t='+Date.now(),{cache:'no-store'})).json(); }catch(e){} }
+  if(L) maj(L); };
+ charger().finally(()=>{ window.dash.run(); }); setInterval(()=>{ if(!document.hidden) charger(); },60000);
+})();
 </script><script>
 (async()=>{ try{
   const P=await (await fetch('data/pubs.json?t='+Date.now(),{cache:'no-store'})).json();
