@@ -153,6 +153,7 @@ return {reset:()=>{for(const k in res) delete res[k];}, calc:(id,o)=>{calcs[id]=
         <h2 class="cx-h">D'où viennent les inscrits</h2>
         <p class="cx-note">Montréal 2026, visiteurs (sans les étudiants), selon la source du lien d'inscription.</p>
         <div class="cx-bar" data-draw="sources" data-source="sources" data-expo="MTL"></div>
+        <p class="cx-note" style="margin-top:4px">Comment lire : les nombres d'inscrits sont réels (Eventmaker, une personne comptée une fois). La source, elle, vient du lien utilisé pour s'inscrire. <b>« Sans source connue »</b> regroupe les gens arrivés sans lien suivi : sites contech.qc.ca et montreal.expocontech.ca, recherche Google, courriel transféré, adresse tapée. Ce n'est pas un canal en soi : une partie vient en réalité des infolettres, de Facebook ou des partenaires, donc les autres canaux sont <b>sous-estimés</b>. Depuis le 11 nov., le suivi est conservé quand on passe par l'accueil du site : cette part devrait baisser. Les inscriptions attribuées par Meta dans l'onglet Pubs sont calculées autrement et ne s'additionnent pas avec ce tableau.</p>
       </article>
     </div>
   </section>
@@ -521,7 +522,7 @@ return {reset:()=>{for(const k in res) delete res[k];}, calc:(id,o)=>{calcs[id]=
     rows.forEach((r, i) => {
       const row = d3.select(el).append('div').style('display', 'grid').style('gap', '4px');
       const top = row.append('div').style('display', 'flex').style('justify-content', 'space-between').style('gap', '8px').style('font-size', 'var(--cds-font-size-body)');
-      top.append('span').text(r.source);
+      top.append('span').text(r.source === 'Site web' ? 'Sans source connue (site, Google, transferts)' : r.source);
       top.append('span').style('font-variant-numeric', 'tabular-nums').style('color', 'var(--color-fg-muted)').text(`${C.int(r.n)} · ${C.pct(r.n / tot)}`);
       row.append('div').style('height', '8px').style('border-radius', '4px').style('background', 'var(--cds-chart-grid)')
         .append('div').style('height', '100%').style('border-radius', '4px').style('width', `${(r.n / max) * 100}%`).style('background', i === 0 ? C.or : 'var(--color-fg-muted)');
