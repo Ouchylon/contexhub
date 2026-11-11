@@ -273,14 +273,23 @@ return {reset:()=>{for(const k in res) delete res[k];}, calc:(id,o)=>{calcs[id]=
 
   dash.calc('ecart', {
     title: 'Écart avec 2025 au même moment',
-    description: 'Inscrits cumulés de 2026 au dernier jour connu, moins ceux de 2025 au même nombre de jours avant l\'Expo.',
+    description: 'Inscrits cumulés de 2026, moins ceux de 2025 au même nombre de jours avant l\'Expo (journée en cours : au prorata des heures écoulées, 7 h à 22 h).',
     inputs: ['rythme', 'hist_rythme'],
     fn: (rythme, hist_rythme) => ['MTL', 'QC'].map((expo) => {
       const now = rythme.filter((r) => r.expo === expo && Number(r.j) <= 0).sort((a, b) => Number(b.j) - Number(a.j))[0];
       const then = now && hist_rythme.find((r) => r.expo === expo + '25' && Number(r.j) === Number(now.j));
       if (!now || !then) return { expo, j: null, cumul_2026: null, cumul_2025: null, ecart: null, ecart_pct: null };
-      return { expo, j: Number(now.j), cumul_2026: Number(now.cumul), cumul_2025: Number(then.cumul),
-               ecart: Number(now.cumul) - Number(then.cumul), ecart_pct: (Number(now.cumul) - Number(then.cumul)) / Number(then.cumul) };
+      // Journée en cours : on compare à 2025 à la même heure (veille + part de la journée écoulée, 7 h à 22 h),
+      // pas à la journée complète de 2025.
+      const tz = new Date().toLocaleString('sv-SE', { timeZone: 'America/Toronto' });
+      let base = Number(then.cumul);
+      if (now.jour === tz.slice(0, 10)) {
+        const h = Number(tz.slice(11, 13)) + Number(tz.slice(14, 16)) / 60;
+        const part = Math.min(1, Math.max(0, (h - 7) / 15));
+        base = Math.round(Number(then.cumul) - Number(then.n) * (1 - part));
+      }
+      return { expo, j: Number(now.j), cumul_2026: Number(now.cumul), cumul_2025: base,
+               ecart: Number(now.cumul) - base, ecart_pct: (Number(now.cumul) - base) / base };
     }),
   });
 
