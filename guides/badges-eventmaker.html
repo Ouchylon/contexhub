@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Imprimer les badges en lot · Eventmaker</title>
+<style>
+:root{--noir:#000;--jaune:#E8990F;--creme:#F7F3ED;--gris:#5b5b5b;--ligne:#e2dcd2}
+*{box-sizing:border-box}
+body{margin:0;background:var(--creme);color:var(--noir);font:16px/1.55 Helvetica,Arial,sans-serif}
+.wrap{max-width:860px;margin:0 auto;padding:28px 16px 60px}
+.top{border-top:5px solid var(--jaune);background:#fff;padding:22px 22px 18px;margin-bottom:22px}
+.kick{font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gris)}
+h1{font-size:28px;line-height:1.15;margin:6px 0 10px}
+h1 b{color:var(--jaune)}
+.top p{margin:0;color:#333}
+.box{background:#fff;border-left:4px solid var(--jaune);padding:14px 18px;margin:0 0 22px}
+.box h2{font-size:15px;margin:0 0 6px;text-transform:uppercase;letter-spacing:.06em}
+.box ul{margin:0;padding-left:20px}
+.step{background:#fff;padding:18px 18px 14px;margin-bottom:16px;display:grid;grid-template-columns:44px 1fr;gap:4px 14px}
+.n{width:36px;height:36px;border-radius:50%;background:var(--jaune);color:#000;font-weight:700;display:flex;align-items:center;justify-content:center;font-size:17px}
+.step h3{margin:5px 0 4px;font-size:18px}
+.step p{margin:0 0 10px}
+.step img{grid-column:1/-1;width:100%;border:1px solid var(--ligne);display:block;margin-top:6px}
+.step img.badge{max-width:340px;margin:6px auto 0}
+code{background:var(--creme);padding:1px 5px;font-size:14px}
+a{color:#9a5f00}
+.foot{font-size:13px;color:var(--gris);margin-top:26px}
+@media (max-width:520px){h1{font-size:23px}.step{grid-template-columns:1fr}.n{margin-bottom:4px}}
+</style>
+</head>
+<body><div class="wrap">
+
+<div class="top">
+  <div class="kick">Expo Contech Montréal · 12 novembre 2026 · Accueil</div>
+  <h1>Imprimer les badges <b>en lot</b> dans Eventmaker</h1>
+  <p>Pour préparer les badges d'avance et réduire les files à l'accueil. Ça prend environ 2 minutes par catégorie, et le fichier arrive par courriel.</p>
+</div>
+
+<div class="box">
+  <h2>À savoir avant</h2>
+  <ul>
+    <li><b>Une page = un badge.</b> C'est le badge habituel à plier en 3 (le tutoriel est imprimé dessus). Il s'imprime sur du papier ordinaire, sur l'imprimante du bureau.</li>
+    <li><b>Les badges sont classés par ordre alphabétique de nom de famille</b>, en paquets d'environ 180 par PDF (ex. « Aime → Lajoie », « Laliberte → Zara »). On peut faire des tables A–L et M–Z à l'accueil.</li>
+    <li><b>Un export = une catégorie.</b> Un export est limité à 1000 personnes : on filtre par catégorie (ex. Exposants - Représentants : 364 badges).</li>
+    <li><b>Il faut quand même scanner le badge à l'entrée.</b> Un badge imprimé d'avance n'inscrit pas la personne comme « Venue ». Pour que la présence soit comptée, on scanne son code QR au point Entrée, comme d'habitude.</li>
+    <li><b>Les inscriptions de dernière minute</b> (après l'export) s'impriment à l'accueil comme d'habitude.</li>
+  </ul>
+</div>
+
+<div class="step"><div class="n">1</div><div>
+  <h3>Filtrer la catégorie à imprimer</h3>
+  <p>Dans <b>Liste des participants</b>, clique sur <b>Catégorie d'inscription</b>, cherche la catégorie (ex. « Exposants ») et coche-la : <b>Exposants - Représentants</b>, <b>Visiteurs Montreal</b>, <b>Conférenciers</b>, etc.</p>
+</div><img src="img/1-filtre.jpg" alt="Filtre Catégorie d'inscription dans la liste des participants"></div>
+
+<div class="step"><div class="n">2</div><div>
+  <h3>Vérifier le nombre</h3>
+  <p>Le filtre s'affiche dans la barre de recherche, et le nombre de badges est en haut à droite (ex. <b>364 participants</b>).</p>
+</div><img src="img/2-liste.jpg" alt="Liste filtrée avec le nombre de participants"></div>
+
+<div class="step"><div class="n">3</div><div>
+  <h3>Plus → Exporter</h3>
+  <p>En haut à droite, clique sur <b>Plus</b>, puis sur <b>Exporter</b>.</p>
+</div><img src="img/3-plus.jpg" alt="Menu Plus, option Exporter"></div>
+
+<div class="step"><div class="n">4</div><div>
+  <h3>Badges → pdf</h3>
+  <p>Vérifie que c'est écrit « Export basé sur votre sélection », puis clique sur <b>pdf</b> sous <b>Badges</b>.</p>
+</div><img src="img/4-exports.jpg" alt="Fenêtre Exports, Badges en pdf"></div>
+
+<div class="step"><div class="n">5</div><div>
+  <h3>Options, puis Confirmer</h3>
+  <p>Laisse <b>Nom</b> coché, coche <b>« plusieurs badges par page »</b>, puis clique sur <b>Confirmer</b>.</p>
+</div><img src="img/5-options.jpg" alt="Options de l'export de badges"></div>
+
+<div class="step"><div class="n">6</div><div>
+  <h3>Ouvrir le courriel et imprimer</h3>
+  <p>1 à 2 minutes plus tard, tu reçois le courriel <b>« Votre export de badges est prêt à être téléchargé »</b>. Clique sur le lien (il est valide 7 jours) pour télécharger le fichier .zip, puis ouvre les PDF qu'il contient.</p>
+  <p>Imprime avec <b>Ajuster à la page</b> (format lettre), en recto seulement, puis plie chaque badge selon le tutoriel imprimé dessus.</p>
+</div><img class="badge" src="img/6-badge.jpg" alt="Exemple de badge exposant, une page par personne"></div>
+
+<p class="foot">On peut aussi revoir les exports déjà faits dans Plus → Historique d'exports.</p>
+</div></body></html>
