@@ -63,7 +63,7 @@ tr.fait td{color:#999;text-decoration:line-through}
 <header>
 <div class="sur">Expo Contech Montréal · 12 novembre · Palais des congrès</div>
 <h1 class="titre">Tournage <em>formations</em></h1>
-<p>Les gens à aller voir aujourd'hui pour filmer des capsules sur les sujets des formations à venir. Un onglet par personne, avec quoi dire, les questions à lire sur l'écran et les plans à filmer.</p>
+<p>Les formateurs Contech présents aujourd'hui (priorité), puis des experts des mêmes sujets. Un onglet par personne, avec quoi dire, les questions à lire sur l'écran et les plans à filmer.</p>
 </header>
 <nav id="nav" role="tablist"></nav>
 <div id="pages"></div>
@@ -75,7 +75,29 @@ tr.fait td{color:#999;text-decoration:line-through}
 <div class="bas"><button id="pPrec">← Précédente</button><button id="pSuiv">Suivante →</button></div>
 </div>
 <script>
-const MISE_A_JOUR="12 novembre 2026, 11 h 30";
+const MISE_A_JOUR="12 novembre 2026, 11 h 45";
+const FORMATEURS=[
+{id:"baron",type:"f",qui:"Karl Baron",org:"Les consultants AMMCO",kiosque:"135",quand:"Maintenant (déjà sur place)",conf:"Exposant au kiosque AMMCO. Son collègue Guillaume Farcot donne une conférence de 13 h 05 à 13 h 35.",
+ formation:"Gestion de la maintenance",date:"19 novembre 2026",urgent:true,
+ questions:["Présentez-vous : votre nom, votre rôle chez AMMCO, et le fait que vous donnez la formation Gestion de la maintenance chez Contech.","Pourquoi la maintenance est-elle souvent négligée dans la gestion des bâtiments?","Quelle erreur coûte le plus cher quand on reporte l'entretien?","Qu'est-ce que les participants vont repartir avec, concrètement, après votre formation?","À qui s'adresse votre formation, et pourquoi la suivre maintenant?"],
+ broll:["Karl à son kiosque en discussion avec un visiteur","Mains qui montrent un rapport ou un tableau (sans données client)","Plan large du kiosque AMMCO","Plan serré de son badge ou du logo AMMCO"]},
+{id:"mousseau",type:"f",qui:"Alain Mousseau, ing.",org:"Calculatec",kiosque:"Visiteur (il circule)",quand:"Le trouver dans les allées",conf:"Inscrit comme visiteur et déjà scanné à l'entrée. Le chercher avec KeepTrack (onglet Participants) ou l'appeler à l'accueil.",
+ formation:"Dommages structuraux",date:"20 novembre 2026",urgent:true,
+ questions:["Présentez-vous : votre nom, votre spécialité, et le fait que vous donnez la formation Dommages structuraux chez Contech.","Quels sont les premiers signes de dommages structuraux dans un bâtiment?","Quelle erreur voyez-vous le plus souvent dans l'évaluation des dommages?","Qu'est-ce que les participants vont apprendre à faire après votre formation?","À qui s'adresse votre formation?"],
+ broll:["Alain qui regarde un détail de structure ou un kiosque de matériaux","Mains qui pointent un élément de structure (poutre, assemblage) dans un kiosque","Plan large dans une allée de l'Expo avec lui"]},
+{id:"lupien",type:"f",qui:"Josée Lupien",org:"Vertima",kiosque:"Visiteuse (elle circule)",quand:"La trouver dans les allées",conf:"Inscrite comme visiteuse et déjà scannée à l'entrée. La chercher avec KeepTrack ou l'appeler à l'accueil.",
+ formation:"Bâtiment durable, cycle de vie et choix de matériaux",date:"10 décembre 2026",
+ questions:["Présentez-vous : votre nom, votre rôle chez Vertima, et le fait que vous donnez la formation Bâtiment durable chez Contech.","C'est quoi, le cycle de vie d'un bâtiment, expliqué simplement?","Comment le choix des matériaux change-t-il l'impact d'un projet?","Qu'est-ce que les participants vont pouvoir appliquer dès le lendemain de votre formation?","Pourquoi c'est le bon moment de se former là-dessus?"],
+ broll:["Josée devant des échantillons de matériaux dans un kiosque","Gros plan sur des matériaux biosourcés ou recyclés (bois, isolants)","Plan large dans une allée avec elle"]},
+{id:"chartier_f",type:"f",qui:"Vincent Chartier",org:"Association des Maîtres Couvreurs du Québec (AMCQ)",kiosque:"825",quand:"Maintenant",conf:"Conférencier ce matin (9 h 40). Il coanime la formation sur les eaux pluviales avec Guy Lalonde.",
+ formation:"Toitures : gestion des eaux pluviales (toits verts et toits bleus)",date:"17 décembre 2026",
+ questions:["Présentez-vous : votre nom, votre rôle à l'AMCQ, et le fait que vous donnez la formation sur la gestion des eaux pluviales chez Contech.","Toit vert, toit bleu : c'est quoi la différence?","Pourquoi la gestion de l'eau de pluie devient-elle un enjeu sur les toitures?","Qu'est-ce que les participants vont apprendre dans votre formation?","Un conseil pour un concepteur qui envisage un toit vert ou bleu?"],
+ broll:["Échantillons de membranes et couches de toiture en gros plan","Mains qui montrent les couches d'un système de toiture","Plan large du kiosque AMCQ"]},
+{id:"pare",type:"f",qui:"Geneviève Paré, ing.",org:"Partie 5",kiosque:"Visiteuse (pas encore arrivée)",quand:"Si elle arrive",conf:"Inscrite comme visiteuse, mais pas encore scannée à l'entrée à 11 h 40. Vérifier plus tard si elle est arrivée.",
+ formation:"Mise en service : guide pratique à l'attention des entrepreneurs",date:"1er décembre 2026 (2 jours)",
+ questions:["Présentez-vous : votre nom, votre rôle, et le fait que vous donnez la formation sur la mise en service chez Contech.","C'est quoi, la mise en service de l'enveloppe, en une phrase?","Qu'est-ce qui arrive sur un chantier quand on la néglige?","Qu'est-ce que les entrepreneurs vont repartir avec après votre formation?","Pourquoi un entrepreneur devrait s'y intéresser dès maintenant?"],
+ broll:["Geneviève devant un kiosque d'enveloppe (fenestration, membranes)","Mains qui montrent un détail de jonction d'enveloppe","Plan large dans une allée avec elle"]}
+];
 const GENS=[
 {id:"amq",ordre:1,qui:"André Bourassa et Adrien Sparling",org:"Association de la maçonnerie du Québec (AMQ)",kiosque:"208",
  quand:"12 h 00",conf:"Conférence 11 h 30 à 12 h 00, salle Les Carrières de St-Dominique : « Conception d'un parement en maçonnerie »",
@@ -211,15 +233,18 @@ const GENS=[
  "Un conseil pour un professionnel qui veut mieux comprendre les sols?"],
  broll:["Gros plan sur pierres, granulats et textures","Mains qui prennent un échantillon","Plan large du kiosque"]}
 ];
-const SANS=["Dommages structuraux (20 nov.)","Moisissures : contamination, investigation et réhabilitation (24 nov.)","Courriels efficaces (25 nov.)","Devis sur plan (27 nov.)","Chantier : administration du marché et surveillance des travaux (3 déc.)","Rédaction de devis des groupes de quincaillerie (3 déc.)"];
+const EXPERTS=GENS;
+const TOUS=FORMATEURS.concat(EXPERTS);
+const SANS=["Moisissures : contamination, investigation et réhabilitation (24 nov.)","Courriels efficaces (25 nov.)","Devis sur plan (27 nov.)","Chantier : administration du marché et surveillance des travaux (3 déc.)","Rédaction de devis des groupes de quincaillerie (3 déc.)"];
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 let fait={};try{fait=JSON.parse(localStorage.getItem("tournage_fait")||"{}")}catch(e){}
 const sauver=()=>{try{localStorage.setItem("tournage_fait",JSON.stringify(fait))}catch(e){}};
 const nav=document.getElementById("nav"),pages=document.getElementById("pages");
-function pitch(g){return `« Bonjour! Je m'occupe du marketing chez Contech Bâtiment. On donne une formation sur ${esc(g.formation.split(" · ")[0].replace(/^./,c=>c.toLowerCase()))} le ${esc(g.date.split(" (")[0])}. Vous êtes exactement la bonne personne pour en parler : auriez-vous deux minutes pour répondre à quelques questions devant la caméra? On vous identifie, vous et votre organisation, quand on publie. »`}
+function pitch(g){if(g.type==="f")return `« Bonjour ${esc(g.qui.split(",")[0].split(" ")[0])}! Je m'occupe du marketing chez Contech Bâtiment. On aimerait faire une petite capsule vidéo avec vous pour promouvoir votre formation ${esc(g.formation.split(" (")[0])} du ${esc(g.date.split(" (")[0])}. Ça prend deux minutes : quelques questions devant la caméra, et on vous identifie quand on publie. Ça vous irait? »`;return `« Bonjour! Je m'occupe du marketing chez Contech Bâtiment. On donne une formation sur ${esc(g.formation.split(" · ")[0].replace(/^./,c=>c.toLowerCase()))} le ${esc(g.date.split(" (")[0])}. Vous êtes exactement la bonne personne pour en parler : auriez-vous deux minutes pour répondre à quelques questions devant la caméra? On vous identifie, vous et votre organisation, quand on publie. »`}
 function plan(){
- const rows=GENS.map(g=>`<tr class="${fait[g.id]?'fait':''}"><td class="h">${esc(g.quand)}</td><td><b>${esc(g.org)}</b><br>${esc(g.qui)}</td><td>${esc(g.kiosque)}</td><td>${esc(g.formation)}<br><span class="note">${esc(g.date)}</span></td></tr>`).join("");
- return `<div class="carte"><h3>Ordre de passage</h3><h2 class="titre">Qui aller voir</h2><p class="note">Coche chaque personne dans son onglet une fois filmée. Mis à jour le ${MISE_A_JOUR}. Vérifie les numéros de kiosque sur le plan de salle.</p><div style="overflow-x:auto"><table><thead><tr><th>Quand</th><th>Qui</th><th>Kiosque</th><th>Formation</th></tr></thead><tbody>${rows}</tbody></table></div></div>
+ const ligne=g=>`<tr class="${fait[g.id]?'fait':''}"><td class="h">${esc(g.quand)}</td><td><b>${esc(g.org)}</b><br>${esc(g.qui)}</td><td>${esc(g.kiosque)}</td><td>${esc(g.formation)}<br><span class="note">${esc(g.date)}</span></td></tr>`;
+ const rows=EXPERTS.map(ligne).join(""),rowsF=FORMATEURS.map(ligne).join("");
+ return `<div class="carte" style="border-top:4px solid var(--jaune)"><h3>Priorité</h3><h2 class="titre">Formateurs Contech présents aujourd'hui</h2><p class="note">Ce sont les vrais formateurs des formations à venir, repérés dans la liste des inscrits de l'Expo.</p><div style="overflow-x:auto"><table><thead><tr><th>Quand</th><th>Qui</th><th>Où</th><th>Sa formation</th></tr></thead><tbody>${rowsF}</tbody></table></div></div><div class="carte"><h3>Bonus</h3><h2 class="titre">Experts du même sujet</h2><p class="note">Pas les formateurs : des exposants et conférenciers qui parlent du même sujet. Leur dire « on donne une formation sur ce sujet », pas « votre formation ».</p><p class="note">Coche chaque personne dans son onglet une fois filmée. Mis à jour le ${MISE_A_JOUR}. Vérifie les numéros de kiosque sur le plan de salle.</p><div style="overflow-x:auto"><table><thead><tr><th>Quand</th><th>Qui</th><th>Kiosque</th><th>Formation</th></tr></thead><tbody>${rows}</tbody></table></div></div>
  <div class="grille"><div class="carte"><h3>Pour un montage facile</h3><ul class="b">
  <li>Vertical 9:16, la personne au tiers de l'image, les yeux vers toi (pas vers la caméra).</li>
  <li>Un clip par question : démarre, attends 2 secondes, pose la question, laisse 2 secondes à la fin.</li>
@@ -238,7 +263,7 @@ function fiche(g){
  <div class="grille"><div class="carte"><h3>Questions à lire</h3><ol class="q">${g.questions.map(q=>`<li>${esc(q)}</li>`).join("")}</ol>
  <p style="margin:14px 0 0"><button class="bouton j" data-prompt="${g.id}">Afficher en grand pour la personne</button></p></div>
  <div class="carte"><h3>Plans de coupe à filmer</h3><ul class="b">${g.broll.map(b=>`<li>${esc(b)}</li>`).join("")}</ul></div></div>`}
-const onglets=[{id:"plan",lab:"Qui aller voir",sub:"Ordre de passage",html:plan()}].concat(GENS.map(g=>({id:g.id,lab:g.org.split(" (")[0],sub:`${g.quand} · ${/^\d/.test(g.kiosque)?'kiosque '+g.kiosque:g.kiosque}`,html:fiche(g)})));
+const onglets=[{id:"plan",lab:"Qui aller voir",sub:"Formateurs et experts",html:plan()}].concat(TOUS.map(g=>({id:g.id,lab:(g.type==="f"?"★ ":"")+(g.type==="f"?g.qui.split(",")[0]:g.org.split(" (")[0]),sub:`${g.quand} · ${/^\d/.test(g.kiosque)?'kiosque '+g.kiosque:g.kiosque}`,html:fiche(g)})));
 onglets.forEach((o,i)=>{const b=document.createElement("button");b.setAttribute("role","tab");b.dataset.t=o.id;b.innerHTML=`${esc(o.lab)}<small>${esc(o.sub)}</small>`;if(fait[o.id])b.classList.add("fait");nav.appendChild(b);
  const s=document.createElement("section");s.id="s_"+o.id;s.innerHTML=o.html;pages.appendChild(s);});
 function montrer(id){document.querySelectorAll("nav button").forEach(b=>b.setAttribute("aria-selected",b.dataset.t===id));document.querySelectorAll("section").forEach(s=>s.classList.toggle("on",s.id==="s_"+id));try{history.replaceState(null,"","#"+id)}catch(e){}}
@@ -248,7 +273,7 @@ montrer((location.hash||"#plan").slice(1)&&onglets.some(o=>o.id===location.hash.
 // prompteur
 const P=document.getElementById("prompteur");let pg=null,pi=0;
 function pAff(){document.getElementById("pNom").textContent=pg.org;document.getElementById("pNum").textContent=`Question ${pi+1} / ${pg.questions.length}`;document.getElementById("pTexte").textContent=pg.questions[pi]}
-pages.addEventListener("click",e=>{const b=e.target.closest("[data-prompt]");if(!b)return;pg=GENS.find(g=>g.id===b.dataset.prompt);pi=0;pAff();P.classList.add("on");P.setAttribute("aria-hidden","false");try{document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen()}catch(e){}});
+pages.addEventListener("click",e=>{const b=e.target.closest("[data-prompt]");if(!b)return;pg=TOUS.find(g=>g.id===b.dataset.prompt);pi=0;pAff();P.classList.add("on");P.setAttribute("aria-hidden","false");try{document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen()}catch(e){}});
 const fermer=()=>{P.classList.remove("on");P.setAttribute("aria-hidden","true");try{document.fullscreenElement&&document.exitFullscreen()}catch(e){}};
 document.getElementById("pFermer").onclick=fermer;
 document.getElementById("pSuiv").onclick=()=>{if(pi<pg.questions.length-1){pi++;pAff()}};
