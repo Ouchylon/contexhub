@@ -425,7 +425,8 @@ return {reset:()=>{for(const k in res) delete res[k];}, calc:(id,o)=>{calcs[id]=
   dash.draw('objectif', (el) => { el.textContent = C.int(C.objectif); });
 
   dash.draw('jours', (el) => {
-    const j = Math.ceil((C.jourJ - new Date()) / 864e5);
+    const jour = (d) => Date.parse(d.toLocaleDateString('sv-SE', { timeZone: 'America/Toronto' }));
+    const j = Math.round((jour(C.jourJ) - jour(new Date())) / 864e5);
     el.textContent = j > 1 ? `à ${j} jours de l'Expo` : j === 1 ? "à la veille de l'Expo" : j === 0 ? "le jour de l'Expo" : "après l'Expo";
   });
 
