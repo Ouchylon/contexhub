@@ -75,9 +75,9 @@ tr.fait td{color:#999;text-decoration:line-through}
 <div class="bas"><button id="pPrec">← Précédente</button><button id="pSuiv">Suivante →</button></div>
 </div>
 <script>
-const MISE_A_JOUR="12 novembre 2026, 11 h 45";
+const MISE_A_JOUR="12 novembre 2026, 11 h 55 (kiosques vérifiés sur le site de l'Expo)";
 const FORMATEURS=[
-{id:"baron",type:"f",qui:"Karl Baron",org:"Les consultants AMMCO",kiosque:"135",quand:"Maintenant (déjà sur place)",conf:"Exposant au kiosque AMMCO. Son collègue Guillaume Farcot donne une conférence de 13 h 05 à 13 h 35.",
+{id:"baron",type:"f",qui:"Karl Baron",org:"Les consultants AMMCO",kiosque:"800",quand:"Maintenant (déjà sur place)",conf:"Exposant au kiosque AMMCO. Son collègue Guillaume Farcot donne une conférence de 13 h 05 à 13 h 35.",
  formation:"Gestion de la maintenance",date:"19 novembre 2026",urgent:true,
  questions:["Présentez-vous : votre nom, votre rôle chez AMMCO, et le fait que vous donnez la formation Gestion de la maintenance chez Contech.","Pourquoi la maintenance est-elle souvent négligée dans la gestion des bâtiments?","Quelle erreur coûte le plus cher quand on reporte l'entretien?","Qu'est-ce que les participants vont repartir avec, concrètement, après votre formation?","À qui s'adresse votre formation, et pourquoi la suivre maintenant?"],
  broll:["Karl à son kiosque en discussion avec un visiteur","Mains qui montrent un rapport ou un tableau (sans données client)","Plan large du kiosque AMMCO","Plan serré de son badge ou du logo AMMCO"]},
@@ -89,7 +89,7 @@ const FORMATEURS=[
  formation:"Bâtiment durable, cycle de vie et choix de matériaux",date:"10 décembre 2026",
  questions:["Présentez-vous : votre nom, votre rôle chez Vertima, et le fait que vous donnez la formation Bâtiment durable chez Contech.","C'est quoi, le cycle de vie d'un bâtiment, expliqué simplement?","Comment le choix des matériaux change-t-il l'impact d'un projet?","Qu'est-ce que les participants vont pouvoir appliquer dès le lendemain de votre formation?","Pourquoi c'est le bon moment de se former là-dessus?"],
  broll:["Josée devant des échantillons de matériaux dans un kiosque","Gros plan sur des matériaux biosourcés ou recyclés (bois, isolants)","Plan large dans une allée avec elle"]},
-{id:"chartier_f",type:"f",qui:"Vincent Chartier",org:"Association des Maîtres Couvreurs du Québec (AMCQ)",kiosque:"825",quand:"Maintenant",conf:"Conférencier ce matin (9 h 40). Il coanime la formation sur les eaux pluviales avec Guy Lalonde.",
+{id:"chartier_f",type:"f",qui:"Vincent Chartier",org:"Association des Maîtres Couvreurs du Québec (AMCQ)",kiosque:"311",quand:"Maintenant",conf:"Conférencier ce matin (9 h 40). Il coanime la formation sur les eaux pluviales avec Guy Lalonde.",
  formation:"Toitures : gestion des eaux pluviales (toits verts et toits bleus)",date:"17 décembre 2026",
  questions:["Présentez-vous : votre nom, votre rôle à l'AMCQ, et le fait que vous donnez la formation sur la gestion des eaux pluviales chez Contech.","Toit vert, toit bleu : c'est quoi la différence?","Pourquoi la gestion de l'eau de pluie devient-elle un enjeu sur les toitures?","Qu'est-ce que les participants vont apprendre dans votre formation?","Un conseil pour un concepteur qui envisage un toit vert ou bleu?"],
  broll:["Échantillons de membranes et couches de toiture en gros plan","Mains qui montrent les couches d'un système de toiture","Plan large du kiosque AMCQ"]},
@@ -99,7 +99,7 @@ const FORMATEURS=[
  broll:["Geneviève devant un kiosque d'enveloppe (fenestration, membranes)","Mains qui montrent un détail de jonction d'enveloppe","Plan large dans une allée avec elle"]}
 ];
 const GENS=[
-{id:"amq",ordre:1,qui:"André Bourassa et Adrien Sparling",org:"Association de la maçonnerie du Québec (AMQ)",kiosque:"208",
+{id:"amq",ordre:1,qui:"André Bourassa et Adrien Sparling",org:"Association de la maçonnerie du Québec (AMQ)",kiosque:"114",
  quand:"12 h 00",conf:"Conférence 11 h 30 à 12 h 00, salle Les Carrières de St-Dominique : « Conception d'un parement en maçonnerie »",
  formation:"Systèmes de murs massifs et parement de maçonnerie",date:"18 novembre 2026 (2 jours)",urgent:true,
  questions:[
@@ -109,7 +109,7 @@ const GENS=[
  "Qu'est-ce qu'un architecte ou un entrepreneur devrait vérifier avant de concevoir un mur massif?",
  "Pourquoi c'est important de bien se former sur la maçonnerie aujourd'hui?"],
  broll:["Gros plan sur les briques et pierres de leur kiosque (texture, joints)","Mains qui montrent un ancrage, un joint ou une coupe de mur","Leur affiche ou maquette de coupe de mur, lent mouvement de haut en bas","Plan large du kiosque avec des visiteurs qui discutent","Si possible : 5 secondes de leur conférence (scène, public)"]},
-{id:"felt",ordre:2,qui:"Gilles Elhadad",org:"Feltkütur by/par Alkegen",kiosque:"812",
+{id:"felt",ordre:2,qui:"Gilles Elhadad",org:"Feltkütur by/par Alkegen",kiosque:"312",
  quand:"Maintenant",conf:"Conférence terminée (10 h 30) : « Le confort acoustique : principes essentiels pour architectes et designers »",
  formation:"Acoustique et insonorisation",date:"26 novembre 2026",
  questions:[
@@ -119,7 +119,7 @@ const GENS=[
  "À quel moment d'un projet faut-il penser à l'acoustique?",
  "Un conseil pour un architecte ou un designer qui veut mieux gérer le bruit dans ses projets?"],
  broll:["Gros plan sur les panneaux et matériaux acoustiques (texture, épaisseur)","Mains qui touchent ou plient un échantillon","Plan large du kiosque","Détail d'un plafond ou mur de la salle (contexte bâtiment)"]},
-{id:"amcq",ordre:3,qui:"Vincent Chartier",org:"Association des Maîtres Couvreurs du Québec (AMCQ)",kiosque:"825",
+{id:"amcq",ordre:3,qui:"Vincent Chartier",org:"Association des Maîtres Couvreurs du Québec (AMCQ)",kiosque:"311",
  quand:"Maintenant",conf:"Conférence terminée (9 h 40) : « Quelle toiture pour le bâtiment de demain? »",
  formation:"Toitures : entretien et maintenance · Toitures : gestion des eaux pluviales (toits verts et bleus)",date:"1er décembre et 17 décembre 2026",
  questions:[
@@ -129,7 +129,7 @@ const GENS=[
  "Toits verts, toits bleus : qu'est-ce que ça change pour la gestion des eaux de pluie?",
  "Votre conseil numéro un à un gestionnaire de bâtiment pour sa toiture?"],
  broll:["Échantillons de membranes et couches de toiture en gros plan","Mains qui montrent les couches d'un système de toiture","Plan large du kiosque","Affiche ou visuel d'un toit vert si disponible"]},
-{id:"rbq",ordre:4,qui:"Nicolas Rochette",org:"Régie du bâtiment du Québec (RBQ)",kiosque:"Kiosque RBQ (voir plan)",
+{id:"rbq",ordre:4,qui:"Nicolas Rochette",org:"Régie du bâtiment du Québec (RBQ)",kiosque:"723",
  quand:"12 h 05",conf:"Conférence 11 h 05 à 12 h 05, salle St-Laurent : « Vers un nouveau modèle d'inspection et de surveillance au Québec »",
  formation:"Inspection de grands bâtiments, niveau 2 : les pathologies du bâtiment et la Loi 122",date:"9 décembre 2026",
  questions:[
@@ -140,7 +140,7 @@ const GENS=[
  "Pourquoi c'est important pour les professionnels de se tenir à jour là-dessus?"],
  broll:["Logo et kiosque RBQ en plan large","5 secondes de la conférence si possible","Documents ou dépliants sur le kiosque (sans texte lisible de près)"],
  note:"Organisme public : rester sur l'information générale, ne pas lui faire dire qu'il recommande une formation en particulier."},
-{id:"codex",ordre:5,qui:"Jonathan Gariépy-Roy (et Morteza Rahbar)",org:"Codex BIM",kiosque:"238",
+{id:"codex",ordre:5,qui:"Jonathan Gariépy-Roy (et Morteza Rahbar)",org:"Codex BIM",kiosque:"239",
  quand:"13 h 30",conf:"Conférence 13 h 00 à 13 h 30, salle Codex BIM : « Conformité au Code du bâtiment : laissez Revit faire le travail »",
  formation:"Projet BIM : se préparer et collaborer selon les standards actuels du marché public",date:"2 décembre 2026",
  questions:[
@@ -150,7 +150,7 @@ const GENS=[
  "Quelle est l'erreur la plus fréquente quand une firme commence en BIM?",
  "Un conseil pour bien se préparer à un projet BIM?"],
  broll:["Écran avec un modèle 3D qui tourne (sans données client)","Mains sur la souris ou la tablette","Plan large du kiosque avec visiteurs","Vue de la salle Codex BIM"]},
-{id:"gpbl",ordre:6,qui:"Benoit Lalonde (et Sophie Lalonde, Ville de Montréal)",org:"GPBL Penser Projet",kiosque:"Voir plan",
+{id:"gpbl",ordre:6,qui:"Benoit Lalonde (et Sophie Lalonde, Ville de Montréal)",org:"GPBL Penser Projet",kiosque:"Pas de kiosque (conférencier)",
  quand:"14 h 00",conf:"Conférence 13 h 00 à 14 h 00, salle St-Laurent : « Gestion immobilière : l'implantation des bonnes pratiques en gestion de projets »",
  formation:"Gestion de la maintenance",date:"19 novembre 2026",
  questions:[
@@ -160,7 +160,7 @@ const GENS=[
  "Qu'est-ce qui coûte le plus cher : entretenir ou attendre?",
  "Un conseil à un gestionnaire qui veut mieux planifier son entretien?"],
  broll:["Plan large de la salle après la conférence","Échanges avec des participants","Mains qui pointent un document ou une tablette"]},
-{id:"ammco",ordre:7,qui:"Guillaume Farcot",org:"Les consultants AMMCO",kiosque:"135",
+{id:"ammco",ordre:7,qui:"Guillaume Farcot",org:"Les consultants AMMCO",kiosque:"800",
  quand:"13 h 35",conf:"Conférence 13 h 05 à 13 h 35, salle Les Carrières de St-Dominique : « Briser le cycle de la vétusté »",
  formation:"Gestion de la maintenance",date:"19 novembre 2026",
  questions:[
@@ -170,7 +170,7 @@ const GENS=[
  "Quelle décision prise à la conception a le plus d'impact sur l'entretien plus tard?",
  "Un conseil pour un propriétaire qui veut garder ses actifs en bon état?"],
  broll:["Plan large du kiosque","Mains qui montrent un rapport ou un graphique (sans données client)","Échange avec un visiteur"]},
-{id:"passif",ordre:8,qui:"Mahnaz Nikbakht",org:"Bâtiment passif Québec",kiosque:"243",
+{id:"passif",ordre:8,qui:"Mahnaz Nikbakht",org:"Bâtiment passif Québec",kiosque:"400",
  quand:"13 h 40",conf:"Conférence 13 h 10 à 13 h 40, salle Schluter : « Décarboner le bâti existant : la Ken Soble Tower »",
  formation:"Bâtiment durable, cycle de vie et choix de matériaux",date:"10 décembre 2026",
  questions:[
@@ -180,7 +180,7 @@ const GENS=[
  "Comment le choix des matériaux change l'empreinte d'un bâtiment?",
  "Un conseil pour un professionnel qui veut construire plus durable?"],
  broll:["Plan large du kiosque","Gros plan sur des matériaux ou une coupe d'enveloppe","Visuel de projet sur leur affiche"]},
-{id:"cebq",ordre:9,qui:"Charles Thibodeau",org:"Conseil de l'enveloppe du bâtiment du Québec (CEBQ)",kiosque:"239",
+{id:"cebq",ordre:9,qui:"Charles Thibodeau",org:"Conseil de l'enveloppe du bâtiment du Québec (CEBQ)",kiosque:"118",
  quand:"14 h 30",conf:"Conférence 14 h 00 à 14 h 30, salle Schluter : « Comment bien évaluer l'impact environnemental d'un mur extérieur? »",
  formation:"Bâtiment durable, cycle de vie et choix de matériaux · Systèmes de murs-rideaux",date:"10 et 9 décembre 2026",
  questions:[
@@ -190,7 +190,7 @@ const GENS=[
  "Quelle erreur voyez-vous souvent dans la conception de l'enveloppe?",
  "Pourquoi c'est important pour les professionnels de se former là-dessus?"],
  broll:["Coupes de mur ou échantillons d'enveloppe en gros plan","Plan large du kiosque","5 secondes de la conférence si possible"]},
-{id:"ul",ordre:10,qui:"Claudio Bardetti",org:"UL Solutions (avec l'AERMQ)",kiosque:"824 (AERMQ)",
+{id:"ul",ordre:10,qui:"Claudio Bardetti",org:"UL Solutions (avec l'AERMQ)",kiosque:"Pas de kiosque (conférencier)",
  quand:"15 h 00",conf:"Conférence 14 h 30 à 15 h 00, salle IKO : « Mise en service de l'enveloppe du bâtiment (BECx) »",
  formation:"Mise en service : guide pratique à l'attention des entrepreneurs",date:"1er décembre 2026 (2 jours)",
  questions:[
@@ -201,7 +201,7 @@ const GENS=[
  "Un conseil à un entrepreneur qui fait sa première mise en service?"],
  broll:["Équipement de test ou de mesure s'il y en a au kiosque","Mains qui montrent un détail d'enveloppe","Plan large du kiosque AERMQ"],
  note:"UL Solutions est partenaire de Contech : bon candidat pour une capsule plus longue."},
-{id:"avfq",ordre:11,qui:"Mathieu Audet (Glaspex) ou un représentant",org:"Association de vitrerie et fenestration du Québec (AVFQ)",kiosque:"114",
+{id:"avfq",ordre:11,qui:"Mathieu Audet (Glaspex) ou un représentant",org:"Association de vitrerie et fenestration du Québec (AVFQ)",kiosque:"825",
  quand:"Maintenant",conf:"Conférence terminée (11 h 30 à 12 h 15) : « Au-delà du Code : simulations numériques et performance des enveloppes »",
  formation:"Systèmes de murs-rideaux : conception, conformité et performance",date:"9 décembre 2026 (2 jours)",
  questions:[
@@ -211,7 +211,7 @@ const GENS=[
  "Comment la simulation aide à éviter les problèmes avant la construction?",
  "Un conseil pour un concepteur qui travaille sur son premier mur-rideau?"],
  broll:["Profilés et échantillons de vitrage en gros plan","Reflets et lumière sur le verre (beau plan lent)","Plan large du kiosque"]},
-{id:"soprema",ordre:12,qui:"Léopold Giroux-Gauthier ou Jean-François Côté",org:"Soprema",kiosque:"Voir plan",
+{id:"soprema",ordre:12,qui:"Léopold Giroux-Gauthier ou Jean-François Côté",org:"Soprema",kiosque:"223 · 225 · 322 · 324",
  quand:"15 h 45",conf:"Conférence 14 h 45 à 15 h 45, salle Les Carrières de St-Dominique : « Mieux construire »",
  formation:"Murs végétaux : design et intégration · Toitures : gestion des eaux pluviales",date:"4 décembre et 17 décembre 2026",
  questions:[
@@ -222,7 +222,7 @@ const GENS=[
  "Un conseil pour un architecte qui veut intégrer de la végétation à son projet?"],
  broll:["Échantillons de membranes et substrats en gros plan","Visuels de toits verts sur leurs affiches","Plan large du kiosque"],
  note:"Fabricant : rester sur le sujet, pas sur le produit."},
-{id:"carrieres",ordre:13,qui:"David Jodoin",org:"Les Carrières de St-Dominique",kiosque:"120",
+{id:"carrieres",ordre:13,qui:"David Jodoin",org:"Les Carrières de St-Dominique",kiosque:"135",
  quand:"Si tu as le temps",conf:"Conférence terminée (9 h 50) : « Valorisation des sols et des matériaux existants »",
  formation:"Mécanique des sols",date:"17 décembre 2026",
  questions:[
@@ -244,7 +244,7 @@ function pitch(g){if(g.type==="f")return `« Bonjour ${esc(g.qui.split(",")[0].s
 function plan(){
  const ligne=g=>`<tr class="${fait[g.id]?'fait':''}"><td class="h">${esc(g.quand)}</td><td><b>${esc(g.org)}</b><br>${esc(g.qui)}</td><td>${esc(g.kiosque)}</td><td>${esc(g.formation)}<br><span class="note">${esc(g.date)}</span></td></tr>`;
  const rows=EXPERTS.map(ligne).join(""),rowsF=FORMATEURS.map(ligne).join("");
- return `<div class="carte" style="border-top:4px solid var(--jaune)"><h3>Priorité</h3><h2 class="titre">Formateurs Contech présents aujourd'hui</h2><p class="note">Ce sont les vrais formateurs des formations à venir, repérés dans la liste des inscrits de l'Expo.</p><div style="overflow-x:auto"><table><thead><tr><th>Quand</th><th>Qui</th><th>Où</th><th>Sa formation</th></tr></thead><tbody>${rowsF}</tbody></table></div></div><div class="carte"><h3>Bonus</h3><h2 class="titre">Experts du même sujet</h2><p class="note">Pas les formateurs : des exposants et conférenciers qui parlent du même sujet. Leur dire « on donne une formation sur ce sujet », pas « votre formation ».</p><p class="note">Coche chaque personne dans son onglet une fois filmée. Mis à jour le ${MISE_A_JOUR}. Vérifie les numéros de kiosque sur le plan de salle.</p><div style="overflow-x:auto"><table><thead><tr><th>Quand</th><th>Qui</th><th>Kiosque</th><th>Formation</th></tr></thead><tbody>${rows}</tbody></table></div></div>
+ return `<div class="carte" style="border-top:4px solid var(--jaune)"><h3>Priorité</h3><h2 class="titre">Formateurs Contech présents aujourd'hui</h2><p class="note">Ce sont les vrais formateurs des formations à venir, repérés dans la liste des inscrits de l'Expo.</p><div style="overflow-x:auto"><table><thead><tr><th>Quand</th><th>Qui</th><th>Où</th><th>Sa formation</th></tr></thead><tbody>${rowsF}</tbody></table></div></div><div class="carte"><h3>Bonus</h3><h2 class="titre">Experts du même sujet</h2><p class="note">Pas les formateurs : des exposants et conférenciers qui parlent du même sujet. Leur dire « on donne une formation sur ce sujet », pas « votre formation ».</p><p class="note">Coche chaque personne dans son onglet une fois filmée. Mis à jour le ${MISE_A_JOUR}. Kiosques vérifiés sur la liste officielle des exposants.</p><div style="overflow-x:auto"><table><thead><tr><th>Quand</th><th>Qui</th><th>Kiosque</th><th>Formation</th></tr></thead><tbody>${rows}</tbody></table></div></div>
  <div class="grille"><div class="carte"><h3>Pour un montage facile</h3><ul class="b">
  <li>Vertical 9:16, la personne au tiers de l'image, les yeux vers toi (pas vers la caméra).</li>
  <li>Un clip par question : démarre, attends 2 secondes, pose la question, laisse 2 secondes à la fin.</li>
