@@ -181,7 +181,7 @@
     "date": "2026-11-17",
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "envoyes": 19762,
-    "ouverture": 31.3,
+    "ouverture": 31.5,
     "clic": 4.2,
     "desabonnements": 26
    },
@@ -195,27 +195,11 @@
    },
    {
     "date": "2026-11-10",
-    "nom": "Expo MTL 10 nov. 2026 - Relance grandes entreprises",
-    "envoyes": 318,
-    "ouverture": 34.9,
-    "clic": 3.1,
-    "desabonnements": 0
-   },
-   {
-    "date": "2026-11-10",
-    "nom": "Expo MTL 10 nov. 2026 (J-2) - Architectes et conception",
-    "envoyes": 2553,
-    "ouverture": 36.8,
-    "clic": 1.4,
-    "desabonnements": 1
-   },
-   {
-    "date": "2026-11-10",
-    "nom": "Expo MTL 10 nov. 2026 (J-2) - Gestionnaires immobiliers",
-    "envoyes": 776,
-    "ouverture": 29.5,
-    "clic": 2.3,
-    "desabonnements": 4
+    "nom": "Expo MTL 10 nov. 2026 (J-2) - Autres professionnels",
+    "envoyes": 11963,
+    "ouverture": 26.6,
+    "clic": 1.2,
+    "desabonnements": 15
    },
    {
     "date": "2026-11-10",
@@ -227,17 +211,33 @@
    },
    {
     "date": "2026-11-10",
-    "nom": "Expo MTL 10 nov. 2026 (J-2) - Autres professionnels",
-    "envoyes": 11963,
-    "ouverture": 26.5,
-    "clic": 1.2,
-    "desabonnements": 15
+    "nom": "Expo MTL 10 nov. 2026 (J-2) - Gestionnaires immobiliers",
+    "envoyes": 776,
+    "ouverture": 29.5,
+    "clic": 2.3,
+    "desabonnements": 4
+   },
+   {
+    "date": "2026-11-10",
+    "nom": "Expo MTL 10 nov. 2026 (J-2) - Architectes et conception",
+    "envoyes": 2553,
+    "ouverture": 36.8,
+    "clic": 1.4,
+    "desabonnements": 1
+   },
+   {
+    "date": "2026-11-10",
+    "nom": "Expo MTL 10 nov. 2026 - Relance grandes entreprises",
+    "envoyes": 318,
+    "ouverture": 34.9,
+    "clic": 3.1,
+    "desabonnements": 0
    },
    {
     "date": "2026-11-09",
     "nom": "Expo MTL 9 nov. 2026 (J-3)",
     "envoyes": 18610,
-    "ouverture": 30.0,
+    "ouverture": 30.1,
     "clic": 1.5,
     "desabonnements": 13
    },
@@ -245,7 +245,7 @@
     "date": "2026-11-06",
     "nom": "Expo MTL 6 nov. 2026 (J-6) - Inscrits",
     "envoyes": 1137,
-    "ouverture": 55.2,
+    "ouverture": 55.4,
     "clic": 11.7,
     "desabonnements": 1
    },
@@ -253,7 +253,7 @@
     "date": "2026-11-05",
     "nom": "Expo MTL 5 nov. 2026 (J-7)",
     "envoyes": 18643,
-    "ouverture": 30.0,
+    "ouverture": 30.1,
     "clic": 1.4,
     "desabonnements": 24
    },
@@ -280,9 +280,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 31.3,
+   "ouverture": 31.5,
    "clics": 4.2,
-   "ctor": 13.6,
+   "ctor": 13.5,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -302,10 +302,14 @@
     "statut": "À préparer"
    }
   ],
-  "source": "Dialog Insight (API)",
-  "releve": "2026-11-19T11:20-05:00",
+  "source": "Dialog Insight (API, relevé automatique)",
+  "releve": "2026-11-19T15:44-05:00",
   "alertes": [
-   "Hebdo « Dernières places » prévu le 19 nov. 8 h : pas encore parti (en attente d’approbation)"
+   "Envoi prévu le 2026.09.22 08:00 pas encore parti (approbation?)",
+   "Envoi prévu le 2026.10.29 10:00 pas encore parti (approbation?)",
+   "Envoi prévu le 2026.10.29 10:00 pas encore parti (approbation?)",
+   "Envoi prévu le 2026.11.09 10:00 pas encore parti (approbation?)",
+   "Envoi prévu le 2026.11.19 08:00 pas encore parti (approbation?)"
   ],
   "tous": [
    {
@@ -314,12 +318,11 @@
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "categorie": "Formations",
     "envoyes": 19762,
-    "ouverture": 31.3,
+    "ouverture": 31.5,
     "clic": 4.2,
     "desabonnements": 26,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2665/IGwG33/lancement-hp2027-entete-v3.gif",
-    "capture": null,
-    "apercu": null
+    "apercu": "nl/730126.html"
    },
    {
     "id": 730124,
@@ -331,8 +334,7 @@
     "clic": 1.7,
     "desabonnements": 17,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2645/cXejm5/hebdo11nov-entete-v2.gif",
-    "capture": null,
-    "apercu": null
+    "apercu": "nl/730124.html"
    },
    {
     "id": 730119,
@@ -344,8 +346,8 @@
     "clic": 3.1,
     "desabonnements": 0,
     "vignette": null,
-    "capture": "../bilan/img/infolettres/2026-11-10-mtl-relance-grandes-entreprises.jpg",
-    "apercu": null
+    "apercu": "nl/730119.html",
+    "capture": "../bilan/img/infolettres/2026-11-10-mtl-relance-grandes-entreprises.jpg"
    },
    {
     "id": 730121,
@@ -357,8 +359,7 @@
     "clic": 1.4,
     "desabonnements": 1,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
-    "capture": null,
-    "apercu": null
+    "apercu": "nl/730121.html"
    },
    {
     "id": 730122,
@@ -370,8 +371,8 @@
     "clic": 2.3,
     "desabonnements": 4,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
-    "capture": "../bilan/img/infolettres/2026-11-10-mtl-j2-immobilier.jpg",
-    "apercu": null
+    "apercu": "nl/730122.html",
+    "capture": "../bilan/img/infolettres/2026-11-10-mtl-j2-immobilier.jpg"
    },
    {
     "id": 730123,
@@ -383,8 +384,8 @@
     "clic": 1.5,
     "desabonnements": 4,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
-    "capture": "../bilan/img/infolettres/2026-11-10-mtl-j2-entrepreneurs.jpg",
-    "apercu": null
+    "apercu": "nl/730123.html",
+    "capture": "../bilan/img/infolettres/2026-11-10-mtl-j2-entrepreneurs.jpg"
    },
    {
     "id": 730120,
@@ -392,12 +393,12 @@
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Autres professionnels",
     "categorie": "Expos",
     "envoyes": 11963,
-    "ouverture": 26.5,
+    "ouverture": 26.6,
     "clic": 1.2,
     "desabonnements": 15,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
-    "capture": "../bilan/img/infolettres/2026-11-10-mtl-j2-autres.jpg",
-    "apercu": null
+    "apercu": "nl/730120.html",
+    "capture": "../bilan/img/infolettres/2026-11-10-mtl-j2-autres.jpg"
    },
    {
     "id": 730118,
@@ -405,12 +406,12 @@
     "nom": "Expo MTL 9 nov. 2026 (J-3)",
     "categorie": "Expos",
     "envoyes": 18610,
-    "ouverture": 30.0,
+    "ouverture": 30.1,
     "clic": 1.5,
     "desabonnements": 13,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
-    "capture": "../bilan/img/infolettres/2026-11-09-mtl-j3.jpg",
-    "apercu": null
+    "apercu": "nl/730118.html",
+    "capture": "../bilan/img/infolettres/2026-11-09-mtl-j3.jpg"
    },
    {
     "id": 730117,
@@ -418,12 +419,12 @@
     "nom": "Expo MTL 6 nov. 2026 (J-6) - Inscrits",
     "categorie": "Expos",
     "envoyes": 1137,
-    "ouverture": 55.2,
+    "ouverture": 55.4,
     "clic": 11.7,
     "desabonnements": 1,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
-    "capture": "../bilan/img/infolettres/2026-11-06-mtl-j6-inscrits.jpg",
-    "apercu": null
+    "apercu": "nl/730117.html",
+    "capture": "../bilan/img/infolettres/2026-11-06-mtl-j6-inscrits.jpg"
    },
    {
     "id": 730116,
@@ -431,12 +432,12 @@
     "nom": "Expo MTL 5 nov. 2026 (J-7)",
     "categorie": "Expos",
     "envoyes": 18643,
-    "ouverture": 30.0,
+    "ouverture": 30.1,
     "clic": 1.4,
     "desabonnements": 24,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
-    "capture": "../bilan/img/infolettres/2026-11-05-mtl-j7.jpg",
-    "apercu": null
+    "apercu": "nl/730116.html",
+    "capture": "../bilan/img/infolettres/2026-11-05-mtl-j7.jpg"
    },
    {
     "id": 730115,
@@ -448,8 +449,7 @@
     "clic": 1.5,
     "desabonnements": 36,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2543/3nvMo2/nl27oct-bandeau-art-de-negocier-niv1-9nov-suzanne.png",
-    "capture": null,
-    "apercu": null
+    "apercu": "nl/730115.html"
    },
    {
     "id": 730113,
@@ -461,8 +461,8 @@
     "clic": 1.6,
     "desabonnements": 20,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
-    "capture": "../bilan/img/infolettres/2026-11-02-mtl-j10.jpg",
-    "apercu": null
+    "apercu": "nl/730113.html",
+    "capture": "../bilan/img/infolettres/2026-11-02-mtl-j10.jpg"
    },
    {
     "id": 730111,
@@ -474,8 +474,8 @@
     "clic": 1.5,
     "desabonnements": 27,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
-    "capture": "../bilan/img/infolettres/2026-10-29-mtl-j14.jpg",
-    "apercu": null
+    "apercu": "nl/730111.html",
+    "capture": "../bilan/img/infolettres/2026-10-29-mtl-j14.jpg"
    },
    {
     "id": 730109,
@@ -487,8 +487,7 @@
     "clic": 1.1,
     "desabonnements": 20,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2532/Nj29J4/nl20oct-banniere-inspection-generale-5nov-v4.jpg",
-    "capture": null,
-    "apercu": null
+    "apercu": "nl/730109.html"
    },
    {
     "id": 730110,
@@ -500,8 +499,8 @@
     "clic": 2.4,
     "desabonnements": 15,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
-    "capture": "../bilan/img/infolettres/2026-10-27-mtl-j16.jpg",
-    "apercu": null
+    "apercu": "nl/730110.html",
+    "capture": "../bilan/img/infolettres/2026-10-27-mtl-j16.jpg"
    },
    {
     "id": 730108,
@@ -513,8 +512,8 @@
     "clic": 1.2,
     "desabonnements": 37,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2341/MEUTMR/expos-contech-2026-mtl-qc-1200x630.jpg",
-    "capture": "../bilan/img/infolettres/2026-10-21-qc-veille.jpg",
-    "apercu": null
+    "apercu": "nl/730108.html",
+    "capture": "../bilan/img/infolettres/2026-10-21-qc-veille.jpg"
    },
    {
     "id": 730107,
@@ -526,8 +525,7 @@
     "clic": 1.2,
     "desabonnements": 18,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2532/Nj29J4/nl20oct-banniere-inspection-generale-5nov-v4.jpg",
-    "capture": null,
-    "apercu": null
+    "apercu": "nl/730107.html"
    },
    {
     "id": 730103,
@@ -539,8 +537,7 @@
     "clic": 1.3,
     "desabonnements": 22,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2493/fXCnpa/nl13oct-banniere-quincaillerie-3nov.jpg",
-    "capture": null,
-    "apercu": null
+    "apercu": "nl/730103.html"
    },
    {
     "id": 730102,
@@ -552,8 +549,8 @@
     "clic": 1.7,
     "desabonnements": 21,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2341/MEUTMR/expos-contech-2026-mtl-qc-1200x630.jpg",
-    "capture": "../bilan/img/infolettres/2026-10-08-ouverture-fermeture.jpg",
-    "apercu": null
+    "apercu": "nl/730102.html",
+    "capture": "../bilan/img/infolettres/2026-10-08-ouverture-fermeture.jpg"
    },
    {
     "id": 730101,
@@ -565,8 +562,19 @@
     "clic": 1.1,
     "desabonnements": 28,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2475/XfHa71/nl06-banniere-chantier-14-21oct.png",
-    "capture": null,
-    "apercu": null
+    "apercu": "nl/730101.html"
+   },
+   {
+    "id": 730099,
+    "date": "2026-10-01",
+    "nom": "Expo 1er oct. zones",
+    "categorie": "Expos",
+    "envoyes": 19128,
+    "ouverture": 30.0,
+    "clic": 1.4,
+    "desabonnements": 24,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2460/GcOMld/pastille-inscription-quebec-600x430.jpg",
+    "apercu": "nl/730099.html"
    },
    {
     "id": null,
@@ -580,6 +588,138 @@
     "vignette": null,
     "capture": "../bilan/img/infolettres/2026-10-01-zones.jpg",
     "apercu": null
+   },
+   {
+    "id": 730097,
+    "date": "2026-09-29",
+    "nom": "Hebdo Formations 29 sept 2026",
+    "categorie": "Formations",
+    "envoyes": 19160,
+    "ouverture": 29.9,
+    "clic": 1.6,
+    "desabonnements": 35,
+    "vignette": null,
+    "apercu": "nl/730097.html"
+   },
+   {
+    "id": 730093,
+    "date": "2026-09-24",
+    "nom": "PUSH7_Focus Commandite Qc Mtl_2026",
+    "categorie": "Expos",
+    "envoyes": 19189,
+    "ouverture": 32.7,
+    "clic": 2.1,
+    "desabonnements": 30,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2341/MEUTMR/expos-contech-2026-mtl-qc-1200x630.jpg",
+    "apercu": "nl/730093.html"
+   },
+   {
+    "id": 730092,
+    "date": "2026-09-22",
+    "nom": "22 septembre - Hebdo formations",
+    "categorie": "Formations",
+    "envoyes": 19189,
+    "ouverture": 33.6,
+    "clic": 1.9,
+    "desabonnements": 23,
+    "vignette": null,
+    "apercu": "nl/730092.html"
+   },
+   {
+    "id": 730090,
+    "date": "2026-09-17",
+    "nom": "PUSH6_Focus Québec_2026",
+    "categorie": "Expos",
+    "envoyes": 19229,
+    "ouverture": 32.9,
+    "clic": 2.0,
+    "desabonnements": 40,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2341/MEUTMR/expos-contech-2026-mtl-qc-1200x630.jpg",
+    "apercu": "nl/730090.html"
+   },
+   {
+    "id": 730088,
+    "date": "2026-09-15",
+    "nom": "15 septembre - Hebdo formations",
+    "categorie": "Formations",
+    "envoyes": 19255,
+    "ouverture": 31.9,
+    "clic": 1.2,
+    "desabonnements": 37,
+    "vignette": null,
+    "apercu": "nl/730088.html"
+   },
+   {
+    "id": 730087,
+    "date": "2026-09-10",
+    "nom": "PUSH5_Focus Québec_2026",
+    "categorie": "Expos",
+    "envoyes": 38566,
+    "ouverture": 30.0,
+    "clic": 1.8,
+    "desabonnements": 57,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2307/BWrPWL/stl-logoslogan-bleuboreal.png",
+    "apercu": "nl/730087.html"
+   },
+   {
+    "id": 730086,
+    "date": "2026-09-08",
+    "nom": "8 septembre - Hebdo formations",
+    "categorie": "Formations",
+    "envoyes": 19304,
+    "ouverture": 31.4,
+    "clic": 2.2,
+    "desabonnements": 29,
+    "vignette": null,
+    "apercu": "nl/730086.html"
+   },
+   {
+    "id": 730085,
+    "date": "2026-09-03",
+    "nom": "PUSH4_Focus Québec_2026 - -",
+    "categorie": "Expos",
+    "envoyes": 19308,
+    "ouverture": 29.7,
+    "clic": 1.9,
+    "desabonnements": 38,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2307/BWrPWL/stl-logoslogan-bleuboreal.png",
+    "apercu": "nl/730085.html"
+   },
+   {
+    "id": 730084,
+    "date": "2026-09-01",
+    "nom": "31 Aout - Hebdo formations",
+    "categorie": "Formations",
+    "envoyes": 19370,
+    "ouverture": 31.8,
+    "clic": 1.3,
+    "desabonnements": 52,
+    "vignette": null,
+    "apercu": "nl/730084.html"
+   },
+   {
+    "id": 730082,
+    "date": "2026-08-27",
+    "nom": "PUSH3_Focus Québec_2026 -",
+    "categorie": "Expos",
+    "envoyes": 19401,
+    "ouverture": 29.3,
+    "clic": 1.9,
+    "desabonnements": 46,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2307/BWrPWL/stl-logoslogan-bleuboreal.png",
+    "apercu": "nl/730082.html"
+   },
+   {
+    "id": 730081,
+    "date": "2026-08-25",
+    "nom": "25 Aout - Hebdo formations",
+    "categorie": "Formations",
+    "envoyes": 19423,
+    "ouverture": 29.6,
+    "clic": 1.6,
+    "desabonnements": 45,
+    "vignette": null,
+    "apercu": "nl/730081.html"
    }
   ]
  },
