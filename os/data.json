@@ -175,12 +175,7 @@
     "utm": "",
     "calendrier": "Promo −50 %"
    }
-  ],
-  "reference": {
-   "nom": "Formations fin OCT26-NOV26",
-   "periode": "octobre",
-   "coutParAchat": 39.8
-  }
+  ]
  },
  "infolettres": {
   "derniers": [
@@ -282,8 +277,9 @@
    }
   ],
   "base": {
-   "contacts": 82314,
-   "nouveaux7j": 86
+   "contacts": 82316,
+   "nouveaux7j": 15,
+   "releve": "19 nov., 17 h"
   },
   "sept_jours": {
    "livraison": 99.7,

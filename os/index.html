@@ -336,9 +336,11 @@ footer b{color:var(--ink)}
     var nc=F.filter(function(x){return x.inscrits<=seuil;}).length;
     var nxt=(D.infolettres.prochains||[]).filter(function(x){return days(D.today,x.date)>=0;})[0];
     html+='<section id="aujourdhui"><div class="sh"><h2>Aujourd’<span class="o">hui</span></h2><span class="k">Vue d’ensemble</span></div><div class="tiles">';
-    html+='<div class="card tile"><span class="k">Achats formations</span><div class="v num">'+int(A.valeur)+'</div>'+
-      '<div class="s">'+esc(A.periode)+' · '+esc(A.source)+'</div>'+
-      '<div class="row">'+(A.releve?'<span class="pill g">Relevé '+esc(A.releve)+'</span>':'')+'<span class="pill">Correspondance '+String(A.qualiteCorrespondance.toFixed(1)).replace(".",",")+'/10</span></div></div>';
+    if(D.ventes){var tm=D.today.slice(0,7), mi=+D.today.slice(5,7)-1, MOL=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+      var revM=D.ventes.lignes.filter(function(x){return x.date.slice(0,7)===tm;}).reduce(function(s,x){return s+x.revenus;},0), budM=D.ventes.budgetMensuel[mi]||0;
+      html+='<div class="card tile"><span class="k">Revenus de '+MOL[mi]+'</span><div class="v num">'+money(revM)+'</div>'+
+        '<div class="s">'+(budM?Math.round(100*revM/budM)+' % du budget du mois ('+money(budM)+')':'')+' · Coûts et revenus 2026</div>'+
+        '<div class="row"><span class="pill g">Relevé '+esc(D.ventes.releve)+'</span></div></div>';}
     html+='<div class="card tile"><span class="k">Dépense pubs / jour</span><div class="v num">'+money(depTot)+'</div><div class="s">'+
       dep.map(function(x){return '<b>'+money(x.parJour)+'</b> '+esc(x.label)+(x.depuis?' (dès le '+fd(x.depuis)+')':'');}).join('<br>')+'</div></div>';
     html+='<div class="card tile"><span class="k">Prochaine infolettre</span>'+(nxt?
@@ -384,7 +386,7 @@ footer b{color:var(--ink)}
       html+='</dl></div>';
     });
     html+='</div>';
-    if(P.reference)html+='<div class="card ref"><span class="k">Référence · '+esc(P.reference.periode)+'</span><b>'+esc(P.reference.nom)+'</b><span style="flex:1"></span><span class="k">Coût par achat</span><span class="v num">'+money(P.reference.coutParAchat)+'</span></div>';
+    if(false&&P.reference)html+='<div class="card ref"><span class="k">Référence · '+esc(P.reference.periode)+'</span><b>'+esc(P.reference.nom)+'</b><span style="flex:1"></span><span class="k">Coût par achat</span><span class="v num">'+money(P.reference.coutParAchat)+'</span></div>';
     html+='</section>';
 
     /* 4. Infolettres */
@@ -404,8 +406,7 @@ footer b{color:var(--ink)}
     if(NX.length){html+='<div class="nl-grp">Expos</div>';NX.forEach(row);}
     html+='</div><div class="side">';
     html+='<div class="card"><span class="k">Base de contacts</span><div class="big num">'+int(N.base.contacts)+'</div><div class="s" style="font-size:13px;color:var(--mut)"><b style="color:var(--ink)">+'+int(N.base.nouveaux7j)+'</b> nouveaux en 7 jours</div>'+
-      '<div class="k" style="margin-top:16px">7 derniers jours</div><div class="stats">'+
-      [["Livraison",S.livraison],["Ouverture",S.ouverture],["Clics",S.clics],["CTOR",S.ctor],["Désabo.",S.desabonnements]].map(function(p){return '<div><div class="v num">'+pct(p[1])+'</div><div class="l">'+p[0]+'</div></div>';}).join('')+'</div></div>';
+      '<div class="s" style="font-size:12px;color:var(--mut);margin-top:8px">Tableau de bord Dialog Insight · relevé '+esc(N.base.releve||'')+'</div></div>';
     html+='<div class="card next"><span class="k">Prochains envois · à préparer</span><ul>'+
       N.prochains.map(function(x){return '<li><span class="dt">'+fdj(x.date).replace(/^(\S+) /,"$1 ")+'</span><span class="nm">'+esc(x.nom)+'</span></li>';}).join('')+'</ul></div>';
     html+='</div></div></section>';
@@ -548,7 +549,7 @@ window.vtInit=function(V,todayIso){
     var bud=budgetFor(a,b), pct=bud?Math.round(100*rev/bud):null;
     var k='<div class="vt-kpis">'+
       '<div class="card"><span class="k">Revenus</span><div class="v">'+$(rev)+'</div><span class="s">'+fd(a)+' → '+fd(b)+'</span></div>'+
-      '<div class="card"><span class="k">Vs budget</span><div class="v">'+(pct==null?"—":pct+" %")+'</div><span class="s">Budget de la période : '+$(bud)+'</span></div>'+
+      '<div class="card"><span class="k">Vs budget</span><div class="v">'+(pct==null?"—":pct+" %")+'</div><span class="s">Budget de la période : '+$(bud)+' (au prorata des jours)</span></div>'+
       '<div class="card"><span class="k">Profit</span><div class="v">'+$(pro)+'</div><span class="s">'+(rev?Math.round(100*pro/rev)+" % de marge":"—")+'</span></div>'+
       '<div class="card"><span class="k">Participants</span><div class="v">'+par+'</div><span class="s">'+L.length+' formation'+(L.length>1?"s":"")+(fut?' · dont '+fut+' à venir':'')+'</span></div></div>';
     var mx=Math.max.apply(null,V.budgetMensuel.concat(V.reelMensuel)), cm=T.getMonth();
