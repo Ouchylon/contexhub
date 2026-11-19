@@ -1,0 +1,109 @@
+{
+  "updated": "2026-11-18T23:00:00-05:00",
+  "today": "2026-11-18",
+  "seuilConfirmation": 5,
+
+  "kpis": {
+    "achats": {
+      "valeur": 138,
+      "periode": "4 dernières semaines",
+      "source": "Pixel Meta « Pixel de Contech »",
+      "dernierRecu": "il y a 7 h",
+      "qualiteCorrespondance": 8.0
+    },
+    "depensePubs": [
+      { "label": "Dernière chance", "parJour": 35, "depuis": "2026-11-19" },
+      { "label": "Teaser Vendredi fou", "parJour": 37.5, "depuis": "2026-11-23" }
+    ]
+  },
+
+  "formations": {
+    "source": "Tableau de bord A2026, SharePoint",
+    "releve": "18 nov. 2026, 23 h",
+    "items": [
+      { "date": "2026-11-24", "titre": "Moisissures : contamination, investigation et réhabilitation", "formateur": "Claude Latulippe", "inscrits": 8, "max": 18 },
+      { "date": "2026-11-25", "titre": "Courriels efficaces : stratégies de gestion et outils numériques", "formateur": "Suzanne Saint-Laurent", "inscrits": 5, "max": 18 },
+      { "date": "2026-11-26", "titre": "Acoustique et insonorisation", "formateur": "Steve Davidson", "inscrits": 5, "max": 18 },
+      { "date": "2026-11-27", "titre": "Devis sur plan", "formateur": "Louis Réjean Gagné", "inscrits": 15, "max": 22 },
+      { "date": "2026-12-01", "titre": "Toitures : entretien et maintenance", "formateur": "Guy Lalonde", "inscrits": 3, "max": 22 },
+      { "date": "2026-12-02", "titre": "Projet BIM – se préparer et collaborer selon les standards actuels du marché public", "formateur": "Mahdi Remaoun (GLT)", "inscrits": 1, "max": 18 },
+      { "date": "2026-12-03", "titre": "Chantier : administration du marché et surveillance des travaux 1/2", "formateur": "Louis Réjean Gagné", "inscrits": 6, "max": 22 },
+      { "date": "2026-12-03", "titre": "Rédaction de devis des groupes de quincaillerie mécanique et électrifiée", "formateur": "Serge Lalancette", "inscrits": 2, "max": 18 },
+      { "date": "2026-12-04", "titre": "Murs végétaux – designs et intégrations", "formateur": "Antoine Trottier", "inscrits": 0, "max": 16 },
+      { "date": "2026-12-09", "titre": "Inspection des grands bâtiments – niveau 2", "formateur": "Claude Latulippe", "inscrits": 1, "max": 18 },
+      { "date": "2026-12-09", "titre": "Systèmes de murs-rideaux 1/2", "formateur": "Louis Fortin", "inscrits": 5, "max": 18 },
+      { "date": "2026-12-10", "titre": "Bâtiment durable, cycle de vie et choix de matériaux", "formateur": "Josée Lupien", "inscrits": 3, "max": 18 },
+      { "date": "2026-12-17", "titre": "Mécanique des sols", "formateur": "Benoît Rioux", "inscrits": 6, "max": 16 },
+      { "date": "2026-12-17", "titre": "Toitures : gestion des eaux pluviales", "formateur": "Guy Lalonde, Vincent Chartier", "inscrits": 1, "max": 22 }
+    ]
+  },
+
+  "pubs": {
+    "campagnes": [
+      {
+        "nom": "BOF ET TOF – Dernière chance NOV26",
+        "statut": "Programmée",
+        "debut": "2026-11-19T06:00",
+        "fin": "2026-11-24T23:59",
+        "budgetJour": 35,
+        "objectif": "Ventes (achat)",
+        "ensembles": ["TOF Québec Advantage+", "BOF reciblage"],
+        "pubs": "6 pubs : Moisissures, Courriels, Acoustique × TOF/BOF",
+        "utm": "utm_campaign=derniere_chance_nov26",
+        "calendrier": "Dernière chance"
+      },
+      {
+        "nom": "BOF ET TOF – TEASER Vendredi fou NOV26",
+        "statut": "Programmée",
+        "debut": "2026-11-23T06:00",
+        "fin": "2026-11-26T23:59",
+        "budgetJour": 37.5,
+        "objectif": "Trafic",
+        "ensembles": [],
+        "pubs": "",
+        "utm": "utm_campaign=vendredi_fou_2026",
+        "calendrier": "Teaser"
+      },
+      {
+        "nom": "Promo Vendredi fou",
+        "statut": "À venir",
+        "debut": "2026-11-27",
+        "fin": "2026-11-30",
+        "budgetTotal": 340,
+        "objectif": "−50 % sur toutes les formations",
+        "ensembles": [],
+        "pubs": "",
+        "utm": "",
+        "calendrier": "Promo −50 %"
+      }
+    ],
+    "reference": {
+      "nom": "Formations fin OCT26-NOV26",
+      "periode": "octobre",
+      "coutParAchat": 39.8
+    }
+  },
+
+  "infolettres": {
+    "derniers": [
+      { "date": "2026-11-17", "nom": "Hebdo Formations · Lancement hiver-printemps 2027", "ouverture": 31, "clic": 4 },
+      { "date": "2026-11-11", "nom": "Hebdo Formations", "ouverture": 30, "clic": 2 },
+      { "date": "2026-11-10", "nom": "Expo MTL (J-2) · Architectes et conception", "ouverture": 37, "clic": 1 },
+      { "date": "2026-11-10", "nom": "Expo MTL (J-2) · Entrepreneurs", "ouverture": 34, "clic": 1 },
+      { "date": "2026-11-10", "nom": "Expo MTL (J-2) · Gestionnaires immobiliers", "ouverture": 30, "clic": 2 },
+      { "date": "2026-11-10", "nom": "Expo MTL (J-2) · Autres professionnels", "ouverture": 26, "clic": 1 },
+      { "date": "2026-11-09", "nom": "Expo MTL · Relance grandes entreprises", "ouverture": 35, "clic": 3 }
+    ],
+    "base": { "contacts": 82314, "nouveaux7j": 86 },
+    "sept_jours": { "livraison": 99.7, "ouverture": 27.6, "clics": 4.1, "ctor": 14.8, "desabonnements": 0.1 },
+    "prochains": [
+      { "date": "2026-11-19", "nom": "Hebdo « Dernières places »", "statut": "À préparer" },
+      { "date": "2026-11-27", "nom": "Vendredi fou", "statut": "À préparer" },
+      { "date": "2026-11-30", "nom": "Cyber lundi", "statut": "À préparer" }
+    ]
+  },
+
+  "calendrier": { "debut": "2026-11-19", "fin": "2026-12-17" },
+
+  "note": "Version 1 : données relevées manuellement. Prochaine étape : connexion en direct (Meta Marketing API, Shopify, Dialog Insight)."
+}

@@ -1,0 +1,369 @@
+<!doctype html>
+<!--
+  OS Marketing Contech — tableau de bord (version 1)
+  ===================================================
+  Toutes les données affichées viennent de data.json (même dossier). Pour mettre à jour
+  le tableau de bord, on modifie seulement data.json : le HTML ne change pas.
+
+  Champs de data.json :
+  - updated            Date/heure ISO du dernier relevé (affichée dans le pied de page).
+  - today              Date ISO de référence (« aujourd'hui ») pour les tuiles et la frise.
+  - seuilConfirmation  Nombre d'inscrits au-dessous ou égal duquel une formation est « non confirmée » (rouge).
+  - kpis.achats        { valeur, periode, source, dernierRecu, qualiteCorrespondance } — achats suivis par le pixel Meta.
+  - kpis.depensePubs[] { label, parJour ($), depuis (date ISO) } — dépenses quotidiennes des pubs actives/programmées.
+  - formations         { source, releve, items[] }
+      items[] = { date (ISO), titre, formateur, inscrits, max }
+      Les « places à combler » = somme de (max − inscrits) sur toutes les formations listées.
+  - pubs.campagnes[]   { nom, statut ("Programmée" | "Active" | "À venir" | "Terminée"), debut, fin (ISO),
+                         budgetJour ($/jour) ou budgetTotal ($), objectif, ensembles[] (noms),
+                         pubs (texte), utm (texte), calendrier (libellé court affiché dans la frise) }
+  - pubs.reference     { nom, periode, coutParAchat ($) } — campagne de comparaison.
+  - infolettres.derniers[]  { date, nom, ouverture (%), clic (%) } — derniers envois Dialog Insight.
+  - infolettres.base        { contacts, nouveaux7j }
+  - infolettres.sept_jours  { livraison, ouverture, clics, ctor, desabonnements } (en %)
+  - infolettres.prochains[] { date, nom, statut } — le premier envoi futur alimente la tuile « Prochain envoi ».
+  - calendrier         { debut, fin } — bornes (ISO) de la frise ; elle combine pubs, infolettres à venir et formations.
+  - note               Texte affiché dans le pied de page.
+-->
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>OS Marketing Contech</title>
+<style>
+@font-face{font-family:Machina;src:url(fonts/machina-bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Helv;src:url(fonts/helvetica.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Helv;src:url(fonts/helvetica-bold.woff2) format("woff2");font-weight:700;font-display:swap}
+:root{
+  --cream:#F7F3ED;--grid:rgb(233,230,223);--ink:#111;--yel:#E8990F;
+  --blue:#86B8CE;--indigo:#5B618A;--sage:#86A397;--pink:#EF798A;--red:#B9314F;
+  --mut:#5f5a52;--line:#e2dcd1;--card:#fff;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;color:var(--ink);font:15px/1.5 Helv,Helvetica,Arial,sans-serif;
+  background-color:var(--cream);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:54px 54px}
+.w{max-width:1160px;margin:0 auto;padding:28px 24px 56px}
+h1,h2,h3{font-family:Machina,Helv,Helvetica,sans-serif;font-weight:700;margin:0;line-height:1.08;letter-spacing:-.01em}
+.k{font:700 11px/1.3 Helv,Helvetica,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--mut)}
+.o{color:var(--yel)}
+.num{font-variant-numeric:tabular-nums}
+
+/* En-tête */
+header{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  padding-bottom:22px;border-bottom:2px solid var(--ink);margin-bottom:34px}
+header img{height:38px;width:auto;display:block;margin-bottom:18px}
+header h1{font-size:clamp(30px,5vw,52px)}
+.hdr-r{text-align:right}
+.hdr-r .d{font-family:Machina,Helv,sans-serif;font-size:20px;margin-top:4px}
+
+/* Sections */
+section{margin-bottom:44px}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.sh h2{font-size:clamp(24px,3.2vw,32px)}
+.sh .k{max-width:100%}
+.card{background:var(--card);border:1px solid var(--line);border-radius:4px}
+.band{height:6px;background:var(--yel);border-radius:4px 4px 0 0}
+
+/* Tuiles KPI */
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.tile{padding:18px 20px 20px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.tile .v{font-family:Machina,Helv,sans-serif;font-size:clamp(34px,4vw,46px);line-height:1}
+.tile .v small{font-size:.45em;margin-left:4px}
+.tile .s{font-size:13px;color:var(--mut);line-height:1.45}
+.tile .s b{color:var(--ink)}
+.pill{display:inline-block;font:700 10.5px/1 Helv,sans-serif;letter-spacing:.12em;text-transform:uppercase;
+  padding:5px 8px;border-radius:99px;background:#f1ece3;color:var(--ink);white-space:nowrap;max-width:100%}
+.tile .pill{white-space:normal;line-height:1.25}
+.tile .row{display:flex;flex-wrap:wrap;gap:6px}
+.pill.y{background:var(--yel);color:#111}
+.pill.r{background:var(--red);color:#fff}
+.pill.b{background:var(--blue);color:#111}
+.pill.i{background:var(--indigo);color:#fff}
+.pill.g{background:var(--sage);color:#111}
+
+/* Tableau formations */
+.tbl{width:100%;border-collapse:collapse}
+.tbl th{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line)}
+.tbl td{padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:middle}
+.tbl tr:last-child td{border-bottom:0}
+.tbl .dt{white-space:nowrap;font-family:Machina,Helv,sans-serif;font-size:15px;width:92px}
+.tbl .ti{font-weight:700;line-height:1.35}
+.tbl .fo{color:var(--mut);font-size:13.5px}
+.fill{display:flex;align-items:center;gap:10px;min-width:180px}
+.bar{flex:1;height:8px;background:#efe9df;border-radius:99px;overflow:hidden;min-width:70px}
+.bar i{display:block;height:100%;background:var(--sage);border-radius:99px}
+.bar i.lo{background:var(--red)}
+.fill .n{font-size:13.5px;white-space:nowrap;min-width:46px;text-align:right}
+.fill .n.lo{color:var(--red);font-weight:700}
+.tag-nc{font:700 10px/1 Helv;letter-spacing:.12em;text-transform:uppercase;color:var(--red);white-space:nowrap}
+.legend{display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;font-size:12.5px;color:var(--mut)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+
+/* Pubs */
+.ads{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ad{padding:18px 20px 20px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.ad h3{font-size:19px;line-height:1.2;overflow-wrap:anywhere}
+.ad .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.ad dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-size:13.5px}
+.ad dt{color:var(--mut)}
+.ad dd{margin:0;min-width:0;overflow-wrap:anywhere}
+.ad code{font:12.5px/1.4 ui-monospace,Menlo,Consolas,monospace;background:#f4efe6;padding:2px 6px;border-radius:3px;overflow-wrap:anywhere}
+.ad.soon{background:transparent;border-style:dashed;border-color:#cfc6b6}
+.ref{margin-top:16px;padding:14px 20px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.ref .v{font-family:Machina,Helv,sans-serif;font-size:26px}
+
+/* Infolettres */
+.nl{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px}
+.nl-list{padding:6px 0}
+.nl-row{display:grid;grid-template-columns:70px minmax(0,1fr) 150px;gap:14px;align-items:center;padding:12px 20px;border-bottom:1px solid var(--line)}
+.nl-row:last-child{border-bottom:0}
+.nl-row .dt{font-family:Machina,Helv,sans-serif;font-size:14px;white-space:nowrap}
+.nl-row .nm{font-weight:700;line-height:1.35;min-width:0}
+.rates{display:flex;flex-direction:column;gap:5px}
+.rate{display:grid;grid-template-columns:52px 1fr 34px;gap:8px;align-items:center;font-size:12px;color:var(--mut)}
+.rate .bar{height:6px}
+.rate b{color:var(--ink);text-align:right;font-weight:700}
+.side{display:flex;flex-direction:column;gap:16px;min-width:0}
+.side .card{padding:18px 20px}
+.big{font-family:Machina,Helv,sans-serif;font-size:36px;line-height:1;margin:8px 0 4px}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px;margin-top:12px}
+.stats div{text-align:left;min-width:0}
+.stats .v{font-family:Machina,Helv,sans-serif;font-size:19px;line-height:1.1;white-space:nowrap}
+.stats .l{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.next li{display:flex;gap:12px;align-items:baseline;padding:8px 0;border-bottom:1px solid var(--line)}
+.next li:last-child{border-bottom:0}
+.next ul{list-style:none;margin:8px 0 0;padding:0}
+.next .dt{font-family:Machina,Helv,sans-serif;font-size:14px;min-width:62px;white-space:nowrap}
+.next .nm{flex:1;font-weight:700;min-width:0}
+
+/* Calendrier */
+.cal{padding:18px 20px 16px}
+.cal-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+.cal-grid{display:grid;position:relative;min-width:860px;row-gap:6px}
+.cal-day{font-size:11px;text-align:center;color:var(--mut);padding:4px 0 6px;border-left:1px solid var(--line);line-height:1.2}
+.cal-day b{display:block;font-family:Machina,Helv,sans-serif;font-size:14px;color:var(--ink)}
+.cal-day.we{background:#faf7f2}
+.cal-day.mon{border-left:2px solid var(--ink)}
+.cal-lane{font:700 10.5px/1.2 Helv;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);display:flex;align-items:center;padding-right:10px}
+.ev{border-radius:3px;font-size:11.5px;font-weight:700;line-height:1.2;padding:6px 8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0;align-self:center}
+.ev.pub{background:var(--yel);color:#111}
+.ev.pub.soon{background:repeating-linear-gradient(135deg,#f6d9a8 0 6px,#f9e6c4 6px 12px);color:#111;border:1px dashed var(--yel)}
+.ev.nl{background:var(--indigo);color:#fff;text-align:center;padding:6px 2px}
+.fm{display:flex;flex-direction:column;gap:3px;align-items:center;align-self:start;padding-top:2px}
+.fm i{width:22px;height:22px;border-radius:50%;background:var(--sage);color:#111;font:700 10px/22px Helv;text-align:center;font-style:normal;cursor:default}
+.fm i.lo{background:var(--red);color:#fff}
+.cal-today{font:700 10px/1 Helv;letter-spacing:.1em;text-transform:uppercase}
+.cal-hint{display:none;font-size:12px;color:var(--mut);margin-top:6px}
+
+footer{border-top:2px solid var(--ink);padding-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
+footer b{color:var(--ink)}
+.err{padding:20px;border:1px solid var(--red);color:var(--red);background:#fff}
+
+@media (max-width:1000px){
+  .tiles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ads{grid-template-columns:1fr 1fr}
+  .nl{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .w{padding:20px 16px 40px}
+  header{margin-bottom:26px}
+  .hdr-r{text-align:left}
+  .tiles{grid-template-columns:1fr 1fr;gap:10px}
+  .tile{padding:14px}
+  .tile .v{font-size:32px}
+  .ads{grid-template-columns:1fr}
+  /* Tableau -> cartes empilées */
+  .tbl thead{display:none}
+  .tbl,.tbl tbody,.tbl tr,.tbl td{display:block;width:100%}
+  .tbl tr{padding:12px 16px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:64px minmax(0,1fr);column-gap:10px}
+  .tbl tr:last-child{border-bottom:0}
+  .tbl td{padding:0;border:0}
+  .tbl .dt{grid-row:1/3;width:auto;font-size:14px;padding-top:2px}
+  .tbl td.fl{grid-column:2;margin-top:8px}
+  .fill{min-width:0}
+  .nl-row{grid-template-columns:56px minmax(0,1fr);padding:12px 16px}
+  .nl-row .rates{grid-column:2}
+  .cal{padding:14px 12px}
+  .cal-hint{display:block}
+}
+@media (max-width:380px){ .tiles{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+<div class="w">
+  <header>
+    <div>
+      <img src="logo.png" alt="Contech Bâtiment">
+      <div class="k">Tableau de bord marketing</div>
+      <h1>OS Marketing <span class="o">Contech</span></h1>
+    </div>
+    <div class="hdr-r">
+      <div class="k">Aujourd'hui</div>
+      <div class="d" id="today">—</div>
+    </div>
+  </header>
+
+  <main id="app"><p class="k">Chargement des données…</p></main>
+
+  <footer>
+    <div>Données mises à jour le <b id="updated">—</b></div>
+    <div id="note"></div>
+  </footer>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var MOIS=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+  var MOIS_L=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+  var JOURS=["dim.","lun.","mar.","mer.","jeu.","ven.","sam."];
+  var JOURS_L=["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+
+  function esc(s){return String(s==null?"":s).replace(/[&<>"']/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];});}
+  function d(iso){var p=String(iso).slice(0,10).split("-");return new Date(+p[0],+p[1]-1,+p[2]);}
+  function hm(iso){var m=String(iso).match(/T(\d\d):(\d\d)/);if(!m)return"";return (+m[1])+" h"+(m[2]==="00"?"":" "+m[2]);}
+  function fd(iso){var x=d(iso);return x.getDate()+(x.getDate()===1?"er":"")+" "+MOIS[x.getMonth()];}
+  function fdj(iso){var x=d(iso);return JOURS[x.getDay()]+" "+fd(iso);}
+  function money(n){var s=(Math.round(n*100)/100).toFixed(n%1?2:0).replace(".",",");return s.replace(/\B(?=(\d{3})+(?!\d))/g," ")+" $";}
+  function int(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g," ");}
+  function pct(n){return String(n).replace(".",",")+" %";}
+  function days(a,b){return Math.round((d(b)-d(a))/864e5);}
+
+  fetch("data.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
+  .then(render).catch(function(e){
+    document.getElementById("app").innerHTML='<div class="err">Impossible de charger data.json ('+esc(e.message)+').</div>';
+  });
+
+  function render(D){
+    var seuil=D.seuilConfirmation==null?5:D.seuilConfirmation;
+    var t=d(D.today);
+    document.getElementById("today").textContent=JOURS_L[t.getDay()]+" "+t.getDate()+" "+MOIS_L[t.getMonth()]+" "+t.getFullYear();
+    var up=new Date(D.updated);
+    document.getElementById("updated").textContent=isNaN(up)?D.updated:
+      up.getDate()+" "+MOIS_L[up.getMonth()]+" "+up.getFullYear()+" à "+up.getHours()+" h"+(up.getMinutes()?" "+String(up.getMinutes()).padStart(2,"0"):"");
+    document.getElementById("note").textContent=D.note||"";
+
+    var F=D.formations.items;
+    var html="";
+
+    /* 1. Aujourd'hui */
+    var A=D.kpis.achats, dep=D.kpis.depensePubs;
+    var depTot=dep.reduce(function(s,x){return s+x.parJour;},0);
+    var places=F.reduce(function(s,x){return s+Math.max(0,x.max-x.inscrits);},0);
+    var nc=F.filter(function(x){return x.inscrits<=seuil;}).length;
+    var nxt=(D.infolettres.prochains||[]).filter(function(x){return days(D.today,x.date)>=0;})[0];
+    html+='<section id="aujourdhui"><div class="sh"><h2>Aujourd’<span class="o">hui</span></h2><span class="k">Vue d’ensemble</span></div><div class="tiles">';
+    html+='<div class="card tile"><span class="k">Achats formations</span><div class="v num">'+int(A.valeur)+'</div>'+
+      '<div class="s">'+esc(A.periode)+' · '+esc(A.source)+'</div>'+
+      '<div class="row"><span class="pill g">Dernier reçu '+esc(A.dernierRecu)+'</span><span class="pill">Correspondance '+String(A.qualiteCorrespondance.toFixed(1)).replace(".",",")+'/10</span></div></div>';
+    html+='<div class="card tile"><span class="k">Dépense pubs / jour</span><div class="v num">'+money(depTot)+'</div><div class="s">'+
+      dep.map(function(x){return '<b>'+money(x.parJour)+'</b> '+esc(x.label)+(x.depuis?' (dès le '+fd(x.depuis)+')':'');}).join('<br>')+'</div></div>';
+    html+='<div class="card tile"><span class="k">Prochaine infolettre</span>'+(nxt?
+      '<div class="v">'+fd(nxt.date)+'</div><div class="s"><b>'+esc(nxt.nom)+'</b><br>'+JOURS_L[d(nxt.date).getDay()]+' · '+esc(nxt.statut||"")+'</div>':'<div class="s">Aucun envoi prévu</div>')+'</div>';
+    html+='<div class="card tile"><span class="k">Places à combler</span><div class="v num">'+int(places)+'</div><div class="s">'+F.length+' formations, '+
+      fd(F[0].date)+' → '+fd(F[F.length-1].date)+'<br><b style="color:var(--red)">'+nc+' non confirmées</b> (≤ '+seuil+' inscrits)</div></div>';
+    html+='</div></section>';
+
+    /* 2. Formations */
+    html+='<section id="formations"><div class="sh"><h2>Formations <span class="o">à venir</span></h2><span class="k">Source : '+esc(D.formations.source)+' · relevé le '+esc(D.formations.releve)+'</span></div>';
+    html+='<div class="card"><div class="band"></div><table class="tbl"><thead><tr><th class="k">Date</th><th class="k">Formation</th><th class="k">Inscrits / max</th></tr></thead><tbody>';
+    F.forEach(function(x){
+      var lo=x.inscrits<=seuil, w=x.max?Math.min(100,x.inscrits/x.max*100):0;
+      html+='<tr><td class="dt">'+fd(x.date)+'</td><td><div class="ti">'+esc(x.titre)+'</div><div class="fo">'+esc(x.formateur)+
+        (lo?' · <span class="tag-nc">Non confirmée</span>':'')+'</div></td>'+
+        '<td class="fl"><div class="fill"><div class="bar"><i class="'+(lo?'lo':'')+'" style="width:'+w.toFixed(1)+'%"></i></div><span class="n num'+(lo?' lo':'')+'">'+x.inscrits+' / '+x.max+'</span></div></td></tr>';
+    });
+    html+='</tbody></table></div><div class="legend"><span><i class="sw" style="background:var(--sage)"></i>Confirmée (plus de '+seuil+' inscrits)</span><span><i class="sw" style="background:var(--red)"></i>Non confirmée (≤ '+seuil+' inscrits)</span></div></section>';
+
+    /* 3. Pubs */
+    var P=D.pubs;
+    html+='<section id="pubs"><div class="sh"><h2>Pubs <span class="o">en cours</span></h2><span class="k">Meta Ads</span></div><div class="ads">';
+    P.campagnes.forEach(function(c){
+      var soon=c.statut==="À venir";
+      var pc=soon?"":(c.statut==="Active"?"g":"y");
+      var per=fd(c.debut)+(hm(c.debut)?" "+hm(c.debut):"")+" → "+fd(c.fin)+(hm(c.fin)?" "+hm(c.fin):"");
+      html+='<div class="card ad'+(soon?' soon':'')+'"><div class="row"><span class="pill '+pc+'">'+esc(c.statut)+'</span></div><h3>'+esc(c.nom)+'</h3><dl>';
+      html+='<dt>Période</dt><dd>'+per+'</dd>';
+      if(c.budgetJour!=null)html+='<dt>Budget</dt><dd><b>'+money(c.budgetJour)+'</b> / jour</dd>';
+      if(c.budgetTotal!=null)html+='<dt>Budget</dt><dd>≈ <b>'+money(c.budgetTotal)+'</b> prévu</dd>';
+      if(c.objectif)html+='<dt>'+(soon?'Offre':'Objectif')+'</dt><dd>'+esc(c.objectif)+'</dd>';
+      if(c.ensembles&&c.ensembles.length)html+='<dt>Ensembles</dt><dd>'+c.ensembles.length+' : '+c.ensembles.map(esc).join(', ')+'</dd>';
+      if(c.pubs)html+='<dt>Pubs</dt><dd>'+esc(c.pubs)+'</dd>';
+      if(c.utm)html+='<dt>UTM</dt><dd><code>'+esc(c.utm)+'</code></dd>';
+      html+='</dl></div>';
+    });
+    html+='</div>';
+    if(P.reference)html+='<div class="card ref"><span class="k">Référence · '+esc(P.reference.periode)+'</span><b>'+esc(P.reference.nom)+'</b><span style="flex:1"></span><span class="k">Coût par achat</span><span class="v num">'+money(P.reference.coutParAchat)+'</span></div>';
+    html+='</section>';
+
+    /* 4. Infolettres */
+    var N=D.infolettres, S=N.sept_jours;
+    var maxO=Math.max.apply(null,N.derniers.map(function(x){return x.ouverture;}).concat([40]));
+    html+='<section id="infolettres"><div class="sh"><h2><span class="o">Infolettres</span></h2><span class="k">Dialog Insight · derniers envois</span></div><div class="nl">';
+    html+='<div class="card nl-list">';
+    N.derniers.forEach(function(x){
+      html+='<div class="nl-row"><div class="dt">'+fd(x.date)+'</div><div class="nm">'+esc(x.nom)+'</div><div class="rates">'+
+        '<div class="rate"><span>Ouv.</span><div class="bar"><i style="width:'+(x.ouverture/maxO*100).toFixed(1)+'%;background:var(--blue)"></i></div><b class="num">'+x.ouverture+' %</b></div>'+
+        '<div class="rate"><span>Clic</span><div class="bar"><i style="width:'+(x.clic/maxO*100).toFixed(1)+'%;background:var(--yel)"></i></div><b class="num">'+x.clic+' %</b></div></div></div>';
+    });
+    html+='</div><div class="side">';
+    html+='<div class="card"><span class="k">Base de contacts</span><div class="big num">'+int(N.base.contacts)+'</div><div class="s" style="font-size:13px;color:var(--mut)"><b style="color:var(--ink)">+'+int(N.base.nouveaux7j)+'</b> nouveaux en 7 jours</div>'+
+      '<div class="k" style="margin-top:16px">7 derniers jours</div><div class="stats">'+
+      [["Livraison",S.livraison],["Ouverture",S.ouverture],["Clics",S.clics],["CTOR",S.ctor],["Désabo.",S.desabonnements]].map(function(p){return '<div><div class="v num">'+pct(p[1])+'</div><div class="l">'+p[0]+'</div></div>';}).join('')+'</div></div>';
+    html+='<div class="card next"><span class="k">Prochains envois · à préparer</span><ul>'+
+      N.prochains.map(function(x){return '<li><span class="dt">'+fdj(x.date).replace(/^(\S+) /,"$1 ")+'</span><span class="nm">'+esc(x.nom)+'</span></li>';}).join('')+'</ul></div>';
+    html+='</div></div></section>';
+
+    /* 5. Calendrier */
+    var C=D.calendrier, n=days(C.debut,C.fin)+1, start=d(C.debut);
+    var cols='120px repeat('+n+',minmax(26px,1fr))';
+    function col(iso){return days(C.debut,iso)+2;}
+    function inR(iso){var k=days(C.debut,iso);return k>=0&&k<n;}
+    var g='<div class="cal-grid" style="grid-template-columns:'+cols+'"><div></div>';
+    for(var i=0;i<n;i++){
+      var x=new Date(start.getFullYear(),start.getMonth(),start.getDate()+i);
+      var we=x.getDay()===0||x.getDay()===6, mon=x.getDay()===1;
+      var lab=(i===0||x.getDate()===1)?MOIS[x.getMonth()]:JOURS[x.getDay()].charAt(0).toUpperCase();
+      g+='<div class="cal-day'+(we?' we':'')+(mon?' mon':'')+'" style="grid-column:'+(i+2)+';grid-row:1">'+esc(lab)+'<b>'+x.getDate()+'</b></div>';
+    }
+    // Voie pubs : une ligne par campagne
+    var row=2;
+    g+='<div class="cal-lane" style="grid-row:'+row+'/'+(row+P.campagnes.length)+'">Pubs</div>';
+    P.campagnes.forEach(function(c,ix){
+      var a=Math.max(0,days(C.debut,c.debut)), b=Math.min(n-1,days(C.debut,c.fin));
+      if(b<0||a>n-1)return;
+      g+='<div class="ev pub'+(c.statut==="À venir"?' soon':'')+'" style="grid-row:'+(row+ix)+';grid-column:'+(a+2)+'/'+(b+3)+'" title="'+esc(c.nom+" · "+fd(c.debut)+" → "+fd(c.fin))+'">'+esc(c.calendrier||c.nom)+'</div>';
+    });
+    row+=P.campagnes.length;
+    // Voie infolettres
+    g+='<div class="cal-lane" style="grid-row:'+row+'">Infolettres</div>';
+    N.prochains.filter(function(x){return inR(x.date);}).forEach(function(x){
+      g+='<div class="ev nl" style="grid-row:'+row+';grid-column:'+col(x.date)+'" title="'+esc(fd(x.date)+" · "+x.nom)+'">✉</div>';
+    });
+    row++;
+    // Voie formations (pastilles groupées par jour)
+    g+='<div class="cal-lane" style="grid-row:'+row+'">Formations</div>';
+    var byDay={};
+    F.forEach(function(x){if(inR(x.date))(byDay[x.date]=byDay[x.date]||[]).push(x);});
+    Object.keys(byDay).forEach(function(k){
+      g+='<div class="fm" style="grid-row:'+row+';grid-column:'+col(k)+'">'+byDay[k].map(function(x){
+        var lo=x.inscrits<=seuil;
+        return '<i class="'+(lo?'lo':'')+'" title="'+esc(fd(x.date)+" · "+x.titre+" — "+x.inscrits+"/"+x.max)+'">'+x.inscrits+'</i>';
+      }).join('')+'</div>';
+    });
+    g+='</div>';
+    html+='<section id="calendrier"><div class="sh"><h2><span class="o">Calendrier</span></h2><span class="k">'+fd(C.debut)+' → '+fd(C.fin)+'</span></div>'+
+      '<div class="card cal"><div class="cal-scroll">'+g+'</div><div class="cal-hint">← Glisser pour voir toute la période →</div>'+
+      '<div class="legend"><span><i class="sw" style="background:var(--yel)"></i>Pub programmée</span><span><i class="sw" style="background:#f6d9a8;border:1px dashed var(--yel)"></i>Pub à venir</span><span><i class="sw" style="background:var(--indigo)"></i>Infolettre</span><span><i class="sw" style="background:var(--sage);border-radius:50%"></i>Formation (nb d’inscrits)</span><span><i class="sw" style="background:var(--red);border-radius:50%"></i>Non confirmée</span></div></div></section>';
+
+    document.getElementById("app").innerHTML=html;
+  }
+})();
+</script>
+</body>
+</html>
