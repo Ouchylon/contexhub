@@ -1,7 +1,8 @@
 name: Relevé Dialog Insight
 on:
   schedule:
-    - cron: "*/30 11-23 * * 1-5"   # aux 30 min, 6 h à 18 h (heure de Montréal), jours ouvrables
+    - cron: "7,37 11-23 * * 1-5"   # aux 30 min (h:07 et h:37), 6 h à 18 h (heure de Montréal), jours ouvrables
+    - cron: "17 0-3 * * 2-6"       # une fois l’heure le soir (19 h à 22 h)
   workflow_dispatch:
 permissions:
   contents: write
