@@ -185,11 +185,19 @@
  "infolettres": {
   "derniers": [
    {
+    "date": "2026-11-19",
+    "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
+    "envoyes": 19723,
+    "ouverture": 12.7,
+    "clic": 3.5,
+    "desabonnements": 12
+   },
+   {
     "date": "2026-11-17",
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "envoyes": 19762,
     "ouverture": 31.5,
-    "clic": 4.2,
+    "clic": 4.3,
     "desabonnements": 26
    },
    {
@@ -252,7 +260,7 @@
     "date": "2026-11-06",
     "nom": "Expo MTL 6 nov. 2026 (J-6) - Inscrits",
     "envoyes": 1137,
-    "ouverture": 55.4,
+    "ouverture": 55.5,
     "clic": 11.7,
     "desabonnements": 1
    },
@@ -271,14 +279,6 @@
     "ouverture": 30.8,
     "clic": 1.5,
     "desabonnements": 36
-   },
-   {
-    "date": "2026-11-02",
-    "nom": "Expo MTL 2 nov. 2026 (J-10)",
-    "envoyes": 19009,
-    "ouverture": 31.6,
-    "clic": 1.6,
-    "desabonnements": 20
    }
   ],
   "base": {
@@ -287,9 +287,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 31.5,
-   "clics": 4.2,
-   "ctor": 13.5,
+   "ouverture": 22.1,
+   "clics": 3.9,
+   "ctor": 17.5,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -305,9 +305,21 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-19T15:56-05:00",
+  "releve": "2026-11-19T17:58-05:00",
   "alertes": [],
   "tous": [
+   {
+    "id": 730127,
+    "date": "2026-11-19",
+    "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
+    "categorie": "Formations",
+    "envoyes": 19723,
+    "ouverture": 12.7,
+    "clic": 3.5,
+    "desabonnements": 12,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
+    "apercu": "nl/730127.html"
+   },
    {
     "id": 730126,
     "date": "2026-11-17",
@@ -315,7 +327,7 @@
     "categorie": "Formations",
     "envoyes": 19762,
     "ouverture": 31.5,
-    "clic": 4.2,
+    "clic": 4.3,
     "desabonnements": 26,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2665/IGwG33/lancement-hp2027-entete-v3.gif",
     "apercu": "nl/730126.html"
@@ -415,7 +427,7 @@
     "nom": "Expo MTL 6 nov. 2026 (J-6) - Inscrits",
     "categorie": "Expos",
     "envoyes": 1137,
-    "ouverture": 55.4,
+    "ouverture": 55.5,
     "clic": 11.7,
     "desabonnements": 1,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
