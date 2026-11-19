@@ -38,19 +38,52 @@ fmt = "%Y.%m.%d %H:%M:%S"
 res = call("sendings", "GetBatches", {
     "idProject": ID_PROJECT,
     "batchFilter": {"BatchFilterMode": "dtCreated",
-                    "dtCreated_Min": (now - dt.timedelta(days=45)).strftime(fmt),
+                    "dtCreated_Min": (now - dt.timedelta(days=90)).strftime(fmt),
                     "dtCreated_Max": now.strftime(fmt)}})
 batches = [b for b in res.get("BatchInfos") or []
            if not b.get("isTestBach") and not b.get("isCancelled") and b.get("dtFirstMessage")]
 
-names = {}
+names, contents = {}, {}
 for idm in {b["idMessage"] for b in batches}:
     try:
         m = call("messages", "Get", {"idProject": ID_PROJECT, "idMessage": idm}).get("Message") or {}
         names[idm] = m.get("Name") or f"Message {idm}"
+        try:
+            contents[idm] = m["MessageVersions"][0]["MessageBodies"][0]["Content"]
+        except (KeyError, IndexError, TypeError):
+            pass
     except SystemExit as e:
-        print("Nom introuvable", idm, e)
+        print("Message introuvable", idm, e)
         names[idm] = f"Message {idm}"
+
+# Aperçus : on remplace les images de la librairie par leur adresse publique,
+# on retire les liens suivis et les balises de personnalisation.
+OSDIR = os.path.join(os.path.dirname(__file__), "..", "os")
+IMG = json.load(open(os.path.join(OSDIR, "di_images.json")))
+GENERIC = {"2215", "1871", "1872", "1873", "2332", "1888", "2310"}
+import re
+def render(idm, html):
+    missing = []
+    def img(mo):
+        u = IMG.get(mo.group(1))
+        if not u:
+            missing.append(mo.group(1))
+            return "data:image/gif;base64,R0lGODlhAQABAAAAACw="
+        return u
+    h = re.sub(r"\[\[=?\s*Hosting\.Image\((\d+)\)\s*\]\]", img, html)
+    h = re.sub(r"\[\[=?\s*Message\.Link\([^\]]*\)\s*\]\]", "#", h)
+    h = re.sub(r"<!--\[\[.*?\]\]-->", "", h, flags=re.S)
+    h = re.sub(r"\[\[.*?\]\]", "", h, flags=re.S)
+    h = h.replace("<head>", '<head><meta name="robots" content="noindex"><base target="_blank">', 1)
+    path = os.path.join(OSDIR, "nl", f"{idm}.html")
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    open(path, "w", encoding="utf-8").write(h)
+    ids = re.findall(r"Hosting\.Image\((\d+)\)", html)
+    thumb = next((IMG[i] for i in ids if i in IMG and i not in GENERIC), None)
+    if missing:
+        print(f"{idm} : images sans adresse connue {sorted(set(missing))}")
+    return f"nl/{idm}.html", thumb
+previews = {idm: render(idm, c) for idm, c in contents.items()}
 
 rows = []
 for b in sorted(batches, key=lambda b: b["dtFirstMessage"], reverse=True)[:12]:
@@ -67,6 +100,25 @@ for b in sorted(batches, key=lambda b: b["dtFirstMessage"], reverse=True)[:12]:
 late = [b for b in res.get("BatchInfos") or [] if not b.get("isTestBach") and not b.get("isCancelled")
         and not b.get("dtFirstMessage") and b.get("dtLaunch")
         and b["dtLaunch"][:16] < now.strftime("%Y.%m.%d %H:%M")]
+
+# Liste complète, une ligne par infolettre (les envois d'une même infolettre sont additionnés)
+agg = {}
+for b in batches:
+    a = agg.setdefault(b["idMessage"], {"d": b["dtFirstMessage"], "dl": 0, "op": 0, "cl": 0, "ou": 0})
+    a["d"] = min(a["d"], b["dtFirstMessage"])
+    a["dl"] += b.get("Stats_DeliveredCount") or 0
+    a["op"] += b.get("Stats_ViewCount_Uniques") or 0
+    a["cl"] += b.get("Stats_ClickCount_Uniques") or 0
+    a["ou"] += b.get("Stats_OptoutCount") or 0
+tous = []
+for idm, a in agg.items():
+    nom = names.get(idm) or ""
+    ap, th = previews.get(idm, (None, None))
+    tous.append({"id": idm, "date": a["d"][:10].replace(".", "-"), "nom": nom,
+                 "categorie": "Formations" if re.search(r"hebdo|formation", nom, re.I) else "Expos",
+                 "envoyes": a["dl"], "ouverture": round(100 * a["op"] / a["dl"], 1) if a["dl"] else None,
+                 "clic": round(100 * a["cl"] / a["dl"], 1) if a["dl"] else None,
+                 "desabonnements": a["ou"], "vignette": th, "apercu": ap})
 # Moyennes des 7 derniers jours (pondérées par le nombre de courriels livrés)
 wk = [b for b in batches if b["dtFirstMessage"][:10] >= (now - dt.timedelta(days=7)).strftime("%Y.%m.%d")]
 dl = sum(b.get("Stats_DeliveredCount") or 0 for b in wk)
@@ -85,6 +137,13 @@ with open(DATA, encoding="utf-8") as f:
     data = json.load(f)
 if rows:
     data["infolettres"]["derniers"] = rows
+if tous:
+    prev = {x.get("id"): x for x in data["infolettres"].get("tous", [])}
+    for x in tous:  # garder les captures déjà associées (ex. bilan Expos)
+        if prev.get(x["id"], {}).get("capture"):
+            x["capture"] = prev[x["id"]]["capture"]
+    keep = [x for x in prev.values() if x.get("id") is None or x["id"] not in agg]
+    data["infolettres"]["tous"] = sorted(tous + keep, key=lambda x: x["date"], reverse=True)
     if sept:
         data["infolettres"]["sept_jours"] = sept
     data["infolettres"]["source"] = "Dialog Insight (API, relevé automatique)"

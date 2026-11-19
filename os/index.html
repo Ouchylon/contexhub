@@ -161,6 +161,28 @@ section{margin-bottom:44px}
 .cal-today{font:700 10px/1 Helv;letter-spacing:.1em;text-transform:uppercase}
 .cal-hint{display:none;font-size:12px;color:var(--mut);margin-top:6px}
 
+
+/* Galeries (infolettres, réseaux sociaux) */
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 14px}
+.tabs button{font:700 14px Helv,sans-serif;padding:9px 16px;border-radius:999px;border:2px solid var(--ink);background:#fff;color:var(--ink);cursor:pointer}
+.tabs button.on{background:var(--ink);color:#fff}
+.gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
+.gal[hidden]{display:none}
+.gc{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.gc .th{display:block;height:300px;overflow:hidden;background:#EFEFEF;border-bottom:1px solid var(--line)}
+.gc .th img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.gc .th.sq{height:auto;aspect-ratio:1/1}
+.gc .th .vide{display:flex;align-items:center;justify-content:center;height:100%;font-size:13px;color:var(--mut);padding:16px;text-align:center}
+.gc .bd{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.gc .k{font-size:11px}
+.gc h3{font:700 15px/1.3 Helv,sans-serif;margin:0}
+.gc .st{font-size:13px;color:var(--mut)}
+.gc .st b{color:var(--ink)}
+.gc .lk{margin-top:auto;font-size:13px;font-weight:700;color:var(--ink)}
+.gnote{font-size:13px;color:var(--mut);margin:0 0 12px}
+.sommaire{display:flex;gap:8px;flex-wrap:wrap;margin:-14px 0 28px}
+.sommaire a{font:700 13px Helv,sans-serif;color:var(--ink);text-decoration:none;border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 12px}
+
 footer{border-top:2px solid var(--ink);padding-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:var(--mut)}
 footer b{color:var(--ink)}
 .err{padding:20px;border:1px solid var(--red);color:var(--red);background:#fff}
@@ -236,7 +258,10 @@ footer b{color:var(--ink)}
   function pct(n){return String(n).replace(".",",")+" %";}
   function days(a,b){return Math.round((d(b)-d(a))/864e5);}
 
-  fetch("data.json",{cache:"no-store"}).then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
+  var SOC=null;
+  fetch("social.json",{cache:"no-store"}).then(function(r){return r.ok?r.json():null;}).catch(function(){return null;})
+  .then(function(s){SOC=s;return fetch("data.json",{cache:"no-store"});})
+  .then(function(r){if(!r.ok)throw new Error("HTTP "+r.status);return r.json();})
   .then(render).catch(function(e){
     document.getElementById("app").innerHTML='<div class="err">Impossible de charger data.json ('+esc(e.message)+').</div>';
   });
@@ -315,9 +340,9 @@ footer b{color:var(--ink)}
         '<div class="rate"><span>Clic</span><div class="bar"><i style="width:'+(x.clic/maxO*100).toFixed(1)+'%;background:var(--yel)"></i></div><b class="num">'+pc(x.clic)+'</b></div></div></div>';
     };
     var isF=function(x){return /hebdo|formation/i.test(x.nom||'');};
-    var F=N.derniers.filter(isF), X=N.derniers.filter(function(x){return !isF(x);});
-    if(F.length){html+='<div class="nl-grp">Formations</div>';F.forEach(row);}
-    if(X.length){html+='<div class="nl-grp">Expos</div>';X.forEach(row);}
+    var NF=N.derniers.filter(isF), NX=N.derniers.filter(function(x){return !isF(x);});
+    if(NF.length){html+='<div class="nl-grp">Formations</div>';NF.forEach(row);}
+    if(NX.length){html+='<div class="nl-grp">Expos</div>';NX.forEach(row);}
     html+='</div><div class="side">';
     html+='<div class="card"><span class="k">Base de contacts</span><div class="big num">'+int(N.base.contacts)+'</div><div class="s" style="font-size:13px;color:var(--mut)"><b style="color:var(--ink)">+'+int(N.base.nouveaux7j)+'</b> nouveaux en 7 jours</div>'+
       '<div class="k" style="margin-top:16px">7 derniers jours</div><div class="stats">'+
@@ -325,6 +350,36 @@ footer b{color:var(--ink)}
     html+='<div class="card next"><span class="k">Prochains envois · à préparer</span><ul>'+
       N.prochains.map(function(x){return '<li><span class="dt">'+fdj(x.date).replace(/^(\S+) /,"$1 ")+'</span><span class="nm">'+esc(x.nom)+'</span></li>';}).join('')+'</ul></div>';
     html+='</div></div></section>';
+
+    /* 4b. Toutes les infolettres, telles que reçues */
+    var T=(N.tous||[]);
+    var gcard=function(x){
+      var src=x.capture||x.vignette, open=x.apercu||x.capture||x.vignette;
+      var th=src?'<img src="'+esc(src)+'" alt="'+esc(x.nom)+'" loading="lazy">':'<span class="vide">Aperçu à venir</span>';
+      return '<div class="gc"><a class="th" href="'+esc(open||'#')+'" target="_blank" rel="noopener">'+th+'</a><div class="bd">'+
+        '<span class="k">'+fd(x.date)+(x.envoyes?' · '+int(x.envoyes)+' contacts':'')+'</span><h3>'+esc(x.nom)+'</h3>'+
+        (x.ouverture!=null?'<span class="st"><b>'+pc(x.ouverture)+'</b> ouverture · <b>'+pc(x.clic)+'</b> clics</span>':'')+
+        (open?'<a class="lk" href="'+esc(open)+'" target="_blank" rel="noopener">Ouvrir l’infolettre ↗</a>':'')+'</div></div>';
+    };
+    var TF=T.filter(function(x){return x.categorie==='Formations';}), TX=T.filter(function(x){return x.categorie!=='Formations';});
+    html+='<section id="toutes-infolettres"><div class="sh"><h2>Toutes les <span class="o">infolettres</span></h2><span class="k">Telles que reçues · cliquez pour ouvrir</span></div>'+
+      '<div class="tabs" data-g="nlg"><button class="on" data-t="nlg-f">Formations ('+TF.length+')</button><button data-t="nlg-x">Expos ('+TX.length+')</button></div>'+
+      '<div class="gal" id="nlg-f">'+TF.map(gcard).join('')+'</div><div class="gal" id="nlg-x" hidden>'+TX.map(gcard).join('')+'</div></section>';
+
+    /* 4c. Réseaux sociaux */
+    if(SOC){
+      var pcard=function(x,net){
+        return '<div class="gc"><a class="th sq" href="'+esc(x.url)+'" target="_blank" rel="noopener"><img src="'+esc(x.img)+'" alt="'+esc(x.titre)+'" loading="lazy"></a><div class="bd">'+
+          '<span class="k">'+esc(x.date)+' · '+net+'</span><h3>'+esc(x.titre)+'</h3>'+
+          '<a class="lk" href="'+esc(x.url)+'" target="_blank" rel="noopener">Voir la publication (réactions à jour) ↗</a></div></div>';
+      };
+      var FB=SOC.facebook||[], LI=SOC.linkedin||[];
+      html+='<section id="reseaux"><div class="sh"><h2>Réseaux <span class="o">sociaux</span></h2><span class="k">'+esc(SOC.source||'')+'</span></div>'+
+        '<p class="gnote">Cliquez sur une image pour ouvrir la vraie publication : les réactions et les commentaires y sont à jour. Facebook et LinkedIn peuvent demander d’être connecté.</p>'+
+        '<div class="tabs" data-g="soc"><button class="on" data-t="soc-fb">Facebook ('+FB.length+')</button><button data-t="soc-li">LinkedIn ('+LI.length+')</button></div>'+
+        '<div class="gal" id="soc-fb">'+FB.map(function(x){return pcard(x,'Facebook');}).join('')+'</div>'+
+        '<div class="gal" id="soc-li" hidden>'+LI.map(function(x){return pcard(x,'LinkedIn');}).join('')+'</div></section>';
+    }
 
     /* 5. Calendrier */
     var C=D.calendrier, n=days(C.debut,C.fin)+1, start=d(C.debut);
@@ -368,7 +423,15 @@ footer b{color:var(--ink)}
       '<div class="card cal"><div class="cal-scroll">'+g+'</div><div class="cal-hint">← Glisser pour voir toute la période →</div>'+
       '<div class="legend"><span><i class="sw" style="background:var(--yel)"></i>Pub programmée</span><span><i class="sw" style="background:#f6d9a8;border:1px dashed var(--yel)"></i>Pub à venir</span><span><i class="sw" style="background:var(--indigo)"></i>Infolettre</span><span><i class="sw" style="background:var(--sage);border-radius:50%"></i>Formation (nb d’inscrits)</span><span><i class="sw" style="background:var(--red);border-radius:50%"></i>Non confirmée</span></div></div></section>';
 
-    document.getElementById("app").innerHTML=html;
+    var som='<nav class="sommaire">'+[["aujourdhui","Aujourd’hui"],["formations","Formations"],["pubs","Pubs"],["infolettres","Infolettres"],["toutes-infolettres","Toutes les infolettres"],["reseaux","Réseaux sociaux"],["calendrier","Calendrier"]]
+      .filter(function(a){return html.indexOf('id="'+a[0]+'"')>=0;}).map(function(a){return '<a href="#'+a[0]+'">'+a[1]+'</a>';}).join('')+'</nav>';
+    document.getElementById("app").innerHTML=som+html;
+    document.querySelectorAll(".tabs").forEach(function(tb){
+      tb.addEventListener("click",function(e){
+        var b=e.target.closest("button"); if(!b)return;
+        tb.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b);document.getElementById(x.dataset.t).hidden=(x!==b);});
+      });
+    });
   }
 })();
 </script>

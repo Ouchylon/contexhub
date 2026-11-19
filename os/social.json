@@ -1,0 +1,554 @@
+{
+ "source": "Bilan Expos 2026 (captures du 14 nov.)",
+ "maj": "2026-11-14",
+ "facebook": [
+  {
+   "date": "13 nov.",
+   "titre": "Merci, Montréal!",
+   "url": "https://www.facebook.com/583689035016826_1571192571713461",
+   "img": "../bilan/img/posts/fb-03.jpg"
+  },
+  {
+   "date": "12 nov.",
+   "titre": "iPhone 17 à gagner (dernière chance)",
+   "url": "https://www.facebook.com/583689035016826_1570264748472910",
+   "img": "../bilan/img/posts/fb-04.jpg"
+  },
+  {
+   "date": "12 nov.",
+   "titre": "Reel « C'est aujourd'hui »",
+   "url": "https://www.facebook.com/583689035016826_1570157758483609",
+   "img": "../bilan/img/posts/fb-05.jpg"
+  },
+  {
+   "date": "12 nov.",
+   "titre": "Animation Norbec",
+   "url": "https://www.facebook.com/583689035016826_1570023451830373",
+   "img": "../bilan/img/posts/fb-06.jpg"
+  },
+  {
+   "date": "12 nov.",
+   "titre": "C'est aujourd'hui!",
+   "url": "https://www.facebook.com/583689035016826_1569911905174861",
+   "img": "../bilan/img/posts/fb-07.jpg"
+  },
+  {
+   "date": "11 nov.",
+   "titre": "Reel entrevue Cecobois",
+   "url": "https://www.facebook.com/583689035016826_1569303215235730",
+   "img": "../bilan/img/posts/fb-08.jpg"
+  },
+  {
+   "date": "11 nov.",
+   "titre": "Conférence Les leaders de la construction",
+   "url": "https://www.facebook.com/583689035016826_1569241275241924",
+   "img": "../bilan/img/posts/fb-09.jpg"
+  },
+  {
+   "date": "11 nov.",
+   "titre": "C'est demain!",
+   "url": "https://www.facebook.com/583689035016826_1569052861927432",
+   "img": "../bilan/img/posts/fb-11.jpg"
+  },
+  {
+   "date": "11 nov.",
+   "titre": "Salle St-Laurent",
+   "url": "https://www.facebook.com/583689035016826_1568939205272131",
+   "img": "../bilan/img/posts/fb-12.jpg"
+  },
+  {
+   "date": "10 nov.",
+   "titre": "Reel « Comment se rendre »",
+   "url": "https://www.facebook.com/583689035016826_1568139095352142",
+   "img": "../bilan/img/posts/fb-13.jpg"
+  },
+  {
+   "date": "10 nov.",
+   "titre": "Reel entrevue Traceo",
+   "url": "https://www.facebook.com/583689035016826_1568082102024508",
+   "img": "../bilan/img/posts/fb-14.jpg"
+  },
+  {
+   "date": "10 nov.",
+   "titre": "Salle Codex-BIM",
+   "url": "https://www.facebook.com/583689035016826_1568016878697697",
+   "img": "../bilan/img/posts/fb-15.jpg"
+  },
+  {
+   "date": "10 nov.",
+   "titre": "Conférence IA et design",
+   "url": "https://www.facebook.com/583689035016826_1567763782056340",
+   "img": "../bilan/img/posts/fb-17.jpg"
+  },
+  {
+   "date": "10 nov.",
+   "titre": "Résilience climatique",
+   "url": "https://www.facebook.com/583689035016826_1567641692068549",
+   "img": "../bilan/img/posts/fb-18.jpg"
+  },
+  {
+   "date": "9 nov.",
+   "titre": "Reel J-3",
+   "url": "https://www.facebook.com/583689035016826_1566929905473061",
+   "img": "../bilan/img/posts/fb-19.jpg"
+  },
+  {
+   "date": "9 nov.",
+   "titre": "Reel Guillaume Fafard",
+   "url": "https://www.facebook.com/583689035016826_1566887838810601",
+   "img": "../bilan/img/posts/fb-20.jpg"
+  },
+  {
+   "date": "9 nov.",
+   "titre": "Conférence RBQ",
+   "url": "https://www.facebook.com/583689035016826_1566735265492525",
+   "img": "../bilan/img/posts/fb-21.jpg"
+  },
+  {
+   "date": "9 nov.",
+   "titre": "Invitation de Lita",
+   "url": "https://www.facebook.com/583689035016826_1566660558833329",
+   "img": "../bilan/img/posts/fb-23.jpg"
+  },
+  {
+   "date": "9 nov.",
+   "titre": "Reel Gilles Elhadad",
+   "url": "https://www.facebook.com/583689035016826_1566547975511254",
+   "img": "../bilan/img/posts/fb-24.jpg"
+  },
+  {
+   "date": "9 nov.",
+   "titre": "Venez en équipe",
+   "url": "https://www.facebook.com/583689035016826_1566268578872527",
+   "img": "../bilan/img/posts/fb-25.jpg"
+  },
+  {
+   "date": "8 nov.",
+   "titre": "Reel témoignages participantes",
+   "url": "https://www.facebook.com/583689035016826_1565487852283933",
+   "img": "../bilan/img/posts/fb-26.jpg"
+  },
+  {
+   "date": "8 nov.",
+   "titre": "iPhone 17 à gagner",
+   "url": "https://www.facebook.com/583689035016826_1565258372306881",
+   "img": "../bilan/img/posts/fb-27.jpg"
+  },
+  {
+   "date": "7 nov.",
+   "titre": "Salle Carrières St-Dominique",
+   "url": "https://www.facebook.com/583689035016826_1564380635727988",
+   "img": "../bilan/img/posts/fb-28.jpg"
+  },
+  {
+   "date": "6 nov.",
+   "titre": "Photo de couverture Montréal",
+   "url": "https://www.facebook.com/583689035016826_1562334939265891",
+   "img": "../bilan/img/posts/fb-29.jpg"
+  },
+  {
+   "date": "5 nov.",
+   "titre": "Reel « Jeudi prochain »",
+   "url": "https://www.facebook.com/583689035016826_1561982619301123",
+   "img": "../bilan/img/posts/fb-30.jpg"
+  },
+  {
+   "date": "30 oct.",
+   "titre": "Deux zones à découvrir",
+   "url": "https://www.facebook.com/583689035016826_1555140629985322",
+   "img": "../bilan/img/posts/fb-33.jpg"
+  },
+  {
+   "date": "29 oct.",
+   "titre": "Reel « Une journée à l'Expo »",
+   "url": "https://www.facebook.com/583689035016826_1553858363446882",
+   "img": "../bilan/img/posts/fb-35.jpg"
+  },
+  {
+   "date": "28 oct.",
+   "titre": "Architectes, technologues",
+   "url": "https://www.facebook.com/583689035016826_1553315953501123",
+   "img": "../bilan/img/posts/fb-36.jpg"
+  },
+  {
+   "date": "27 oct.",
+   "titre": "Événement Facebook Montréal",
+   "url": "https://www.facebook.com/583689035016826_1632728138062460",
+   "img": "../bilan/img/posts/fb-39.jpg"
+  },
+  {
+   "date": "27 oct.",
+   "titre": "30 conférences, une journée",
+   "url": "https://www.facebook.com/583689035016826_1551689883663730",
+   "img": "../bilan/img/posts/fb-41.jpg"
+  },
+  {
+   "date": "26 oct.",
+   "titre": "Merci, Québec!",
+   "url": "https://www.facebook.com/583689035016826_1550815130417872",
+   "img": "../bilan/img/posts/fb-43.jpg"
+  },
+  {
+   "date": "24 oct.",
+   "titre": "Reel « Dans 19 jours »",
+   "url": "https://www.facebook.com/583689035016826_1549113890587996",
+   "img": "../bilan/img/posts/fb-45.jpg"
+  },
+  {
+   "date": "22 oct.",
+   "titre": "Partage ACO Canada (exposant)",
+   "url": "https://www.facebook.com/583689035016826_1546902050809180",
+   "img": "../bilan/img/posts/fb-46.jpg"
+  },
+  {
+   "date": "22 oct.",
+   "titre": "C'est aujourd'hui! (Québec)",
+   "url": "https://www.facebook.com/583689035016826_1546800514152667",
+   "img": "../bilan/img/posts/fb-47.jpg"
+  },
+  {
+   "date": "22 oct.",
+   "titre": "Reel « C'est aujourd'hui » Québec",
+   "url": "https://www.facebook.com/583689035016826_1546667484165970",
+   "img": "../bilan/img/posts/fb-48.jpg"
+  },
+  {
+   "date": "21 oct.",
+   "titre": "C'est demain! (Québec)",
+   "url": "https://www.facebook.com/583689035016826_1546169684215750",
+   "img": "../bilan/img/posts/fb-49.jpg"
+  },
+  {
+   "date": "20 oct.",
+   "titre": "Votre journée à l'Expo Québec",
+   "url": "https://www.facebook.com/583689035016826_1545187610980624",
+   "img": "../bilan/img/posts/fb-50.jpg"
+  },
+  {
+   "date": "19 oct.",
+   "titre": "Plus que 3 jours",
+   "url": "https://www.facebook.com/583689035016826_1544177371081648",
+   "img": "../bilan/img/posts/fb-52.jpg"
+  },
+  {
+   "date": "19 oct.",
+   "titre": "Reel J-3 Québec",
+   "url": "https://www.facebook.com/583689035016826_1544078594424859",
+   "img": "../bilan/img/posts/fb-53.jpg"
+  },
+  {
+   "date": "17 oct.",
+   "titre": "Ce jeudi, on se voit",
+   "url": "https://www.facebook.com/583689035016826_1541987421300643",
+   "img": "../bilan/img/posts/fb-56.jpg"
+  },
+  {
+   "date": "17 oct.",
+   "titre": "Reel « Voici l'Expo Québec »",
+   "url": "https://www.facebook.com/583689035016826_1541923194640399",
+   "img": "../bilan/img/posts/fb-57.jpg"
+  },
+  {
+   "date": "17 oct.",
+   "titre": "Merci à nos partenaires",
+   "url": "https://www.facebook.com/583689035016826_1541647528001299",
+   "img": "../bilan/img/posts/fb-58.jpg"
+  },
+  {
+   "date": "16 oct.",
+   "titre": "Lancement Montréal",
+   "url": "https://www.facebook.com/583689035016826_1540993724733346",
+   "img": "../bilan/img/posts/fb-59.jpg"
+  },
+  {
+   "date": "15 oct.",
+   "titre": "Lanières : à chacun sa couleur",
+   "url": "https://www.facebook.com/583689035016826_1539943524838366",
+   "img": "../bilan/img/posts/fb-61.jpg"
+  },
+  {
+   "date": "15 oct.",
+   "titre": "J-7 Québec",
+   "url": "https://www.facebook.com/583689035016826_1539845251514860",
+   "img": "../bilan/img/posts/fb-62.jpg"
+  },
+  {
+   "date": "9 oct.",
+   "titre": "Conférence de fermeture Québec",
+   "url": "https://www.facebook.com/583689035016826_1533280902171295",
+   "img": "../bilan/img/posts/fb-63.jpg"
+  },
+  {
+   "date": "8 oct.",
+   "titre": "Conférence d'ouverture Québec 2035",
+   "url": "https://www.facebook.com/583689035016826_1532231538942898",
+   "img": "../bilan/img/posts/fb-64.jpg"
+  },
+  {
+   "date": "5 oct.",
+   "titre": "Commanditaire Fabrication St-Laurent",
+   "url": "https://www.facebook.com/583689035016826_1529387892560596",
+   "img": "../bilan/img/posts/fb-67.jpg"
+  },
+  {
+   "date": "2 oct.",
+   "titre": "Tout savoir pour l'Expo Québec",
+   "url": "https://www.facebook.com/583689035016826_1526435729522479",
+   "img": "../bilan/img/posts/fb-68.jpg"
+  },
+  {
+   "date": "30 sept.",
+   "titre": "L'an dernier, vous étiez nombreux",
+   "url": "https://www.facebook.com/583689035016826_1524533266379392",
+   "img": "../bilan/img/posts/fb-69.jpg"
+  },
+  {
+   "date": "29 sept.",
+   "titre": "Conférences gratuites à Québec",
+   "url": "https://www.facebook.com/583689035016826_1523157116517007",
+   "img": "../bilan/img/posts/fb-72.jpg"
+  },
+  {
+   "date": "25 sept.",
+   "titre": "Reel « Dans moins d'un mois »",
+   "url": "https://www.facebook.com/583689035016826_1520340043465381",
+   "img": "../bilan/img/posts/fb-74.jpg"
+  }
+ ],
+ "linkedin": [
+  {
+   "date": "13 nov.",
+   "titre": "Merci, Montréal",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7527030101490761729/",
+   "img": "../bilan/img/posts/li-74.jpg"
+  },
+  {
+   "date": "12 nov.",
+   "titre": "iPhone 17 (dernière chance)",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526720615437877249/",
+   "img": "../bilan/img/posts/li-75.jpg"
+  },
+  {
+   "date": "12 nov.",
+   "titre": "Vidéo « C'est aujourd'hui »",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526690451370795008/",
+   "img": "../bilan/img/posts/li-76.jpg"
+  },
+  {
+   "date": "12 nov.",
+   "titre": "Norbec : Parlons toit",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526653145511448576/",
+   "img": "../bilan/img/posts/li-77.jpg"
+  },
+  {
+   "date": "12 nov.",
+   "titre": "C'est aujourd'hui",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526622955129405440/",
+   "img": "../bilan/img/posts/li-78.jpg"
+  },
+  {
+   "date": "11 nov.",
+   "titre": "Les leaders de la construction",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526358328936079361/",
+   "img": "../bilan/img/posts/li-79.jpg"
+  },
+  {
+   "date": "11 nov.",
+   "titre": "C'est demain",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526299717358575616/",
+   "img": "../bilan/img/posts/li-80.jpg"
+  },
+  {
+   "date": "11 nov.",
+   "titre": "Entrevue Cecobois",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7526271492020600832/",
+   "img": "../bilan/img/posts/li-81.jpg"
+  },
+  {
+   "date": "11 nov.",
+   "titre": "Entrevue Traceo",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525996123589697536/",
+   "img": "../bilan/img/posts/li-82.jpg"
+  },
+  {
+   "date": "10 nov.",
+   "titre": "Accès et stationnement",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525965611638620161/",
+   "img": "../bilan/img/posts/li-83.jpg"
+  },
+  {
+   "date": "10 nov.",
+   "titre": "Quand l'IA sait créer",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525951464700162048/",
+   "img": "../bilan/img/posts/li-84.jpg"
+  },
+  {
+   "date": "10 nov.",
+   "titre": "Montréal 2035",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525939078152978432/",
+   "img": "../bilan/img/posts/li-85.jpg"
+  },
+  {
+   "date": "10 nov.",
+   "titre": "Résilience climatique",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525913021202948096/",
+   "img": "../bilan/img/posts/li-86.jpg"
+  },
+  {
+   "date": "10 nov.",
+   "titre": "Entrevue Guillaume Fafard",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525909065479245824/",
+   "img": "../bilan/img/posts/li-87.jpg"
+  },
+  {
+   "date": "9 nov.",
+   "titre": "J-3 Montréal",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525648426823311361/",
+   "img": "../bilan/img/posts/li-88.jpg"
+  },
+  {
+   "date": "9 nov.",
+   "titre": "Entrevue Gilles Elhadad",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525618764726509568/",
+   "img": "../bilan/img/posts/li-89.jpg"
+  },
+  {
+   "date": "9 nov.",
+   "titre": "Témoignages participants",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7525546589235613696/",
+   "img": "../bilan/img/posts/li-90.jpg"
+  },
+  {
+   "date": "5 nov.",
+   "titre": "Jeudi prochain",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7524154505937223683/",
+   "img": "../bilan/img/posts/li-91.jpg"
+  },
+  {
+   "date": "28 oct.",
+   "titre": "Une journée à l'Expo",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7521557603852660736/",
+   "img": "../bilan/img/posts/li-92.jpg"
+  },
+  {
+   "date": "27 oct.",
+   "titre": "Événement LinkedIn Montréal",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7520986997943934976/",
+   "img": "../bilan/img/posts/li-93.jpg"
+  },
+  {
+   "date": "26 oct.",
+   "titre": "Merci Québec, cap sur Montréal",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7520472470987128832/",
+   "img": "../bilan/img/posts/li-94.jpg"
+  },
+  {
+   "date": "22 oct.",
+   "titre": "5 raisons de venir",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519382635274604544/",
+   "img": "../bilan/img/posts/li-95.jpg"
+  },
+  {
+   "date": "22 oct.",
+   "titre": "C'est aujourd'hui (Québec)",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519027331810750465/",
+   "img": "../bilan/img/posts/li-96.jpg"
+  },
+  {
+   "date": "21 oct.",
+   "titre": "Vidéo « C'est aujourd'hui » Québec",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7519066117525422080/",
+   "img": "../bilan/img/posts/li-97.jpg"
+  },
+  {
+   "date": "21 oct.",
+   "titre": "Norbec, zone réseautage",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518748500654739457/",
+   "img": "../bilan/img/posts/li-98.jpg"
+  },
+  {
+   "date": "20 oct.",
+   "titre": "Demain, on ouvre les portes",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518657560862670848/",
+   "img": "../bilan/img/posts/li-99.jpg"
+  },
+  {
+   "date": "20 oct.",
+   "titre": "L'Expo Québec en images",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518385689755934721/",
+   "img": "../bilan/img/posts/li-100.jpg"
+  },
+  {
+   "date": "20 oct.",
+   "titre": "Votre journée",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518340895344218112/",
+   "img": "../bilan/img/posts/li-101.jpg"
+  },
+  {
+   "date": "19 oct.",
+   "titre": "J-3 Québec",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7518053675664031744/",
+   "img": "../bilan/img/posts/li-102.jpg"
+  },
+  {
+   "date": "19 oct.",
+   "titre": "Plus que 3 jours",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7517979585070841856/",
+   "img": "../bilan/img/posts/li-103.jpg"
+  },
+  {
+   "date": "16 oct.",
+   "titre": "À chacun sa couleur",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516936310016659456/",
+   "img": "../bilan/img/posts/li-104.jpg"
+  },
+  {
+   "date": "16 oct.",
+   "titre": "Le rendez-vous du grand bâtiment",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516891085823025153/",
+   "img": "../bilan/img/posts/li-105.jpg"
+  },
+  {
+   "date": "15 oct.",
+   "titre": "J-7 Québec",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7516588816284082176/",
+   "img": "../bilan/img/posts/li-106.jpg"
+  },
+  {
+   "date": "8 oct.",
+   "titre": "Québec 2035",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7513947448910823424/",
+   "img": "../bilan/img/posts/li-107.jpg"
+  },
+  {
+   "date": "30 sept.",
+   "titre": "À mettre à votre agenda",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7511152941052088321/",
+   "img": "../bilan/img/posts/li-108.jpg"
+  },
+  {
+   "date": "28 sept.",
+   "titre": "Conférences gratuites Québec",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7510730867493801984/",
+   "img": "../bilan/img/posts/li-110.jpg"
+  },
+  {
+   "date": "22 sept.",
+   "titre": "Dans moins d'un mois",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7509733606467100672/",
+   "img": "../bilan/img/posts/li-111.jpg"
+  },
+  {
+   "date": "17 sept.",
+   "titre": "Moins de 20 espaces (Patrick)",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7507091213586604032/",
+   "img": "../bilan/img/posts/li-112.jpg"
+  },
+  {
+   "date": "16 sept.",
+   "titre": "Du nouveau aux Expos",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7506321483183497216/",
+   "img": "../bilan/img/posts/li-113.jpg"
+  }
+ ]
+}
