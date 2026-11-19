@@ -1575,5 +1575,35 @@
     "profit": -375.0
    }
   ]
+ },
+ "fraicheur": {
+  "ventes": {
+   "mode": "manuel",
+   "quand": "2026-11-19T17:00",
+   "source": "Coûts et revenus Contech 2026 (SharePoint)"
+  },
+  "formations": {
+   "mode": "manuel",
+   "quand": "2026-11-19T17:00",
+   "source": "Tableau de bord A2026 (SharePoint)"
+  },
+  "pubs": {
+   "mode": "manuel",
+   "quand": "2026-11-19T18:30",
+   "source": "Meta Ads Manager"
+  },
+  "infolettres": {
+   "mode": "auto",
+   "source": "Dialog Insight (API)"
+  },
+  "toutes-infolettres": {
+   "mode": "auto",
+   "source": "Dialog Insight (API)"
+  },
+  "reseaux": {
+   "mode": "manuel",
+   "quand": "2026-11-19T18:00",
+   "source": "Meta Business Suite · LinkedIn"
+  }
  }
 }

@@ -168,6 +168,12 @@ section{margin-bottom:44px}
 .tabs button.on{background:var(--ink);color:#fff}
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
 .gal[hidden]{display:none}
+.fr{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:12.5px;color:var(--mut);background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;margin:-6px 0 14px}
+.fr b{color:var(--ink)}
+.fr-d{width:8px;height:8px;border-radius:50%;background:#3a9b5c;flex:none}
+.fr.ok .fr-d{box-shadow:0 0 0 3px rgba(58,155,92,.18)}
+.fr.old .fr-d{background:#d08a1a}
+.fr.old i{color:#b5651d;font-style:normal;font-weight:700}
 .crea{margin-top:18px}
 .crea .sh2{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:10px}
 .crea h3{font-size:19px}
@@ -521,6 +527,7 @@ footer b{color:var(--ink)}
       .filter(function(a){return html.indexOf('id="'+a[0]+'"')>=0;}).map(function(a){return '<a href="#'+a[0]+'">'+a[1]+'</a>';}).join('')+'</nav>';
     document.getElementById("app").innerHTML=som+html;
     if(D.ventes) window.vtInit(D.ventes,D.today);
+    window.fraicheur(D);
     document.querySelectorAll(".tabs:not(.vt-per)").forEach(function(tb){
       tb.addEventListener("click",function(e){
         var b=e.target.closest("button"); if(!b)return;
@@ -593,6 +600,19 @@ window.vtInit=function(V,todayIso){
   bar.addEventListener("click",function(ev){var b=ev.target.closest("button");if(!b)return;bar.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b);});per.hidden=b.dataset.p!=="perso";draw(b.dataset.p);});
   ["vt-du","vt-au"].forEach(function(id){document.getElementById(id).addEventListener("change",function(){draw("perso");});});
   draw("mois");
+};
+
+window.fraicheur=function(D){
+  var Fr=D.fraicheur||{}, now=new Date();
+  Object.keys(Fr).forEach(function(id){
+    var f=Fr[id], sec=document.getElementById(id); if(!sec)return; var sh=sec.querySelector('.sh'); if(!sh)return;
+    var q=f.mode==='auto'?(D.infolettres&&D.infolettres.releve):f.quand; var t=q?new Date(q):null;
+    var h=t?(now-t)/36e5:999, lim=f.mode==='auto'?2:24, ok=h<=lim;
+    var ago=!t?'—':h<1?'il y a '+Math.max(1,Math.round(h*60))+' min':h<24?'il y a '+Math.round(h)+' h':'le '+t.getDate()+' '+["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."][t.getMonth()]+' à '+t.getHours()+' h';
+    var b=document.createElement('div'); b.className='fr '+(ok?'ok':'old');
+    b.innerHTML='<span class="fr-d"></span><b>'+(f.mode==='auto'?'Connecté · mise à jour automatique':'Relevé manuel')+'</b> · '+ago+' · '+f.source+(ok?'':' · <i>à rafraîchir</i>');
+    sh.insertAdjacentElement('afterend',b);
+  });
 };
 </script>
 </body>
