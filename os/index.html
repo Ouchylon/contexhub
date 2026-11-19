@@ -168,6 +168,35 @@ section{margin-bottom:44px}
 .tabs button.on{background:var(--ink);color:#fff}
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
 .gal[hidden]{display:none}
+.vt-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
+.vt-perso label{font-size:13px;color:var(--mut)}
+.vt-perso input{font:14px Helv,sans-serif;padding:5px 8px;border:1px solid var(--line);border-radius:4px;background:#fff}
+.vt-kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin-bottom:14px}
+.vt-kpis .card{padding:14px 16px}
+.vt-kpis .v{font:700 28px/1.1 Machina,Helv,sans-serif;margin:6px 0 4px}
+.vt-kpis .s{font-size:12.5px;color:var(--mut)}
+.vt-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:12px}
+@media(max-width:860px){.vt-grid{grid-template-columns:1fr}}
+.vt-chart{padding:16px}
+.vt-bars{display:flex;align-items:flex-end;gap:6px;height:190px;border-bottom:1px solid var(--line);padding-top:8px}
+.vt-m{flex:1;display:flex;align-items:flex-end;justify-content:center;gap:2px;height:100%;position:relative;cursor:default}
+.vt-m i{display:block;width:42%;border-radius:3px 3px 0 0}
+.vt-m i.b{background:#e7e1d6}
+.vt-m i.r{background:var(--yel)}
+.vt-m.cur i.r{background:#111}
+.vt-lab{display:flex;gap:6px;margin-top:6px}
+.vt-lab span{flex:1;text-align:center;font-size:11px;color:var(--mut)}
+.vt-tip{position:absolute;bottom:100%;left:50%;transform:translateX(-50%);background:#111;color:#fff;font-size:12px;padding:6px 8px;border-radius:4px;white-space:nowrap;display:none;z-index:3;margin-bottom:6px}
+.vt-m:hover .vt-tip{display:block}
+.vt-list{padding:6px 0;max-height:300px;overflow:auto}
+.vt-list table{width:100%;border-collapse:collapse;font-size:13.5px}
+.vt-list td{padding:7px 14px;border-top:1px solid var(--line);vertical-align:top}
+.vt-list td.r{text-align:right;white-space:nowrap}
+.vt-list tr:first-child td{border-top:0}
+.vt-list td:first-child{white-space:nowrap}
+@media(max-width:480px){.vt-kpis .v{font-size:22px}}
+#ventes .gnote{margin-top:10px}
+.vt-empty{padding:16px;color:var(--mut);font-size:14px}
 .gal.nlgal{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
 .gc.nl .bd{flex:0 0 auto}
 .nlv{height:520px;overflow-y:auto;margin:0 14px;border:1px solid var(--line);border-radius:4px;background:#fff}
@@ -310,6 +339,14 @@ footer b{color:var(--ink)}
       fd(F[0].date)+' → '+fd(F[F.length-1].date)+'<br><b style="color:var(--red)">'+nc+' non confirmées</b> (≤ '+seuil+' inscrits)</div></div>';
     html+='</div></section>';
 
+    /* 1b. Ventes */
+    if(D.ventes){
+      html+='<section id="ventes"><div class="sh"><h2>Ventes <span class="o">formations</span></h2><span class="k">Source : '+esc(D.ventes.source)+' · relevé le '+esc(D.ventes.releve)+'</span></div>'+
+        '<div class="vt-bar"><div class="tabs vt-per">'+[["sem","Cette semaine"],["sem-1","Semaine passée"],["mois","Ce mois"],["mois-1","Mois passé"],["annee","Année 2026"],["perso","Période…"]].map(function(a,i){return '<button type="button" data-p="'+a[0]+'"'+(a[0]==="mois"?' class="on"':'')+'>'+a[1]+'</button>';}).join('')+'</div>'+
+        '<span class="vt-perso" hidden><label>Du <input type="date" id="vt-du" value="2026-11-01"></label> <label>au <input type="date" id="vt-au" value="2026-11-30"></label></span></div>'+
+        '<div id="vt-out"></div><p class="gnote">'+esc(D.ventes.note)+'</p></section>';
+    }
+
     /* 2. Formations */
     html+='<section id="formations"><div class="sh"><h2>Formations <span class="o">à venir</span></h2><span class="k">Source : '+esc(D.formations.source)+' · relevé le '+esc(D.formations.releve)+'</span></div>';
     html+='<div class="card"><div class="band"></div><table class="tbl"><thead><tr><th class="k">Date</th><th class="k">Formation</th><th class="k">Inscrits / max</th></tr></thead><tbody>';
@@ -442,10 +479,11 @@ footer b{color:var(--ink)}
       '<div class="card cal"><div class="cal-scroll">'+g+'</div><div class="cal-hint">← Glisser pour voir toute la période →</div>'+
       '<div class="legend"><span><i class="sw" style="background:var(--yel)"></i>Pub programmée</span><span><i class="sw" style="background:#f6d9a8;border:1px dashed var(--yel)"></i>Pub à venir</span><span><i class="sw" style="background:var(--indigo)"></i>Infolettre</span><span><i class="sw" style="background:var(--sage);border-radius:50%"></i>Formation (nb d’inscrits)</span><span><i class="sw" style="background:var(--red);border-radius:50%"></i>Non confirmée</span></div></div></section>';
 
-    var som='<nav class="sommaire">'+[["aujourdhui","Aujourd’hui"],["formations","Formations"],["pubs","Pubs"],["infolettres","Infolettres"],["toutes-infolettres","Toutes les infolettres"],["reseaux","Réseaux sociaux"],["calendrier","Calendrier"]]
+    var som='<nav class="sommaire">'+[["aujourdhui","Aujourd’hui"],["ventes","Ventes"],["formations","Formations"],["pubs","Pubs"],["infolettres","Infolettres"],["toutes-infolettres","Toutes les infolettres"],["reseaux","Réseaux sociaux"],["calendrier","Calendrier"]]
       .filter(function(a){return html.indexOf('id="'+a[0]+'"')>=0;}).map(function(a){return '<a href="#'+a[0]+'">'+a[1]+'</a>';}).join('')+'</nav>';
     document.getElementById("app").innerHTML=som+html;
-    document.querySelectorAll(".tabs").forEach(function(tb){
+    if(D.ventes) window.vtInit(D.ventes,D.today);
+    document.querySelectorAll(".tabs:not(.vt-per)").forEach(function(tb){
       tb.addEventListener("click",function(e){
         var b=e.target.closest("button"); if(!b)return;
         tb.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b);document.getElementById(x.dataset.t).hidden=(x!==b);});
@@ -466,6 +504,58 @@ document.addEventListener('click',function(e){
   if(L&&!L.hidden&&(e.target===L||e.target.classList.contains('x'))){L.hidden=true;L.querySelector('.pn').innerHTML='';document.body.style.overflow='';}
 });
 document.addEventListener('keydown',function(e){var L=document.getElementById('lbx');if(e.key==='Escape'&&L&&!L.hidden){L.hidden=true;L.querySelector('.pn').innerHTML='';document.body.style.overflow='';}});
+
+window.vtInit=function(V,todayIso){
+  var MO=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+  function P(iso){var a=iso.split("-");return new Date(+a[0],+a[1]-1,+a[2]);}
+  function I(d){return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");}
+  function $(n){return Math.round(n).toLocaleString("fr-CA")+" $";}
+  function fd(iso){var d=P(iso);return d.getDate()+(d.getDate()===1?"er":"")+" "+MO[d.getMonth()];}
+  function e(t){return String(t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+  var T=P(todayIso), out=document.getElementById("vt-out");
+  function range(p){
+    var d=new Date(T),a,b;
+    if(p==="sem"||p==="sem-1"){var w=(d.getDay()+6)%7;a=new Date(d);a.setDate(d.getDate()-w);if(p==="sem-1")a.setDate(a.getDate()-7);b=new Date(a);b.setDate(a.getDate()+6);}
+    else if(p==="mois"){a=new Date(d.getFullYear(),d.getMonth(),1);b=new Date(d.getFullYear(),d.getMonth()+1,0);}
+    else if(p==="mois-1"){a=new Date(d.getFullYear(),d.getMonth()-1,1);b=new Date(d.getFullYear(),d.getMonth(),0);}
+    else if(p==="annee"){a=new Date(2026,0,1);b=new Date(2026,11,31);}
+    else{a=P(document.getElementById("vt-du").value||I(T));b=P(document.getElementById("vt-au").value||I(T));}
+    return [I(a),I(b)];
+  }
+  function budgetFor(a,b){ // budget au prorata des jours de chaque mois couvert
+    var s=0,d=P(a),end=P(b);
+    while(d<=end){var m=d.getMonth(),dim=new Date(d.getFullYear(),m+1,0).getDate();s+=(V.budgetMensuel[m]||0)/dim;d.setDate(d.getDate()+1);}
+    return s;
+  }
+  function draw(p){
+    var r=range(p),a=r[0],b=r[1];
+    var L=V.lignes.filter(function(x){return x.date>=a&&x.date<=b;});
+    var rev=L.reduce(function(s,x){return s+x.revenus;},0), pro=L.reduce(function(s,x){return s+x.profit;},0),
+        par=L.reduce(function(s,x){return s+x.participants;},0), fut=L.filter(function(x){return x.date>todayIso;}).length;
+    var bud=budgetFor(a,b), pct=bud?Math.round(100*rev/bud):null;
+    var k='<div class="vt-kpis">'+
+      '<div class="card"><span class="k">Revenus</span><div class="v">'+$(rev)+'</div><span class="s">'+fd(a)+' → '+fd(b)+'</span></div>'+
+      '<div class="card"><span class="k">Vs budget</span><div class="v">'+(pct==null?"—":pct+" %")+'</div><span class="s">Budget de la période : '+$(bud)+'</span></div>'+
+      '<div class="card"><span class="k">Profit</span><div class="v">'+$(pro)+'</div><span class="s">'+(rev?Math.round(100*pro/rev)+" % de marge":"—")+'</span></div>'+
+      '<div class="card"><span class="k">Participants</span><div class="v">'+par+'</div><span class="s">'+L.length+' formation'+(L.length>1?"s":"")+(fut?' · dont '+fut+' à venir':'')+'</span></div></div>';
+    var mx=Math.max.apply(null,V.budgetMensuel.concat(V.reelMensuel)), cm=T.getMonth();
+    var bars='<div class="vt-bars">'+V.budgetMensuel.map(function(bv,i){var rv=V.reelMensuel[i]||0;
+      return '<div class="vt-m'+(i===cm?' cur':'')+'"><i class="b" style="height:'+(100*bv/mx)+'%"></i><i class="r" style="height:'+(100*rv/mx)+'%"></i>'+
+      '<span class="vt-tip">'+MO[i]+' : '+$(rv)+' / budget '+$(bv)+'</span></div>';}).join('')+'</div>'+
+      '<div class="vt-lab">'+MO.map(function(m){return '<span>'+m.replace(".","")+'</span>';}).join('')+'</div>';
+    var ytd=V.reelMensuel.reduce(function(s,x){return s+x;},0);
+    var chart='<div class="card vt-chart"><span class="k">2026 par mois · réel vs budget</span>'+bars+
+      '<div class="legend"><span><i class="sw" style="background:var(--yel)"></i>Réel</span><span><i class="sw" style="background:#e7e1d6"></i>Budget</span><span><i class="sw" style="background:#111"></i>Mois en cours</span></div>'+
+      '<p class="s" style="margin:8px 0 0;font-size:13px">Cumul 2026 : <b>'+$(ytd)+'</b> sur '+$(V.budgetAnnuel)+' de budget (<b>'+(Math.round(1000*ytd/V.budgetAnnuel)/10).toLocaleString('fr-CA')+' %</b>).</p></div>';
+    var list='<div class="card vt-list">'+(L.length?'<table>'+L.slice().sort(function(x,y){return x.date<y.date?-1:1;}).map(function(x){
+      return '<tr><td>'+fd(x.date)+'</td><td>'+e(x.titre)+'<br><span class="s" style="font-size:12px;color:var(--mut)">'+x.participants+' participant'+(x.participants>1?"s":"")+'</span></td><td class="r">'+$(x.revenus)+'</td></tr>';}).join('')+'</table>':'<p class="vt-empty">Aucune formation dans cette période.</p>')+'</div>';
+    out.innerHTML=k+'<div class="vt-grid">'+chart+list+'</div>';
+  }
+  var bar=document.querySelector(".vt-per"), per=document.querySelector(".vt-perso");
+  bar.addEventListener("click",function(ev){var b=ev.target.closest("button");if(!b)return;bar.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b);});per.hidden=b.dataset.p!=="perso";draw(b.dataset.p);});
+  ["vt-du","vt-au"].forEach(function(id){document.getElementById(id).addEventListener("change",function(){draw("perso");});});
+  draw("mois");
+};
 </script>
 </body>
 </html>

@@ -711,5 +711,777 @@
   "debut": "2026-11-19",
   "fin": "2026-12-17"
  },
- "note": "Infolettres : relevé automatique aux 30 min (Dialog Insight). Inscriptions et pubs : relevé du 19 nov., 17 h."
+ "note": "Infolettres : relevé automatique aux 30 min (Dialog Insight). Inscriptions et pubs : relevé du 19 nov., 17 h.",
+ "ventes": {
+  "source": "Coûts et revenus Contech 2026 (SharePoint, Formations › 00-Admin › Budget)",
+  "releve": "19 nov. 2026, 17 h",
+  "note": "Revenus comptés à la date de la formation (inscriptions payées). Décembre = inscriptions à ce jour.",
+  "budgetMensuel": [
+   82160,
+   137085,
+   104780,
+   119600,
+   125255,
+   74100,
+   0,
+   18850,
+   101010,
+   114205,
+   114205,
+   101010
+  ],
+  "reelMensuel": [
+   57697.5,
+   117370,
+   85795,
+   56837.5,
+   96127.5,
+   73771.25,
+   0,
+   0,
+   38690,
+   36745.37,
+   102499.63,
+   17775
+  ],
+  "budgetAnnuel": 1092260,
+  "objectifAnnulation": 873808,
+  "lignes": [
+   {
+    "date": "2026-01-14",
+    "titre": "Enveloppe du bâtiment : notions fondamentales",
+    "participants": 18,
+    "revenus": 8600.0,
+    "profit": 6000.0
+   },
+   {
+    "date": "2026-01-14",
+    "titre": "Devis – principes fondamentaux",
+    "participants": 15,
+    "revenus": 8812.5,
+    "profit": 6812.5
+   },
+   {
+    "date": "2026-01-15",
+    "titre": "Introduction à la structure de bâtiments",
+    "participants": 10,
+    "revenus": 5025.0,
+    "profit": 3525.0
+   },
+   {
+    "date": "2026-01-16",
+    "titre": "Code de construction du Québec 2020 : modifications",
+    "participants": 26,
+    "revenus": 7485.0,
+    "profit": 6285.0
+   },
+   {
+    "date": "2026-01-21",
+    "titre": "Quincaillerie architecturale – section 08",
+    "participants": 11,
+    "revenus": 6375.0,
+    "profit": 4625.0
+   },
+   {
+    "date": "2026-01-23",
+    "titre": "Toitures : matériaux et systèmes",
+    "participants": 9,
+    "revenus": 2232.5,
+    "profit": 1132.5
+   },
+   {
+    "date": "2026-01-27",
+    "titre": "Mise aux normes des bâtiments existants",
+    "participants": 24,
+    "revenus": 11230.0,
+    "profit": 9430.0
+   },
+   {
+    "date": "2026-01-28",
+    "titre": "Inspection de grands bâtiments – niveau 1",
+    "participants": 6,
+    "revenus": 3787.5,
+    "profit": 2087.5
+   },
+   {
+    "date": "2026-01-30",
+    "titre": "Enjeux climatiques et patrimoine bâti",
+    "participants": 16,
+    "revenus": 4150.0,
+    "profit": 2350.0
+   },
+   {
+    "date": "2026-02-02",
+    "titre": "Stratégies de communication selon votre profil",
+    "participants": 12,
+    "revenus": 5650.0,
+    "profit": 3800.0
+   },
+   {
+    "date": "2026-02-03",
+    "titre": "Humidité dans l’enveloppe du bâtiment",
+    "participants": 17,
+    "revenus": 12125.0,
+    "profit": 9525.0
+   },
+   {
+    "date": "2026-02-05",
+    "titre": "Partie 9 – les incontournables",
+    "participants": 17,
+    "revenus": 6887.5,
+    "profit": 5237.5
+   },
+   {
+    "date": "2026-02-06",
+    "titre": "Appel d'offres et soumissions",
+    "participants": 12,
+    "revenus": 3950.0,
+    "profit": 2900.0
+   },
+   {
+    "date": "2026-02-10",
+    "titre": "Moisissures",
+    "participants": 17,
+    "revenus": 11450.0,
+    "profit": 9750.0
+   },
+   {
+    "date": "2026-02-12",
+    "titre": "Projets de cuisines",
+    "participants": 18,
+    "revenus": 10825.0,
+    "profit": 9325.0
+   },
+   {
+    "date": "2026-02-17",
+    "titre": "Quincaillerie électrifiée – contrôle d’accès",
+    "participants": 21,
+    "revenus": 14137.5,
+    "profit": 12387.5
+   },
+   {
+    "date": "2026-02-18",
+    "titre": "Gestion de projet appliquée",
+    "participants": 10,
+    "revenus": 9937.5,
+    "profit": 6237.5
+   },
+   {
+    "date": "2026-02-19",
+    "titre": "Estimation et planification budgétaire",
+    "participants": 16,
+    "revenus": 7987.5,
+    "profit": 5987.5
+   },
+   {
+    "date": "2026-02-20",
+    "titre": "Devis sur plan",
+    "participants": 23,
+    "revenus": 7735.0,
+    "profit": 6735.0
+   },
+   {
+    "date": "2026-02-23",
+    "titre": "Art de négocier niveau 2",
+    "participants": 13,
+    "revenus": 7462.5,
+    "profit": 5612.5
+   },
+   {
+    "date": "2026-02-24",
+    "titre": "Enjeux climatiques et patrimoine bâti",
+    "participants": 14,
+    "revenus": 5810.0,
+    "profit": 4010.0
+   },
+   {
+    "date": "2026-02-24",
+    "titre": "Partie 10 du CCQ 2020",
+    "participants": 28,
+    "revenus": 13412.5,
+    "profit": 11612.5
+   },
+   {
+    "date": "2026-03-10",
+    "titre": "Le BIM décrypté (entrepreneurs)",
+    "participants": 7,
+    "revenus": 5075.0,
+    "profit": 3275.0
+   },
+   {
+    "date": "2026-03-10",
+    "titre": "Courriels efficaces",
+    "participants": 17,
+    "revenus": 7312.5,
+    "profit": 5462.5
+   },
+   {
+    "date": "2026-03-12",
+    "titre": "Maintenance des bâtiments – exigences réglementaires",
+    "participants": 23,
+    "revenus": 11712.5,
+    "profit": 9962.5
+   },
+   {
+    "date": "2026-03-16",
+    "titre": "Droit de la construction 1/2",
+    "participants": 13,
+    "revenus": 14425.0,
+    "profit": 10725.0
+   },
+   {
+    "date": "2026-03-17",
+    "titre": "Mise en service – guide pratique",
+    "participants": 19,
+    "revenus": 13225.0,
+    "profit": 11225.0
+   },
+   {
+    "date": "2026-03-20",
+    "titre": "Infiltration d'eau par une couverture",
+    "participants": 11,
+    "revenus": 4207.5,
+    "profit": 3007.5
+   },
+   {
+    "date": "2026-03-25",
+    "titre": "Systèmes de murs-rideaux",
+    "participants": 13,
+    "revenus": 6525.0,
+    "profit": 4225.0
+   },
+   {
+    "date": "2026-03-26",
+    "titre": "Moyens d’évacuation, CCQ 2020",
+    "participants": 18,
+    "revenus": 5502.5,
+    "profit": 4302.5
+   },
+   {
+    "date": "2026-03-26",
+    "titre": "Radiographie de votre bâtiment",
+    "participants": 11,
+    "revenus": 5827.5,
+    "profit": 4077.5
+   },
+   {
+    "date": "2026-03-31",
+    "titre": "Séparations coupe-feu – Bloc 1",
+    "participants": 14,
+    "revenus": 5245.0,
+    "profit": 4045.0
+   },
+   {
+    "date": "2026-03-31",
+    "titre": "Béton : inspection et réparation (niveau 1)",
+    "participants": 11,
+    "revenus": 6737.5,
+    "profit": 5087.5
+   },
+   {
+    "date": "2026-04-09",
+    "titre": "Code de construction du Québec 2020 : modifications",
+    "participants": 25,
+    "revenus": 6547.5,
+    "profit": 5347.5
+   },
+   {
+    "date": "2026-04-10",
+    "titre": "Dommages structuraux",
+    "participants": 14,
+    "revenus": 4722.5,
+    "profit": 3822.5
+   },
+   {
+    "date": "2026-04-15",
+    "titre": "Programmation fonctionnelle et technique",
+    "participants": 16,
+    "revenus": 10000.0,
+    "profit": 8000.0
+   },
+   {
+    "date": "2026-04-16",
+    "titre": "Rapport d'expert et témoignage au tribunal",
+    "participants": 9,
+    "revenus": 5287.5,
+    "profit": 3587.5
+   },
+   {
+    "date": "2026-04-16",
+    "titre": "Partie 3 du Code de construction",
+    "participants": 16,
+    "revenus": 14525.0,
+    "profit": 11025.0
+   },
+   {
+    "date": "2026-04-17",
+    "titre": "Murs végétaux",
+    "participants": 4,
+    "revenus": 830.0,
+    "profit": 80.0
+   },
+   {
+    "date": "2026-04-20",
+    "titre": "Mieux gérer ses priorités",
+    "participants": 9,
+    "revenus": 4875.0,
+    "profit": 3025.0
+   },
+   {
+    "date": "2026-04-22",
+    "titre": "Enveloppe du bâtiment : notions fondamentales",
+    "participants": 14,
+    "revenus": 7975.0,
+    "profit": 5375.0
+   },
+   {
+    "date": "2026-04-28",
+    "titre": "Cuisines institutionnelles et commerciales",
+    "participants": 5,
+    "revenus": 2075.0,
+    "profit": 1175.0
+   },
+   {
+    "date": "2026-05-01",
+    "titre": "La force du travail collaboratif",
+    "participants": 15,
+    "revenus": 4837.5,
+    "profit": 3337.5
+   },
+   {
+    "date": "2026-05-05",
+    "titre": "Humidité dans l’enveloppe du bâtiment",
+    "participants": 12,
+    "revenus": 7612.5,
+    "profit": 5012.5
+   },
+   {
+    "date": "2026-05-06",
+    "titre": "Chantier : administration et surveillance",
+    "participants": 16,
+    "revenus": 9687.5,
+    "profit": 7887.5
+   },
+   {
+    "date": "2026-05-06",
+    "titre": "Gestion de la maintenance",
+    "participants": 15,
+    "revenus": 8912.5,
+    "profit": 7162.5
+   },
+   {
+    "date": "2026-05-07",
+    "titre": "Toitures végétalisées",
+    "participants": 7,
+    "revenus": 3625.0,
+    "profit": 2125.0
+   },
+   {
+    "date": "2026-05-13",
+    "titre": "Acoustique et insonorisation",
+    "participants": 11,
+    "revenus": 6162.5,
+    "profit": 4512.5
+   },
+   {
+    "date": "2026-05-21",
+    "titre": "Courriels efficaces",
+    "participants": 6,
+    "revenus": 4250.0,
+    "profit": 2400.0
+   },
+   {
+    "date": "2026-05-22",
+    "titre": "Mezzanines et aires communicantes",
+    "participants": 8,
+    "revenus": 3320.0,
+    "profit": 2120.0
+   },
+   {
+    "date": "2026-05-25",
+    "titre": "Management humain dans la gestion de projet",
+    "participants": 11,
+    "revenus": 7775.0,
+    "profit": 5925.0
+   },
+   {
+    "date": "2026-05-26",
+    "titre": "Inspection générale d'un immeuble",
+    "participants": 14,
+    "revenus": 10050.0,
+    "profit": 8350.0
+   },
+   {
+    "date": "2026-05-26",
+    "titre": "Mise aux normes des bâtiments existants",
+    "participants": 24,
+    "revenus": 16575.0,
+    "profit": 14775.0
+   },
+   {
+    "date": "2026-05-28",
+    "titre": "Estimation et planification budgétaire",
+    "participants": 6,
+    "revenus": 4200.0,
+    "profit": 2200.0
+   },
+   {
+    "date": "2026-05-28",
+    "titre": "Rédaction de devis – quincaillerie",
+    "participants": 11,
+    "revenus": 7875.0,
+    "profit": 6125.0
+   },
+   {
+    "date": "2026-05-29",
+    "titre": "Le drone en construction",
+    "participants": 4,
+    "revenus": 1245.0,
+    "profit": 245.0
+   },
+   {
+    "date": "2026-06-02",
+    "titre": "Murs massifs et parement de maçonnerie",
+    "participants": 13,
+    "revenus": 7612.5,
+    "profit": 5912.5
+   },
+   {
+    "date": "2026-06-03",
+    "titre": "Devis sur plan",
+    "participants": 17,
+    "revenus": 6082.5,
+    "profit": 4882.5
+   },
+   {
+    "date": "2026-06-03",
+    "titre": "Projet BIM – marché public",
+    "participants": 7,
+    "revenus": 4562.5,
+    "profit": 2762.5
+   },
+   {
+    "date": "2026-06-04",
+    "titre": "Partie 9 – les incontournables",
+    "participants": 12,
+    "revenus": 7875.0,
+    "profit": 6125.0
+   },
+   {
+    "date": "2026-06-05",
+    "titre": "Enjeux climatiques et patrimoine bâti",
+    "participants": 12,
+    "revenus": 4465.0,
+    "profit": 2665.0
+   },
+   {
+    "date": "2026-06-05",
+    "titre": "Code de construction du Québec 2020 : modifications",
+    "participants": 13,
+    "revenus": 4100.0,
+    "profit": 2900.0
+   },
+   {
+    "date": "2026-06-08",
+    "titre": "Art de négocier niveau 1",
+    "participants": 7,
+    "revenus": 5075.0,
+    "profit": 3225.0
+   },
+   {
+    "date": "2026-06-10",
+    "titre": "Partie 10 du CCQ 2020",
+    "participants": 21,
+    "revenus": 11962.5,
+    "profit": 10162.5
+   },
+   {
+    "date": "2026-06-11",
+    "titre": "Maintenance des bâtiments – exigences réglementaires",
+    "participants": 8,
+    "revenus": 4875.0,
+    "profit": 3125.0
+   },
+   {
+    "date": "2026-06-11",
+    "titre": "Bâtiment durable, cycle de vie et matériaux",
+    "participants": 11,
+    "revenus": 6887.5,
+    "profit": 4887.5
+   },
+   {
+    "date": "2026-06-12",
+    "titre": "Toitures : gestion des eaux pluviales",
+    "participants": 11,
+    "revenus": 3788.75,
+    "profit": 2688.75
+   },
+   {
+    "date": "2026-06-17",
+    "titre": "Quincaillerie électrifiée – contrôle d’accès",
+    "participants": 4,
+    "revenus": 2850.0,
+    "profit": 1100.0
+   },
+   {
+    "date": "2026-06-19",
+    "titre": "Moyens d’évacuation, CCQ 2020",
+    "participants": 9,
+    "revenus": 3635.0,
+    "profit": 2435.0
+   },
+   {
+    "date": "2026-09-09",
+    "titre": "Enveloppe du bâtiment : notions fondamentales",
+    "participants": 8,
+    "revenus": 5800.0,
+    "profit": 3200.0
+   },
+   {
+    "date": "2026-09-15",
+    "titre": "Quincaillerie architecturale – section 08",
+    "participants": 12,
+    "revenus": 8700.0,
+    "profit": 6950.0
+   },
+   {
+    "date": "2026-09-16",
+    "titre": "Maintenance des bâtiments – exigences réglementaires",
+    "participants": 12,
+    "revenus": 7975.0,
+    "profit": 6225.0
+   },
+   {
+    "date": "2026-09-18",
+    "titre": "Mezzanines et aires communicantes",
+    "participants": 8,
+    "revenus": 2490.0,
+    "profit": 1290.0
+   },
+   {
+    "date": "2026-09-23",
+    "titre": "Mise aux normes des bâtiments existants",
+    "participants": 11,
+    "revenus": 7925.0,
+    "profit": 6125.0
+   },
+   {
+    "date": "2026-09-24",
+    "titre": "Inspection de grands bâtiments – niveau 1",
+    "participants": 8,
+    "revenus": 5800.0,
+    "profit": 3912.5
+   },
+   {
+    "date": "2026-10-01",
+    "titre": "Gestion de projet appliqué 1/2",
+    "participants": 9,
+    "revenus": 11860.37,
+    "profit": 8160.37
+   },
+   {
+    "date": "2026-10-16",
+    "titre": "Infiltration d'eau par une couverture",
+    "participants": 6,
+    "revenus": 2490.0,
+    "profit": 1290.0
+   },
+   {
+    "date": "2026-10-20",
+    "titre": "Humidité dans l’enveloppe du bâtiment",
+    "participants": 8,
+    "revenus": 5750.0,
+    "profit": 3150.0
+   },
+   {
+    "date": "2026-10-28",
+    "titre": "Béton : inspection et réparation (niveau 1)",
+    "participants": 10,
+    "revenus": 7200.0,
+    "profit": 5550.0
+   },
+   {
+    "date": "2026-10-29",
+    "titre": "Coordination 3D BIM",
+    "participants": 13,
+    "revenus": 4880.0,
+    "profit": 3680.0
+   },
+   {
+    "date": "2026-10-29",
+    "titre": "Toitures : matériaux et systèmes",
+    "participants": 5,
+    "revenus": 2075.0,
+    "profit": 875.0
+   },
+   {
+    "date": "2026-10-30",
+    "titre": "Enjeux climatiques et patrimoine bâti",
+    "participants": 6,
+    "revenus": 2490.0,
+    "profit": 690.0
+   },
+   {
+    "date": "2026-11-03",
+    "titre": "Quincaillerie électrifiée – contrôle d’accès",
+    "participants": 18,
+    "revenus": 12800.0,
+    "profit": 11050.0
+   },
+   {
+    "date": "2026-11-04",
+    "titre": "Programmation fonctionnelle et technique",
+    "participants": 13,
+    "revenus": 9075.0,
+    "profit": 7075.0
+   },
+   {
+    "date": "2026-11-05",
+    "titre": "Inspection générale d'un immeuble",
+    "participants": 22,
+    "revenus": 15039.63,
+    "profit": 13339.63
+   },
+   {
+    "date": "2026-11-06",
+    "titre": "Moyens d’évacuation, CCQ 2020",
+    "participants": 10,
+    "revenus": 4100.0,
+    "profit": 2900.0
+   },
+   {
+    "date": "2026-11-09",
+    "titre": "Art de négocier niveau 1",
+    "participants": 7,
+    "revenus": 4300.0,
+    "profit": 2450.0
+   },
+   {
+    "date": "2026-11-10",
+    "titre": "Partie 3 du Code de construction 1/2",
+    "participants": 14,
+    "revenus": 18550.0,
+    "profit": 15050.0
+   },
+   {
+    "date": "2026-11-18",
+    "titre": "Murs massifs et parement de maçonnerie 1/2",
+    "participants": 11,
+    "revenus": 7825.0,
+    "profit": 6125.0
+   },
+   {
+    "date": "2026-11-19",
+    "titre": "Gestion de la maintenance",
+    "participants": 9,
+    "revenus": 6425.0,
+    "profit": 4675.0
+   },
+   {
+    "date": "2026-11-20",
+    "titre": "Dommages structuraux",
+    "participants": 14,
+    "revenus": 5710.0,
+    "profit": 4810.0
+   },
+   {
+    "date": "2026-11-24",
+    "titre": "Moisissures",
+    "participants": 8,
+    "revenus": 5650.0,
+    "profit": 3950.0
+   },
+   {
+    "date": "2026-11-25",
+    "titre": "Courriels efficaces",
+    "participants": 5,
+    "revenus": 3525.0,
+    "profit": 1675.0
+   },
+   {
+    "date": "2026-11-26",
+    "titre": "Acoustique et insonorisation",
+    "participants": 5,
+    "revenus": 3475.0,
+    "profit": 1575.0
+   },
+   {
+    "date": "2026-11-27",
+    "titre": "Devis sur plan",
+    "participants": 16,
+    "revenus": 6025.0,
+    "profit": 4825.0
+   },
+   {
+    "date": "2026-12-01",
+    "titre": "Toitures : entretien et maintenance",
+    "participants": 3,
+    "revenus": 2175.0,
+    "profit": 200.0
+   },
+   {
+    "date": "2026-12-02",
+    "titre": "Projet BIM – marché public",
+    "participants": 1,
+    "revenus": 675.0,
+    "profit": -1125.0
+   },
+   {
+    "date": "2026-12-03",
+    "titre": "Rédaction de devis – quincaillerie",
+    "participants": 2,
+    "revenus": 1350.0,
+    "profit": -400.0
+   },
+   {
+    "date": "2026-12-03",
+    "titre": "Chantier : administration et surveillance 1/2",
+    "participants": 6,
+    "revenus": 4300.0,
+    "profit": 2500.0
+   },
+   {
+    "date": "2026-12-04",
+    "titre": "Murs végétaux",
+    "participants": 0,
+    "revenus": 0.0,
+    "profit": -750.0
+   },
+   {
+    "date": "2026-12-09",
+    "titre": "Inspection de grands bâtiments – niveau 2",
+    "participants": 1,
+    "revenus": 725.0,
+    "profit": -975.0
+   },
+   {
+    "date": "2026-12-09",
+    "titre": "Systèmes de murs-rideaux 1/2",
+    "participants": 5,
+    "revenus": 2175.0,
+    "profit": -125.0
+   },
+   {
+    "date": "2026-12-10",
+    "titre": "Bâtiment durable, cycle de vie et matériaux",
+    "participants": 3,
+    "revenus": 1450.0,
+    "profit": -550.0
+   },
+   {
+    "date": "2026-12-17",
+    "titre": "Mécanique des sols",
+    "participants": 6,
+    "revenus": 4200.0,
+    "profit": 2500.0
+   },
+   {
+    "date": "2026-12-17",
+    "titre": "Toitures : gestion des eaux pluviales",
+    "participants": 1,
+    "revenus": 725.0,
+    "profit": -375.0
+   }
+  ]
+ }
 }
