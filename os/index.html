@@ -301,7 +301,7 @@ footer b{color:var(--ink)}
     html+='<section id="aujourdhui"><div class="sh"><h2>Aujourd’<span class="o">hui</span></h2><span class="k">Vue d’ensemble</span></div><div class="tiles">';
     html+='<div class="card tile"><span class="k">Achats formations</span><div class="v num">'+int(A.valeur)+'</div>'+
       '<div class="s">'+esc(A.periode)+' · '+esc(A.source)+'</div>'+
-      '<div class="row"><span class="pill g">Dernier reçu '+esc(A.dernierRecu)+'</span><span class="pill">Correspondance '+String(A.qualiteCorrespondance.toFixed(1)).replace(".",",")+'/10</span></div></div>';
+      '<div class="row">'+(A.releve?'<span class="pill g">Relevé '+esc(A.releve)+'</span>':'')+'<span class="pill">Correspondance '+String(A.qualiteCorrespondance.toFixed(1)).replace(".",",")+'/10</span></div></div>';
     html+='<div class="card tile"><span class="k">Dépense pubs / jour</span><div class="v num">'+money(depTot)+'</div><div class="s">'+
       dep.map(function(x){return '<b>'+money(x.parJour)+'</b> '+esc(x.label)+(x.depuis?' (dès le '+fd(x.depuis)+')':'');}).join('<br>')+'</div></div>';
     html+='<div class="card tile"><span class="k">Prochaine infolettre</span>'+(nxt?
