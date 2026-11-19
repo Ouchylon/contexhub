@@ -5,7 +5,7 @@ Appelle Sendings.GetBatches (envois des 45 derniers jours) puis Messages.Get
 pour le nom de chaque message. N'écrit que des statistiques agrégées par envoi :
 aucune donnée de contact. La clé vient des secrets GitHub (DI_IDKEY, DI_KEY).
 """
-import json, os, sys, datetime as dt, urllib.request
+import json, os, sys, datetime as dt, urllib.request, urllib.error
 
 BASE = "https://app.dialoginsight.com/webservices/ofc4/"
 ID_PROJECT = int(os.environ.get("DI_IDPROJECT", "7991"))  # Contech TC
@@ -17,8 +17,17 @@ def call(service, method, payload):
     body = json.dumps({"AuthKey": AUTH, **payload}).encode()
     req = urllib.request.Request(f"{BASE}{service}.ashx?method={method}", data=body,
                                  headers={"Content-Type": "application/json"})
-    with urllib.request.urlopen(req, timeout=60) as r:
-        res = json.loads(r.read().decode("utf-8-sig"))
+    import time
+    for essai in range(5):  # le serveur coupe parfois la connexion : on réessaie
+        try:
+            with urllib.request.urlopen(req, timeout=60) as r:
+                res = json.loads(r.read().decode("utf-8-sig"))
+            break
+        except (urllib.error.URLError, ConnectionError, TimeoutError) as e:
+            if essai == 4:
+                raise
+            print("Nouvel essai après erreur réseau :", e)
+            time.sleep(3 * (essai + 1))
     if not res.get("Success"):
         sys.exit(f"{service}.{method} : {res.get('ErrorCode')} {res.get('ErrorMessage')}")
     return res
