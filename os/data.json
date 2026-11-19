@@ -187,8 +187,8 @@
    {
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
-    "envoyes": 19723,
-    "ouverture": 12.7,
+    "envoyes": 19724,
+    "ouverture": 13.0,
     "clic": 3.5,
     "desabonnements": 12
    },
@@ -287,9 +287,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 22.1,
+   "ouverture": 22.3,
    "clics": 3.9,
-   "ctor": 17.5,
+   "ctor": 17.3,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -305,7 +305,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-19T17:58-05:00",
+  "releve": "2026-11-19T18:07-05:00",
   "alertes": [],
   "tous": [
    {
@@ -313,8 +313,8 @@
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "categorie": "Formations",
-    "envoyes": 19723,
-    "ouverture": 12.7,
+    "envoyes": 19724,
+    "ouverture": 13.0,
     "clic": 3.5,
     "desabonnements": 12,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
