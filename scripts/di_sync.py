@@ -8,7 +8,7 @@ import json, os, sys, datetime as dt, urllib.request
 
 BASE = "https://app.dialoginsight.com/webservices/ofc4/"
 ID_PROJECT = int(os.environ.get("DI_IDPROJECT", "7991"))  # Contech TC
-AUTH = {"idKey": int(os.environ["DI_IDKEY"]), "Key": os.environ["DI_KEY"]}
+AUTH = {"idKey": int(os.environ.get("DI_IDKEY") or 34368), "Key": os.environ["DI_KEY"]}
 DATA = os.path.join(os.path.dirname(__file__), "..", "os", "data.json")
 
 
