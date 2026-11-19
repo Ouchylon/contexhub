@@ -71,7 +71,9 @@ def render(idm, html):
             missing.append(mo.group(1))
             return "data:image/gif;base64,R0lGODlhAQABAAAAACw="
         return u
-    h = re.sub(r"\[\[=?\s*Hosting\.Image\((\d+)\)\s*\]\]", img, html)
+    h = re.sub(r"\[\[[^\]]*?Hosting\.Image\(\s*['\"]?(\d+)[^\]]*\]\]", img, html)
+    autres = sorted(set(re.findall(r"\[\[[^\]]{0,80}\]\]", h)))[:8]
+    if autres: print(idm, "balises restantes :", autres)
     h = re.sub(r"\[\[=?\s*Message\.Link\([^\]]*\)\s*\]\]", "#", h)
     h = re.sub(r"<!--\[\[.*?\]\]-->", "", h, flags=re.S)
     h = re.sub(r"\[\[.*?\]\]", "", h, flags=re.S)
@@ -79,7 +81,7 @@ def render(idm, html):
     path = os.path.join(OSDIR, "nl", f"{idm}.html")
     os.makedirs(os.path.dirname(path), exist_ok=True)
     open(path, "w", encoding="utf-8").write(h)
-    ids = re.findall(r"Hosting\.Image\((\d+)\)", html)
+    ids = re.findall(r"Hosting\.Image\(\s*['\"]?(\d+)", html)
     thumb = next((IMG[i] for i in ids if i in IMG and i not in GENERIC), None)
     if missing:
         print(f"{idm} : images sans adresse connue {sorted(set(missing))}")
