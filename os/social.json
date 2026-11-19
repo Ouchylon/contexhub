@@ -666,5 +666,50 @@
     "img": "../bilan/img/posts/li-113.jpg"
    }
   ]
- }
+ },
+ "programmes": [
+  {
+   "quand": "2026-11-20T12:00",
+   "reseau": "Facebook",
+   "type": "Photo",
+   "titre": "Projet BIM : se préparer et collaborer (2 déc.)",
+   "img": "img/posts/li-bim.jpg"
+  },
+  {
+   "quand": "2026-11-20T12:00",
+   "reseau": "LinkedIn",
+   "type": "Post",
+   "titre": "Projet BIM : se préparer et collaborer (2 déc.)",
+   "img": "img/posts/li-bim.jpg"
+  },
+  {
+   "quand": "2026-11-22T21:00",
+   "reseau": "Facebook",
+   "type": "Reel",
+   "titre": "Toitures : entretien et maintenance (1er déc.)",
+   "img": "img/posts/li-toitures.jpg"
+  },
+  {
+   "quand": "2026-11-23T08:00",
+   "reseau": "LinkedIn",
+   "type": "Post",
+   "titre": "Toitures : entretien et maintenance (1er déc.)",
+   "img": "img/posts/li-toitures.jpg"
+  },
+  {
+   "quand": "2026-11-23T21:00",
+   "reseau": "Facebook",
+   "type": "Reel",
+   "titre": "Murs végétaux : design et intégration (4 déc.)",
+   "img": "img/posts/li-murs-vegetaux.jpg"
+  },
+  {
+   "quand": "2026-11-24T08:00",
+   "reseau": "LinkedIn",
+   "type": "Post",
+   "titre": "Murs végétaux : design et intégration (4 déc.)",
+   "img": "img/posts/li-murs-vegetaux.jpg"
+  }
+ ],
+ "programmes_releve": "19 nov., 18 h"
 }

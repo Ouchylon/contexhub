@@ -168,6 +168,15 @@ section{margin-bottom:44px}
 .tabs button.on{background:var(--ink);color:#fff}
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
 .gal[hidden]{display:none}
+.prog{margin:0 0 22px}
+.prog .sh2{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.prog h3{font-size:19px}
+.prog-l{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));gap:10px}
+.pr{display:flex;gap:12px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:8px;padding:10px}
+.pr img{width:64px;height:80px;object-fit:cover;border-radius:4px;flex:none;background:#eee}
+.pr b{display:block;font-size:14.5px;line-height:1.3;margin:3px 0 5px}
+.pr-n{display:inline-block;font:700 11px/1 Helv,sans-serif;padding:4px 9px;border-radius:999px;color:#fff}
+.pr-n.fb{background:#1877F2}.pr-n.li{background:#0A66C2}
 .vt-bar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:14px}
 .vt-perso label{font-size:13px;color:var(--mut)}
 .vt-perso input{font:14px Helv,sans-serif;padding:5px 8px;border:1px solid var(--line);border-radius:4px;background:#fff}
@@ -430,6 +439,11 @@ footer b{color:var(--ink)}
       };
       var FB=SOC.facebook||[], LI=SOC.linkedin||[];
       html+='<section id="reseaux"><div class="sh"><h2>Réseaux <span class="o">sociaux</span></h2><span class="k">'+esc(SOC.source||'')+'</span></div>'+
+        (function(){var P=(SOC.programmes||[]).filter(function(x){return x.quand.slice(0,10)>=D.today;});if(!P.length)return '';
+          var JR=["dim.","lun.","mar.","mer.","jeu.","ven.","sam."],MO=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
+          return '<div class="prog"><div class="sh2"><h3>Posts programmés</h3><span class="k">'+P.length+' à venir · relevé '+esc(SOC.programmes_releve||'')+'</span></div><div class="prog-l">'+
+          P.map(function(x){var t=new Date(x.quand);var h=t.getHours()+' h'+(t.getMinutes()?String(t.getMinutes()).padStart(2,'0'):'');
+            return '<div class="pr"><img src="'+esc(x.img)+'" alt=""><div><span class="k">'+JR[t.getDay()]+' '+t.getDate()+' '+MO[t.getMonth()]+' · '+h+'</span><b>'+esc(x.titre)+'</b><span class="pr-n '+(x.reseau==='Facebook'?'fb':'li')+'">'+esc(x.reseau)+' · '+esc(x.type)+'</span></div></div>';}).join('')+'</div></div>';})()+
         '<p class="gnote">Cliquez sur une image pour ouvrir la vraie publication : les réactions et les commentaires y sont à jour. Facebook et LinkedIn peuvent demander d’être connecté.</p>'+
         '<div class="tabs" data-g="soc"><button class="on" data-t="soc-fb">Facebook ('+FB.length+')</button><button data-t="soc-li">LinkedIn ('+LI.length+')</button></div>'+
         '<div class="gal" id="soc-fb">'+FB.map(function(x){return pcard(x,'Facebook');}).join('')+'</div>'+
