@@ -370,7 +370,7 @@ footer b{color:var(--ink)}
     if(SOC){
       var pcard=function(x,net){
         return '<div class="gc"><a class="th sq" href="'+esc(x.url)+'" target="_blank" rel="noopener"><img src="'+esc(x.img)+'" alt="'+esc(x.titre)+'" loading="lazy"></a><div class="bd">'+
-          '<span class="k">'+esc(x.date)+' · '+net+'</span><h3>'+esc(x.titre)+'</h3>'+(x.impressions!=null?'<span class="st"><b>'+int(x.impressions)+'</b> impressions · <b>'+int(x.reactions||0)+'</b> réactions · <b>'+int(x.clics||0)+'</b> clics</span>':'')+
+          '<span class="k">'+esc(x.date)+' · '+net+'</span><h3>'+esc(x.titre)+'</h3>'+(x.impressions!=null?'<span class="st"><b>'+int(x.impressions)+'</b> '+(net==='Facebook'?'vues':'impressions')+' · <b>'+int(x.reactions||0)+'</b> réactions · <b>'+int(x.clics||0)+'</b> clics</span>':'')+
           '<a class="lk" href="'+esc(x.url)+'" target="_blank" rel="noopener">Voir la publication (réactions à jour) ↗</a></div></div>';
       };
       var FB=SOC.facebook||[], LI=SOC.linkedin||[];
