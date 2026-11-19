@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-18T23:00:00-05:00",
- "today": "2026-11-18",
+ "updated": "2026-11-19T17:00:00-05:00",
+ "today": "2026-11-19",
  "seuilConfirmation": 5,
  "kpis": {
   "achats": {
@@ -25,8 +25,15 @@
  },
  "formations": {
   "source": "Tableau de bord A2026, SharePoint",
-  "releve": "18 nov. 2026, 23 h",
+  "releve": "19 nov. 2026, 17 h",
   "items": [
+   {
+    "date": "2026-11-20",
+    "titre": "Dommages structuraux",
+    "formateur": "Alain Mousseau",
+    "inscrits": 14,
+    "max": 22
+   },
    {
     "date": "2026-11-24",
     "titre": "Moisissures : contamination, investigation et réhabilitation",
@@ -52,7 +59,7 @@
     "date": "2026-11-27",
     "titre": "Devis sur plan",
     "formateur": "Louis Réjean Gagné",
-    "inscrits": 15,
+    "inscrits": 16,
     "max": 22
    },
    {
@@ -131,7 +138,7 @@
   "campagnes": [
    {
     "nom": "BOF ET TOF – Dernière chance NOV26",
-    "statut": "Programmée",
+    "statut": "Active",
     "debut": "2026-11-19T06:00",
     "fin": "2026-11-24T23:59",
     "budgetJour": 35,
@@ -704,5 +711,5 @@
   "debut": "2026-11-19",
   "fin": "2026-12-17"
  },
- "note": "Version 1 : données relevées manuellement. Prochaine étape : connexion en direct (Meta Marketing API, Shopify, Dialog Insight)."
+ "note": "Infolettres : relevé automatique aux 30 min (Dialog Insight). Inscriptions et pubs : relevé du 19 nov., 17 h."
 }

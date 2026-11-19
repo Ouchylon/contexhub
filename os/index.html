@@ -281,6 +281,7 @@ footer b{color:var(--ink)}
 
   function render(D){
     var seuil=D.seuilConfirmation==null?5:D.seuilConfirmation;
+    D.today=(function(){var n=new Date();return n.getFullYear()+'-'+String(n.getMonth()+1).padStart(2,'0')+'-'+String(n.getDate()).padStart(2,'0');})();
     var t=d(D.today);
     document.getElementById("today").textContent=JOURS_L[t.getDay()]+" "+t.getDate()+" "+MOIS_L[t.getMonth()]+" "+t.getFullYear();
     var up=new Date(D.updated);
@@ -288,7 +289,7 @@ footer b{color:var(--ink)}
       up.getDate()+" "+MOIS_L[up.getMonth()]+" "+up.getFullYear()+" à "+up.getHours()+" h"+(up.getMinutes()?" "+String(up.getMinutes()).padStart(2,"0"):"");
     document.getElementById("note").textContent=D.note||"";
 
-    var F=D.formations.items;
+    var F=D.formations.items.filter(function(x){return days(D.today,x.date)>=0;});
     var html="";
 
     /* 1. Aujourd'hui */
