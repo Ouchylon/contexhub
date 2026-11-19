@@ -526,6 +526,7 @@ footer b{color:var(--ink)}
     var som='<nav class="sommaire">'+[["aujourdhui","Aujourd’hui"],["ventes","Ventes"],["formations","Formations"],["pubs","Pubs"],["infolettres","Infolettres"],["toutes-infolettres","Toutes les infolettres"],["reseaux","Réseaux sociaux"],["calendrier","Calendrier"]]
       .filter(function(a){return html.indexOf('id="'+a[0]+'"')>=0;}).map(function(a){return '<a href="#'+a[0]+'">'+a[1]+'</a>';}).join('')+'</nav>';
     document.getElementById("app").innerHTML=som+html;
+    window.__SH=D.shopify||null;
     if(D.ventes) window.vtInit(D.ventes,D.today);
     window.fraicheur(D);
     document.querySelectorAll(".tabs:not(.vt-per)").forEach(function(tb){
@@ -579,9 +580,11 @@ window.vtInit=function(V,todayIso){
         par=L.reduce(function(s,x){return s+x.participants;},0), fut=L.filter(function(x){return x.date>todayIso;}).length;
     var bud=budgetFor(a,b), pct=bud?Math.round(100*rev/bud):null;
     var k='<div class="vt-kpis">'+
-      '<div class="card"><span class="k">Revenus</span><div class="v">'+$(rev)+'</div><span class="s">'+fd(a)+' → '+fd(b)+'</span></div>'+
+      '<div class="card"><span class="k">Revenus (formations données)</span><div class="v">'+$(rev)+'</div><span class="s">'+fd(a)+' → '+fd(b)+' · selon la date de la formation</span></div>'+
       '<div class="card"><span class="k">Vs budget</span><div class="v">'+(pct==null?"—":pct+" %")+'</div><span class="s">Budget de la période : '+$(bud)+' (au prorata des jours)</span></div>'+
       '<div class="card"><span class="k">Profit</span><div class="v">'+$(pro)+'</div><span class="s">'+(rev?Math.round(100*pro/rev)+" % de marge":"—")+'</span></div>'+
+      (window.__SH?(function(){var J=window.__SH.jours.filter(function(x){return x.date>=a&&x.date<=b;});var ht=J.reduce(function(s,x){return s+x.ht;},0),nc=J.reduce(function(s,x){return s+x.commandes;},0);
+        return '<div class="card"><span class="k">Encaissé (Shopify)</span><div class="v">'+$(ht)+'</div><span class="s">Avant taxes · '+nc+' commande'+(nc>1?'s':'')+' payée'+(nc>1?'s':'')+' dans la période</span></div>';})():'')+
       '<div class="card"><span class="k">Participants</span><div class="v">'+par+'</div><span class="s">'+L.length+' formation'+(L.length>1?"s":"")+(fut?' · dont '+fut+' à venir':'')+'</span></div></div>';
     var mx=Math.max.apply(null,V.budgetMensuel.concat(V.reelMensuel)), cm=T.getMonth();
     var bars='<div class="vt-bars">'+V.budgetMensuel.map(function(bv,i){var rv=V.reelMensuel[i]||0;
@@ -606,7 +609,7 @@ window.fraicheur=function(D){
   var Fr=D.fraicheur||{}, now=new Date();
   Object.keys(Fr).forEach(function(id){
     var f=Fr[id], sec=document.getElementById(id); if(!sec)return; var sh=sec.querySelector('.sh'); if(!sh)return;
-    var q=f.mode==='auto'?(D.infolettres&&D.infolettres.releve):f.quand; var t=q?new Date(q):null;
+    var q=f.mode==='auto'?(f.src==='shopify'?(D.shopify&&D.shopify.releve):(D.infolettres&&D.infolettres.releve)):f.quand; var t=q?new Date(q):null;
     var h=t?(now-t)/36e5:999, lim=f.mode==='auto'?2:24, ok=h<=lim;
     var ago=!t?'—':h<1?'il y a '+Math.max(1,Math.round(h*60))+' min':h<24?'il y a '+Math.round(h)+' h':'le '+t.getDate()+' '+["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."][t.getMonth()]+' à '+t.getHours()+' h';
     var b=document.createElement('div'); b.className='fr '+(ok?'ok':'old');

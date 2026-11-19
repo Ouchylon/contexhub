@@ -1,25 +1,33 @@
-name: Relevé Dialog Insight
+name: Relevé OS (Dialog Insight + Shopify)
 on:
   schedule:
     - cron: "7,37 11-23 * * 1-5"   # aux 30 min (h:07 et h:37), 6 h à 18 h (heure de Montréal), jours ouvrables
     - cron: "17 0-3 * * 2-6"       # une fois l’heure le soir (19 h à 22 h)
+    - cron: "17 13,21 * * 0,6"     # fin de semaine : 8 h et 16 h
   workflow_dispatch:
 permissions:
   contents: write
-concurrency: di-sync
+concurrency: os-sync
 jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Relever les envois
+      - name: Relever Dialog Insight
         env:
           DI_IDKEY: ${{ secrets.DI_IDKEY }}
           DI_KEY: ${{ secrets.DI_KEY }}
         run: python3 scripts/di_sync.py
+      - name: Relever Shopify
+        if: always()
+        env:
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          SHOPIFY_SHOP: ${{ secrets.SHOPIFY_SHOP }}
+        run: python3 scripts/shopify_sync.py
       - name: Publier si changé
+        if: always()
         run: |
           git config user.name "os-marketing"
           git config user.email "os-marketing@users.noreply.github.com"
           git add os/data.json os/nl os/di_missing.json
-          git diff --cached --quiet || (git commit -m "Relevé Dialog Insight" && git push)
+          git diff --cached --quiet || (git commit -m "Relevé OS" && git pull --rebase -X theirs origin main && git push)
