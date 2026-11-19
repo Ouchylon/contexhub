@@ -1,6 +1,6 @@
 {
- "source": "Bilan Expos 2026 (captures du 14 nov.)",
- "maj": "2026-11-14",
+ "source": "Expos 2026 (bilan) + formations · statistiques LinkedIn au 19 nov.",
+ "maj": "2026-11-19",
  "facebook": [
   {
    "date": "13 nov.",
@@ -316,6 +316,56 @@
   }
  ],
  "linkedin": [
+  {
+   "date": "19 nov.",
+   "titre": "Toitures : entretien et maintenance (1er déc.)",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7529227413667426305/",
+   "img": "img/posts/li-toitures.jpg",
+   "impressions": 33,
+   "reactions": 1,
+   "clics": 1,
+   "categorie": "Formations"
+  },
+  {
+   "date": "18 nov.",
+   "titre": "Acoustique et insonorisation (26 nov.)",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528821022351929344/",
+   "img": "img/posts/li-acoustique.jpg",
+   "impressions": 290,
+   "reactions": 4,
+   "clics": 4,
+   "categorie": "Formations"
+  },
+  {
+   "date": "17 nov.",
+   "titre": "Courriels efficaces (25 nov.)",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528457516918231040/",
+   "img": "img/posts/li-courriels.jpg",
+   "impressions": 97,
+   "reactions": 2,
+   "clics": 2,
+   "categorie": "Formations"
+  },
+  {
+   "date": "16 nov.",
+   "titre": "Moisissures (24 nov.)",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7528098290287054849/",
+   "img": "img/posts/li-moisissures.jpg",
+   "impressions": 154,
+   "reactions": 4,
+   "clics": 3,
+   "categorie": "Formations"
+  },
+  {
+   "date": "13 nov.",
+   "titre": "Dommages structuraux (20 nov.)",
+   "url": "https://www.linkedin.com/feed/update/urn:li:activity:7527008147136458752/",
+   "img": "img/posts/li-dommages.jpg",
+   "impressions": 170,
+   "reactions": 3,
+   "clics": 4,
+   "categorie": "Formations"
+  },
   {
    "date": "13 nov.",
    "titre": "Merci, Montréal",
