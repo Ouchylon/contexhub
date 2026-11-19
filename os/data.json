@@ -305,10 +305,6 @@
   "source": "Dialog Insight (API, relevé automatique)",
   "releve": "2026-11-19T15:44-05:00",
   "alertes": [
-   "Envoi prévu le 2026.09.22 08:00 pas encore parti (approbation?)",
-   "Envoi prévu le 2026.10.29 10:00 pas encore parti (approbation?)",
-   "Envoi prévu le 2026.10.29 10:00 pas encore parti (approbation?)",
-   "Envoi prévu le 2026.11.09 10:00 pas encore parti (approbation?)",
    "Envoi prévu le 2026.11.19 08:00 pas encore parti (approbation?)"
   ],
   "tous": [
@@ -575,19 +571,6 @@
     "desabonnements": 24,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2460/GcOMld/pastille-inscription-quebec-600x430.jpg",
     "apercu": "nl/730099.html"
-   },
-   {
-    "id": null,
-    "date": "2026-10-01",
-    "nom": "Expo : les zones AVFQ et Bâtiment passif",
-    "categorie": "Expos",
-    "envoyes": 19167,
-    "ouverture": 30,
-    "clic": 1,
-    "desabonnements": null,
-    "vignette": null,
-    "capture": "../bilan/img/infolettres/2026-10-01-zones.jpg",
-    "apercu": null
    },
    {
     "id": 730097,

@@ -1,3 +1,4 @@
+from datetime import timedelta
 """Relève Dialog Insight -> os/data.json (bloc infolettres.derniers).
 
 Appelle Sendings.GetBatches (envois des 45 derniers jours) puis Messages.Get
@@ -99,7 +100,7 @@ for b in sorted(batches, key=lambda b: b["dtFirstMessage"], reverse=True)[:12]:
 # Alerte : un envoi dont l'heure est passée mais qui n'est pas parti (non approuvé)
 late = [b for b in res.get("BatchInfos") or [] if not b.get("isTestBach") and not b.get("isCancelled")
         and not b.get("dtFirstMessage") and b.get("dtLaunch")
-        and b["dtLaunch"][:16] < now.strftime("%Y.%m.%d %H:%M")]
+        and (now - timedelta(days=3)).strftime("%Y.%m.%d %H:%M") < b["dtLaunch"][:16] < now.strftime("%Y.%m.%d %H:%M")]
 
 # Liste complète, une ligne par infolettre (les envois d'une même infolettre sont additionnés)
 agg = {}
@@ -142,7 +143,13 @@ if tous:
     for x in tous:  # garder les captures déjà associées (ex. bilan Expos)
         if prev.get(x["id"], {}).get("capture"):
             x["capture"] = prev[x["id"]]["capture"]
-    keep = [x for x in prev.values() if x.get("id") is None or x["id"] not in agg]
+    pris = {(x["date"], x["categorie"]) for x in tous}
+    keep = [x for x in prev.values() if (x.get("id") is None and (x["date"], x.get("categorie")) not in pris)
+            or (x.get("id") is not None and x["id"] not in agg)]
+    for x in tous:  # récupérer la capture d'une ancienne entrée sans id (même date, même catégorie)
+        for y in prev.values():
+            if y.get("id") is None and y.get("capture") and (y["date"], y.get("categorie")) == (x["date"], x["categorie"]):
+                x.setdefault("capture", y["capture"])
     data["infolettres"]["tous"] = sorted(tous + keep, key=lambda x: x["date"], reverse=True)
     if sept:
         data["infolettres"]["sept_jours"] = sept
