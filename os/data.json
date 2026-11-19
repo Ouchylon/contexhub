@@ -175,7 +175,91 @@
     "utm": "",
     "calendrier": "Promo −50 %"
    }
-  ]
+  ],
+  "creatifs": {
+   "campagne": "BOF ET TOF – Dernière chance NOV26",
+   "releve": "19 nov., 18 h 30 (journée du 19 nov.)",
+   "sujets": [
+    {
+     "sujet": "Moisissures",
+     "date": "24 nov.",
+     "video": "img/pubs/reel-moisissures.mp4",
+     "poster": "img/pubs/reel-moisissures.jpg",
+     "image": "img/pubs/post-moisissures.jpg",
+     "destination": "https://contech.qc.ca/products/2026-11-24-moisissures-contamination-investigation-et-rehabilitation",
+     "pubs": [
+      {
+       "nom": "TOF",
+       "post": "https://www.facebook.com/100064681987485/posts/1577753554390696/",
+       "portee": 217,
+       "impressions": 313,
+       "clics": 4,
+       "depense": 6.37
+      },
+      {
+       "nom": "BOF",
+       "post": "https://www.facebook.com/100064681987485/posts/1577751837724201/",
+       "portee": 171,
+       "impressions": 250,
+       "clics": 6,
+       "depense": 4.97
+      }
+     ]
+    },
+    {
+     "sujet": "Courriels efficaces",
+     "date": "25 nov.",
+     "video": "img/pubs/reel-courriels.mp4",
+     "poster": "img/pubs/reel-courriels.jpg",
+     "image": "img/pubs/post-courriels.jpg",
+     "destination": "https://contech.qc.ca/products/2026-11-25-courriels-efficaces-strategies-de-gestion-et-outils-numeriques",
+     "pubs": [
+      {
+       "nom": "TOF",
+       "post": "https://www.facebook.com/100064681987485/posts/1577752934390758/",
+       "portee": 22,
+       "impressions": 23,
+       "clics": 0,
+       "depense": 0.2
+      },
+      {
+       "nom": "BOF",
+       "post": "https://www.facebook.com/100064681987485/posts/1577751277724257/",
+       "portee": 61,
+       "impressions": 89,
+       "clics": 1,
+       "depense": 0.92
+      }
+     ]
+    },
+    {
+     "sujet": "Acoustique et insonorisation",
+     "date": "26 nov.",
+     "video": "img/pubs/reel-acoustique.mp4",
+     "poster": "img/pubs/reel-acoustique.jpg",
+     "image": "img/pubs/post-acoustique.jpg",
+     "destination": "https://contech.qc.ca/products/2026-11-26-acoustique-et-insonorisation",
+     "pubs": [
+      {
+       "nom": "TOF",
+       "post": "https://www.facebook.com/100064681987485/posts/1577753241057394/",
+       "portee": 309,
+       "impressions": 420,
+       "clics": 5,
+       "depense": 5.03
+      },
+      {
+       "nom": "BOF",
+       "post": "https://www.facebook.com/100064681987485/posts/1577752464390805/",
+       "portee": 115,
+       "impressions": 134,
+       "clics": 1,
+       "depense": 1.87
+      }
+     ]
+    }
+   ]
+  }
  },
  "infolettres": {
   "derniers": [
