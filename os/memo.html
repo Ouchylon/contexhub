@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Mémo · OS Marketing Contech</title>
+<style>
+@font-face{font-family:Machina;src:url(fonts/machina-bold.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:Helv;src:url(fonts/helvetica.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Helv;src:url(fonts/helvetica-bold.woff2) format("woff2");font-weight:700;font-display:swap}
+:root{--cream:#F7F3ED;--grid:rgb(233,230,223);--ink:#111;--yel:#E8990F;--soft:#FBEBD0;--mut:#5f5a52;--line:#e2dcd1;--card:#fff;--red:#B9314F;--sage:#86A397}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;color:var(--ink);font:16px/1.55 Helv,Helvetica,Arial,sans-serif;background-color:var(--cream);
+  background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:54px 54px}
+.w{max-width:860px;margin:0 auto;padding:28px 20px 72px}
+h1,h2,h3{font-family:Machina,Helv,Helvetica,sans-serif;font-weight:700;margin:0;line-height:1.1;letter-spacing:-.01em}
+.k{font:700 11px/1.3 Helv,Helvetica,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--yel)}
+.o{color:var(--yel)}
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:28px}
+header img{height:34px}
+header a{font:700 13px Helv,sans-serif;color:var(--ink);text-decoration:none;border:2px solid var(--ink);padding:8px 14px;border-radius:999px;background:var(--card)}
+h1{font-size:clamp(32px,6vw,52px);margin:8px 0 6px}
+.meta{color:var(--mut);font-size:14px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.pill{display:inline-block;font:700 12px Helv,sans-serif;padding:3px 10px;border-radius:999px;background:var(--soft);color:#7a4c00}
+.bottom{margin:26px 0 8px;background:var(--soft);border:2px solid var(--yel);border-radius:16px;padding:20px 22px;font-size:17px}
+nav.toc{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0 6px}
+nav.toc a{font:700 13px Helv,sans-serif;color:var(--ink);text-decoration:none;background:var(--card);border:1px solid var(--line);padding:7px 12px;border-radius:999px}
+nav.toc a:hover{border-color:var(--yel)}
+section{margin-top:44px;scroll-margin-top:16px}
+h2{font-size:clamp(22px,3.6vw,30px);margin:6px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.big{font:700 34px/1 Machina,Helv,sans-serif;color:var(--yel);margin-bottom:8px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:640px){.two{grid-template-columns:1fr}}
+.card h3{font-size:17px;margin-bottom:8px}
+ul{margin:0;padding-left:20px}
+li{margin:4px 0}
+.ans{font-size:17px}
+.person{display:flex;gap:14px;align-items:flex-start}
+.av{flex:0 0 52px;height:52px;border-radius:12px;background:var(--yel);display:flex;align-items:center;justify-content:center;font:700 20px Machina,sans-serif}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;font-size:15px}
+th,td{text-align:left;padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:700 11px Helv,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);background:#fbf9f5}
+tr:last-child td{border-bottom:0}
+.tag{display:inline-block;white-space:nowrap;font:700 11px Helv,sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:6px}
+.v0{background:var(--yel);color:#111}.v1{background:#e9e4da}.v2{background:#f1eee8;color:var(--mut)}
+.no{background:#fbeef1;color:var(--red)}
+.steps{counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px 12px 52px;position:relative;margin:8px 0}
+.steps li::before{content:counter(s);position:absolute;left:14px;top:11px;width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;font:700 13px/26px Helv,sans-serif;text-align:center}
+.mut{color:var(--mut);font-size:14px}
+footer{margin-top:48px;padding-top:16px;border-top:2px solid var(--ink);color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<div class="w">
+<header>
+  <img src="logo.png" alt="Contech Bâtiment">
+  <a href="./">Ouvrir le tableau de bord →</a>
+</header>
+
+<div class="k">Mémo de projet</div>
+<h1>OS Marketing <span class="o">Contech</span></h1>
+<div class="meta">19 novembre 2026 · Responsable : Ouchylon Suong · <span class="pill">En attente de 3 accès</span></div>
+
+<div class="bottom">
+  <b>En une phrase :</b> une page web, mise à jour toute seule, qui montre en continu ce que le marketing des formations rapporte : les ventes, l'argent mis en pub, le retour sur cet argent et qui répond. <b>Un seul blocage :</b> trois accès à obtenir de Guillaume Marcoux (Shopify, Meta, Dialog Insight).
+</div>
+
+<nav class="toc">
+  <a href="#quoi">C'est quoi</a><a href="#qui">Pour qui</a><a href="#pas">Ce que ce n'est pas</a>
+  <a href="#fini">Terminé =</a><a href="#preuve">La preuve</a><a href="#fonctions">Fonctions</a><a href="#acces">Accès</a><a href="#suite">Prochaines étapes</a>
+</nav>
+
+<section id="quoi">
+  <div class="k">1 · C'est quoi</div>
+  <h2>Un seul endroit pour les chiffres du marketing des formations</h2>
+  <p class="ans">Le OS réunit trois sources qui sont aujourd'hui séparées : <b>Shopify</b> (les ventes de formations), <b>Meta</b> (les pubs Facebook et Instagram) et <b>Dialog Insight</b> (les infolettres). Les chiffres arrivent tout seuls, sans que personne les tape.</p>
+</section>
+
+<section id="qui">
+  <div class="k">2 · Pour qui</div>
+  <h2>Pierre Marcoux</h2>
+  <div class="card person">
+    <div class="av">PM</div>
+    <div>Direction, Groupe Contex. Ce qu'il trouvera dans le OS :
+      <ul>
+        <li>les revenus des formations et ce qu'ils ont coûté en publicité ;</li>
+        <li>la comparaison avec l'an dernier, sur la même base ;</li>
+        <li>pour chaque écart, ce qui a changé de notre côté (pubs, infolettres, calendrier) ;</li>
+        <li>la source de chaque chiffre, pour le vérifier.</li>
+      </ul>
+      <p class="mut" style="margin:10px 0 0">Si ça marche pour Pierre, ça marche aussi pour Patrick, Lita et l'équipe.</p>
+    </div>
+  </div>
+</section>
+
+<section id="pas">
+  <div class="k">3 · Ce que ce n'est pas</div>
+  <h2>Formations seulement</h2>
+  <div class="two">
+    <div class="card"><span class="tag v0">Dedans</span><h3 style="margin-top:10px">Les formations</h3>Ventes, pubs et infolettres des formations en ligne et en entreprise.</div>
+    <div class="card"><span class="tag no">Pas dedans</span><h3 style="margin-top:10px">Les Expos</h3>Les Expos ont leur propre bilan. On ne mélange jamais les deux chiffres.</div>
+  </div>
+</section>
+
+<section id="fini">
+  <div class="k">4 · À quoi ressemble « terminé »</div>
+  <h2>Pierre ouvre le lien quand il veut, et tout est à jour</h2>
+  <div class="grid">
+    <div class="card"><div class="big">1 h</div>au plus entre un achat ou une pub et son affichage dans le OS</div>
+    <div class="card"><div class="big">vs 2025</div>revenus des formations comparés à la même période l'an dernier</div>
+    <div class="card"><div class="big">$ → $</div>argent mis en pub, ventes qu'elle a amenées, retour sur cet argent</div>
+    <div class="card"><div class="big">0</div>chiffre tapé à la main : chaque chiffre affiche sa source</div>
+  </div>
+</section>
+
+<section id="preuve">
+  <div class="k">5 · La plus petite version qui prouve que ça marche</div>
+  <h2>Les ventes en direct, pendant 2 semaines</h2>
+  <p class="ans">Chaque achat de formation sur Shopify apparaît <b>tout seul</b> dans le OS, avec une alerte dans Teams : quelle formation, quel montant, d'où vient l'acheteur (pub, infolettre, recherche).</p>
+  <p class="ans">Si ça tient <b>deux semaines sans aucune retouche manuelle</b>, on branche le reste. Sinon, on corrige avant d'aller plus loin.</p>
+</section>
+
+<section id="fonctions">
+  <div class="k">6 · Fonctions</div>
+  <h2>Dans l'ordre où on les construit</h2>
+  <table>
+    <tr><th style="width:110px">Étape</th><th>Fonction</th><th>Ce qu'on voit</th></tr>
+    <tr><td><span class="tag v0">Preuve</span></td><td><b>Alertes d'achat</b></td><td>Chaque vente : formation, montant, heure, source. Alerte Teams.</td></tr>
+    <tr><td><span class="tag v1">Version 1</span></td><td><b>L'argent</b></td><td>Revenus, dépense pub, retour sur l'investissement pub, et l'argent perdu (pubs qui tournent sans aucune vente).</td></tr>
+    <tr><td><span class="tag v1">Version 1</span></td><td><b>Infolettres en direct</b></td><td>Ouvertures et clics de chaque envoi ; quels lecteurs lisent et cliquent le plus.</td></tr>
+    <tr><td><span class="tag v2">Ensuite</span></td><td><b>Qui répond aux pubs</b></td><td>Âge, région, métier (ingénieur, architecte, entrepreneur…), et l'accroche qui mène à l'achat.</td></tr>
+  </table>
+  <p class="mut">Pour connaître le métier des acheteurs, on ajoute une question à l'inscription : « Quel est votre métier ? ».</p>
+</section>
+
+<section id="acces">
+  <div class="k">Blocage</div>
+  <h2>Trois accès à obtenir</h2>
+  <p class="ans">Rien n'est bloqué par les TI : il manque des droits sur nos propres comptes. Les trois relèvent de <b>Guillaume Marcoux</b> (Directeur, données et plateformes).</p>
+  <table>
+    <tr><th>Outil</th><th>Accès actuel</th><th>Ce qu'il faut</th></tr>
+    <tr><td><b>Shopify</b></td><td>Commandes et produits</td><td>Droits « Apps » et « Notifications » (alertes automatiques à chaque achat)</td></tr>
+    <tr><td><b>Meta</b></td><td>Accès partiel (de base)</td><td>Accès complet au compte pub Contech, en lecture des résultats</td></tr>
+    <tr><td><b>Dialog Insight</b></td><td>À vérifier</td><td>Une clé de lecture pour les statistiques d'envoi</td></tr>
+  </table>
+</section>
+
+<section id="suite">
+  <div class="k">Prochaines étapes</div>
+  <h2>De la demande d'accès à la version 1</h2>
+  <ol class="steps">
+    <li><b>Cette semaine :</b> demander les trois accès à Guillaume.</li>
+    <li><b>Dès l'accès Shopify :</b> brancher les alertes d'achat et les laisser tourner deux semaines.</li>
+    <li><b>Ensuite :</b> brancher Meta et Dialog Insight ; afficher l'argent et les infolettres.</li>
+    <li><b>Avant de partager :</b> passer le OS sur un lien privé (aujourd'hui, la page est publique).</li>
+  </ol>
+</section>
+
+<footer>OS Marketing Contech · mémo de projet · formations seulement</footer>
+</div>
+</body>
+</html>
