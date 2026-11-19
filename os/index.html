@@ -120,14 +120,15 @@ section{margin-bottom:44px}
 /* Infolettres */
 .nl{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:16px}
 .nl-list{padding:6px 0}
-.nl-row{display:grid;grid-template-columns:70px minmax(0,1fr) 150px;gap:14px;align-items:center;padding:12px 20px;border-bottom:1px solid var(--line)}
+.nl-row{display:grid;grid-template-columns:70px minmax(0,1fr) 170px;gap:14px;align-items:center;padding:12px 20px;border-bottom:1px solid var(--line)}
 .nl-row:last-child{border-bottom:0}
 .nl-row .dt{font-family:Machina,Helv,sans-serif;font-size:14px;white-space:nowrap}
 .nl-row .nm{font-weight:700;line-height:1.35;min-width:0}
 .rates{display:flex;flex-direction:column;gap:5px}
-.rate{display:grid;grid-template-columns:52px 1fr 34px;gap:8px;align-items:center;font-size:12px;color:var(--mut)}
+.rate{display:grid;grid-template-columns:34px 1fr 46px;gap:8px;align-items:center;font-size:12px;color:var(--mut)}
 .rate .bar{height:6px}
-.rate b{color:var(--ink);text-align:right;font-weight:700}
+.rate b{color:var(--ink);text-align:right;font-weight:700;white-space:nowrap}
+.nl-grp{padding:14px 20px 6px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--mut);border-bottom:1px solid var(--line)}
 .side{display:flex;flex-direction:column;gap:16px;min-width:0}
 .side .card{padding:18px 20px}
 .big{font-family:Machina,Helv,sans-serif;font-size:36px;line-height:1;margin:8px 0 4px}
@@ -305,13 +306,18 @@ footer b{color:var(--ink)}
     /* 4. Infolettres */
     var N=D.infolettres, S=N.sept_jours;
     var maxO=Math.max.apply(null,N.derniers.map(function(x){return x.ouverture;}).concat([40]));
-    html+='<section id="infolettres"><div class="sh"><h2><span class="o">Infolettres</span></h2><span class="k">Dialog Insight · derniers envois'+(N.releve?' · relevé '+esc(N.releve.slice(11,16)):'')+'</span></div><div class="nl">';
+    html+='<section id="infolettres"><div class="sh"><h2><span class="o">Infolettres</span></h2><span class="k">Dialog Insight · derniers envois'+(N.releve?' · relevé '+esc(N.releve.slice(11,16)):'')+'</span></div>'+((N.alertes||[]).length?'<div class="err" style="margin:0 0 12px">⚠ '+N.alertes.map(esc).join('<br>⚠ ')+'</div>':'')+'<div class="nl">';
     html+='<div class="card nl-list">';
-    N.derniers.forEach(function(x){
+    var pc=function(v){return String(v).replace('.',',')+'\u00a0%';};
+    var row=function(x){
       html+='<div class="nl-row"><div class="dt">'+fd(x.date)+'</div><div class="nm">'+esc(x.nom)+'</div><div class="rates">'+
-        '<div class="rate"><span>Ouv.</span><div class="bar"><i style="width:'+(x.ouverture/maxO*100).toFixed(1)+'%;background:var(--blue)"></i></div><b class="num">'+x.ouverture+' %</b></div>'+
-        '<div class="rate"><span>Clic</span><div class="bar"><i style="width:'+(x.clic/maxO*100).toFixed(1)+'%;background:var(--yel)"></i></div><b class="num">'+x.clic+' %</b></div></div></div>';
-    });
+        '<div class="rate"><span>Ouv.</span><div class="bar"><i style="width:'+(x.ouverture/maxO*100).toFixed(1)+'%;background:var(--blue)"></i></div><b class="num">'+pc(x.ouverture)+'</b></div>'+
+        '<div class="rate"><span>Clic</span><div class="bar"><i style="width:'+(x.clic/maxO*100).toFixed(1)+'%;background:var(--yel)"></i></div><b class="num">'+pc(x.clic)+'</b></div></div></div>';
+    };
+    var isF=function(x){return /hebdo|formation/i.test(x.nom||'');};
+    var F=N.derniers.filter(isF), X=N.derniers.filter(function(x){return !isF(x);});
+    if(F.length){html+='<div class="nl-grp">Formations</div>';F.forEach(row);}
+    if(X.length){html+='<div class="nl-grp">Expos</div>';X.forEach(row);}
     html+='</div><div class="side">';
     html+='<div class="card"><span class="k">Base de contacts</span><div class="big num">'+int(N.base.contacts)+'</div><div class="s" style="font-size:13px;color:var(--mut)"><b style="color:var(--ink)">+'+int(N.base.nouveaux7j)+'</b> nouveaux en 7 jours</div>'+
       '<div class="k" style="margin-top:16px">7 derniers jours</div><div class="stats">'+
