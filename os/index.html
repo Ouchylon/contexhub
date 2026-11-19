@@ -305,7 +305,7 @@ footer b{color:var(--ink)}
     /* 4. Infolettres */
     var N=D.infolettres, S=N.sept_jours;
     var maxO=Math.max.apply(null,N.derniers.map(function(x){return x.ouverture;}).concat([40]));
-    html+='<section id="infolettres"><div class="sh"><h2><span class="o">Infolettres</span></h2><span class="k">Dialog Insight · derniers envois</span></div><div class="nl">';
+    html+='<section id="infolettres"><div class="sh"><h2><span class="o">Infolettres</span></h2><span class="k">Dialog Insight · derniers envois'+(N.releve?' · relevé '+esc(N.releve.slice(11,16)):'')+'</span></div><div class="nl">';
     html+='<div class="card nl-list">';
     N.derniers.forEach(function(x){
       html+='<div class="nl-row"><div class="dt">'+fd(x.date)+'</div><div class="nm">'+esc(x.nom)+'</div><div class="rates">'+

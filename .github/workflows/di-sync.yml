@@ -1,0 +1,24 @@
+name: Relevé Dialog Insight
+on:
+  schedule:
+    - cron: "*/30 11-23 * * 1-5"   # aux 30 min, 6 h à 18 h (heure de Montréal), jours ouvrables
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: di-sync
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Relever les envois
+        env:
+          DI_IDKEY: ${{ secrets.DI_IDKEY }}
+          DI_KEY: ${{ secrets.DI_KEY }}
+        run: python3 scripts/di_sync.py
+      - name: Publier si changé
+        run: |
+          git config user.name "os-marketing"
+          git config user.email "os-marketing@users.noreply.github.com"
+          git add os/data.json
+          git diff --cached --quiet || (git commit -m "Relevé Dialog Insight" && git push)
