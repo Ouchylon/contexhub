@@ -188,9 +188,9 @@
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "envoyes": 19724,
-    "ouverture": 13.0,
+    "ouverture": 13.5,
     "clic": 3.5,
-    "desabonnements": 12
+    "desabonnements": 13
    },
    {
     "date": "2026-11-17",
@@ -287,9 +287,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 22.3,
+   "ouverture": 22.5,
    "clics": 3.9,
-   "ctor": 17.3,
+   "ctor": 17.2,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -305,7 +305,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-19T18:07-05:00",
+  "releve": "2026-11-19T18:18-05:00",
   "alertes": [],
   "tous": [
    {
@@ -314,9 +314,9 @@
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "categorie": "Formations",
     "envoyes": 19724,
-    "ouverture": 13.0,
+    "ouverture": 13.5,
     "clic": 3.5,
-    "desabonnements": 12,
+    "desabonnements": 13,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
     "apercu": "nl/730127.html"
    },
@@ -581,7 +581,7 @@
     "ouverture": 30.0,
     "clic": 1.4,
     "desabonnements": 24,
-    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2460/GcOMld/pastille-inscription-quebec-600x430.jpg",
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2455/Pu87ED/expos-contech-2026-qc-600x240.jpg",
     "apercu": "nl/730099.html",
     "capture": "../bilan/img/infolettres/2026-10-01-zones.jpg"
    },
@@ -594,7 +594,7 @@
     "ouverture": 29.9,
     "clic": 1.6,
     "desabonnements": 35,
-    "vignette": null,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2447/Vzlutv/nl29-banniere-rapport-expertise-8oct.png",
     "apercu": "nl/730097.html"
    },
    {
@@ -618,7 +618,7 @@
     "ouverture": 33.6,
     "clic": 1.9,
     "desabonnements": 23,
-    "vignette": null,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2403/CQkHlN/gestion-prio-oct26.png",
     "apercu": "nl/730092.html"
    },
    {
@@ -642,7 +642,7 @@
     "ouverture": 31.9,
     "clic": 1.2,
     "desabonnements": 37,
-    "vignette": null,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/1629/w0UxXq/formations-en-entreprise.png",
     "apercu": "nl/730088.html"
    },
    {
@@ -654,7 +654,7 @@
     "ouverture": 30.0,
     "clic": 1.8,
     "desabonnements": 57,
-    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2307/BWrPWL/stl-logoslogan-bleuboreal.png",
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2342/Sa6Faf/expos-contech-2026-qc-1200x630.jpg",
     "apercu": "nl/730087.html"
    },
    {
@@ -666,7 +666,7 @@
     "ouverture": 31.4,
     "clic": 2.2,
     "desabonnements": 29,
-    "vignette": null,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/1629/w0UxXq/formations-en-entreprise.png",
     "apercu": "nl/730086.html"
    },
    {
@@ -678,7 +678,7 @@
     "ouverture": 29.7,
     "clic": 1.9,
     "desabonnements": 38,
-    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2307/BWrPWL/stl-logoslogan-bleuboreal.png",
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2342/Sa6Faf/expos-contech-2026-qc-1200x630.jpg",
     "apercu": "nl/730085.html"
    },
    {
@@ -690,7 +690,7 @@
     "ouverture": 31.8,
     "clic": 1.3,
     "desabonnements": 52,
-    "vignette": null,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/1629/w0UxXq/formations-en-entreprise.png",
     "apercu": "nl/730084.html"
    },
    {
@@ -702,7 +702,7 @@
     "ouverture": 29.3,
     "clic": 1.9,
     "desabonnements": 46,
-    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2307/BWrPWL/stl-logoslogan-bleuboreal.png",
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2342/Sa6Faf/expos-contech-2026-qc-1200x630.jpg",
     "apercu": "nl/730082.html"
    },
    {
@@ -714,7 +714,7 @@
     "ouverture": 29.6,
     "clic": 1.6,
     "desabonnements": 45,
-    "vignette": null,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/1629/w0UxXq/formations-en-entreprise.png",
     "apercu": "nl/730081.html"
    }
   ]
