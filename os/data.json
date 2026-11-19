@@ -287,11 +287,6 @@
   },
   "prochains": [
    {
-    "date": "2026-11-19",
-    "nom": "Hebdo « Dernières places »",
-    "statut": "En attente d’approbation"
-   },
-   {
     "date": "2026-11-27",
     "nom": "Vendredi fou",
     "statut": "À préparer"
@@ -304,9 +299,7 @@
   ],
   "source": "Dialog Insight (API, relevé automatique)",
   "releve": "2026-11-19T15:56-05:00",
-  "alertes": [
-   "Envoi prévu le 2026.11.19 08:00 pas encore parti (approbation?)"
-  ],
+  "alertes": [],
   "tous": [
    {
     "id": 730126,
