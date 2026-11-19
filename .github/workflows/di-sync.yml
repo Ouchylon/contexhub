@@ -21,5 +21,5 @@ jobs:
         run: |
           git config user.name "os-marketing"
           git config user.email "os-marketing@users.noreply.github.com"
-          git add os/data.json os/nl
+          git add os/data.json os/nl os/di_missing.json
           git diff --cached --quiet || (git commit -m "Relevé Dialog Insight" && git push)

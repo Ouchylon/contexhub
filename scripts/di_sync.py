@@ -72,13 +72,14 @@ OSDIR = os.path.join(os.path.dirname(__file__), "..", "os")
 IMG = json.load(open(os.path.join(OSDIR, "di_images.json")))
 GENERIC = {"2215", "1871", "1872", "1873", "2332", "1888", "2310"}
 import re
+MISSING = {}
 def render(idm, html):
     missing = []
     def img(mo):
         u = IMG.get(mo.group(1))
         if not u:
             missing.append(mo.group(1))
-            return "data:image/gif;base64,R0lGODlhAQABAAAAACw="
+            return "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
         return u
     h = re.sub(r"\[\[[^\]]*?Hosting\.Image\(\s*['\"]?(\d+)[^\]]*\]\]", img, html)
     autres = sorted(set(re.findall(r"\[\[[^\]]{0,80}\]\]", h)))[:8]
@@ -94,8 +95,10 @@ def render(idm, html):
     thumb = next((IMG[i] for i in ids if i in IMG and i not in GENERIC), None)
     if missing:
         print(f"{idm} : images sans adresse connue {sorted(set(missing))}")
+        MISSING[str(idm)] = sorted(set(missing))
     return f"nl/{idm}.html", thumb
 previews = {idm: render(idm, c) for idm, c in contents.items()}
+json.dump(MISSING, open(os.path.join(OSDIR, "di_missing.json"), "w"), indent=1)
 
 rows = []
 for b in sorted(batches, key=lambda b: b["dtFirstMessage"], reverse=True)[:12]:
