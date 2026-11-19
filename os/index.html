@@ -168,6 +168,19 @@ section{margin-bottom:44px}
 .tabs button.on{background:var(--ink);color:#fff}
 .gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px}
 .gal[hidden]{display:none}
+.gal.nlgal{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.gc.nl .bd{flex:0 0 auto}
+.nlv{height:520px;overflow-y:auto;margin:0 14px;border:1px solid var(--line);border-radius:4px;background:#fff}
+.nlv img{display:block;width:100%;height:auto}
+.nlv iframe{display:block;width:100%;height:100%;border:0}
+.nlwait{font-size:12.5px;color:var(--mut);padding:10px 12px;margin:0}
+.nlbig{align-self:flex-start;margin:10px 14px 14px;background:none;border:0;padding:0;font:700 13px Helv,sans-serif;text-decoration:underline;cursor:pointer;color:var(--ink)}
+.lbx{position:fixed;inset:0;background:rgba(0,0,0,.72);display:flex;align-items:center;justify-content:center;z-index:999;padding:16px}
+.lbx[hidden]{display:none}
+.lbx .pn{background:#fff;width:min(680px,100%);height:92vh;border-radius:6px;overflow:auto;position:relative}
+.lbx .pn img{display:block;width:100%;height:auto}
+.lbx .pn iframe{display:block;width:100%;height:100%;border:0}
+.lbx .x{position:fixed;top:14px;right:18px;background:#fff;border:0;border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer;line-height:38px}
 .gc{background:#fff;border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
 .gc .th{display:block;height:300px;overflow:hidden;background:#EFEFEF;border-bottom:1px solid var(--line)}
 .gc .th img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
@@ -354,17 +367,22 @@ footer b{color:var(--ink)}
     /* 4b. Toutes les infolettres, telles que reçues */
     var T=(N.tous||[]);
     var gcard=function(x){
-      var src=x.capture||x.vignette, open=x.apercu||x.capture||x.vignette;
-      var th=src?'<img src="'+esc(src)+'" alt="'+esc(x.nom)+'" loading="lazy">':'<span class="vide">Aperçu à venir</span>';
-      return '<div class="gc"><a class="th" href="'+esc(open||'#')+'" target="_blank" rel="noopener">'+th+'</a><div class="bd">'+
+      var view;
+      if(x.apercu) view='<iframe src="'+esc(x.apercu)+'" title="'+esc(x.nom)+'" loading="lazy"></iframe>';
+      else if(x.capture) view='<img src="'+esc(x.capture)+'" alt="'+esc(x.nom)+'" loading="lazy">';
+      else if(x.vignette) view='<img src="'+esc(x.vignette)+'" alt="'+esc(x.nom)+'" loading="lazy"><p class="nlwait">Version complète affichée dès la prochaine synchronisation.</p>';
+      else view='<p class="nlwait">Version complète affichée dès la prochaine synchronisation.</p>';
+      var big=x.apercu||x.capture;
+      return '<div class="gc nl"><div class="bd">'+
         '<span class="k">'+fd(x.date)+(x.envoyes?' · '+int(x.envoyes)+' contacts':'')+'</span><h3>'+esc(x.nom)+'</h3>'+
-        (x.ouverture!=null?'<span class="st"><b>'+pc(x.ouverture)+'</b> ouverture · <b>'+pc(x.clic)+'</b> clics</span>':'')+
-        (open?'<a class="lk" href="'+esc(open)+'" target="_blank" rel="noopener">Ouvrir l’infolettre ↗</a>':'')+'</div></div>';
+        (x.ouverture!=null?'<span class="st"><b>'+pc(x.ouverture)+'</b> ouverture · <b>'+pc(x.clic)+'</b> clics</span>':'')+'</div>'+
+        '<div class="nlv">'+view+'</div>'+
+        (big?'<button class="nlbig" type="button" data-src="'+esc(big)+'" data-kind="'+(x.apercu?'f':'i')+'" data-t="'+esc(x.nom)+'">Ouvrir en grand</button>':'')+'</div>';
     };
     var TF=T.filter(function(x){return x.categorie==='Formations';}), TX=T.filter(function(x){return x.categorie!=='Formations';});
     html+='<section id="toutes-infolettres"><div class="sh"><h2>Toutes les <span class="o">infolettres</span></h2><span class="k">Telles que reçues · cliquez pour ouvrir</span></div>'+
       '<div class="tabs" data-g="nlg"><button class="on" data-t="nlg-f">Formations ('+TF.length+')</button><button data-t="nlg-x">Expos ('+TX.length+')</button></div>'+
-      '<div class="gal" id="nlg-f">'+TF.map(gcard).join('')+'</div><div class="gal" id="nlg-x" hidden>'+TX.map(gcard).join('')+'</div></section>';
+      '<div class="gal nlgal" id="nlg-f">'+TF.map(gcard).join('')+'</div><div class="gal nlgal" id="nlg-x" hidden>'+TX.map(gcard).join('')+'</div></section>';
 
     /* 4c. Réseaux sociaux */
     if(SOC){
@@ -434,6 +452,19 @@ footer b{color:var(--ink)}
     });
   }
 })();
+
+document.addEventListener('click',function(e){
+  var b=e.target.closest&&e.target.closest('.nlbig');
+  var L=document.getElementById('lbx');
+  if(b){
+    if(!L){L=document.createElement('div');L.id='lbx';L.className='lbx';L.innerHTML='<button class="x" type="button" aria-label="Fermer">×</button><div class="pn"></div>';document.body.appendChild(L);}
+    var src=b.getAttribute('data-src'),t=b.getAttribute('data-t');
+    L.querySelector('.pn').innerHTML=b.getAttribute('data-kind')==='f'?'<iframe src="'+src+'" title="'+t+'"></iframe>':'<img src="'+src+'" alt="'+t+'">';
+    L.hidden=false;document.body.style.overflow='hidden';return;
+  }
+  if(L&&!L.hidden&&(e.target===L||e.target.classList.contains('x'))){L.hidden=true;L.querySelector('.pn').innerHTML='';document.body.style.overflow='';}
+});
+document.addEventListener('keydown',function(e){var L=document.getElementById('lbx');if(e.key==='Escape'&&L&&!L.hidden){L.hidden=true;L.querySelector('.pn').innerHTML='';document.body.style.overflow='';}});
 </script>
 </body>
 </html>
