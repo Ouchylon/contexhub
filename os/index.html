@@ -368,16 +368,16 @@ footer b{color:var(--ink)}
     var T=(N.tous||[]);
     var gcard=function(x){
       var view;
-      if(x.apercu) view='<iframe src="'+esc(x.apercu)+'" title="'+esc(x.nom)+'" loading="lazy"></iframe>';
-      else if(x.capture) view='<img src="'+esc(x.capture)+'" alt="'+esc(x.nom)+'" loading="lazy">';
+      if(x.capture) view='<img src="'+esc(x.capture)+'" alt="'+esc(x.nom)+'" loading="lazy">';
+      else if(x.apercu) view='<iframe src="'+esc(x.apercu)+'" title="'+esc(x.nom)+'" loading="lazy"></iframe>';
       else if(x.vignette) view='<img src="'+esc(x.vignette)+'" alt="'+esc(x.nom)+'" loading="lazy"><p class="nlwait">Version complète affichée dès la prochaine synchronisation.</p>';
       else view='<p class="nlwait">Version complète affichée dès la prochaine synchronisation.</p>';
-      var big=x.apercu||x.capture;
+      var big=x.capture||x.apercu;
       return '<div class="gc nl"><div class="bd">'+
         '<span class="k">'+fd(x.date)+(x.envoyes?' · '+int(x.envoyes)+' contacts':'')+'</span><h3>'+esc(x.nom)+'</h3>'+
         (x.ouverture!=null?'<span class="st"><b>'+pc(x.ouverture)+'</b> ouverture · <b>'+pc(x.clic)+'</b> clics</span>':'')+'</div>'+
         '<div class="nlv">'+view+'</div>'+
-        (big?'<button class="nlbig" type="button" data-src="'+esc(big)+'" data-kind="'+(x.apercu?'f':'i')+'" data-t="'+esc(x.nom)+'">Ouvrir en grand</button>':'')+'</div>';
+        (big?'<button class="nlbig" type="button" data-src="'+esc(big)+'" data-kind="'+(x.capture?'i':'f')+'" data-t="'+esc(x.nom)+'">Ouvrir en grand</button>':'')+'</div>';
     };
     var TF=T.filter(function(x){return x.categorie==='Formations';}), TX=T.filter(function(x){return x.categorie!=='Formations';});
     html+='<section id="toutes-infolettres"><div class="sh"><h2>Toutes les <span class="o">infolettres</span></h2><span class="k">Telles que reçues · cliquez pour ouvrir</span></div>'+
