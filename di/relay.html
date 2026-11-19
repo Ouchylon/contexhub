@@ -1,0 +1,7 @@
+<!doctype html><meta charset="utf-8"><meta name="robots" content="noindex"><title>relay</title>
+<script>
+(async()=>{const f=new URLSearchParams(location.search).get('f');
+const b=await fetch(f,{cache:'no-store'}).then(r=>r.blob());
+const t=window.opener||window.parent; t.postMessage({relay:true,name:f.split('/').pop(),type:b.type,buf:await b.arrayBuffer()},'*');
+document.body.textContent='ok '+b.size;})();
+</script>
