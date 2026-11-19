@@ -1,4 +1,4 @@
-name: Relevé OS (Dialog Insight + Shopify)
+name: Relevé OS (Dialog Insight + Shopify + Meta)
 on:
   schedule:
     - cron: "7,37 11-23 * * 1-5"   # aux 30 min (h:07 et h:37), 6 h à 18 h (heure de Montréal), jours ouvrables
@@ -24,6 +24,11 @@ jobs:
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
           SHOPIFY_SHOP: ${{ secrets.SHOPIFY_SHOP }}
         run: python3 scripts/shopify_sync.py
+      - name: Relever Meta
+        if: always()
+        env:
+          META_TOKEN: ${{ secrets.META_TOKEN }}
+        run: python3 scripts/meta_sync.py
       - name: Publier si changé
         if: always()
         run: |

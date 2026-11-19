@@ -408,13 +408,13 @@ footer b{color:var(--ink)}
     });
     html+='</div>';
     if(P.creatifs){var CR=P.creatifs;
-      html+='<div class="crea"><div class="sh2"><h3>Créatifs · '+esc(CR.campagne)+'</h3><span class="k">Statistiques Meta · '+esc(CR.releve)+'</span></div><div class="crea-g">'+
+      html+='<div class="crea"><div class="sh2"><h3>Créatifs · '+esc(CR.campagne)+'</h3><span class="k">'+(D.meta?'Statistiques Meta depuis le début de la campagne':'Statistiques Meta · '+esc(CR.releve))+'</span></div><div class="crea-g">'+
       CR.sujets.map(function(s){
         return '<div class="card cr"><div class="cr-m"><video controls playsinline preload="none" poster="'+esc(s.poster)+'" src="'+esc(s.video)+'"></video><img src="'+esc(s.image)+'" alt="'+esc(s.sujet)+' – visuel 4:5" loading="lazy"></div>'+
         '<div class="cr-b"><span class="k">Formation du '+esc(s.date)+' · 2 variantes : reel 9:16 + image 4:5</span><h4>'+esc(s.sujet)+'</h4>'+
         '<a class="cr-dest" href="'+esc(s.destination)+'" target="_blank" rel="noopener">Page de destination ↗</a>'+
         '<table class="cr-t"><tr><th>Pub</th><th>Portée</th><th>Impr.</th><th>Clics</th><th>Dépensé</th><th>Réactions</th></tr>'+
-        s.pubs.map(function(a){return '<tr><td><b>'+esc(a.nom)+'</b></td><td>'+int(a.portee)+'</td><td>'+int(a.impressions)+'</td><td>'+int(a.clics)+'</td><td>'+money(a.depense)+'</td><td><a href="'+esc(a.post)+'" target="_blank" rel="noopener">En direct ↗</a></td></tr>';}).join('')+'</table></div></div>';}).join('')+
+        s.pubs.map(function(a){var m=D.meta&&D.meta.pubs.filter(function(p){return p.post===a.post;})[0];if(m){a=Object.assign({},a,m.total);}return '<tr><td><b>'+esc(a.nom)+'</b></td><td>'+int(a.portee)+'</td><td>'+int(a.impressions)+'</td><td>'+int(a.clics)+'</td><td>'+money(a.depense)+'</td><td><a href="'+esc(a.post)+'" target="_blank" rel="noopener">En direct ↗</a></td></tr>';}).join('')+'</table></div></div>';}).join('')+
       '</div><p class="gnote">TOF = nouvelles personnes (Québec), BOF = reciblage des visiteurs du site. « En direct » ouvre la vraie publication de la pub : les j’aime, commentaires et partages y sont à jour.</p></div>';}
     if(false&&P.reference)html+='<div class="card ref"><span class="k">Référence · '+esc(P.reference.periode)+'</span><b>'+esc(P.reference.nom)+'</b><span style="flex:1"></span><span class="k">Coût par achat</span><span class="v num">'+money(P.reference.coutParAchat)+'</span></div>';
     html+='</section>';
@@ -609,7 +609,7 @@ window.fraicheur=function(D){
   var Fr=D.fraicheur||{}, now=new Date();
   Object.keys(Fr).forEach(function(id){
     var f=Fr[id], sec=document.getElementById(id); if(!sec)return; var sh=sec.querySelector('.sh'); if(!sh)return;
-    var q=f.mode==='auto'?(f.src==='shopify'?(D.shopify&&D.shopify.releve):(D.infolettres&&D.infolettres.releve)):f.quand; var t=q?new Date(q):null;
+    var q=f.mode==='auto'?(f.src==='shopify'?(D.shopify&&D.shopify.releve):f.src==='meta'?(D.meta&&D.meta.releve):(D.infolettres&&D.infolettres.releve)):f.quand; var t=q?new Date(q):null;
     var h=t?(now-t)/36e5:999, lim=f.mode==='auto'?2:24, ok=h<=lim;
     var ago=!t?'—':h<1?'il y a '+Math.max(1,Math.round(h*60))+' min':h<24?'il y a '+Math.round(h)+' h':'le '+t.getDate()+' '+["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."][t.getMonth()]+' à '+t.getHours()+' h';
     var b=document.createElement('div'); b.className='fr '+(ok?'ok':'old');
