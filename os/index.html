@@ -344,6 +344,12 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
 .tip-b{display:none;position:absolute;z-index:20;left:50%;top:24px;transform:translateX(-50%);width:300px;max-width:80vw;background:#1d1b18;color:#fff;font:400 12.5px/1.5 Helv,sans-serif;text-align:left;padding:10px 12px;border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,.2);letter-spacing:0;text-transform:none}
 .tip-b b{color:#f3b84a}.tip:hover .tip-b,.tip:focus .tip-b{display:block}.tip:focus{outline:2px solid #E8990F;outline-offset:2px}
 @media(max-width:760px){.tip-b{left:auto;right:-10px;transform:none}}
+#app > section{border-top:4px solid #E8990F;padding-top:22px;margin-bottom:52px;scroll-margin-top:12px}
+#app > section:first-of-type{border-top:0;padding-top:0}
+.top-btn{position:fixed;right:20px;bottom:20px;z-index:50;display:none;align-items:center;gap:6px;background:#E8990F;color:#111;border:0;border-radius:999px;padding:10px 16px;font:700 13px Helv,sans-serif;box-shadow:0 4px 14px rgba(0,0,0,.18);cursor:pointer}
+.top-btn.on{display:flex}.top-btn:hover{background:#f0a722}.top-btn:focus{outline:2px solid #111;outline-offset:2px}
+.sommaire{scroll-margin-top:12px}
+@media(max-width:760px){.top-btn{right:14px;bottom:14px;padding:10px 14px}}
 </style>
 </head>
 <body>
@@ -702,6 +708,9 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
     var som='<nav class="sommaire">'+[["semaines","Ventes par semaine"],["aujourdhui","Aujourd’hui"],["ventes","Ventes"],["pubs","Pubs"],["reseaux","Réseaux sociaux"],["infolettres","Infolettres"],["toutes-infolettres","Toutes les infolettres"],["formations","Formations"],["parcours","Parcours client"],["strategie","Stratégie"],["calendrier","Calendrier"]]
       .filter(function(a){return html.indexOf('id="'+a[0]+'"')>=0;}).map(function(a){return '<a href="#'+a[0]+'">'+a[1]+'</a>';}).join('')+'</nav>';
     document.getElementById("app").innerHTML=som+html;
+    if(!document.querySelector('.top-btn')){var tb=document.createElement('button');tb.type='button';tb.className='top-btn';tb.setAttribute('aria-label','Retour au menu');tb.innerHTML='↑ Menu';
+      tb.addEventListener('click',function(){var m=document.querySelector('.sommaire');(m||document.body).scrollIntoView({behavior:'smooth',block:'start'});});document.body.appendChild(tb);
+      var tg=function(){tb.classList.toggle('on',window.scrollY>600);};window.addEventListener('scroll',tg,{passive:true});tg();}
     (function(){var app=document.getElementById("app");["semaines","aujourdhui","ventes","pubs","reseaux","infolettres","toutes-infolettres","formations","parcours","strategie","calendrier"].forEach(function(id){var el=document.getElementById(id);if(el)app.appendChild(el);});})();
     window.__SH=D.shopify||null;
     if(D.ventes) window.vtInit(D.ventes,D.today);
