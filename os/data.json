@@ -2285,7 +2285,7 @@
   "periodes": [
    {
     "id": "annee",
-    "label": "Depuis le 14 janv. (début Hamak)",
+    "label": "Depuis le 14 janv.",
     "du": "2026-01-14",
     "au": "2026-11-19",
     "total": {
@@ -3282,6 +3282,376 @@
     "d": "2026-11-16",
     "v": 6855.0,
     "n": 13
+   }
+  ]
+ },
+ "ventesSemainesCanaux": {
+  "releve": "20 nov. 2026, 0 h",
+  "source": "Shopify, rapport « Performance par canal marketing » : ventes nettes avant taxes, une semaine = lundi au dimanche, attribuées au dernier clic qui n'est pas une visite directe. Les remboursements sont déduits du canal de la vente d'origine.",
+  "semaines": [
+   {
+    "lundi": "2026-09-28",
+    "ventes": 4900,
+    "commandes": 10,
+    "canaux": [
+     {
+      "canal": "Bing",
+      "ventes": 3190.0,
+      "commandes": 3
+     },
+     {
+      "canal": "Direct",
+      "ventes": 2280.0,
+      "commandes": 3
+     },
+     {
+      "canal": "voirvert",
+      "ventes": 415.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Google Ads",
+      "ventes": -675.0,
+      "commandes": 0
+     },
+     {
+      "canal": "Google",
+      "ventes": -310.0,
+      "commandes": 1
+     }
+    ],
+    "enCours": false
+   },
+   {
+    "lundi": "2026-10-05",
+    "ventes": 16970,
+    "commandes": 19,
+    "canaux": [
+     {
+      "canal": "Unattributed",
+      "ventes": 4050.0,
+      "commandes": 2
+     },
+     {
+      "canal": "Direct",
+      "ventes": 2590.0,
+      "commandes": 3
+     },
+     {
+      "canal": "Google",
+      "ventes": 2385.0,
+      "commandes": 4
+     },
+     {
+      "canal": "siteweb",
+      "ventes": 2235.0,
+      "commandes": 3
+     },
+     {
+      "canal": "Shopify",
+      "ventes": 2025.0,
+      "commandes": 1
+     },
+     {
+      "canal": "newsletter",
+      "ventes": 1140.0,
+      "commandes": 3
+     },
+     {
+      "canal": "static",
+      "ventes": 1095.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Google Ads",
+      "ventes": 725.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Meta Ads",
+      "ventes": 725.0,
+      "commandes": 1
+     }
+    ],
+    "enCours": false
+   },
+   {
+    "lundi": "2026-10-12",
+    "ventes": 13170,
+    "commandes": 15,
+    "canaux": [
+     {
+      "canal": "Google",
+      "ventes": 4330.0,
+      "commandes": 5
+     },
+     {
+      "canal": "Google Ads",
+      "ventes": 3350.0,
+      "commandes": 2
+     },
+     {
+      "canal": "Direct",
+      "ventes": 2900.0,
+      "commandes": 4
+     },
+     {
+      "canal": "Shopify",
+      "ventes": 1450.0,
+      "commandes": 2
+     },
+     {
+      "canal": "newsletter",
+      "ventes": 725.0,
+      "commandes": 1
+     },
+     {
+      "canal": "siteweb",
+      "ventes": 415.0,
+      "commandes": 1
+     }
+    ],
+    "enCours": false
+   },
+   {
+    "lundi": "2026-10-19",
+    "ventes": 8795,
+    "commandes": 16,
+    "canaux": [
+     {
+      "canal": "Direct",
+      "ventes": 3005.0,
+      "commandes": 5
+     },
+     {
+      "canal": "static",
+      "ventes": 2880.0,
+      "commandes": 3
+     },
+     {
+      "canal": "Google",
+      "ventes": 2235.0,
+      "commandes": 4
+     },
+     {
+      "canal": "Shopify",
+      "ventes": 1040.0,
+      "commandes": 2
+     },
+     {
+      "canal": "Google Ads",
+      "ventes": 725.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Unattributed",
+      "ventes": 50.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Meta Ads",
+      "ventes": -725.0,
+      "commandes": 0
+     },
+     {
+      "canal": "siteweb",
+      "ventes": -415.0,
+      "commandes": 0
+     }
+    ],
+    "enCours": false
+   },
+   {
+    "lundi": "2026-10-26",
+    "ventes": 12390,
+    "commandes": 21,
+    "canaux": [
+     {
+      "canal": "Google",
+      "ventes": 3270.0,
+      "commandes": 4
+     },
+     {
+      "canal": "newsletter",
+      "ventes": 1555.0,
+      "commandes": 3
+     },
+     {
+      "canal": "Direct",
+      "ventes": 1450.0,
+      "commandes": 3
+     },
+     {
+      "canal": "Shopify",
+      "ventes": 1140.0,
+      "commandes": 2
+     },
+     {
+      "canal": "Brave",
+      "ventes": 1140.0,
+      "commandes": 1
+     },
+     {
+      "canal": "static",
+      "ventes": 830.0,
+      "commandes": 2
+     },
+     {
+      "canal": "Bing",
+      "ventes": 830.0,
+      "commandes": 2
+     },
+     {
+      "canal": "Google Ads",
+      "ventes": 725.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Meta Ads",
+      "ventes": 725.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Unattributed",
+      "ventes": 725.0,
+      "commandes": 2
+     }
+    ],
+    "enCours": false
+   },
+   {
+    "lundi": "2026-11-02",
+    "ventes": 18760,
+    "commandes": 24,
+    "canaux": [
+     {
+      "canal": "Direct",
+      "ventes": 7515.0,
+      "commandes": 9
+     },
+     {
+      "canal": "Shopify",
+      "ventes": 3840.0,
+      "commandes": 3
+     },
+     {
+      "canal": "newsletter",
+      "ventes": 2695.0,
+      "commandes": 5
+     },
+     {
+      "canal": "Google",
+      "ventes": 2175.0,
+      "commandes": 3
+     },
+     {
+      "canal": "Meta Ads",
+      "ventes": 1450.0,
+      "commandes": 2
+     },
+     {
+      "canal": "Facebook",
+      "ventes": 725.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Google Ads",
+      "ventes": 360.0,
+      "commandes": 1
+     }
+    ],
+    "enCours": false
+   },
+   {
+    "lundi": "2026-11-09",
+    "ventes": 11015,
+    "commandes": 16,
+    "canaux": [
+     {
+      "canal": "newsletter",
+      "ventes": 3315.0,
+      "commandes": 5
+     },
+     {
+      "canal": "groupecontex",
+      "ventes": 2700.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Google",
+      "ventes": 2590.0,
+      "commandes": 3
+     },
+     {
+      "canal": "Direct",
+      "ventes": 2175.0,
+      "commandes": 4
+     },
+     {
+      "canal": "Google Ads",
+      "ventes": 1325.0,
+      "commandes": 1
+     },
+     {
+      "canal": "siteweb",
+      "ventes": 1140.0,
+      "commandes": 2
+     },
+     {
+      "canal": "Unattributed",
+      "ventes": -1815.0,
+      "commandes": 0
+     },
+     {
+      "canal": "Bing",
+      "ventes": -415.0,
+      "commandes": 0
+     }
+    ],
+    "enCours": false
+   },
+   {
+    "lundi": "2026-11-16",
+    "ventes": 6855,
+    "commandes": 13,
+    "canaux": [
+     {
+      "canal": "Shopify",
+      "ventes": 1985.0,
+      "commandes": 4
+     },
+     {
+      "canal": "Google Ads",
+      "ventes": 1450.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Ecosia",
+      "ventes": 1140.0,
+      "commandes": 1
+     },
+     {
+      "canal": "siteweb",
+      "ventes": 725.0,
+      "commandes": 1
+     },
+     {
+      "canal": "newsletter",
+      "ventes": 725.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Direct",
+      "ventes": 415.0,
+      "commandes": 4
+     },
+     {
+      "canal": "Google",
+      "ventes": 415.0,
+      "commandes": 1
+     }
+    ],
+    "enCours": true
    }
   ]
  }
