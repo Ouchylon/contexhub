@@ -285,7 +285,7 @@
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "envoyes": 19728,
-    "ouverture": 19.3,
+    "ouverture": 22.0,
     "clic": 3.5,
     "desabonnements": 17
    },
@@ -293,7 +293,7 @@
     "date": "2026-11-17",
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "envoyes": 19762,
-    "ouverture": 31.7,
+    "ouverture": 31.8,
     "clic": 4.3,
     "desabonnements": 26
    },
@@ -333,7 +333,7 @@
     "date": "2026-11-10",
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Architectes et conception",
     "envoyes": 2553,
-    "ouverture": 36.8,
+    "ouverture": 36.9,
     "clic": 1.4,
     "desabonnements": 1
    },
@@ -385,9 +385,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 25.5,
+   "ouverture": 26.9,
    "clics": 3.9,
-   "ctor": 15.3,
+   "ctor": 14.5,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -403,7 +403,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-19T22:56-05:00",
+  "releve": "2026-11-20T02:07-05:00",
   "alertes": [],
   "tous": [
    {
@@ -412,7 +412,7 @@
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "categorie": "Formations",
     "envoyes": 19728,
-    "ouverture": 19.3,
+    "ouverture": 22.0,
     "clic": 3.5,
     "desabonnements": 17,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
@@ -424,7 +424,7 @@
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "categorie": "Formations",
     "envoyes": 19762,
-    "ouverture": 31.7,
+    "ouverture": 31.8,
     "clic": 4.3,
     "desabonnements": 26,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2665/IGwG33/lancement-hp2027-entete-v3.gif",
@@ -461,7 +461,7 @@
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Architectes et conception",
     "categorie": "Expos",
     "envoyes": 2553,
-    "ouverture": 36.8,
+    "ouverture": 36.9,
     "clic": 1.4,
     "desabonnements": 1,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
