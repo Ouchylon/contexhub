@@ -352,6 +352,9 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
 @media(max-width:760px){.top-btn{right:14px;bottom:14px;padding:10px 14px}}
 #app > section .sh2,#app > section .gad,#app > section .crea{border-top:2px solid rgba(232,153,15,.55);padding-top:16px;margin-top:26px}
 #app > section .gad .sh2,#app > section .crea .sh2{border-top:0;padding-top:0;margin-top:0}
+.ab-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-bottom:6px}.ab-c{padding:14px 16px;display:flex;flex-direction:column;gap:4px}.ab-c .v{font:700 30px/1.1 Machina,Helv,sans-serif}.ab-c .s{font-size:13px;color:var(--mut)}.ab-c .s b{color:#3d7a52}.ab-c .s2{font-size:12px;color:var(--mut);margin-top:4px}
+.rate.desab em{font-style:normal;font-size:11px;color:var(--mut);margin-left:4px}.ab-nl{padding:14px 16px;margin-bottom:12px}.ab-r{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:8px}.ab-r b{font:700 22px Machina,Helv,sans-serif;display:block}.ab-r span{font-size:12px;color:var(--mut)}
+@media(max-width:760px){.ab-g{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -612,13 +615,15 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
     var row=function(x){
       html+='<div class="nl-row"><div class="dt">'+fd(x.date)+'</div><div class="nm">'+esc(x.nom)+'</div><div class="rates">'+
         '<div class="rate"><span>Ouv.</span><div class="bar"><i style="width:'+(x.ouverture/maxO*100).toFixed(1)+'%;background:var(--blue)"></i></div><b class="num">'+pc(x.ouverture)+'</b></div>'+
-        '<div class="rate"><span>Clic</span><div class="bar"><i style="width:'+(x.clic/maxO*100).toFixed(1)+'%;background:var(--yel)"></i></div><b class="num">'+pc(x.clic)+'</b></div></div></div>';
+        '<div class="rate"><span>Clic</span><div class="bar"><i style="width:'+(x.clic/maxO*100).toFixed(1)+'%;background:var(--yel)"></i></div><b class="num">'+pc(x.clic)+'</b></div>'+(x.desabonnements!=null?'<div class="rate desab"><span>Désab.</span><div class="bar"></div><b class="num">'+int(x.desabonnements)+'</b></div>':'')+'</div></div>';
     };
     var isF=function(x){return /hebdo|formation/i.test(x.nom||'');};
     var NF=N.derniers.filter(isF), NX=N.derniers.filter(function(x){return !isF(x);});
     if(NF.length){html+='<div class="nl-grp">Formations</div>';NF.forEach(row);}
     if(NX.length){html+='<div class="nl-grp">Expos</div>';NX.forEach(row);}
     html+='</div><div class="side">';
+    var d30=N.derniers.filter(function(x){return days(x.date,D.today)<=30;}),des30=d30.reduce(function(t,x){return t+(x.desabonnements||0);},0),env30=d30.reduce(function(t,x){return t+(x.envoyes||0);},0),ou30=env30?d30.reduce(function(t,x){return t+(x.ouverture||0)*(x.envoyes||0);},0)/env30:0;
+    html+='<div class="card ab-nl"><span class="k">Abonnés · 30 derniers jours '+tip('Calculé sur les envois des 30 derniers jours relevés dans Dialog Insight. <b>Ouverture moyenne</b> = pondérée par le nombre de courriels envoyés. <b>Désabonnements</b> = personnes qui ont cliqué « se désabonner » dans ces envois.')+'</span><div class="ab-r"><div><b class="num">'+pc(Math.round(ou30*10)/10)+'</b><span>ouverture moyenne</span></div><div><b class="num">'+int(des30)+'</b><span>désabonnements</span></div><div><b class="num">'+int(d30.length)+'</b><span>envois</span></div></div><div class="s" style="font-size:12px;color:var(--mut);margin-top:6px">Dialog Insight (API) · mis à jour automatiquement</div></div>';
     html+='<div class="card"><span class="k">Base de contacts</span><div class="big num">'+int(N.base.contacts)+'</div><div class="s" style="font-size:13px;color:var(--mut)"><b style="color:var(--ink)">+'+int(N.base.nouveaux7j)+'</b> nouveaux en 7 jours</div>'+
       '<div class="s" style="font-size:12px;color:var(--mut);margin-top:8px">Tableau de bord Dialog Insight · relevé '+esc(N.base.releve||'')+'</div></div>';
     html+='<div class="card next"><span class="k">Prochains envois · à préparer</span><ul>'+
@@ -654,6 +659,7 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
       };
       var FB=SOC.facebook||[], LI=SOC.linkedin||[];
       html+='<section id="reseaux"><div class="sh"><h2>Réseaux <span class="o">sociaux</span></h2><span class="k">'+esc(SOC.source||'')+'</span></div>'+
+        (SOC.abonnes?'<div class="ab-g">'+SOC.abonnes.plateformes.map(function(x){return '<div class="card ab-c"><span class="k">'+esc(x.nom)+'</span><div class="v">'+(x.abonnes?esc(x.abonnes):'—')+'</div><div class="s">'+(x.abonnes?'abonnés':'')+(x.variation?'<br>'+(/^\+/.test(x.variation)?'<b>'+esc(x.variation)+'</b>':esc(x.variation)):'')+'</div><div class="s2">'+esc(x.source)+(x.lien?' · <a href="'+esc(x.lien)+'" target="_blank" rel="noopener">voir ↗</a>':'')+'</div></div>';}).join('')+'</div><p class="gnote">Relevé '+esc(SOC.abonnes.releve)+'. '+esc(SOC.abonnes.note)+'</p>':'')+
         (function(){var P=(SOC.programmes||[]).filter(function(x){return x.quand.slice(0,10)>=D.today;});if(!P.length)return '';
           var JR=["dim.","lun.","mar.","mer.","jeu.","ven.","sam."],MO=["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."];
           return '<div class="prog"><div class="sh2"><h3>Posts programmés</h3><span class="k">'+P.length+' à venir · relevé '+esc(SOC.programmes_releve||'')+'</span></div><div class="prog-l">'+

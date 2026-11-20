@@ -711,5 +711,34 @@
    "img": "img/posts/li-murs-vegetaux.jpg"
   }
  ],
- "programmes_releve": "19 nov., 18 h"
+ "programmes_releve": "19 nov., 18 h",
+ "abonnes": {
+  "releve": "19 nov. 2026, 23 h 55",
+  "plateformes": [
+   {
+    "nom": "Facebook",
+    "abonnes": "2,8 k",
+    "exact": false,
+    "variation": "+145 nouveaux abonnés en 28 jours",
+    "source": "Meta Business Suite",
+    "lien": "https://www.facebook.com/ContechBatiment/"
+   },
+   {
+    "nom": "LinkedIn",
+    "abonnes": "4 111",
+    "exact": true,
+    "variation": "",
+    "source": "Page LinkedIn Contech Bâtiment",
+    "lien": "https://www.linkedin.com/company/contech_2/"
+   },
+   {
+    "nom": "Instagram",
+    "abonnes": null,
+    "variation": "Pas relié à la page Facebook dans Meta Business Suite",
+    "source": "Meta Business Suite",
+    "lien": ""
+   }
+  ],
+  "note": "Facebook n’affiche le total qu’arrondi (2,8 k). Relevé chaque matin avec le reste du tableau."
+ }
 }
