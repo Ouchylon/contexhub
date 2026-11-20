@@ -2692,5 +2692,160 @@
     "ventes": 0.0
    }
   ]
+ },
+ "strategie": {
+  "releve": "19 nov. 2026, 23 h",
+  "observations": [
+   {
+    "titre": "Les infolettres : le canal qu'on pilote qui vend le plus",
+    "chiffre": "119 ventes · 80 839 $",
+    "texte": "Depuis le 14 janv., seules les visites directes et la recherche Google gratuite font plus. Les meilleurs envois : hebdo du 13 janv. (7 445 $), du 28 avr. (7 240 $) et du 5 mai (12 ventes).",
+    "source": "Shopify"
+   },
+   {
+    "titre": "La recherche Google gratuite vend 3,6 fois plus que Google Ads",
+    "chiffre": "133 ventes vs 37",
+    "texte": "85 435 $ viennent de gens qui trouvent Contech sur Google sans pub. Le contenu (pages de formation, articles) est un levier aussi important que la pub.",
+    "source": "Shopify"
+   },
+   {
+    "titre": "Google Ads ramène 2,34 $ pour 1 $ payé à Google",
+    "chiffre": "37 ventes · 33 246 $",
+    "texte": "14 194 $ payés à Google depuis le 14 janv., avant les frais de gestion. Google annonce 526 conversions : se fier aux 37 ventes de Shopify.",
+    "source": "Shopify + Google Ads"
+   },
+   {
+    "titre": "Les pubs Meta qui vendent sont surtout les rappels",
+    "chiffre": "5 ventes · 2 900 $",
+    "texte": "3 des 5 ventes Meta viennent des pubs de rappel (personnes déjà venues sur le site) : formation du 5 nov. (2 ventes) et du 3 nov. (1 vente).",
+    "source": "Shopify"
+   },
+   {
+    "titre": "6 formations de décembre sont à 3 inscrits ou moins",
+    "chiffre": "0 à 3 inscrits",
+    "texte": "Murs végétaux 0/16, BIM 1/18, Inspection niveau 2 1/18, Quincaillerie 2/18, Toitures 3/22, Bâtiment durable 3/18.",
+    "source": "Tableau de bord A2026"
+   }
+  ],
+  "actions": [
+   {
+    "qui": "Ouchylon",
+    "role": "Marketing",
+    "items": [
+     {
+      "quoi": "Monter les infolettres Vendredi fou (27 nov.) et Cyber lundi (30 nov.)",
+      "quand": "d'ici le 25 nov.",
+      "pourquoi": "Les infolettres sont le canal qui vend le plus."
+     },
+     {
+      "quoi": "Lancer des pubs Meta de rappel pour les formations de décembre confirmées",
+      "quand": "dès la décision du 23 nov.",
+      "pourquoi": "Les rappels font la majorité des ventes Meta."
+     },
+     {
+      "quoi": "Présenter à Hamak la liste « À optimiser » (Display, « formation batiment », « contech montreal », « maestro oiq »)",
+      "quand": "rencontre du 23 nov., 14 h",
+      "pourquoi": "Environ 400 $ en 30 jours sans aucune conversion Google."
+     },
+     {
+      "quoi": "Ajouter la case d'abonnement au Bulletin Formation au paiement Shopify",
+      "quand": "décembre",
+      "pourquoi": "661 des 1 137 clients actifs n'ont jamais eu la question."
+     }
+    ]
+   },
+   {
+    "qui": "Lyana",
+    "role": "Formation et partenariats",
+    "items": [
+     {
+      "quoi": "Trancher les sessions du 1er au 4 déc. : Murs végétaux (0), BIM (1), Quincaillerie (2), Toitures (3)",
+      "quand": "lundi 23 nov.",
+      "pourquoi": "Décision environ une semaine avant la session."
+     },
+     {
+      "quoi": "Valider la sélection de l'Hebdo du 24 nov. (3 ou 4 formations confirmées)",
+      "quand": "lundi 23 nov.",
+      "pourquoi": "Ne pousser que des sessions qui auront lieu."
+     }
+    ]
+   },
+   {
+    "qui": "Sunny",
+    "role": "Coordination logistique",
+    "items": [
+     {
+      "quoi": "Aviser les formateurs des sessions reportées ou annulées",
+      "quand": "le jour de la décision",
+      "pourquoi": "Leur laisser le temps de s'organiser."
+     },
+     {
+      "quoi": "Confirmer formateur, matériel et répétition technique des sessions maintenues du 1er au 10 déc.",
+      "quand": "semaine du 23 nov.",
+      "pourquoi": "Sessions en ligne : tout doit être prêt avant le jour J."
+     }
+    ]
+   },
+   {
+    "qui": "Ping",
+    "role": "Service à la clientèle",
+    "items": [
+     {
+      "quoi": "Joindre les inscrits des sessions annulées ou reportées : nouvelle date, transfert ou remboursement",
+      "quand": "dès la décision",
+      "pourquoi": "Garder la vente plutôt que rembourser."
+     },
+     {
+      "quoi": "Signaler au marketing les questions qui reviennent souvent des clients",
+      "quand": "en continu",
+      "pourquoi": "Elles deviennent des sujets d'infolettre ou de FAQ."
+     }
+    ]
+   },
+   {
+    "qui": "Lita",
+    "role": "Cheffe marketing",
+    "items": [
+     {
+      "quoi": "Confirmer le montant des frais de gestion de Hamak",
+      "quand": "avant le 23 nov.",
+      "pourquoi": "Pour calculer ce qui reste réellement après Google Ads."
+     },
+     {
+      "quoi": "Décider du budget Display (153 $ sur 30 jours, 0 vente)",
+      "quand": "rencontre Hamak du 23 nov.",
+      "pourquoi": "Seule campagne Google sans aucune conversion."
+     }
+    ]
+   },
+   {
+    "qui": "Équipe données (Guillaume, Louis)",
+    "role": "Données et plateformes",
+    "items": [
+     {
+      "quoi": "Donner les accès en lecture : Shopify (commandes), Meta (utilisateur système), Google Analytics et Search Console",
+      "quand": "à partir du 20 nov.",
+      "pourquoi": "Le tableau se met à jour seul et montre la campagne derrière chaque vente."
+     }
+    ]
+   }
+  ],
+  "tests": [
+   {
+    "titre": "Relancer les anciens clients",
+    "texte": "Courriels aux 1 042 clients dont la dernière formation date de 13 à 24 mois, selon leur centre d'intérêt.",
+    "mesure": "Ventes Shopify de la campagne, 6 semaines"
+   },
+   {
+    "titre": "Visiteurs d'Expo vers les formations",
+    "texte": "Série de courriels aux 3 268 visiteurs d'Expo récents qui n'ont jamais suivi de formation, comparée à un groupe qui ne la reçoit pas.",
+    "mesure": "Ventes des deux groupes"
+   },
+   {
+    "titre": "3 articles pour la recherche Google",
+    "texte": "Code de construction, Exploitation et inspection, Enveloppe du bâtiment, chacun relié à sa formation.",
+    "mesure": "Clics Google et ventes venues des articles"
+   }
+  ]
  }
 }

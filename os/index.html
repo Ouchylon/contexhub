@@ -322,6 +322,15 @@ footer b{color:var(--ink)}
 .vc{padding:18px 20px;margin-top:14px;min-width:0}#vc-o{overflow-x:auto}.vc .roi-h{min-width:0}.vc .cr-t{display:table;width:100%}.vc-s{margin:0 0 8px;font-size:14px}.vc-b td.vc-bar{width:32%}.vc-bar i{display:block;height:10px;background:#E8990F;border-radius:2px;min-width:2px}
 .vc-p td{background:#fbf3e4}.vc-h{margin:22px 0 2px;font:700 17px Machina,Helv,sans-serif}.vc-sc{max-height:420px;overflow:auto;margin-top:8px}.vc-c small{color:var(--mut);white-space:normal}
 @media(max-width:760px){.vc{padding:14px}.vc-b td.vc-bar{display:none}.vc-b th:nth-child(2){display:none}.vc-b th:nth-child(6),.vc-b td:nth-child(6){display:none}.vc-c td:nth-child(2),.vc-c th:nth-child(2){display:none}.vc .cr-t td{white-space:normal}.vc .cr-t td:nth-child(n+3){white-space:nowrap;font-size:12px}}
+.st-o{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+.st-c{padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}.st-c b{font-size:15px;line-height:1.3}.st-c .v{font:700 20px/1.15 Machina,Helv,sans-serif;color:#b86f00}.st-c p{margin:0;font-size:13px;line-height:1.45;color:var(--mut)}
+.st-a{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:10px}
+.st-p{padding:14px 16px;min-width:0}.st-ph{display:flex;justify-content:space-between;gap:8px;align-items:baseline;border-bottom:2px solid #E8990F;padding-bottom:6px}.st-ph b{font:700 17px Machina,Helv,sans-serif}.st-ph span{font-size:12px;color:var(--mut)}
+.st-p ul{list-style:none;margin:6px 0 0;padding:0}.st-p li{padding:8px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:3px}.st-p li:last-child{border-bottom:0}
+.st-q{font-size:14px;line-height:1.35;padding-left:20px;position:relative}.st-q:before{content:"";position:absolute;left:0;top:3px;width:11px;height:11px;border:1.5px solid var(--ink);border-radius:2px}
+.st-w{font-size:12.5px;color:var(--mut);padding-left:20px}.st-w em{font-style:normal;font-weight:700;color:var(--ink)}
+.st-t{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
+#strategie .sh2{margin-top:22px}
 </style>
 </head>
 <body>
@@ -412,6 +421,15 @@ footer b{color:var(--ink)}
     html+='<div class="card tile"><span class="k">Places à combler</span><div class="v num">'+int(places)+'</div><div class="s">'+F.length+' formations, '+
       fd(F[0].date)+' → '+fd(F[F.length-1].date)+'<br><b style="color:var(--red)">'+nc+' non confirmées</b> (≤ '+seuil+' inscrits)</div></div>';
     html+='</div></section>';
+
+    /* 1a. Stratégie */
+    if(D.strategie){var ST=D.strategie;
+      html+='<section id="strategie"><div class="sh"><h2><span class="o">Stratégie</span></h2><span class="k">Ce que disent les chiffres · qui fait quoi · relevé '+esc(ST.releve)+'</span></div>'+
+        '<div class="st-o">'+ST.observations.map(function(o,i){return '<div class="card st-c"><span class="k">'+(i+1)+' · '+esc(o.source)+'</span><b>'+esc(o.titre)+'</b><div class="v">'+esc(o.chiffre)+'</div><p>'+esc(o.texte)+'</p></div>';}).join('')+'</div>'+
+        '<div class="sh2"><h3>Qui fait quoi</h3><span class="k">Actions concrètes, par personne</span></div><div class="st-a">'+
+        ST.actions.map(function(a){return '<div class="card st-p"><div class="st-ph"><b>'+esc(a.qui)+'</b><span>'+esc(a.role)+'</span></div><ul>'+a.items.map(function(x){return '<li><span class="st-q">'+esc(x.quoi)+'</span><span class="st-w"><em>'+esc(x.quand)+'</em> · '+esc(x.pourquoi)+'</span></li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
+        '<div class="sh2"><h3>Tests à lancer</h3><span class="k">Petits essais, résultat mesuré dans ce tableau</span></div><div class="st-t">'+
+        ST.tests.map(function(t){return '<div class="card st-c"><b>'+esc(t.titre)+'</b><p>'+esc(t.texte)+'</p><span class="k">Mesure : '+esc(t.mesure)+'</span></div>';}).join('')+'</div></section>';}
 
     /* 1b. Ventes */
     if(D.ventes){
@@ -651,7 +669,7 @@ footer b{color:var(--ink)}
       '<div class="card cal"><div class="cal-scroll">'+g+'</div><div class="cal-hint">← Glisser pour voir toute la période →</div>'+
       '<div class="legend"><span><i class="sw" style="background:var(--yel)"></i>Pub programmée</span><span><i class="sw" style="background:#f6d9a8;border:1px dashed var(--yel)"></i>Pub à venir</span><span><i class="sw" style="background:var(--indigo)"></i>Infolettre</span><span><i class="sw" style="background:var(--sage);border-radius:50%"></i>Formation (nb d’inscrits)</span><span><i class="sw" style="background:var(--red);border-radius:50%"></i>Non confirmée</span></div></div></section>';
 
-    var som='<nav class="sommaire">'+[["aujourdhui","Aujourd’hui"],["ventes","Ventes"],["parcours","Parcours client"],["formations","Formations"],["pubs","Pubs"],["infolettres","Infolettres"],["toutes-infolettres","Toutes les infolettres"],["reseaux","Réseaux sociaux"],["calendrier","Calendrier"]]
+    var som='<nav class="sommaire">'+[["aujourdhui","Aujourd’hui"],["strategie","Stratégie"],["ventes","Ventes"],["parcours","Parcours client"],["formations","Formations"],["pubs","Pubs"],["infolettres","Infolettres"],["toutes-infolettres","Toutes les infolettres"],["reseaux","Réseaux sociaux"],["calendrier","Calendrier"]]
       .filter(function(a){return html.indexOf('id="'+a[0]+'"')>=0;}).map(function(a){return '<a href="#'+a[0]+'">'+a[1]+'</a>';}).join('')+'</nav>';
     document.getElementById("app").innerHTML=som+html;
     window.__SH=D.shopify||null;
