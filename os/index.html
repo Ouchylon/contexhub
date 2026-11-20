@@ -699,10 +699,10 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
       '<div class="card cal"><div class="cal-scroll">'+g+'</div><div class="cal-hint">← Glisser pour voir toute la période →</div>'+
       '<div class="legend"><span><i class="sw" style="background:var(--yel)"></i>Pub programmée</span><span><i class="sw" style="background:#f6d9a8;border:1px dashed var(--yel)"></i>Pub à venir</span><span><i class="sw" style="background:var(--indigo)"></i>Infolettre</span><span><i class="sw" style="background:var(--sage);border-radius:50%"></i>Formation (nb d’inscrits)</span><span><i class="sw" style="background:var(--red);border-radius:50%"></i>Non confirmée</span></div></div></section>';
 
-    var som='<nav class="sommaire">'+[["semaines","Ventes par semaine"],["aujourdhui","Aujourd’hui"],["ventes","Ventes"],["pubs","Pubs"],["infolettres","Infolettres"],["formations","Formations"],["reseaux","Réseaux sociaux"],["parcours","Parcours client"],["strategie","Stratégie"],["calendrier","Calendrier"],["toutes-infolettres","Toutes les infolettres"]]
+    var som='<nav class="sommaire">'+[["semaines","Ventes par semaine"],["aujourdhui","Aujourd’hui"],["ventes","Ventes"],["pubs","Pubs"],["reseaux","Réseaux sociaux"],["infolettres","Infolettres"],["toutes-infolettres","Toutes les infolettres"],["formations","Formations"],["parcours","Parcours client"],["strategie","Stratégie"],["calendrier","Calendrier"]]
       .filter(function(a){return html.indexOf('id="'+a[0]+'"')>=0;}).map(function(a){return '<a href="#'+a[0]+'">'+a[1]+'</a>';}).join('')+'</nav>';
     document.getElementById("app").innerHTML=som+html;
-    (function(){var app=document.getElementById("app");["semaines","aujourdhui","ventes","pubs","infolettres","formations","reseaux","parcours","strategie","calendrier","toutes-infolettres"].forEach(function(id){var el=document.getElementById(id);if(el)app.appendChild(el);});})();
+    (function(){var app=document.getElementById("app");["semaines","aujourdhui","ventes","pubs","reseaux","infolettres","toutes-infolettres","formations","parcours","strategie","calendrier"].forEach(function(id){var el=document.getElementById(id);if(el)app.appendChild(el);});})();
     window.__SH=D.shopify||null;
     if(D.ventes) window.vtInit(D.ventes,D.today);
     if(D.parcours){var pb=document.getElementById('pc-bars'),tg=document.querySelector('.pc-tog');
