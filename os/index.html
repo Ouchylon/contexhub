@@ -426,7 +426,7 @@ footer b{color:var(--ink)}
     if(D.strategie){var ST=D.strategie;
       html+='<section id="strategie"><div class="sh"><h2><span class="o">Stratégie</span></h2><span class="k">Ce que disent les chiffres · qui fait quoi · relevé '+esc(ST.releve)+'</span></div>'+
         '<div class="st-o">'+ST.observations.map(function(o,i){return '<div class="card st-c"><span class="k">'+(i+1)+' · '+esc(o.source)+'</span><b>'+esc(o.titre)+'</b><div class="v">'+esc(o.chiffre)+'</div><p>'+esc(o.texte)+'</p></div>';}).join('')+'</div>'+
-        '<div class="sh2"><h3>Qui fait quoi</h3><span class="k">Actions concrètes, par personne</span></div><div class="st-a">'+
+        '<div class="sh2"><h3>Prochaines actions marketing</h3><span class="k">Ce que le marketing fait à partir de ces chiffres</span></div><div class="st-a">'+
         ST.actions.map(function(a){return '<div class="card st-p"><div class="st-ph"><b>'+esc(a.qui)+'</b><span>'+esc(a.role)+'</span></div><ul>'+a.items.map(function(x){return '<li><span class="st-q">'+esc(x.quoi)+'</span><span class="st-w"><em>'+esc(x.quand)+'</em> · '+esc(x.pourquoi)+'</span></li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
         '<div class="sh2"><h3>Tests à lancer</h3><span class="k">Petits essais, résultat mesuré dans ce tableau</span></div><div class="st-t">'+
         ST.tests.map(function(t){return '<div class="card st-c"><b>'+esc(t.titre)+'</b><p>'+esc(t.texte)+'</p><span class="k">Mesure : '+esc(t.mesure)+'</span></div>';}).join('')+'</div></section>';}

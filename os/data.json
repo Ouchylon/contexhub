@@ -2739,7 +2739,7 @@
      },
      {
       "quoi": "Lancer des pubs Meta de rappel pour les formations de décembre confirmées",
-      "quand": "dès la décision du 23 nov.",
+      "quand": "pour les formations de décembre confirmées",
       "pourquoi": "Les rappels font la majorité des ventes Meta."
      },
      {
@@ -2751,81 +2751,6 @@
       "quoi": "Ajouter la case d'abonnement au Bulletin Formation au paiement Shopify",
       "quand": "décembre",
       "pourquoi": "661 des 1 137 clients actifs n'ont jamais eu la question."
-     }
-    ]
-   },
-   {
-    "qui": "Lyana",
-    "role": "Formation et partenariats",
-    "items": [
-     {
-      "quoi": "Trancher les sessions du 1er au 4 déc. : Murs végétaux (0), BIM (1), Quincaillerie (2), Toitures (3)",
-      "quand": "lundi 23 nov.",
-      "pourquoi": "Décision environ une semaine avant la session."
-     },
-     {
-      "quoi": "Valider la sélection de l'Hebdo du 24 nov. (3 ou 4 formations confirmées)",
-      "quand": "lundi 23 nov.",
-      "pourquoi": "Ne pousser que des sessions qui auront lieu."
-     }
-    ]
-   },
-   {
-    "qui": "Sunny",
-    "role": "Coordination logistique",
-    "items": [
-     {
-      "quoi": "Aviser les formateurs des sessions reportées ou annulées",
-      "quand": "le jour de la décision",
-      "pourquoi": "Leur laisser le temps de s'organiser."
-     },
-     {
-      "quoi": "Confirmer formateur, matériel et répétition technique des sessions maintenues du 1er au 10 déc.",
-      "quand": "semaine du 23 nov.",
-      "pourquoi": "Sessions en ligne : tout doit être prêt avant le jour J."
-     }
-    ]
-   },
-   {
-    "qui": "Ping",
-    "role": "Service à la clientèle",
-    "items": [
-     {
-      "quoi": "Joindre les inscrits des sessions annulées ou reportées : nouvelle date, transfert ou remboursement",
-      "quand": "dès la décision",
-      "pourquoi": "Garder la vente plutôt que rembourser."
-     },
-     {
-      "quoi": "Signaler au marketing les questions qui reviennent souvent des clients",
-      "quand": "en continu",
-      "pourquoi": "Elles deviennent des sujets d'infolettre ou de FAQ."
-     }
-    ]
-   },
-   {
-    "qui": "Lita",
-    "role": "Cheffe marketing",
-    "items": [
-     {
-      "quoi": "Confirmer le montant des frais de gestion de Hamak",
-      "quand": "avant le 23 nov.",
-      "pourquoi": "Pour calculer ce qui reste réellement après Google Ads."
-     },
-     {
-      "quoi": "Décider du budget Display (153 $ sur 30 jours, 0 vente)",
-      "quand": "rencontre Hamak du 23 nov.",
-      "pourquoi": "Seule campagne Google sans aucune conversion."
-     }
-    ]
-   },
-   {
-    "qui": "Équipe données (Guillaume, Louis)",
-    "role": "Données et plateformes",
-    "items": [
-     {
-      "quoi": "Donner les accès en lecture : Shopify (commandes), Meta (utilisateur système), Google Analytics et Search Console",
-      "quand": "à partir du 20 nov.",
-      "pourquoi": "Le tableau se met à jour seul et montre la campagne derrière chaque vente."
      }
     ]
    }
