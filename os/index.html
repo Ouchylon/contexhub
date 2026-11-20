@@ -331,6 +331,19 @@ footer b{color:var(--ink)}
 .st-w{font-size:12.5px;color:var(--mut);padding-left:20px}.st-w em{font-style:normal;font-weight:700;color:var(--ink)}
 .st-t{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px}
 #strategie .sh2{margin-top:22px}
+.bm{margin-bottom:14px}.bm-t{display:table;width:100%;margin-top:12px;table-layout:fixed}.bm-t td{white-space:normal!important;word-break:break-word}.bm-t em{color:#B9314F;font-style:normal;font-weight:700}.rc{margin:0 0 14px}.rc-g{grid-template-columns:repeat(2,minmax(0,1fr))}
+.ws{padding:18px 20px;margin-bottom:14px}.ws-k{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:10px}.ws-k div{display:flex;flex-direction:column;gap:2px}.ws-k b{font:700 24px/1.1 Machina,Helv,sans-serif}.ws-k span:not(.k){font-size:12.5px;color:var(--mut)}
+.ws-k .up{color:#3d7a52}.ws-k .dn{color:#B9314F}.ws-lg{display:flex;gap:16px;font-size:12.5px;color:var(--mut);margin-bottom:4px}.ws-lg i,.ws-tt i{display:inline-block;width:14px;height:3px;border-radius:2px;margin-right:6px;vertical-align:middle}
+i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{width:100%;height:300px;display:block;overflow:visible}
+.ws-s .gr{stroke:var(--line);stroke-width:1}.ws-s .gr.z{stroke:#bdb6aa}.ws-s .ax{font:11px Helv,sans-serif;fill:var(--mut)}.ws-s .ar{fill:rgba(232,153,15,.14)}.ws-s .la{fill:none;stroke:#E8990F;stroke-width:2.5;stroke-linejoin:round}
+.ws-s .lb{fill:none;stroke:#8f8a80;stroke-width:1.5;stroke-dasharray:4 4}.ws-s .pb{fill:#8f8a80;stroke:#fff;stroke-width:2}.ws-s .an{font:600 11.5px Helv,sans-serif;fill:#5f5a52}.ws-s .xh{stroke:#222;stroke-width:1;stroke-dasharray:2 3}.ws-s .dot{fill:#E8990F;stroke:#fff;stroke-width:2}
+.ws-tt{position:absolute;top:8px;width:190px;background:#fff;border:1px solid var(--line);border-radius:4px;padding:8px 10px;font-size:12.5px;display:flex;flex-direction:column;gap:3px;pointer-events:none;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+@media(max-width:760px){.ws-k{grid-template-columns:repeat(2,minmax(0,1fr))}.ws-k b{font-size:18px}.ws-s{height:220px}}
+.rc .cr-t{display:table;width:100%}
+.tip{position:relative;display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--mut);color:var(--mut);font:700 11px Helv,sans-serif;cursor:help;vertical-align:middle;margin-left:4px}
+.tip-b{display:none;position:absolute;z-index:20;left:50%;top:24px;transform:translateX(-50%);width:300px;max-width:80vw;background:#1d1b18;color:#fff;font:400 12.5px/1.5 Helv,sans-serif;text-align:left;padding:10px 12px;border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,.2);letter-spacing:0;text-transform:none}
+.tip-b b{color:#f3b84a}.tip:hover .tip-b,.tip:focus .tip-b{display:block}.tip:focus{outline:2px solid #E8990F;outline-offset:2px}
+@media(max-width:760px){.tip-b{left:auto;right:-10px;transform:none}}
 </style>
 </head>
 <body>
@@ -376,6 +389,14 @@ footer b{color:var(--ink)}
     if(k==='selectionOCT26')return 'Pub carrousel · sélection d’octobre';
     if(/^\d{12,}$/.test(k))return 'Pub Meta (campagne '+k.slice(-6)+')';
     return k;}
+  function resCanal(D,cle,nomCanal,titre){var VC=D.ventesCanaux;if(!VC)return '';
+    var rows=VC.campagnes.filter(function(c){return c.canal===nomCanal;});
+    var per=VC.periodes.map(function(P){var c=P.canaux.filter(function(x){return x.cle===cle;})[0]||{commandes:0,ventes:0};return {label:P.label,du:P.du,au:P.au,c:c};});
+    return '<div class="card roi rc"><div class="roi-h"><h4>'+esc(titre)+' '+tip('Les ventes de la boutique qui ont suivi un clic sur '+(cle==='newsletter'?'une infolettre':'une pub Meta')+' (dernier clic avant l’achat, selon Shopify). Chaque ligne du tableau = '+(cle==='newsletter'?'un envoi':'une pub')+', avec le nombre de ventes et le montant qu’il a amenés.')+'</h4><span class="k">Ventes Shopify · relevé '+esc(VC.releve)+'</span></div><div class="roi-g rc-g">'+
+      per.map(function(p){return '<div class="roi-c"><span class="k">'+esc(p.label)+'</span><div class="v">'+int(p.c.commandes)+' ventes</div><div class="s"><b>'+money(p.c.ventes)+'</b> avant taxes · du '+fd(p.du)+' au '+fd(p.au)+'</div></div>';}).join('')+'</div>'+
+      (rows.length?'<div class="vc-sc"><table class="cr-t vc-c"><tr><th>'+(cle==='newsletter'?'Envoi':'Pub')+' qui a amené la vente</th><th>Ventes</th><th>Montant</th></tr>'+rows.map(function(c){return '<tr><td><b>'+esc(nomCamp(c.campagne))+'</b></td><td>'+int(c.commandes)+'</td><td><b>'+money(c.ventes)+'</b></td></tr>';}).join('')+'</table></div>':'')+
+      '<p class="gnote">Depuis le 14 janv. Une vente est comptée pour l’envoi ou la pub du dernier clic avant l’achat (Shopify).</p></div>';}
+  function tip(t){return '<span class="tip" tabindex="0" aria-label="Comment lire">?<span class="tip-b">'+t+'</span></span>';}
   function money(n){var s=(Math.round(n*100)/100).toFixed(n%1?2:0).replace(".",",");return s.replace(/\B(?=(\d{3})+(?!\d))/g," ")+" $";}
   function int(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g," ");}
   function pct(n){return String(n).replace(".",",")+" %";}
@@ -434,11 +455,12 @@ footer b{color:var(--ink)}
     /* 1b. Ventes */
     if(D.ventes){
       html+='<section id="ventes"><div class="sh"><h2>Ventes <span class="o">formations</span></h2><span class="k">Source : '+esc(D.ventes.source)+' · relevé le '+esc(D.ventes.releve)+'</span></div>'+
+        (D.ventesSemaines?'<div class="card ws"><div class="roi-h"><h4>Ventes par semaine '+tip('Chaque point = les ventes de la boutique pendant une semaine (lundi au dimanche), avant taxes. <b>Ligne orange</b> : 2026. <b>Pointillé gris</b> : la même semaine en 2025, pour comparer. Passez la souris sur le graphique pour voir le détail d’une semaine. Une semaine sous zéro = plus de remboursements que de ventes.')+'</h4><span class="k">Shopify · relevé '+esc(D.ventesSemaines.releve)+'</span></div><div id="ws-k" class="ws-k"></div><div class="ws-lg"><span><i class="a"></i>2026</span><span><i class="b"></i>2025 (même semaine)</span></div><div id="ws-c" class="ws-c"></div><p class="gnote">'+esc(D.ventesSemaines.source)+'</p></div>':'')+
         '<div class="vt-bar"><div class="tabs vt-per">'+[["sem","Cette semaine"],["sem-1","Semaine passée"],["mois","Ce mois"],["mois-1","Mois passé"],["annee","Année 2026"],["perso","Période…"]].map(function(a,i){return '<button type="button" data-p="'+a[0]+'"'+(a[0]==="mois"?' class="on"':'')+'>'+a[1]+'</button>';}).join('')+'</div>'+
         '<span class="vt-perso" hidden><label>Du <input type="date" id="vt-du" value="2026-11-01"></label> <label>au <input type="date" id="vt-au" value="2026-11-30"></label></span></div>'+
         '<div id="vt-out"></div><p class="gnote">'+esc(D.ventes.note)+'</p>'+
-        (D.ventesCanaux?'<div class="card vc"><div class="roi-h"><h4>D’où viennent les ventes</h4><div class="tabs vc-t">'+D.ventesCanaux.periodes.map(function(p,i){return '<button type="button" data-i="'+i+'"'+(i===0?' class="on"':'')+'>'+esc(p.label)+'</button>';}).join('')+'</div></div><div id="vc-o"></div>'+
-          '<h4 class="vc-h">Ventes par campagne (infolettres et pubs)</h4><span class="k">Depuis le 14 janv. · chaque ligne = un envoi ou une pub, avec les ventes qu’elle a amenées</span><div class="vc-sc"><table class="cr-t vc-c"><tr><th>Campagne</th><th>Canal</th><th>Ventes</th><th>Montant</th><th>Payé</th></tr>'+
+        (D.ventesCanaux?'<div class="card vc"><div class="roi-h"><h4>D’où viennent les ventes '+tip('Pour chaque vente, Shopify regarde d’où venait la personne la dernière fois qu’elle a cliqué avant d’acheter (une infolettre, une pub, Google…). <b>Payé</b> = ce qu’on a dépensé pour ce canal. <b>Pour 1 $ payé</b> = les ventes ramenées pour chaque dollar dépensé. Le 14 janv. est le début des campagnes Google Ads de Hamak : on compare tout sur la même période.')+'</h4><div class="tabs vc-t">'+D.ventesCanaux.periodes.map(function(p,i){return '<button type="button" data-i="'+i+'"'+(i===0?' class="on"':'')+'>'+esc(p.label)+'</button>';}).join('')+'</div></div><div id="vc-o"></div>'+
+          '<h4 class="vc-h">Ventes par campagne (infolettres et pubs) '+tip('Chaque ligne = un envoi d’infolettre ou une pub, et les ventes qu’il a amenées. Google ne transmet pas le nom de ses campagnes à la boutique : ses ventes sont regroupées sur une seule ligne.')+'</h4><span class="k">Depuis le 14 janv. · chaque ligne = un envoi ou une pub, avec les ventes qu’elle a amenées</span><div class="vc-sc"><table class="cr-t vc-c"><tr><th>Campagne</th><th>Canal</th><th>Ventes</th><th>Montant</th><th>Payé</th></tr>'+
           D.ventesCanaux.campagnes.map(function(c){return '<tr><td><b>'+esc(nomCamp(c.campagne))+'</b>'+(c.note?'<br><small>'+esc(c.note)+'</small>':'')+'</td><td>'+esc(c.canal)+'</td><td>'+int(c.commandes)+'</td><td><b>'+money(c.ventes)+'</b></td><td>'+(c.paye!=null?money(c.paye):'—')+'</td></tr>';}).join('')+'</table></div>'+
           '<p class="gnote">'+esc(D.ventesCanaux.source)+' Relevé '+esc(D.ventesCanaux.releve)+'.</p></div>':'')+'</section>';
     }
@@ -512,7 +534,15 @@ footer b{color:var(--ink)}
 
     /* 3. Pubs */
     var P=D.pubs;
-    html+='<section id="pubs"><div class="sh"><h2>Pubs <span class="o">en cours</span></h2><span class="k">Meta Ads</span></div><div class="ads">';
+    var metaRes=function(){return resCanal(D,'Meta Ads','Pubs Meta','Résultats pubs Meta');};var budgetHtml='';if(D.budgetMarketing){var B=D.budgetMarketing,conn=B.depenses.filter(function(x){return x.montant!=null;}).reduce(function(t,x){return t+x.montant;},0),manq=B.depenses.filter(function(x){return x.montant==null;}),dep=B.reellesFichier!=null?B.reellesFichier:conn,mois=(+D.today.slice(5,7)-1)+(+D.today.slice(8,10))/30,adate=Math.min(B.annuel,B.mensuel*mois);
+      budgetHtml='<div class="card roi bm"><div class="roi-h"><h4>Budget marketing 2026 '+tip('Le budget vient du fichier Coûts et revenus 2026 (onglet Coût Marketing). <b>Budget prévu à date</b> = ce qu’on aurait dû dépenser jusqu’à aujourd’hui si on dépensait pareil chaque mois. <b>Il reste</b> = budget de l’année moins ce qui est déjà dépensé. Les postes « à ajouter » ne sont pas encore comptés.')+'</h4><span class="k">Relevé '+esc(B.releve)+'</span></div><div class="roi-g">'+
+        '<div class="roi-c"><span class="k">Budget de l’année</span><div class="v">'+money(B.annuel)+'</div><div class="s">'+money(B.mensuel)+' par mois · <a href="'+esc(B.fichier)+'" target="_blank" rel="noopener">fichier</a></div></div>'+
+        '<div class="roi-c"><span class="k">Budget prévu à date</span><div class="v">'+money(Math.round(adate))+'</div><div class="s">du 1er janv. à aujourd’hui</div></div>'+
+        '<div class="roi-c"><span class="k">Dépensé (relevé)</span><div class="v">'+money(dep)+'</div><div class="s">'+(manq.length?'sans '+manq.map(function(x){return x.poste.toLowerCase();}).join(' ni '):'toutes les dépenses')+'</div></div>'+
+        '<div class="roi-c '+(B.annuel-dep>0?'ok':'ko')+'"><span class="k">Il reste</span><div class="v">'+money(B.annuel-dep)+'</div><div class="s">'+(manq.length?'au plus : les postes manquants vont le réduire':'pour le reste de l’année')+'</div></div></div>'+
+        '<table class="cr-t bm-t"><tr><th>Poste</th><th>Montant</th><th>Source</th></tr>'+B.depenses.map(function(x){return '<tr><td><b>'+esc(x.poste)+'</b></td><td>'+(x.montant!=null?money(x.montant):'<em>à ajouter</em>')+'</td><td>'+esc(x.source)+'</td></tr>';}).join('')+'</table>'+
+        '<p class="gnote">'+esc(B.note)+' '+esc(B.source)+'</p></div>';}
+    html+='<section id="pubs"><div class="sh"><h2>Pubs <span class="o">en cours</span></h2><span class="k">Meta Ads · Google Ads</span></div>'+budgetHtml+metaRes()+'<div class="ads">';
     P.campagnes.forEach(function(c){
       var soon=c.statut==="À venir";
       var pc=soon?"":(c.statut==="Active"?"g":"y");
@@ -543,7 +573,7 @@ footer b{color:var(--ink)}
       html+='<div class="gad"><div class="sh2"><h3>Google Ads · campagnes gérées par Hamak</h3><span class="k">'+(GA?'Google Ads · '+esc(GA.periode)+' · relevé '+esc(GA.releve):'Source : compte Google Ads de Contech')+'</span></div>';
       if(!GA){html+='<div class="pc-vide"><b>À relever</b><span>Campagnes, annonces telles qu’elles s’affichent sur Google, mots-clés et résultats (clics, coût, conversions).</span></div></div>';return;}
       if(GA.roi){var RO=GA.roi;
-        html+='<div class="card roi"><div class="roi-h"><h4>Résultats Google Ads</h4><div class="tabs roi-t">'+RO.periodes.map(function(p,i){return '<button type="button" data-r="'+i+'"'+(i===0?' class="on"':'')+'>'+esc(p.label)+'</button>';}).join('')+'</div></div><div id="roi-o"></div>'+
+        html+='<div class="card roi"><div class="roi-h"><h4>Résultats Google Ads '+tip('<b>1</b> : ce qu’on a payé à Google. <b>2</b> : les ventes que Shopify attribue à un clic sur une pub Google. <b>3</b> : le profit sur ces ventes, après le coût des formateurs. <b>4</b> : ce qui reste après avoir payé Google, avant les frais de Hamak. Google compte ses propres « conversions », souvent plus que les vraies ventes : on se fie à Shopify.')+'</h4><div class="tabs roi-t">'+RO.periodes.map(function(p,i){return '<button type="button" data-r="'+i+'"'+(i===0?' class="on"':'')+'>'+esc(p.label)+'</button>';}).join('')+'</div></div><div id="roi-o"></div>'+
           (GA.analyse?'<div class="gan"><div><span class="k ok">Ce qui fonctionne</span>'+GA.analyse.fonctionne.map(function(x){return '<div class="gan-i"><b>'+esc(x.quoi)+'</b><em>'+esc(x.chiffre)+'</em><span>'+esc(x.detail)+'</span></div>';}).join('')+'</div>'+
           '<div><span class="k ko">À optimiser</span>'+GA.analyse.optimiser.map(function(x){return '<div class="gan-i"><b>'+esc(x.quoi)+'</b><em>'+esc(x.chiffre)+'</em><span>'+esc(x.detail)+'</span></div>';}).join('')+'</div></div><p class="gnote">'+esc(GA.analyse.note)+'</p>':'')+
           '<p class="gnote">'+esc(RO.source)+'</p></div>';}
@@ -568,7 +598,7 @@ footer b{color:var(--ink)}
     /* 4. Infolettres */
     var N=D.infolettres, S=N.sept_jours;
     var maxO=Math.max.apply(null,N.derniers.map(function(x){return x.ouverture;}).concat([40]));
-    html+='<section id="infolettres"><div class="sh"><h2><span class="o">Infolettres</span></h2><span class="k">Dialog Insight · derniers envois'+(N.releve?' · relevé '+esc(N.releve.slice(11,16)):'')+'</span></div>'+((N.alertes||[]).length?'<div class="err" style="margin:0 0 12px">⚠ '+N.alertes.map(esc).join('<br>⚠ ')+'</div>':'')+'<div class="nl">';
+    html+='<section id="infolettres"><div class="sh"><h2><span class="o">Infolettres</span></h2><span class="k">Dialog Insight · derniers envois'+(N.releve?' · relevé '+esc(N.releve.slice(11,16)):'')+'</span></div>'+((N.alertes||[]).length?'<div class="err" style="margin:0 0 12px">⚠ '+N.alertes.map(esc).join('<br>⚠ ')+'</div>':'')+''+resCanal(D,'newsletter','Infolettres','Résultats infolettres')+'<div class="nl">';
     html+='<div class="card nl-list">';
     var pc=function(v){return String(v).replace('.',',')+'\u00a0%';};
     var row=function(x){
@@ -695,6 +725,30 @@ footer b{color:var(--ink)}
         vo.innerHTML='<p class="vc-s"><b>'+int(P.total.commandes)+' ventes · '+money(P.total.ventes)+'</b> avant taxes, du '+fd(P.du)+' au '+fd(P.au)+'</p><table class="cr-t vc-b"><tr><th>Canal</th><th></th><th>Ventes</th><th>Montant</th><th>Payé</th><th>Pour 1 $ payé</th></tr>'+
           P.canaux.map(function(c){return '<tr'+(c.paye!=null?' class="vc-p"':'')+'><td><b>'+esc(c.canal)+'</b></td><td class="vc-bar"><i style="width:'+(100*c.ventes/mx)+'%"></i></td><td>'+int(c.commandes)+'</td><td><b>'+money(c.ventes)+'</b></td><td>'+(c.paye!=null?money(c.paye):'—')+'</td><td>'+(c.paye?(c.ventes/c.paye).toFixed(2).replace('.',',')+' $':'—')+'</td></tr>';}).join('')+'</table>';};
       vt.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;vt.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});drawV(+b.dataset.i);});drawV(0);}
+    if(D.ventesSemaines){(function(){var S=D.ventesSemaines.semaines,by={};S.forEach(function(x){by[x.d]=x;});
+      var iso=function(t){return new Date(t).toISOString().slice(0,10);},DAY=864e5,start=Date.parse('2026-01-05T12:00:00Z'),wk=[];
+      var last=S[S.length-1].d;for(var t=start;t<=Date.parse('2026-12-28T12:00:00Z');t+=7*DAY){var a=by[iso(t)],b=by[iso(t-364*DAY)];if(!a&&iso(t)<=last)a={v:0,n:0};if(!b&&iso(t-364*DAY)<=last)b={v:0,n:0};wk.push({d:iso(t),a:a,b:b});}
+      var cur=wk.filter(function(w){return w.d<=last;});
+      var sum=function(arr,k){return arr.reduce(function(t,w){return t+(w[k]?w[k].v:0);},0);},n=function(arr,k){return arr.reduce(function(t,w){return t+(w[k]?w[k].n:0);},0);};
+      var A=sum(cur,'a'),B=sum(cur,'b'),dif=B?Math.round(100*(A-B)/B):0,l4=cur.slice(-5,-1),p4=cur.slice(-9,-5),r4=sum(l4,'a'),q4=sum(p4,'a');
+      document.getElementById('ws-k').innerHTML='<div><span class="k">2026 à date</span><b>'+money(A)+'</b><span>'+int(n(cur,'a'))+' ventes</span></div><div><span class="k">2025, même période</span><b>'+money(B)+'</b><span>'+int(n(cur,'b'))+' ventes</span></div><div><span class="k">Écart</span><b class="'+(dif>=0?'up':'dn')+'">'+(dif>=0?'+':'')+dif+' %</b><span>vs 2025</span></div><div><span class="k">4 dernières semaines complètes</span><b>'+money(r4)+'</b><span class="'+(r4>=q4?'up':'dn')+'">'+(r4>=q4?'▲ ':'▼ ')+(q4?Math.round(100*(r4-q4)/q4):0)+' % vs les 4 d’avant</span></div>';
+      var W=980,H=300,L=56,R=12,T=14,Bm=34,mx=0,mn=0;wk.forEach(function(w){[w.a,w.b].forEach(function(x){if(x){mx=Math.max(mx,x.v);mn=Math.min(mn,x.v);}});});mx=Math.ceil(mx/10000)*10000;mn=mn<0?-Math.ceil(-mn/10000)*10000:0;
+      var X=function(i){return L+i*(W-L-R)/(wk.length-1);},Y=function(v){return T+(mx-v)*(H-T-Bm)/(mx-mn);};
+      var path=function(k,only){var d='',on=false;wk.forEach(function(w,i){if(only&&w.d>last){on=false;return;}var x=w[k];if(!x){on=false;return;}d+=(on?'L':'M')+X(i).toFixed(1)+' '+Y(x.v).toFixed(1);on=true;});return d;};
+      var g='';for(var v=mn;v<=mx;v+=10000){g+='<line x1="'+L+'" x2="'+(W-R)+'" y1="'+Y(v)+'" y2="'+Y(v)+'" class="gr'+(v===0?' z':'')+'"/><text x="'+(L-8)+'" y="'+(Y(v)+4)+'" class="ax" text-anchor="end">'+(v/1000)+' k$</text>';}
+      var MO=['janv.','févr.','mars','avr.','mai','juin','juil.','août','sept.','oct.','nov.','déc.'],lm=-1;wk.forEach(function(w,i){var m=+w.d.slice(5,7)-1;if(m!==lm){lm=m;g+='<text x="'+X(i)+'" y="'+(H-12)+'" class="ax">'+MO[m]+'</text>';}});
+      var ia=-1;wk.forEach(function(w,i){if(w.d<=last)ia=i;});var area=path('a',true)+'L'+X(ia)+' '+Y(0)+'L'+X(0)+' '+Y(0)+'Z';
+      var pk=-1,pv=0;wk.forEach(function(w,i){if(w.b&&w.b.v>pv){pv=w.b.v;pk=i;}});
+      var svg='<svg viewBox="0 0 '+W+' '+H+'" preserveAspectRatio="none" class="ws-s">'+g+'<path d="'+area+'" class="ar"/><path d="'+path('b')+'" class="lb"/><path d="'+path('a',true)+'" class="la"/>'+
+        (pk>=0?'<circle cx="'+X(pk)+'" cy="'+Y(pv)+'" r="4" class="pb"/><text x="'+(X(pk)-8)+'" y="'+(Y(pv)+4)+'" class="an" text-anchor="end">Vendredi fou 2025 : '+Math.round(pv/1000)+' k$</text>':'')+
+        '<line class="xh" x1="0" x2="0" y1="'+T+'" y2="'+(H-Bm)+'" style="display:none"/><circle class="dot" r="5" style="display:none"/></svg><div class="ws-tt" style="display:none"></div>';
+      var box=document.getElementById('ws-c');box.innerHTML=svg;var sv=box.querySelector('svg'),xh=sv.querySelector('.xh'),dot=sv.querySelector('.dot'),tt=box.querySelector('.ws-tt');
+      var fdl=function(iso){var p=iso.split('-');return (+p[2])+' '+MO[+p[1]-1];};
+      sv.addEventListener('mousemove',function(e){var r=sv.getBoundingClientRect(),x=(e.clientX-r.left)*W/r.width,i=Math.max(0,Math.min(wk.length-1,Math.round((x-L)*(wk.length-1)/(W-L-R)))),w=wk[i];
+        xh.setAttribute('x1',X(i));xh.setAttribute('x2',X(i));xh.style.display='';if(w.a&&w.d<=last){dot.setAttribute('cx',X(i));dot.setAttribute('cy',Y(w.a.v));dot.style.display='';}else dot.style.display='none';
+        tt.innerHTML='<b>Semaine du '+fdl(w.d)+'</b><span><i class="a"></i>2026 : '+(w.a&&w.d<=last?money(w.a.v)+' · '+w.a.n+' ventes':'—')+'</span><span><i class="b"></i>2025 : '+(w.b?money(w.b.v)+' · '+w.b.n+' ventes':'—')+'</span>';
+        tt.style.display='';var px=X(i)*r.width/W;tt.style.left=Math.min(Math.max(px-90,0),r.width-190)+'px';});
+      sv.addEventListener('mouseleave',function(){xh.style.display='none';dot.style.display='none';tt.style.display='none';});})();}
     window.fraicheur(D);
     document.querySelectorAll(".tabs:not(.vt-per):not(.pc-tog):not(.roi-t):not(.vc-t)").forEach(function(tb){
       tb.addEventListener("click",function(e){
