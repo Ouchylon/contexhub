@@ -302,7 +302,7 @@ footer b{color:var(--ink)}
 .gad-a{padding:14px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
 .gad-p{background:#fff;border:1px solid #dadce0;border-radius:8px;padding:12px 14px;font-family:Arial,Helvetica,sans-serif;color:#202124}
 .gad-s{font-size:12px;margin-bottom:6px}.gad-u{display:flex;gap:8px;align-items:center;font-size:13px;line-height:1.25}.gad-u small{color:#4d5156}
-.gad-ic{width:26px;height:26px;border-radius:50%;background:#E8990F;color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px;flex:none}
+.gad-ic{width:26px;height:26px;border-radius:50%;border:1px solid #dadce0;background:#fff;flex:none;object-fit:cover}
 .gad-t{display:block;color:#1a0dab;font-size:18px;line-height:1.3;margin:6px 0 4px;text-decoration:none}.gad-t:hover{text-decoration:underline}
 .gad-p p{margin:0;font-size:14px;line-height:1.45;color:#4d5156}
 .gad-a details{font-size:12.5px;color:var(--mut)}.gad-a details ul{margin:4px 0;padding-left:18px}
@@ -514,7 +514,7 @@ footer b{color:var(--ink)}
         GA.campagnes.map(function(c){return '<tr><td><b>'+esc(c.nom)+'</b>'+(c.budget?'<br><small>'+esc(c.budget)+'</small>':'')+'</td><td>'+esc(c.type||'')+'</td><td>'+esc(c.statut||'')+'</td><td>'+int(c.impressions)+'</td><td>'+int(c.clics)+'</td><td>'+(c.impressions?(100*c.clics/c.impressions).toFixed(1).replace('.',',')+' %':'—')+'</td><td>'+money(c.cout)+'</td><td><b>'+(c.conversions==null?'—':String(c.conversions).replace('.',','))+'</b></td><td>'+(c.conversions?money(c.cout/c.conversions):'—')+'</td></tr>';}).join('')+'</table></div>';
       if(GA.annonces&&GA.annonces.length)html+='<div class="gad-g">'+GA.annonces.map(function(a){var u=(a.url||'').replace(/^https?:\/\//,'').replace(/\/$/,'');
         return '<div class="card gad-a"><span class="k">'+esc(a.campagne)+(a.groupe&&a.groupe!==a.campagne?' · '+esc(a.groupe):'')+(a.format?' · '+esc(a.format):'')+'</span>'+(a.image?'<div class="gad-i"><img src="'+esc(a.image)+'" alt="'+esc(a.nom||'Bannière')+'" loading="lazy" referrerpolicy="no-referrer"></div>':
-          '<div class="gad-p"><div class="gad-s"><b>Sponsorisé</b></div><div class="gad-u"><span class="gad-ic">C</span><span>Contech Bâtiment<br><small>'+esc(u)+'</small></span></div>'+
+          '<div class="gad-p"><div class="gad-s"><b>Sponsorisé</b></div><div class="gad-u"><img class="gad-ic" src="img/icone-contech.png" alt=""><span>Contech Bâtiment<br><small>'+esc(u)+'</small></span></div>'+
           '<a class="gad-t" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">'+esc((a.titres||[]).slice(0,3).join(' | '))+'</a><p>'+esc((a.descriptions||[]).slice(0,2).join(' '))+'</p>'+(a.autres?'<small class="gad-x">'+esc(a.autres)+'</small>':'')+'</div>')+
           ((a.titres||[]).length>3?'<details><summary>Toutes les variantes ('+a.titres.length+' titres, '+(a.descriptions||[]).length+' descriptions)</summary><ul>'+a.titres.map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul><ul>'+(a.descriptions||[]).map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul></details>':'')+
           '<div class="gad-m"><span>'+int(a.impressions||0)+' impr.</span><span>'+int(a.clics||0)+' clics</span>'+(a.cout!=null?'<span>'+money(a.cout)+'</span>':'')+'<span>'+(a.conversions==null?'—':String(a.conversions).replace('.',','))+' conv.</span></div></div>';}).join('')+'</div>';
