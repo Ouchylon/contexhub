@@ -27,7 +27,7 @@ Q = """query($after:String,$q:String){orders(first:100,after:$after,query:$q,sor
  pageInfo{hasNextPage endCursor}
  nodes{createdAt test cancelledAt displayFinancialStatus
   currentSubtotalPriceSet{shopMoney{amount}}
-  lineItems(first:20){nodes{currentQuantity product{id}}}
+  lineItems(first:20){nodes{currentQuantity title product{id}}}
   customerJourneySummary{ready daysToConversion momentsCount{count}
    firstVisit{%s} lastVisit{%s}}}}}""" % (VISITE, VISITE)
 
@@ -72,7 +72,7 @@ print(len(commandes), "commandes lues")
 PAYE = {"PAID", "PARTIALLY_REFUNDED", "PARTIALLY_PAID"}
 prem, dern = defaultdict(lambda: {"commandes": 0, "ht": 0.0, "inscriptions": 0}), defaultdict(lambda: {"commandes": 0, "ht": 0.0, "inscriptions": 0})
 mois = defaultdict(Counter)
-campagnes, arrivees = Counter(), Counter()
+campagnes, arrivees, produits = Counter(), Counter(), Counter()
 delais, moments, sans = [], [], 0
 for c in commandes:
     if c.get("test") or c.get("cancelledAt") or c.get("displayFinancialStatus") not in PAYE:
@@ -95,6 +95,9 @@ for c in commandes:
             delais.append(j["daysToConversion"])
         if (j.get("momentsCount") or {}).get("count") is not None:
             moments.append(j["momentsCount"]["count"])
+    for li in (c.get("lineItems") or {}).get("nodes") or []:
+        if (li.get("currentQuantity") or 0) > 0:
+            produits[(cl, (li.get("title") or "").strip())] += li["currentQuantity"]
     for b, k in ((prem, cf), (dern, cl)):
         b[k]["commandes"] += 1; b[k]["ht"] += ht; b[k]["inscriptions"] += insc
     m = dt.datetime.fromisoformat(c["createdAt"].replace("Z", "+00:00")).astimezone(TZ).strftime("%Y-%m")
@@ -125,6 +128,7 @@ bloc = {
     "visitesMedianes": mediane(moments),
     "campagnes": [{"canal": k[0], "campagne": k[1], "commandes": v} for k, v in campagnes.most_common(15)],
     "pagesArrivee": [{"page": k, "commandes": v} for k, v in arrivees.most_common(10)],
+    "formationsParCanal": [{"canal": k[0], "formation": k[1], "inscriptions": v} for k, v in produits.most_common(40)],
 }
 with open(DATA, encoding="utf-8") as f:
     data = json.load(f)

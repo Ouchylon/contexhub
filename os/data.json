@@ -2182,6 +2182,39 @@
     "conversions": 0
    }
   ],
-  "note": "Conversions « Achat formation » telles que comptées par Google Ads (fractions = attribution partagée entre plusieurs clics). À comparer aux ventes Shopify, jamais à additionner aux conversions Meta. Les annonces de recherche ont 15 titres et 4 descriptions que Google combine : l'aperçu montre la combinaison affichée dans le compte."
+  "note": "Conversions « Achat formation » telles que comptées par Google Ads (fractions = attribution partagée entre plusieurs clics). À comparer aux ventes Shopify, jamais à additionner aux conversions Meta. Les annonces de recherche ont 15 titres et 4 descriptions que Google combine : l'aperçu montre la combinaison affichée dans le compte.",
+  "roi": {
+   "source": "Ventes : Shopify, rapport « Performance par canal marketing » (dernier clic non direct, canal Google Ads), ventes nettes avant taxes. Dépense : compte Google Ads. Marge : fichier Coûts et revenus 2026 (profit ÷ revenus des formations 2026).",
+   "marge": 0.73,
+   "fraisHamak": null,
+   "periodes": [
+    {
+     "id": "30j",
+     "label": "30 derniers jours",
+     "du": "2026-10-20",
+     "au": "2026-11-18",
+     "depense": 1610.36,
+     "googleConv": 11.0,
+     "googleValeur": 8370.0,
+     "commandes": 5,
+     "ventesNettes": 3860.0,
+     "ventesTotales": 4438.04,
+     "sessions": 652
+    },
+    {
+     "id": "annee",
+     "label": "Depuis le 14 janv.",
+     "du": "2026-01-14",
+     "au": "2026-11-19",
+     "depense": 14193.78,
+     "googleConv": 525.56,
+     "googleValeur": null,
+     "commandes": 37,
+     "ventesNettes": 33245.75,
+     "ventesTotales": 38224.36,
+     "sessions": 9253
+    }
+   ]
+  }
  }
 }

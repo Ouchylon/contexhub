@@ -309,6 +309,11 @@ footer b{color:var(--ink)}
 .gad-m{display:flex;gap:14px;font-size:12.5px;color:var(--mut)}
 .gad-i{background:#f1ece4;border-radius:4px;display:grid;place-items:center;padding:10px;min-height:120px}.gad-i img{max-width:100%;max-height:340px;display:block}
 .gad-x{display:block;margin-top:6px;color:#70757a;font-size:12px}.pc-l small{color:var(--mut)}
+.roi{padding:18px 20px;margin-bottom:14px;border-color:var(--ink)}.roi-h{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;margin-bottom:12px}.roi-h h4{margin:0;font:700 20px Machina,Helv,sans-serif}
+.roi-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.roi-c{background:#faf7f2;border:1px solid var(--line);border-radius:4px;padding:12px 14px;min-width:0}
+.roi-c .v{font:700 26px/1.1 Machina,Helv,sans-serif;margin:6px 0 4px}.roi-c .s{font-size:12.5px;color:var(--mut);line-height:1.4}.roi-c.ok{border-color:#86A397;background:#eef3ef}.roi-c.ko{border-color:#B9314F;background:#f8ecef}
+.roi-l{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:12px;font-size:13.5px}
+@media(max-width:760px){.roi-g{grid-template-columns:repeat(2,minmax(0,1fr))}.roi-c .v{font-size:19px}}
 </style>
 </head>
 <body>
@@ -499,6 +504,9 @@ footer b{color:var(--ink)}
     (function(){var GA=D.googleAds;
       html+='<div class="gad"><div class="sh2"><h3>Google Ads · campagnes gérées par Hamak</h3><span class="k">'+(GA?'Google Ads · '+esc(GA.periode)+' · relevé '+esc(GA.releve):'Source : compte Google Ads de Contech')+'</span></div>';
       if(!GA){html+='<div class="pc-vide"><b>À relever</b><span>Campagnes, annonces telles qu’elles s’affichent sur Google, mots-clés et résultats (clics, coût, conversions).</span></div></div>';return;}
+      if(GA.roi){var RO=GA.roi;
+        html+='<div class="card roi"><div class="roi-h"><h4>Est-ce que Google Ads rapporte?</h4><div class="tabs roi-t">'+RO.periodes.map(function(p,i){return '<button type="button" data-r="'+i+'"'+(i===0?' class="on"':'')+'>'+esc(p.label)+'</button>';}).join('')+'</div></div><div id="roi-o"></div>'+
+          '<p class="gnote">'+esc(RO.source)+'</p></div>';}
       if(GA.totaux){var T=GA.totaux;html+='<div class="vt-kpis"><div class="card"><span class="k">Dépensé</span><div class="v">'+money(T.cout)+'</div><div class="s">'+int(T.clics)+' clics · '+int(T.impressions)+' impressions</div></div>'+
         '<div class="card"><span class="k">Conversions « '+esc(GA.conversion||'achat')+' »</span><div class="v">'+String(T.conversions).replace('.',',')+'</div><div class="s">'+money(T.cout/(T.conversions||1))+' par conversion (selon Google)</div></div>'+
         '<div class="card"><span class="k">Valeur des conversions</span><div class="v">'+money(T.valeur)+'</div><div class="s">'+(T.cout?(T.valeur/T.cout).toFixed(1).replace('.',','):'—')+' $ pour 1 $ dépensé (selon Google)</div></div></div>';}
@@ -631,8 +639,19 @@ footer b{color:var(--ink)}
         pb.innerHTML=L.map(function(x){return '<div class="pc-row"><b>'+esc(x.canal)+'</b><i style="width:'+(100*x.commandes/mx)+'%"></i><span>'+int(x.commandes)+' cmd · '+Math.round(100*x.commandes/(tot||1))+' % · '+money(x.ht)+'</span></div>';}).join('');};
       tg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;tg.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});drawP(b.dataset.v);});
       drawP('derniereVisite');}
+    if(D.googleAds&&D.googleAds.roi){var RO=D.googleAds.roi,ro=document.getElementById('roi-o'),rt=document.querySelector('.roi-t');
+      var drawR=function(i){var p=RO.periodes[i],prof=p.ventesNettes*RO.marge,reste=prof-p.depense,f=RO.fraisHamak;
+        var t=function(k,v,s,c){return '<div class="roi-c'+(c?' '+c:'')+'"><span class="k">'+k+'</span><div class="v">'+v+'</div><div class="s">'+s+'</div></div>';};
+        ro.innerHTML='<div class="roi-g">'+
+          t('1 · Payé à Google',money(p.depense),'du '+fd(p.du)+' au '+fd(p.au))+
+          t('2 · Vraies ventes',money(p.ventesNettes),'<b>'+p.commandes+' commandes</b> venues d’une pub Google (Shopify, avant taxes)')+
+          t('3 · Profit sur ces ventes',money(prof),Math.round(RO.marge*100)+' % de marge après le coût des formateurs')+
+          t('4 · Il reste',money(reste),f!=null?('après les frais de Hamak ('+money(f)+') : <b>'+money(reste-f)+'</b>'):'avant les frais de Hamak (à confirmer). Si Hamak coûte plus que ce montant, Google Ads perd de l’argent.',reste>0?'ok':'ko')+'</div>'+
+          '<div class="roi-l"><span>Coût pour 1 vente : <b>'+money(p.depense/(p.commandes||1))+'</b></span><span>Chaque 1 $ payé à Google ramène <b>'+(p.ventesNettes/p.depense).toFixed(2).replace('.',',')+' $</b> de ventes</span>'+
+          '<span>Google dit <b>'+String(p.googleConv).replace('.',',')+' conversions</b>; Shopify a vraiment enregistré <b>'+p.commandes+' ventes</b></span></div>';};
+      rt.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;rt.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});drawR(+b.dataset.r);});drawR(0);}
     window.fraicheur(D);
-    document.querySelectorAll(".tabs:not(.vt-per):not(.pc-tog)").forEach(function(tb){
+    document.querySelectorAll(".tabs:not(.vt-per):not(.pc-tog):not(.roi-t)").forEach(function(tb){
       tb.addEventListener("click",function(e){
         var b=e.target.closest("button"); if(!b)return;
         tb.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b);document.getElementById(x.dataset.t).hidden=(x!==b);});
