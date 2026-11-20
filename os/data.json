@@ -2278,5 +2278,419 @@
     }
    ]
   }
+ },
+ "ventesCanaux": {
+  "releve": "19 nov. 2026, 23 h",
+  "source": "Shopify, rapport « Performance par canal marketing » : ventes nettes avant taxes, attribuées au dernier clic qui n'est pas une visite directe. « Payé » : compte Google Ads.",
+  "periodes": [
+   {
+    "id": "annee",
+    "label": "Depuis le 14 janv.",
+    "du": "2026-01-14",
+    "au": "2026-11-19",
+    "total": {
+     "commandes": 730,
+     "ventes": 522614.5
+    },
+    "canaux": [
+     {
+      "canal": "Direct (adresse tapée, favoris)",
+      "cle": "Direct",
+      "commandes": 187,
+      "ventes": 145246.25
+     },
+     {
+      "canal": "Recherche Google (naturelle)",
+      "cle": "Google",
+      "commandes": 133,
+      "ventes": 85435.0
+     },
+     {
+      "canal": "Infolettres",
+      "cle": "newsletter",
+      "commandes": 119,
+      "ventes": 80838.75
+     },
+     {
+      "canal": "Boutique Shopify (outils de la boutique)",
+      "cle": "Shopify",
+      "commandes": 74,
+      "ventes": 43690.0
+     },
+     {
+      "canal": "Non attribué",
+      "cle": "Unattributed",
+      "commandes": 54,
+      "ventes": 39067.25
+     },
+     {
+      "canal": "Google Ads (Hamak)",
+      "cle": "Google Ads",
+      "commandes": 37,
+      "ventes": 33245.75,
+      "paye": 14193.78
+     },
+     {
+      "canal": "Lien « formation continue » (siteweb)",
+      "cle": "siteweb",
+      "commandes": 44,
+      "ventes": 30595.0
+     },
+     {
+      "canal": "Recherche Bing",
+      "cle": "Bing",
+      "commandes": 25,
+      "ventes": 20110.0
+     },
+     {
+      "canal": "Office / Outlook",
+      "cle": "office",
+      "commandes": 11,
+      "ventes": 9690.0
+     },
+     {
+      "canal": "static",
+      "cle": "static",
+      "commandes": 13,
+      "ventes": 9550.0
+     },
+     {
+      "canal": "Sites gouvernementaux",
+      "cle": "gouv",
+      "commandes": 6,
+      "ventes": 4040.0
+     },
+     {
+      "canal": "Pubs Meta",
+      "cle": "Meta Ads",
+      "commandes": 5,
+      "ventes": 2900.0
+     }
+    ]
+   },
+   {
+    "id": "30j",
+    "label": "30 derniers jours",
+    "du": "2026-10-20",
+    "au": "2026-11-18",
+    "total": {
+     "commandes": 84,
+     "ventes": 59785.0
+    },
+    "canaux": [
+     {
+      "canal": "Direct (adresse tapée, favoris)",
+      "cle": "Direct",
+      "commandes": 22,
+      "ventes": 14560.0
+     },
+     {
+      "canal": "Recherche Google (naturelle)",
+      "cle": "Google",
+      "commandes": 12,
+      "ventes": 9855.0
+     },
+     {
+      "canal": "Boutique Shopify (outils de la boutique)",
+      "cle": "Shopify",
+      "commandes": 11,
+      "ventes": 9405.0
+     },
+     {
+      "canal": "Infolettres",
+      "cle": "newsletter",
+      "commandes": 14,
+      "ventes": 8290.0
+     },
+     {
+      "canal": "Google Ads (Hamak)",
+      "cle": "Google Ads",
+      "commandes": 5,
+      "ventes": 3860.0,
+      "paye": 1610.36
+     },
+     {
+      "canal": "static",
+      "cle": "static",
+      "commandes": 5,
+      "ventes": 3710.0
+     },
+     {
+      "canal": "Site Groupe Contex",
+      "cle": "groupecontex",
+      "commandes": 1,
+      "ventes": 2700.0
+     },
+     {
+      "canal": "Pubs Meta",
+      "cle": "Meta Ads",
+      "commandes": 3,
+      "ventes": 2175.0
+     },
+     {
+      "canal": "Lien « formation continue » (siteweb)",
+      "cle": "siteweb",
+      "commandes": 3,
+      "ventes": 1450.0
+     },
+     {
+      "canal": "Recherche Ecosia",
+      "cle": "Ecosia",
+      "commandes": 1,
+      "ventes": 1140.0
+     },
+     {
+      "canal": "Recherche Brave",
+      "cle": "Brave",
+      "commandes": 1,
+      "ventes": 1140.0
+     },
+     {
+      "canal": "Facebook (organique)",
+      "cle": "Facebook",
+      "commandes": 1,
+      "ventes": 725.0
+     }
+    ]
+   }
+  ],
+  "campagnes": [
+   {
+    "canal": "Google Ads (Hamak)",
+    "campagne": "Toutes les campagnes Google",
+    "commandes": 37,
+    "ventes": 33245.75,
+    "paye": 14193.78,
+    "note": "Google ne transmet pas le nom de la campagne à la boutique (suivi par gclid) : le détail par campagne Google vient du compte Google Ads."
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_13_01_26",
+    "commandes": 6,
+    "ventes": 7445.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_28_04_26",
+    "commandes": 6,
+    "ventes": 7240.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_20_01_26",
+    "commandes": 9,
+    "ventes": 6585.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_05_05_26",
+    "commandes": 12,
+    "ventes": 5600.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_10_02_26",
+    "commandes": 5,
+    "ventes": 5340.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_27_01_26",
+    "commandes": 6,
+    "ventes": 4350.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_07_04_26",
+    "commandes": 6,
+    "ventes": 3730.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_21_04_26",
+    "commandes": 5,
+    "ventes": 3420.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_11_11_26",
+    "commandes": 5,
+    "ventes": 3315.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_03_02_26",
+    "commandes": 5,
+    "ventes": 3005.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_11_08_26",
+    "commandes": 4,
+    "ventes": 2900.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_01_09_26",
+    "commandes": 2,
+    "ventes": 2590.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_02_06_26",
+    "commandes": 4,
+    "ventes": 2486.25
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "QC_15_01_26",
+    "commandes": 1,
+    "ventes": 2050.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_17_02_26",
+    "commandes": 7,
+    "ventes": 2025.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_24_03_26",
+    "commandes": 4,
+    "ventes": 1865.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_06_10_26",
+    "commandes": 3,
+    "ventes": 1865.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_18_08_26",
+    "commandes": 2,
+    "ventes": 1865.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_27_10_26",
+    "commandes": 3,
+    "ventes": 1555.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_17_03_26",
+    "commandes": 3,
+    "ventes": 1555.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_03_11_26",
+    "commandes": 3,
+    "ventes": 1555.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_03_03_26",
+    "commandes": 2,
+    "ventes": 1450.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_13_10_26",
+    "commandes": 2,
+    "ventes": 1450.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_24_02_26",
+    "commandes": 2,
+    "ventes": 1450.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "VV_15_04_26",
+    "commandes": 1,
+    "ventes": 1450.0
+   },
+   {
+    "canal": "Pubs Meta",
+    "campagne": "formation05112026",
+    "commandes": 2,
+    "ventes": 1450.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_20_10_26",
+    "commandes": 2,
+    "ventes": 1140.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_10_03_26",
+    "commandes": 2,
+    "ventes": 725.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_04_08_26",
+    "commandes": 1,
+    "ventes": 725.0
+   },
+   {
+    "canal": "Pubs Meta",
+    "campagne": "formation03112026",
+    "commandes": 1,
+    "ventes": 725.0
+   },
+   {
+    "canal": "Pubs Meta",
+    "campagne": "120240737223510302",
+    "commandes": 1,
+    "ventes": 725.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_31_03_26",
+    "commandes": 1,
+    "ventes": 675.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_22_09_26",
+    "commandes": 1,
+    "ventes": 415.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_14_04_26",
+    "commandes": 1,
+    "ventes": 415.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_09_06_26",
+    "commandes": 1,
+    "ventes": 415.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "hebdo_16_06_26",
+    "commandes": 1,
+    "ventes": 0.0
+   },
+   {
+    "canal": "Infolettres",
+    "campagne": "Expos 2026",
+    "commandes": 1,
+    "ventes": 0.0
+   },
+   {
+    "canal": "Pubs Meta",
+    "campagne": "selectionOCT26",
+    "commandes": 1,
+    "ventes": 0.0
+   }
+  ]
  }
 }
