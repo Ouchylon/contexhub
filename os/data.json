@@ -1852,5 +1852,336 @@
     ]
    }
   ]
+ },
+ "googleAds": {
+  "releve": "19 nov. 2026, 22 h",
+  "periode": "20 oct. au 18 nov. 2026 (30 jours)",
+  "source": "Google Ads, compte Contech Bâtiment (relevé dans l'interface)",
+  "geree": "Hamak",
+  "conversion": "Achat formation",
+  "totaux": {
+   "impressions": 11423,
+   "clics": 702,
+   "cout": 1610.36,
+   "conversions": 11.0,
+   "valeur": 8370.0
+  },
+  "campagnes": [
+   {
+    "nom": "Formations précises (OIQ, OAQ, Estimation, BIM)",
+    "code": "SPE_NA_FR_SRCH_LGEN_GG_CTX_HAMAK",
+    "type": "Recherche",
+    "statut": "Diffusion limitée (volume de recherche)",
+    "budget": "19 $/j (budget partagé de 38 $/j)",
+    "impressions": 1217,
+    "clics": 263,
+    "cout": 949.57,
+    "conversions": 5.67,
+    "valeur": 5226.67
+   },
+   {
+    "nom": "Générique (formation bâtiment)",
+    "code": "Generique_NA_FR_SRCH_LGEN_GG_CTX_HAMAK",
+    "type": "Recherche",
+    "statut": "Diffusion limitée (volume de recherche)",
+    "budget": "19 $/j (budget partagé de 38 $/j)",
+    "impressions": 909,
+    "clics": 116,
+    "cout": 416.78,
+    "conversions": 2.33,
+    "valeur": 1278.33
+   },
+   {
+    "nom": "Marque (Contech Bâtiment)",
+    "code": "Brand_NA_FR_SRCH_LGEN_GG_CTX_HAMAK",
+    "type": "Recherche",
+    "statut": "Éligible",
+    "budget": "6 $/j",
+    "impressions": 436,
+    "clics": 159,
+    "cout": 91.05,
+    "conversions": 3.0,
+    "valeur": 1865.0
+   },
+   {
+    "nom": "Display (bannières)",
+    "code": "Display_NA_FR_DISP_LGEN_GG_CTX_HAMAK",
+    "type": "Display",
+    "statut": "Éligible · certaines annonces refusées",
+    "budget": "5 $/j",
+    "impressions": 8861,
+    "clics": 164,
+    "cout": 152.95,
+    "conversions": 0,
+    "valeur": 0
+   }
+  ],
+  "annonces": [
+   {
+    "campagne": "Marque",
+    "groupe": "Brand",
+    "titres": [
+     "Contech Bâtiment",
+     "Formations en construction",
+     "Perfectionnez votre carrière"
+    ],
+    "descriptions": [
+     "Développez votre expertise et votre réseau avec Contech Bâtiment, la référence au Québec. Apprenez des meilleurs experts actifs dans l'industrie. Contenu adapté au marché Québécois."
+    ],
+    "autres": "+ 12 autres titres, + 2 autres descriptions",
+    "url": "https://contech.qc.ca",
+    "impressions": 436,
+    "clics": 159,
+    "cout": 91.05,
+    "conversions": 3.0
+   },
+   {
+    "campagne": "Formations précises",
+    "groupe": "Ordres OIQ",
+    "titres": [
+     "Contech Bâtiment",
+     "Formation continue OIQ",
+     "Formation pour ingénieur"
+    ],
+    "descriptions": [
+     "Développez votre expertise et votre réseau avec Contech Bâtiment, la référence au Québec. Apprenez des meilleurs experts actifs dans l'industrie. Contenu adapté au marché Québécois."
+    ],
+    "autres": "+ 12 autres titres, + 2 autres descriptions",
+    "url": "https://contech.qc.ca",
+    "impressions": 678,
+    "clics": 145,
+    "cout": 596.31,
+    "conversions": 3.0
+   },
+   {
+    "campagne": "Générique",
+    "groupe": "Générique",
+    "titres": [
+     "Contech Bâtiment",
+     "Formations en construction",
+     "Perfectionnez votre carrière"
+    ],
+    "descriptions": [
+     "Développez votre expertise et votre réseau avec Contech Bâtiment, la référence au Québec. Apprenez des meilleurs experts actifs dans l'industrie. Contenu adapté au marché Québécois."
+    ],
+    "autres": "+ 12 autres titres, + 2 autres descriptions",
+    "url": "https://contech.qc.ca",
+    "impressions": 909,
+    "clics": 116,
+    "cout": 416.78,
+    "conversions": 2.33
+   },
+   {
+    "campagne": "Formations précises",
+    "groupe": "Ordres OAQ",
+    "titres": [
+     "Contech Bâtiment",
+     "Formation continue OAQ",
+     "Formation pour architecte"
+    ],
+    "descriptions": [
+     "Développez votre expertise et votre réseau avec Contech Bâtiment, la référence au Québec. Apprenez des meilleurs experts actifs dans l'industrie. Contenu adapté au marché Québécois."
+    ],
+    "autres": "+ 12 autres titres, + 2 autres descriptions",
+    "url": "https://contech.qc.ca",
+    "impressions": 184,
+    "clics": 53,
+    "cout": 250.06,
+    "conversions": 1.67
+   },
+   {
+    "campagne": "Formations précises",
+    "groupe": "Estimation",
+    "titres": [
+     "Contech Bâtiment",
+     "Estimation en construction",
+     "Planification budgétaire"
+    ],
+    "descriptions": [
+     "Développez votre expertise et votre réseau avec Contech Bâtiment, la référence au Québec. Apprenez des meilleurs experts actifs dans l'industrie. Contenu adapté au marché Québécois."
+    ],
+    "autres": "+ 12 autres titres, + 2 autres descriptions",
+    "url": "https://contech.qc.ca",
+    "impressions": 200,
+    "clics": 38,
+    "cout": 37.63,
+    "conversions": 1.0
+   },
+   {
+    "campagne": "Formations précises",
+    "groupe": "BIM",
+    "titres": [
+     "Contech Bâtiment",
+     "Formation BIM",
+     "Coordination BIM"
+    ],
+    "descriptions": [
+     "Développez votre expertise et votre réseau avec Contech Bâtiment, la référence au Québec. Apprenez des meilleurs experts actifs dans l'industrie. Contenu adapté au marché Québécois."
+    ],
+    "autres": "+ 12 autres titres, + 2 autres descriptions",
+    "url": "https://contech.qc.ca",
+    "impressions": 97,
+    "clics": 15,
+    "cout": 44.32,
+    "conversions": 0
+   },
+   {
+    "campagne": "Display",
+    "groupe": "V1",
+    "image": "https://tpc.googlesyndication.com/simgad/9170332685843717633",
+    "nom": "Lancement A2026",
+    "format": "300 × 250",
+    "impressions": 1865,
+    "clics": 72,
+    "cout": 79.19,
+    "conversions": 0
+   },
+   {
+    "campagne": "Display",
+    "groupe": "V1",
+    "image": "https://tpc.googlesyndication.com/simgad/16947693768293805947",
+    "nom": "Bannière formations",
+    "format": "300 × 600",
+    "impressions": 1236,
+    "clics": 53,
+    "cout": 40.97,
+    "conversions": 0
+   },
+   {
+    "campagne": "Display",
+    "groupe": "V1",
+    "image": "https://tpc.googlesyndication.com/simgad/5510680237400683338",
+    "nom": "Bannière formations",
+    "format": "300 × 250",
+    "impressions": 1205,
+    "clics": 18,
+    "cout": 13.64,
+    "conversions": 0
+   },
+   {
+    "campagne": "Display",
+    "groupe": "V1",
+    "image": "https://tpc.googlesyndication.com/simgad/10804039063106809687",
+    "nom": "Lancement A2026",
+    "format": "300 × 600",
+    "impressions": 2831,
+    "clics": 16,
+    "cout": 15.02,
+    "conversions": 0
+   }
+  ],
+  "motsCles": [
+   {
+    "mot": "[contech batiment]",
+    "clics": 159,
+    "cout": 91.05,
+    "conversions": 3.0
+   },
+   {
+    "mot": "\"formation oiq\"",
+    "clics": 62,
+    "cout": 336.74,
+    "conversions": 1.0
+   },
+   {
+    "mot": "\"formation batiment\"",
+    "clics": 56,
+    "cout": 174.6,
+    "conversions": 0
+   },
+   {
+    "mot": "\"formation architecte\"",
+    "clics": 52,
+    "cout": 249.63,
+    "conversions": 1.67
+   },
+   {
+    "mot": "\"formation continue oiq\"",
+    "clics": 46,
+    "cout": 157.77,
+    "conversions": 1.0
+   },
+   {
+    "mot": "\"formation estimation construction\"",
+    "clics": 33,
+    "cout": 33.84,
+    "conversions": 1.0
+   },
+   {
+    "mot": "\"formation continue pour ingénieur\"",
+    "clics": 20,
+    "cout": 60.24,
+    "conversions": 1.0
+   },
+   {
+    "mot": "\"formation pour ingénieur\"",
+    "clics": 17,
+    "cout": 41.57,
+    "conversions": 0
+   },
+   {
+    "mot": "\"formation de construction\"",
+    "clics": 15,
+    "cout": 37.6,
+    "conversions": 0
+   },
+   {
+    "mot": "\"formation bim\"",
+    "clics": 12,
+    "cout": 31.23,
+    "conversions": 0
+   }
+  ],
+  "termes": [
+   {
+    "terme": "formation oiq",
+    "clics": 33,
+    "cout": 171.94,
+    "conversions": 1.0
+   },
+   {
+    "terme": "formation continue oiq",
+    "clics": 20,
+    "cout": 54.66,
+    "conversions": 1.0
+   },
+   {
+    "terme": "contech montreal",
+    "clics": 20,
+    "cout": 50.04,
+    "conversions": 0
+   },
+   {
+    "terme": "formation oaq",
+    "clics": 9,
+    "cout": 45.58,
+    "conversions": 0
+   },
+   {
+    "terme": "oiq formation continue",
+    "clics": 7,
+    "cout": 24.93,
+    "conversions": 0
+   },
+   {
+    "terme": "formation continue ingénieur",
+    "clics": 6,
+    "cout": 23.5,
+    "conversions": 1.0
+   },
+   {
+    "terme": "formation continue architecture",
+    "clics": 5,
+    "cout": 24.72,
+    "conversions": 0
+   },
+   {
+    "terme": "maestro oiq",
+    "clics": 4,
+    "cout": 28.71,
+    "conversions": 0
+   }
+  ],
+  "note": "Conversions « Achat formation » telles que comptées par Google Ads (fractions = attribution partagée entre plusieurs clics). À comparer aux ventes Shopify, jamais à additionner aux conversions Meta. Les annonces de recherche ont 15 titres et 4 descriptions que Google combine : l'aperçu montre la combinaison affichée dans le compte."
  }
 }
