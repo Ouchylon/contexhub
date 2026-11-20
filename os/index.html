@@ -314,6 +314,11 @@ footer b{color:var(--ink)}
 .roi-c .v{font:700 26px/1.1 Machina,Helv,sans-serif;margin:6px 0 4px}.roi-c .s{font-size:12.5px;color:var(--mut);line-height:1.4}.roi-c.ok{border-color:#86A397;background:#eef3ef}.roi-c.ko{border-color:#B9314F;background:#f8ecef}
 .roi-l{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:12px;font-size:13.5px}
 @media(max-width:760px){.roi-g{grid-template-columns:repeat(2,minmax(0,1fr))}.roi-c .v{font-size:19px}}
+.gan{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.gan .k{display:block;margin-bottom:6px}.gan .k.ok{color:#4f7a5c}.gan .k.ko{color:#B9314F}
+.gan-i{display:grid;grid-template-columns:1fr auto;gap:2px 12px;padding:8px 0;border-bottom:1px solid var(--line);font-size:13.5px}
+.gan-i em{font-style:normal;font-weight:700;white-space:nowrap;text-align:right}.gan-i span{grid-column:1/-1;color:var(--mut);font-size:12.5px;line-height:1.4}
+@media(max-width:760px){.gan{grid-template-columns:1fr}.gan-i em{white-space:normal}}
 </style>
 </head>
 <body>
@@ -505,7 +510,9 @@ footer b{color:var(--ink)}
       html+='<div class="gad"><div class="sh2"><h3>Google Ads · campagnes gérées par Hamak</h3><span class="k">'+(GA?'Google Ads · '+esc(GA.periode)+' · relevé '+esc(GA.releve):'Source : compte Google Ads de Contech')+'</span></div>';
       if(!GA){html+='<div class="pc-vide"><b>À relever</b><span>Campagnes, annonces telles qu’elles s’affichent sur Google, mots-clés et résultats (clics, coût, conversions).</span></div></div>';return;}
       if(GA.roi){var RO=GA.roi;
-        html+='<div class="card roi"><div class="roi-h"><h4>Est-ce que Google Ads rapporte?</h4><div class="tabs roi-t">'+RO.periodes.map(function(p,i){return '<button type="button" data-r="'+i+'"'+(i===0?' class="on"':'')+'>'+esc(p.label)+'</button>';}).join('')+'</div></div><div id="roi-o"></div>'+
+        html+='<div class="card roi"><div class="roi-h"><h4>Résultats Google Ads</h4><div class="tabs roi-t">'+RO.periodes.map(function(p,i){return '<button type="button" data-r="'+i+'"'+(i===0?' class="on"':'')+'>'+esc(p.label)+'</button>';}).join('')+'</div></div><div id="roi-o"></div>'+
+          (GA.analyse?'<div class="gan"><div><span class="k ok">Ce qui fonctionne</span>'+GA.analyse.fonctionne.map(function(x){return '<div class="gan-i"><b>'+esc(x.quoi)+'</b><em>'+esc(x.chiffre)+'</em><span>'+esc(x.detail)+'</span></div>';}).join('')+'</div>'+
+          '<div><span class="k ko">À optimiser</span>'+GA.analyse.optimiser.map(function(x){return '<div class="gan-i"><b>'+esc(x.quoi)+'</b><em>'+esc(x.chiffre)+'</em><span>'+esc(x.detail)+'</span></div>';}).join('')+'</div></div><p class="gnote">'+esc(GA.analyse.note)+'</p>':'')+
           '<p class="gnote">'+esc(RO.source)+'</p></div>';}
       if(GA.totaux){var T=GA.totaux;html+='<div class="vt-kpis"><div class="card"><span class="k">Dépensé</span><div class="v">'+money(T.cout)+'</div><div class="s">'+int(T.clics)+' clics · '+int(T.impressions)+' impressions</div></div>'+
         '<div class="card"><span class="k">Conversions « '+esc(GA.conversion||'achat')+' »</span><div class="v">'+String(T.conversions).replace('.',',')+'</div><div class="s">'+money(T.cout/(T.conversions||1))+' par conversion (selon Google)</div></div>'+
@@ -646,7 +653,7 @@ footer b{color:var(--ink)}
           t('1 · Payé à Google',money(p.depense),'du '+fd(p.du)+' au '+fd(p.au))+
           t('2 · Vraies ventes',money(p.ventesNettes),'<b>'+p.commandes+' commandes</b> venues d’une pub Google (Shopify, avant taxes)')+
           t('3 · Profit sur ces ventes',money(prof),Math.round(RO.marge*100)+' % de marge après le coût des formateurs')+
-          t('4 · Il reste',money(reste),f!=null?('après les frais de Hamak ('+money(f)+') : <b>'+money(reste-f)+'</b>'):'avant les frais de Hamak (à confirmer). Si Hamak coûte plus que ce montant, Google Ads perd de l’argent.',reste>0?'ok':'ko')+'</div>'+
+          t('4 · Il reste',money(reste),f!=null?('après les frais de Hamak ('+money(f)+') : <b>'+money(reste-f)+'</b>'):'avant les frais de gestion de Hamak (montant à ajouter)',reste>0?'ok':'ko')+'</div>'+
           '<div class="roi-l"><span>Coût pour 1 vente : <b>'+money(p.depense/(p.commandes||1))+'</b></span><span>Chaque 1 $ payé à Google ramène <b>'+(p.ventesNettes/p.depense).toFixed(2).replace('.',',')+' $</b> de ventes</span>'+
           '<span>Google dit <b>'+String(p.googleConv).replace('.',',')+' conversions</b>; Shopify a vraiment enregistré <b>'+p.commandes+' ventes</b></span></div>';};
       rt.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;rt.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});drawR(+b.dataset.r);});drawR(0);}

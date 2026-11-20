@@ -2215,6 +2215,68 @@
      "sessions": 9253
     }
    ]
+  },
+  "analyse": {
+   "note": "Conversions par campagne et mot-clé telles que comptées par Google (30 jours). À confirmer avec les ventes Shopify par campagne quand l'accès aux commandes sera branché.",
+   "fonctionne": [
+    {
+     "quoi": "Estimation en construction",
+     "chiffre": "37,63 $ par conversion",
+     "detail": "38 clics, 1 conversion : le meilleur coût du compte."
+    },
+    {
+     "quoi": "Recherches sur le nom Contech (campagne Marque)",
+     "chiffre": "30,35 $ par conversion",
+     "detail": "91 $ pour 3 conversions. Ces gens cherchaient déjà Contech : ça protège le nom plus que ça n'amène de nouveaux clients."
+    },
+    {
+     "quoi": "« formation continue oiq »",
+     "chiffre": "54,66 $ par conversion",
+     "detail": "20 clics, 1 conversion : moins cher que « formation oiq » (171,94 $)."
+    },
+    {
+     "quoi": "Ordres OAQ (architectes)",
+     "chiffre": "150,04 $ par conversion",
+     "detail": "250 $ pour 1,67 conversion, taux de conversion de 3,1 %, le plus élevé des groupes."
+    }
+   ],
+   "optimiser": [
+    {
+     "quoi": "Bannières Display",
+     "chiffre": "152,95 $ · 0 conversion",
+     "detail": "164 clics, aucune vente. Certaines bannières sont refusées par Google."
+    },
+    {
+     "quoi": "« formation batiment » (Générique)",
+     "chiffre": "174,60 $ · 0 conversion",
+     "detail": "56 clics sans conversion : recherche trop large."
+    },
+    {
+     "quoi": "« contech montreal »",
+     "chiffre": "50,04 $ · 0 conversion",
+     "detail": "20 clics : des gens qui cherchent l'Expo, pas une formation."
+    },
+    {
+     "quoi": "« maestro oiq »",
+     "chiffre": "28,71 $ · 0 conversion",
+     "detail": "Recherche du portail de l'OIQ, pas d'une formation : à exclure."
+    },
+    {
+     "quoi": "Ordres OIQ (ingénieurs)",
+     "chiffre": "198,77 $ par conversion",
+     "detail": "596 $ pour 3 conversions : le plus gros poste de dépense du compte."
+    },
+    {
+     "quoi": "BIM",
+     "chiffre": "44,32 $ · 0 conversion",
+     "detail": "15 clics : volume faible."
+    },
+    {
+     "quoi": "Écart Google vs ventes réelles",
+     "chiffre": "11 conversions vs 5 ventes",
+     "detail": "Google compte 2 fois plus d'achats que Shopify sur 30 jours (526 vs 37 depuis janvier) : les décisions doivent se prendre sur les ventes Shopify."
+    }
+   ]
   }
  }
 }
