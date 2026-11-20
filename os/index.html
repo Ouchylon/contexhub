@@ -287,6 +287,26 @@ footer b{color:var(--ink)}
   .cal-hint{display:block}
 }
 @media (max-width:380px){ .tiles{grid-template-columns:1fr} }
+.pc-con{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin-bottom:18px}
+.pc-c{padding:12px 14px;display:flex;flex-direction:column;gap:5px;font-size:12.5px;color:var(--mut)}.pc-c b{color:var(--ink);font-size:14px}.pc-c .pill{align-self:flex-start}
+.pill.n{background:#f1ece4;color:var(--mut)}
+.pc-vide{border:1px dashed var(--line);border-radius:4px;padding:18px;display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--mut);margin-bottom:18px;background:rgba(255,255,255,.5)}.pc-vide b{color:var(--ink)}
+.pc-bars{padding:16px;margin:10px 0 12px}.pc-row{display:grid;grid-template-columns:minmax(120px,190px) 1fr auto;gap:10px;align-items:center;font-size:13px;margin:7px 0}
+.pc-row i{display:block;height:14px;background:var(--o,#E8990F);border-radius:2px;min-width:2px}.pc-row span{color:var(--mut);white-space:nowrap}
+.pc-l{padding:14px 16px;margin-bottom:12px;min-width:0;overflow-x:auto}.pc-l small{color:var(--mut)}.pc-l .s{font-size:12.5px;color:var(--mut);line-height:1.5}
+.pc-f{display:table}
+.pc-sj{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:10px}
+.pc-s{padding:14px 16px;display:flex;flex-direction:column;gap:6px}.pc-s b{font-size:15px}.pc-s ul{margin:2px 0 0;padding-left:18px;font-size:13px;line-height:1.45}.pc-s .pill{align-self:flex-start}
+#parcours .sh2{margin-top:20px}
+.gad{margin-top:22px}.gad-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px;margin-bottom:12px}
+.gad-a{padding:14px 16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.gad-p{background:#fff;border:1px solid #dadce0;border-radius:8px;padding:12px 14px;font-family:Arial,Helvetica,sans-serif;color:#202124}
+.gad-s{font-size:12px;margin-bottom:6px}.gad-u{display:flex;gap:8px;align-items:center;font-size:13px;line-height:1.25}.gad-u small{color:#4d5156}
+.gad-ic{width:26px;height:26px;border-radius:50%;background:#E8990F;color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px;flex:none}
+.gad-t{display:block;color:#1a0dab;font-size:18px;line-height:1.3;margin:6px 0 4px;text-decoration:none}.gad-t:hover{text-decoration:underline}
+.gad-p p{margin:0;font-size:14px;line-height:1.45;color:#4d5156}
+.gad-a details{font-size:12.5px;color:var(--mut)}.gad-a details ul{margin:4px 0;padding-left:18px}
+.gad-m{display:flex;gap:14px;font-size:12.5px;color:var(--mut)}
 </style>
 </head>
 <body>
@@ -378,6 +398,62 @@ footer b{color:var(--ink)}
         '<div id="vt-out"></div><p class="gnote">'+esc(D.ventes.note)+'</p></section>';
     }
 
+    /* 1c. Parcours client */
+    (function(){
+      var PA=D.parcours, G=D.ga4, S=D.gsc, CT=D.contenus||{centres:[]};
+      var ORD=["Meta (pub)","Google Ads","Courriel","LinkedIn (pub)","Recherche Google (SEO)","IA (ChatGPT, etc.)","Réseaux sociaux (organique)","Sites référents","Direct / inconnu"];
+      function pct(a,b){return b?Math.round(100*a/b)+' %':'—';}
+      function attente(txt){return '<div class="pc-vide"><b>Se remplit tout seul une fois branché</b><span>'+txt+'</span></div>';}
+      var con=[
+        ["Dialog Insight","Infolettres : envois, ouvertures, clics",!!(D.infolettres&&D.infolettres.releve)],
+        ["Shopify · commandes","Ventes encaissées et parcours de chaque achat (première et dernière visite)",!!(D.shopify||PA)],
+        ["Meta","Pubs : portée, clics, visites, paniers, achats",!!D.meta],
+        ["Google Analytics 4","Visites par canal, entonnoir, Google Ads, visites venues des IA",!!G],
+        ["Search Console","Mots tapés dans Google pour nous trouver",!!S],
+        ["Pixel Meta de la boutique","Ajouts au panier et achats suivis par les pubs",true]];
+      var h='<section id="parcours"><div class="sh"><h2>Parcours <span class="o">client</span></h2><span class="k">D’où viennent les inscriptions · ce qu’on cherche pour nous trouver</span></div>'+
+        '<div class="pc-con">'+con.map(function(c){return '<div class="card pc-c"><span class="pill '+(c[2]?'g':'n')+'">'+(c[2]?'Branché':'À brancher')+'</span><b>'+c[0]+'</b><span>'+c[1]+'</span></div>';}).join('')+'</div>';
+
+      /* A. Canal d'arrivée des inscriptions */
+      h+='<div class="sh2"><h3>D’où arrivent les acheteurs</h3><span class="k">'+(PA?'Shopify · '+int(PA.commandes)+' commandes payées depuis le '+fd(PA.depuis):'Source : Shopify (parcours de chaque commande)')+'</span></div>';
+      if(PA){
+        h+='<div class="tabs pc-tog"><button type="button" class="on" data-v="derniereVisite">Dernière visite avant l’achat</button><button type="button" data-v="premiereVisite">Première visite</button></div><div class="card pc-bars" id="pc-bars"></div>'+
+          '<div class="vt-kpis">'+
+          '<div class="card"><span class="k">Délai médian</span><div class="v">'+(PA.delaiMedianJours==null?'—':PA.delaiMedianJours+' j')+'</div><div class="s">entre la première visite et l’achat</div></div>'+
+          '<div class="card"><span class="k">Visites médianes</span><div class="v">'+(PA.visitesMedianes==null?'—':PA.visitesMedianes)+'</div><div class="s">avant d’acheter</div></div>'+
+          '<div class="card"><span class="k">Sans parcours</span><div class="v">'+int(PA.sansParcours)+'</div><div class="s">commandes sans source (ex. entrées à la main)</div></div></div>'+
+          '<div class="vt-grid"><div class="card pc-l"><span class="k">Campagnes qui mènent à l’achat (utm_campaign)</span>'+(PA.campagnes.length?'<table class="cr-t">'+PA.campagnes.map(function(c){return '<tr><td>'+esc(c.campagne)+'</td><td>'+esc(c.canal)+'</td><td><b>'+int(c.commandes)+'</b></td></tr>';}).join('')+'</table>':'<p class="s">Aucune campagne nommée.</p>')+'</div>'+
+          '<div class="card pc-l"><span class="k">Pages d’arrivée des acheteurs</span><table class="cr-t">'+PA.pagesArrivee.map(function(c){return '<tr><td>'+esc(c.page)+'</td><td><b>'+int(c.commandes)+'</b></td></tr>';}).join('')+'</table></div></div>';
+      } else h+=attente('Avec l’accès en lecture aux commandes Shopify, chaque inscription est rattachée à son canal : '+ORD.join(', ')+'.');
+
+      /* B. Entonnoir par canal (GA4) */
+      h+='<div class="sh2"><h3>Entonnoir par canal</h3><span class="k">'+(G?'Google Analytics 4 · '+esc(G.periode):'Source : Google Analytics 4')+'</span></div>';
+      if(G){
+        h+='<div class="card pc-l"><table class="cr-t pc-f"><tr><th>Canal</th><th>Visites</th><th>Fiches formation</th><th>Panier</th><th>Paiement</th><th>Achats</th><th>Taux d’achat</th></tr>'+
+          G.canaux.map(function(c){return '<tr><td><b>'+esc(c.canal)+'</b></td><td>'+int(c.sessions)+'</td><td>'+int(c.fiches)+'</td><td>'+int(c.paniers)+'</td><td>'+int(c.paiements)+'</td><td><b>'+int(c.achats)+'</b></td><td>'+pct(c.achats,c.sessions)+'</td></tr>';}).join('')+'</table></div>';
+        if(G.googleAds&&G.googleAds.length)h+='<div class="card pc-l"><span class="k">Google Ads (Hamak) · campagnes</span><table class="cr-t"><tr><th>Campagne</th><th>Visites</th><th>Coût</th><th>Achats</th></tr>'+G.googleAds.map(function(c){return '<tr><td>'+esc(c.campagne)+'</td><td>'+int(c.sessions)+'</td><td>'+money(c.cout)+'</td><td><b>'+int(c.achats)+'</b></td></tr>';}).join('')+'</table></div>';
+      } else h+=attente('Visites → fiche formation → panier → paiement → achat, pour chaque canal, plus les campagnes Google Ads et les visites venues de ChatGPT et des autres IA.');
+
+      /* C. Comment on nous trouve */
+      h+='<div class="sh2"><h3>Comment on nous trouve sur Google</h3><span class="k">'+(S?'Search Console · '+esc(S.periode):'Source : Google Search Console')+'</span></div>';
+      if(S){
+        h+='<div class="vt-kpis"><div class="card"><span class="k">Clics depuis Google</span><div class="v">'+int(S.totaux.clics)+'</div><div class="s">'+int(S.totaux.impressions)+' affichages</div></div>'+
+          '<div class="card"><span class="k">Recherches sans le nom Contech</span><div class="v">'+pct(S.totaux.clics-S.totaux.marque,S.totaux.clics)+'</div><div class="s">des clics : des gens qui ne nous connaissaient pas</div></div>'+
+          (G&&G.ia?'<div class="card"><span class="k">Visites venues des IA</span><div class="v">'+int(G.ia.reduce(function(s,x){return s+x.sessions;},0))+'</div><div class="s">ChatGPT, Perplexity, Gemini… (90 jours)</div></div>':'')+'</div>'+
+          '<div class="vt-grid"><div class="card pc-l"><span class="k">Mots tapés dans Google</span><table class="cr-t"><tr><th>Recherche</th><th>Clics</th><th>Affich.</th><th>Pos.</th></tr>'+S.requetes.slice(0,20).map(function(q){return '<tr><td>'+esc(q.requete)+(q.centre?'<br><small>'+esc(q.centre)+'</small>':'')+'</td><td>'+int(q.clics)+'</td><td>'+int(q.impressions)+'</td><td>'+q.position+'</td></tr>';}).join('')+'</table></div>'+
+          '<div class="card pc-l"><span class="k">Occasions : vus souvent, mais en 2e page ou plus bas</span><table class="cr-t"><tr><th>Recherche</th><th>Affich.</th><th>Pos.</th></tr>'+S.occasions.map(function(q){return '<tr><td>'+esc(q.requete)+'</td><td>'+int(q.impressions)+'</td><td>'+q.position+'</td></tr>';}).join('')+'</table>'+
+          (G&&G.rechercheInterne&&G.rechercheInterne.length?'<span class="k" style="margin-top:14px;display:block">Recherches sur contech.qc.ca</span><p class="s">'+G.rechercheInterne.map(function(t){return esc(t.terme)+' ('+t.fois+')';}).join(' · ')+'</p>':'')+'</div></div>';
+      } else h+=attente('Les vraies recherches Google qui mènent au site, classées par centre d’intérêt, et les « occasions » : les sujets où on apparaît sans être cliqués.');
+
+      /* D. Sujets de contenu */
+      var pc={}; (S&&S.parCentre||[]).forEach(function(c){pc[c.centre]=c;});
+      var cen=CT.centres.slice().sort(function(a,b){return ((pc[b.nom]||{}).impressions||0)-((pc[a.nom]||{}).impressions||0);});
+      h+='<div class="sh2"><h3>Sujets de blogue proposés</h3><span class="k">'+esc(CT.source||'')+(S?' · classés selon les recherches Google':'')+'</span></div>'+
+        '<div class="pc-sj">'+cen.map(function(c){var g=pc[c.nom];return '<div class="card pc-s"><span class="k">'+esc(c.thematique)+'</span><b>'+esc(c.nom)+'</b>'+(g?'<span class="pill g">'+int(g.impressions)+' affichages Google · '+int(g.clics)+' clics</span>':'')+'<ul>'+c.idees.map(function(i){return '<li>'+esc(i)+'</li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
+        '<p class="gnote">Méthode : Shopify fait foi pour les ventes. Chaque plateforme (Meta, Google) compte les conversions à sa façon : leurs chiffres sont montrés côte à côte, jamais additionnés. Aucune donnée personnelle n’est publiée ici, seulement des totaux.</p></section>';
+      html+=h;
+    })();
+
     /* 2. Formations */
     html+='<section id="formations"><div class="sh"><h2>Formations <span class="o">à venir</span></h2><span class="k">Source : '+esc(D.formations.source)+' · relevé le '+esc(D.formations.releve)+'</span></div>';
     html+='<div class="card"><div class="band"></div><table class="tbl"><thead><tr><th class="k">Date</th><th class="k">Formation</th><th class="k">Inscrits / max</th></tr></thead><tbody>';
@@ -416,6 +492,23 @@ footer b{color:var(--ink)}
         '<table class="cr-t"><tr><th>Pub</th><th>Portée</th><th>Clics</th><th>Visites</th><th>Panier</th><th>Achats</th><th>Dépensé</th></tr>'+
         s.pubs.map(function(a){var m=D.meta&&D.meta.pubs.filter(function(p){return p.post===a.post;})[0];if(m){a=Object.assign({},a,m.total);}return '<tr><td><a href="'+esc(a.post)+'" target="_blank" rel="noopener"><b>'+esc(a.nom)+'</b>&nbsp;↗</a></td><td>'+int(a.portee)+'</td><td>'+int(a.clics)+'</td><td>'+int(a.visites)+'</td><td>'+int(a.paniers)+'</td><td><b>'+int(a.achats)+'</b></td><td>'+money(a.depense)+'</td></tr>';}).join('')+'</table></div></div>';}).join('')+
       '</div><p class="gnote">TOF = nouvelles personnes (Québec), BOF = reciblage des visiteurs du site. Visites = pages de formation chargées; Panier et Achats = événements du pixel de Contech sur la boutique (attribution Meta : 7 jours après un clic, 1 jour après une vue). TOF ↗ et BOF ↗ ouvrent la vraie publication de la pub : les j’aime, commentaires et partages y sont à jour.</p></div>';}
+
+    /* Google Ads (Hamak) */
+    (function(){var GA=D.googleAds;
+      html+='<div class="gad"><div class="sh2"><h3>Google Ads · campagnes gérées par Hamak</h3><span class="k">'+(GA?'Google Ads · '+esc(GA.periode)+' · relevé '+esc(GA.releve):'Source : compte Google Ads de Contech')+'</span></div>';
+      if(!GA){html+='<div class="pc-vide"><b>À relever</b><span>Campagnes, annonces telles qu’elles s’affichent sur Google, mots-clés et résultats (clics, coût, conversions).</span></div></div>';return;}
+      html+='<div class="card pc-l"><table class="cr-t pc-f"><tr><th>Campagne</th><th>Type</th><th>Statut</th><th>Impr.</th><th>Clics</th><th>CTR</th><th>Coût</th><th>Conv.</th><th>Coût / conv.</th></tr>'+
+        GA.campagnes.map(function(c){return '<tr><td><b>'+esc(c.nom)+'</b></td><td>'+esc(c.type||'')+'</td><td>'+esc(c.statut||'')+'</td><td>'+int(c.impressions)+'</td><td>'+int(c.clics)+'</td><td>'+(c.impressions?(100*c.clics/c.impressions).toFixed(1).replace('.',',')+' %':'—')+'</td><td>'+money(c.cout)+'</td><td><b>'+(c.conversions==null?'—':String(c.conversions).replace('.',','))+'</b></td><td>'+(c.conversions?money(c.cout/c.conversions):'—')+'</td></tr>';}).join('')+'</table></div>';
+      if(GA.annonces&&GA.annonces.length)html+='<div class="gad-g">'+GA.annonces.map(function(a){var u=(a.url||'').replace(/^https?:\/\//,'').replace(/\/$/,'');
+        return '<div class="card gad-a"><span class="k">'+esc(a.campagne)+(a.groupe?' · '+esc(a.groupe):'')+'</span>'+
+          '<div class="gad-p"><div class="gad-s"><b>Sponsorisé</b></div><div class="gad-u"><span class="gad-ic">C</span><span>Contech Bâtiment<br><small>'+esc(u)+'</small></span></div>'+
+          '<a class="gad-t" href="'+esc(a.url||'#')+'" target="_blank" rel="noopener">'+esc((a.titres||[]).slice(0,3).join(' | '))+'</a><p>'+esc((a.descriptions||[]).slice(0,2).join(' '))+'</p></div>'+
+          ((a.titres||[]).length>3?'<details><summary>Toutes les variantes ('+a.titres.length+' titres, '+(a.descriptions||[]).length+' descriptions)</summary><ul>'+a.titres.map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul><ul>'+(a.descriptions||[]).map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul></details>':'')+
+          '<div class="gad-m"><span>'+int(a.impressions||0)+' impr.</span><span>'+int(a.clics||0)+' clics</span><span>'+(a.conversions==null?'—':String(a.conversions).replace('.',','))+' conv.</span></div></div>';}).join('')+'</div>';
+      if(GA.motsCles&&GA.motsCles.length)html+='<div class="vt-grid"><div class="card pc-l"><span class="k">Mots-clés achetés</span><table class="cr-t"><tr><th>Mot-clé</th><th>Clics</th><th>Coût</th><th>Conv.</th></tr>'+GA.motsCles.map(function(m){return '<tr><td>'+esc(m.mot)+'</td><td>'+int(m.clics)+'</td><td>'+money(m.cout)+'</td><td>'+(m.conversions==null?'—':m.conversions)+'</td></tr>';}).join('')+'</table></div>'+
+        '<div class="card pc-l"><span class="k">Ce que les gens ont tapé (termes de recherche)</span><table class="cr-t"><tr><th>Recherche</th><th>Clics</th><th>Conv.</th></tr>'+(GA.termes||[]).map(function(m){return '<tr><td>'+esc(m.terme)+'</td><td>'+int(m.clics)+'</td><td>'+(m.conversions==null?'—':m.conversions)+'</td></tr>';}).join('')+'</table></div></div>';
+      html+='<p class="gnote">'+esc(GA.note||'Conversions telles que comptées par Google Ads (sa propre attribution) : à comparer aux ventes Shopify, jamais à additionner aux conversions Meta.')+'</p></div>';
+    })();
     if(false&&P.reference)html+='<div class="card ref"><span class="k">Référence · '+esc(P.reference.periode)+'</span><b>'+esc(P.reference.nom)+'</b><span style="flex:1"></span><span class="k">Coût par achat</span><span class="v num">'+money(P.reference.coutParAchat)+'</span></div>';
     html+='</section>';
 
@@ -523,13 +616,18 @@ footer b{color:var(--ink)}
       '<div class="card cal"><div class="cal-scroll">'+g+'</div><div class="cal-hint">← Glisser pour voir toute la période →</div>'+
       '<div class="legend"><span><i class="sw" style="background:var(--yel)"></i>Pub programmée</span><span><i class="sw" style="background:#f6d9a8;border:1px dashed var(--yel)"></i>Pub à venir</span><span><i class="sw" style="background:var(--indigo)"></i>Infolettre</span><span><i class="sw" style="background:var(--sage);border-radius:50%"></i>Formation (nb d’inscrits)</span><span><i class="sw" style="background:var(--red);border-radius:50%"></i>Non confirmée</span></div></div></section>';
 
-    var som='<nav class="sommaire">'+[["aujourdhui","Aujourd’hui"],["ventes","Ventes"],["formations","Formations"],["pubs","Pubs"],["infolettres","Infolettres"],["toutes-infolettres","Toutes les infolettres"],["reseaux","Réseaux sociaux"],["calendrier","Calendrier"]]
+    var som='<nav class="sommaire">'+[["aujourdhui","Aujourd’hui"],["ventes","Ventes"],["parcours","Parcours client"],["formations","Formations"],["pubs","Pubs"],["infolettres","Infolettres"],["toutes-infolettres","Toutes les infolettres"],["reseaux","Réseaux sociaux"],["calendrier","Calendrier"]]
       .filter(function(a){return html.indexOf('id="'+a[0]+'"')>=0;}).map(function(a){return '<a href="#'+a[0]+'">'+a[1]+'</a>';}).join('')+'</nav>';
     document.getElementById("app").innerHTML=som+html;
     window.__SH=D.shopify||null;
     if(D.ventes) window.vtInit(D.ventes,D.today);
+    if(D.parcours){var pb=document.getElementById('pc-bars'),tg=document.querySelector('.pc-tog');
+      var drawP=function(v){var L=D.parcours[v],mx=Math.max.apply(null,L.map(function(x){return x.commandes;}).concat([1])),tot=L.reduce(function(s,x){return s+x.commandes;},0);
+        pb.innerHTML=L.map(function(x){return '<div class="pc-row"><b>'+esc(x.canal)+'</b><i style="width:'+(100*x.commandes/mx)+'%"></i><span>'+int(x.commandes)+' cmd · '+Math.round(100*x.commandes/(tot||1))+' % · '+money(x.ht)+'</span></div>';}).join('');};
+      tg.addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;tg.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});drawP(b.dataset.v);});
+      drawP('derniereVisite');}
     window.fraicheur(D);
-    document.querySelectorAll(".tabs:not(.vt-per)").forEach(function(tb){
+    document.querySelectorAll(".tabs:not(.vt-per):not(.pc-tog)").forEach(function(tb){
       tb.addEventListener("click",function(e){
         var b=e.target.closest("button"); if(!b)return;
         tb.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b);document.getElementById(x.dataset.t).hidden=(x!==b);});
@@ -609,7 +707,7 @@ window.fraicheur=function(D){
   var Fr=D.fraicheur||{}, now=new Date();
   Object.keys(Fr).forEach(function(id){
     var f=Fr[id], sec=document.getElementById(id); if(!sec)return; var sh=sec.querySelector('.sh'); if(!sh)return;
-    var q=f.mode==='auto'?(f.src==='shopify'?(D.shopify&&D.shopify.releve):f.src==='meta'?(D.meta&&D.meta.releve):(D.infolettres&&D.infolettres.releve)):f.quand; var t=q?new Date(q):null;
+    var q=f.mode==='auto'?(f.src==='shopify'?(D.shopify&&D.shopify.releve):f.src==='meta'?(D.meta&&D.meta.releve):f.src==='parcours'?((D.parcours||D.ga4||D.gsc||{}).releve):(D.infolettres&&D.infolettres.releve)):f.quand; var t=q?new Date(q):null;
     var h=t?(now-t)/36e5:999, lim=f.mode==='auto'?2:24, ok=h<=lim;
     var ago=!t?'—':h<1?'il y a '+Math.max(1,Math.round(h*60))+' min':h<24?'il y a '+Math.round(h)+' h':'le '+t.getDate()+' '+["janv.","févr.","mars","avr.","mai","juin","juil.","août","sept.","oct.","nov.","déc."][t.getMonth()]+' à '+t.getHours()+' h';
     var b=document.createElement('div'); b.className='fr '+(ok?'ok':'old');

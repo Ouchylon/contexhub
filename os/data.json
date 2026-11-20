@@ -1623,5 +1623,234 @@
    "quand": "2026-11-19T18:00",
    "source": "Meta Business Suite · LinkedIn"
   }
+ },
+ "contenus": {
+  "source": "Centres d'intérêt de l'analyse BI Contech (nov. 2026) · idées de sujets à valider avec les formateurs",
+  "centres": [
+   {
+    "nom": "Code de construction et réglementation",
+    "thematique": "Codes et réglementations",
+    "mots": [
+     "code (de )?(construction|du b)",
+     "\\bcnb",
+     "r[ée]glement",
+     "\\brbq\\b",
+     "chapitre i"
+    ],
+    "idees": [
+     "Code de construction du Québec : ce qui change pour les professionnels",
+     "Usage principal, classement et exigences : lire le Code sans se tromper"
+    ]
+   },
+   {
+    "nom": "Sécurité incendie et évacuation",
+    "thematique": "Codes et réglementations",
+    "mots": [
+     "incendie",
+     "coupe-feu",
+     "[ée]vacuation",
+     "gicleur"
+    ],
+    "idees": [
+     "Séparations coupe-feu : les erreurs les plus fréquentes sur les plans",
+     "Moyens d'évacuation : ce que vérifie l'inspecteur"
+    ]
+   },
+   {
+    "nom": "Enveloppe du bâtiment",
+    "thematique": "Opérations et techniques du bâtiment",
+    "mots": [
+     "enveloppe",
+     "isolation",
+     "pare-(vapeur|air)",
+     "mur(s)?-rideau",
+     "ma[çc]onnerie",
+     "infiltration",
+     "fen[êe]tre"
+    ],
+    "idees": [
+     "Infiltrations d'eau dans l'enveloppe : diagnostiquer avant de réparer",
+     "Murs-rideaux : points de contrôle à la conception et au chantier"
+    ]
+   },
+   {
+    "nom": "Toitures",
+    "thematique": "Opérations et techniques du bâtiment",
+    "mots": [
+     "toit",
+     "membrane",
+     "eaux pluviales"
+    ],
+    "idees": [
+     "Entretien d'une toiture commerciale : le calendrier type",
+     "Toits plats et eaux pluviales : prévenir les accumulations"
+    ]
+   },
+   {
+    "nom": "Structure, sols et béton",
+    "thematique": "Opérations et techniques du bâtiment",
+    "mots": [
+     "structur",
+     "b[ée]ton",
+     "fondation",
+     "g[ée]otechn",
+     "m[ée]canique des sols"
+    ],
+    "idees": [
+     "Dommages structuraux : les signes à ne pas ignorer",
+     "Mécanique des sols : ce que le professionnel doit savoir avant de bâtir"
+    ]
+   },
+   {
+    "nom": "Systèmes électromécaniques",
+    "thematique": "Opérations et techniques du bâtiment",
+    "mots": [
+     "cvac",
+     "ventilation",
+     "plomberie",
+     "[ée]lectri",
+     "chauffage",
+     "m[ée]canique du b"
+    ],
+    "idees": [
+     "CVAC : les vérifications à faire avant la saison froide",
+     "Plomberie et code : les non-conformités les plus courantes"
+    ]
+   },
+   {
+    "nom": "Énergie et construction durable",
+    "thematique": "Construction et opération durables",
+    "mots": [
+     "[ée]nerg",
+     "durable",
+     "\\bleed\\b",
+     "carbone",
+     "novoclimat",
+     "murs? v[ée]g[ée]tal"
+    ],
+    "idees": [
+     "Bâtiment durable : par où commencer sur un projet existant",
+     "Murs végétaux : conception, entretien et limites"
+    ]
+   },
+   {
+    "nom": "Exploitation, maintenance et inspection",
+    "thematique": "Opérations et techniques du bâtiment",
+    "mots": [
+     "inspection",
+     "entretien",
+     "maintenance",
+     "loi 122",
+     "fa[çc]ade",
+     "carnet d.entretien",
+     "gestion immobili"
+    ],
+    "idees": [
+     "Carnet d'entretien : les obligations des propriétaires d'immeubles",
+     "Inspection de bâtiment niveau 2 : ce qui est évalué"
+    ]
+   },
+   {
+    "nom": "Qualité de l'environnement intérieur",
+    "thematique": "Opérations et techniques du bâtiment",
+    "mots": [
+     "moisissure",
+     "qualit[ée] de l.air",
+     "acoustique",
+     "insonoris",
+     "radon"
+    ],
+    "idees": [
+     "Moisissures dans un bâtiment : quand faut-il un expert?",
+     "Bruit entre logements : comprendre l'indice d'insonorisation"
+    ]
+   },
+   {
+    "nom": "Devis, plans et conception",
+    "thematique": "Opérations et techniques du bâtiment",
+    "mots": [
+     "devis",
+     "lecture de plans",
+     "\\bplans?\\b",
+     "conception"
+    ],
+    "idees": [
+     "Devis sur plan : structurer un devis clair et défendable",
+     "Lecture de plans : les symboles que tout le monde confond"
+    ]
+   },
+   {
+    "nom": "Estimation et contrôle des coûts",
+    "thematique": "Gestion 3.0",
+    "mots": [
+     "estimation",
+     "co[ûu]ts?",
+     "soumission"
+    ],
+    "idees": [
+     "Estimer un projet de bâtiment : méthodes et marges d'erreur",
+     "Contrôle des coûts en chantier : les indicateurs à suivre"
+    ]
+   },
+   {
+    "nom": "Gestion de projet et chantier",
+    "thematique": "Gestion 3.0",
+    "mots": [
+     "gestion de projet",
+     "chantier",
+     "surintend",
+     "planification"
+    ],
+    "idees": [
+     "Gestion de chantier : les réunions qui évitent les retards",
+     "Planifier un projet de construction : outils simples qui marchent"
+    ]
+   },
+   {
+    "nom": "Leadership, gestion et communication",
+    "thematique": "Gestion 3.0",
+    "mots": [
+     "leadership",
+     "n[ée]goci",
+     "communication",
+     "courriel",
+     "gestion d.[ée]quipe"
+    ],
+    "idees": [
+     "Courriels de chantier : écrire pour être lu (et protégé)",
+     "Négocier avec un client ou un sous-traitant : les bases"
+    ]
+   },
+   {
+    "nom": "Droit de la construction et contrats",
+    "thematique": "Questions juridiques",
+    "mots": [
+     "contrat",
+     "juridique",
+     "hypoth[èe]que l[ée]gale",
+     "r[ée]clamation",
+     "droit de la construction"
+    ],
+    "idees": [
+     "Hypothèque légale de la construction : les délais à respecter",
+     "Avenants et réclamations : documenter pour se protéger"
+    ]
+   },
+   {
+    "nom": "BIM et outils numériques",
+    "thematique": "Outils numériques et technologiques",
+    "mots": [
+     "\\bbim\\b",
+     "revit",
+     "num[ée]rique",
+     "intelligence artificielle",
+     "\\bia\\b"
+    ],
+    "idees": [
+     "BIM pour les petites firmes : par où commencer",
+     "L'IA dans un bureau d'architectes ou d'ingénieurs : usages concrets"
+    ]
+   }
+  ]
  }
 }

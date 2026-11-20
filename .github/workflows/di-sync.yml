@@ -1,4 +1,4 @@
-name: Relevé OS (Dialog Insight + Shopify + Meta)
+name: Relevé OS (Dialog Insight + Shopify + Meta + Google)
 on:
   schedule:
     - cron: "7,37 11-23 * * 1-5"   # aux 30 min (h:07 et h:37), 6 h à 18 h (heure de Montréal), jours ouvrables
@@ -24,6 +24,21 @@ jobs:
           SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
           SHOPIFY_SHOP: ${{ secrets.SHOPIFY_SHOP }}
         run: python3 scripts/shopify_sync.py
+      - name: Relever le parcours client (Shopify)
+        if: always()
+        env:
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          SHOPIFY_SHOP: ${{ secrets.SHOPIFY_SHOP }}
+        run: python3 scripts/parcours_sync.py
+      - name: Relever Google (Analytics 4 + Search Console)
+        if: always()
+        env:
+          GOOGLE_SA_JSON: ${{ secrets.GOOGLE_SA_JSON }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          GSC_SITE: ${{ secrets.GSC_SITE }}
+        run: |
+          if [ -n "$GOOGLE_SA_JSON" ]; then pip install -q google-auth requests; fi
+          python3 scripts/google_sync.py
       - name: Relever Meta
         if: always()
         env:
