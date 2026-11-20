@@ -58,10 +58,17 @@ for c in camps:
     ads = get(f"{c['id']}/ads", fields="id,name,effective_status,creative{effective_object_story_id}", limit=100)
     for a in ads:
         def ins(preset):
-            r = get(f"{a['id']}/insights", fields="reach,impressions,inline_link_clicks,spend", date_preset=preset)
+            r = get(f"{a['id']}/insights", fields="reach,impressions,inline_link_clicks,spend,actions,action_values", date_preset=preset)
             r = r[0] if isinstance(r, list) and r else {}
+            act = {x.get("action_type"): num(x.get("value")) for x in r.get("actions") or []}
+            val = {x.get("action_type"): num(x.get("value")) for x in r.get("action_values") or []}
+            def ev(d, nom):  # pixel de la boutique d'abord, sinon le total Meta
+                return d.get(f"offsite_conversion.fb_pixel_{nom}", d.get(nom, 0))
             return {"portee": int(num(r.get("reach"))), "impressions": int(num(r.get("impressions"))),
-                    "clics": int(num(r.get("inline_link_clicks"))), "depense": round(num(r.get("spend")), 2)}
+                    "clics": int(num(r.get("inline_link_clicks"))), "depense": round(num(r.get("spend")), 2),
+                    "visites": int(act.get("landing_page_view", 0)), "paniers": int(ev(act, "add_to_cart")),
+                    "paiements": int(ev(act, "initiate_checkout")), "achats": int(ev(act, "purchase")),
+                    "valeurAchats": round(ev(val, "purchase"), 2)}
         story = ((a.get("creative") or {}).get("effective_object_story_id") or "")
         post = f"https://www.facebook.com/{story.replace('_', '/posts/')}/" if story else ""
         pubs.append({"campagne": c["name"], "pub": a["name"], "statut": a.get("effective_status"),

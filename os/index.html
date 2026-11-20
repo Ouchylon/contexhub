@@ -185,9 +185,9 @@ section{margin-bottom:44px}
 .cr-b{padding:12px 14px 14px}
 .cr-b h4{font:700 17px/1.25 Machina,Helv,sans-serif;margin:4px 0 6px}
 .cr-dest{font:700 13px Helv,sans-serif;color:var(--ink)}
-.cr-t{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
-.cr-t th{font:700 10.5px Helv,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);text-align:left;padding:4px 4px;border-bottom:1px solid var(--line)}
-.cr-t{table-layout:auto}.cr-t td{padding:6px 4px;border-bottom:1px solid var(--line);white-space:nowrap}
+.cr-t{display:block;overflow-x:auto;width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+.cr-t th{font:700 9.5px Helv,sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--mut);text-align:left;padding:4px 4px;border-bottom:1px solid var(--line)}
+.cr-t{table-layout:auto}.cr-t td{font-size:12.5px;padding:6px 3px;border-bottom:1px solid var(--line);white-space:nowrap}
 .cr-t td a{font-weight:700;color:var(--ink)}
 .prog{margin:0 0 22px}
 .prog .sh2{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:6px;margin-bottom:10px}
@@ -413,9 +413,9 @@ footer b{color:var(--ink)}
         return '<div class="card cr"><div class="cr-m"><video controls playsinline preload="none" poster="'+esc(s.poster)+'" src="'+esc(s.video)+'"></video><img src="'+esc(s.image)+'" alt="'+esc(s.sujet)+' – visuel 4:5" loading="lazy"></div>'+
         '<div class="cr-b"><span class="k">Formation du '+esc(s.date)+' · 2 variantes : reel 9:16 + image 4:5</span><h4>'+esc(s.sujet)+'</h4>'+
         '<a class="cr-dest" href="'+esc(s.destination)+'" target="_blank" rel="noopener">Page de destination ↗</a>'+
-        '<table class="cr-t"><tr><th>Pub</th><th>Portée</th><th>Impr.</th><th>Clics</th><th>Dépensé</th><th>Réactions</th></tr>'+
-        s.pubs.map(function(a){var m=D.meta&&D.meta.pubs.filter(function(p){return p.post===a.post;})[0];if(m){a=Object.assign({},a,m.total);}return '<tr><td><b>'+esc(a.nom)+'</b></td><td>'+int(a.portee)+'</td><td>'+int(a.impressions)+'</td><td>'+int(a.clics)+'</td><td>'+money(a.depense)+'</td><td><a href="'+esc(a.post)+'" target="_blank" rel="noopener">En direct ↗</a></td></tr>';}).join('')+'</table></div></div>';}).join('')+
-      '</div><p class="gnote">TOF = nouvelles personnes (Québec), BOF = reciblage des visiteurs du site. « En direct » ouvre la vraie publication de la pub : les j’aime, commentaires et partages y sont à jour.</p></div>';}
+        '<table class="cr-t"><tr><th>Pub</th><th>Portée</th><th>Clics</th><th>Visites</th><th>Panier</th><th>Achats</th><th>Dépensé</th></tr>'+
+        s.pubs.map(function(a){var m=D.meta&&D.meta.pubs.filter(function(p){return p.post===a.post;})[0];if(m){a=Object.assign({},a,m.total);}return '<tr><td><a href="'+esc(a.post)+'" target="_blank" rel="noopener"><b>'+esc(a.nom)+'</b>&nbsp;↗</a></td><td>'+int(a.portee)+'</td><td>'+int(a.clics)+'</td><td>'+int(a.visites)+'</td><td>'+int(a.paniers)+'</td><td><b>'+int(a.achats)+'</b></td><td>'+money(a.depense)+'</td></tr>';}).join('')+'</table></div></div>';}).join('')+
+      '</div><p class="gnote">TOF = nouvelles personnes (Québec), BOF = reciblage des visiteurs du site. Visites = pages de formation chargées; Panier et Achats = événements du pixel de Contech sur la boutique (attribution Meta : 7 jours après un clic, 1 jour après une vue). TOF ↗ et BOF ↗ ouvrent la vraie publication de la pub : les j’aime, commentaires et partages y sont à jour.</p></div>';}
     if(false&&P.reference)html+='<div class="card ref"><span class="k">Référence · '+esc(P.reference.periode)+'</span><b>'+esc(P.reference.nom)+'</b><span style="flex:1"></span><span class="k">Coût par achat</span><span class="v num">'+money(P.reference.coutParAchat)+'</span></div>';
     html+='</section>';
 

@@ -178,7 +178,7 @@
   ],
   "creatifs": {
    "campagne": "BOF ET TOF – Dernière chance NOV26",
-   "releve": "19 nov., 18 h 30 (journée du 19 nov.)",
+   "releve": "depuis le début, 17 au 19 nov. (relevé 19 nov., 22 h)",
    "sujets": [
     {
      "sujet": "Moisissures",
@@ -191,18 +191,24 @@
       {
        "nom": "TOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577753554390696/",
-       "portee": 217,
-       "impressions": 313,
+       "portee": 249,
+       "impressions": 355,
        "clics": 4,
-       "depense": 6.37
+       "depense": 7.23,
+       "visites": 4,
+       "paniers": 1,
+       "achats": 0
       },
       {
        "nom": "BOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577751837724201/",
-       "portee": 171,
-       "impressions": 250,
-       "clics": 6,
-       "depense": 4.97
+       "portee": 186,
+       "impressions": 275,
+       "clics": 7,
+       "depense": 5.25,
+       "visites": 4,
+       "paniers": 0,
+       "achats": 0
       }
      ]
     },
@@ -217,18 +223,24 @@
       {
        "nom": "TOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577752934390758/",
-       "portee": 22,
-       "impressions": 23,
+       "portee": 49,
+       "impressions": 56,
        "clics": 0,
-       "depense": 0.2
+       "depense": 0.42,
+       "visites": 0,
+       "paniers": 0,
+       "achats": 0
       },
       {
        "nom": "BOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577751277724257/",
-       "portee": 61,
-       "impressions": 89,
-       "clics": 1,
-       "depense": 0.92
+       "portee": 73,
+       "impressions": 111,
+       "clics": 2,
+       "depense": 1.28,
+       "visites": 1,
+       "paniers": 0,
+       "achats": 0
       }
      ]
     },
@@ -243,18 +255,24 @@
       {
        "nom": "TOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577753241057394/",
-       "portee": 309,
-       "impressions": 420,
+       "portee": 391,
+       "impressions": 529,
        "clics": 5,
-       "depense": 5.03
+       "depense": 6.29,
+       "visites": 5,
+       "paniers": 0,
+       "achats": 0
       },
       {
        "nom": "BOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577752464390805/",
-       "portee": 115,
-       "impressions": 134,
-       "clics": 1,
-       "depense": 1.87
+       "portee": 181,
+       "impressions": 218,
+       "clics": 4,
+       "depense": 3.1,
+       "visites": 3,
+       "paniers": 0,
+       "achats": 0
       }
      ]
     }
