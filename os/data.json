@@ -284,16 +284,16 @@
    {
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
-    "envoyes": 19726,
-    "ouverture": 14.1,
+    "envoyes": 19728,
+    "ouverture": 19.3,
     "clic": 3.5,
-    "desabonnements": 15
+    "desabonnements": 17
    },
    {
     "date": "2026-11-17",
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "envoyes": 19762,
-    "ouverture": 31.5,
+    "ouverture": 31.7,
     "clic": 4.3,
     "desabonnements": 26
    },
@@ -301,7 +301,7 @@
     "date": "2026-11-11",
     "nom": "Hebdo Formations – 11 nov. 2026",
     "envoyes": 19707,
-    "ouverture": 30.4,
+    "ouverture": 30.5,
     "clic": 1.7,
     "desabonnements": 17
    },
@@ -317,7 +317,7 @@
     "date": "2026-11-10",
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Entrepreneurs",
     "envoyes": 3298,
-    "ouverture": 33.8,
+    "ouverture": 33.9,
     "clic": 1.5,
     "desabonnements": 4
    },
@@ -385,9 +385,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 22.8,
+   "ouverture": 25.5,
    "clics": 3.9,
-   "ctor": 17.0,
+   "ctor": 15.3,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -403,7 +403,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-19T18:45-05:00",
+  "releve": "2026-11-19T22:56-05:00",
   "alertes": [],
   "tous": [
    {
@@ -411,10 +411,10 @@
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "categorie": "Formations",
-    "envoyes": 19726,
-    "ouverture": 14.1,
+    "envoyes": 19728,
+    "ouverture": 19.3,
     "clic": 3.5,
-    "desabonnements": 15,
+    "desabonnements": 17,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
     "apercu": "nl/730127.html"
    },
@@ -424,7 +424,7 @@
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "categorie": "Formations",
     "envoyes": 19762,
-    "ouverture": 31.5,
+    "ouverture": 31.7,
     "clic": 4.3,
     "desabonnements": 26,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2665/IGwG33/lancement-hp2027-entete-v3.gif",
@@ -436,7 +436,7 @@
     "nom": "Hebdo Formations – 11 nov. 2026",
     "categorie": "Formations",
     "envoyes": 19707,
-    "ouverture": 30.4,
+    "ouverture": 30.5,
     "clic": 1.7,
     "desabonnements": 17,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2645/cXejm5/hebdo11nov-entete-v2.gif",
@@ -486,7 +486,7 @@
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Entrepreneurs",
     "categorie": "Expos",
     "envoyes": 3298,
-    "ouverture": 33.8,
+    "ouverture": 33.9,
     "clic": 1.5,
     "desabonnements": 4,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
@@ -563,7 +563,7 @@
     "nom": "Expo MTL 2 nov. 2026 (J-10)",
     "categorie": "Expos",
     "envoyes": 19009,
-    "ouverture": 31.6,
+    "ouverture": 31.7,
     "clic": 1.6,
     "desabonnements": 20,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
@@ -576,7 +576,7 @@
     "nom": "Expo MTL 29 oct. 2026 (J-14)",
     "categorie": "Expos",
     "envoyes": 19871,
-    "ouverture": 32.9,
+    "ouverture": 33.0,
     "clic": 1.5,
     "desabonnements": 27,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
