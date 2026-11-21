@@ -713,19 +713,19 @@
  ],
  "programmes_releve": "19 nov., 18 h",
  "abonnes": {
-  "releve": "19 nov. 2026, 23 h 55",
+  "releve": "21 nov. 2026, 18 h",
   "plateformes": [
    {
     "nom": "Facebook",
     "abonnes": "2,8 k",
     "exact": false,
-    "variation": "+145 nouveaux abonnés en 28 jours",
+    "variation": "+142 nouveaux abonnés en 28 jours",
     "source": "Meta Business Suite",
     "lien": "https://www.facebook.com/ContechBatiment/"
    },
    {
     "nom": "LinkedIn",
-    "abonnes": "4 111",
+    "abonnes": "4 115",
     "exact": true,
     "variation": "",
     "source": "Page LinkedIn Contech Bâtiment",

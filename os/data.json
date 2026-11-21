@@ -25,13 +25,13 @@
  },
  "formations": {
   "source": "Tableau de bord A2026, SharePoint",
-  "releve": "19 nov. 2026, 17 h",
+  "releve": "21 nov. 2026, 18 h",
   "items": [
    {
     "date": "2026-11-20",
     "titre": "Dommages structuraux",
     "formateur": "Alain Mousseau",
-    "inscrits": 14,
+    "inscrits": 15,
     "max": 22
    },
    {
@@ -68,13 +68,6 @@
     "formateur": "Guy Lalonde",
     "inscrits": 3,
     "max": 22
-   },
-   {
-    "date": "2026-12-02",
-    "titre": "Projet BIM – se préparer et collaborer selon les standards actuels du marché public",
-    "formateur": "Mahdi Remaoun (GLT)",
-    "inscrits": 1,
-    "max": 18
    },
    {
     "date": "2026-12-03",
@@ -1602,25 +1595,21 @@
   },
   "formations": {
    "mode": "manuel",
-   "quand": "2026-11-19T17:00",
+   "quand": "2026-11-21T18:00",
    "source": "Tableau de bord A2026 (SharePoint)"
   },
   "pubs": {
    "mode": "manuel",
-   "quand": "2026-11-19T18:30",
+   "quand": "2026-11-21T18:10",
    "source": "Meta Ads Manager"
   },
   "infolettres": {
    "mode": "auto",
    "source": "Dialog Insight (API)"
   },
-  "toutes-infolettres": {
-   "mode": "auto",
-   "source": "Dialog Insight (API)"
-  },
   "reseaux": {
    "mode": "manuel",
-   "quand": "2026-11-19T18:00",
+   "quand": "2026-11-21T18:15",
    "source": "Meta Business Suite · LinkedIn"
   }
  },
@@ -1854,17 +1843,17 @@
   ]
  },
  "googleAds": {
-  "releve": "19 nov. 2026, 22 h",
-  "periode": "20 oct. au 18 nov. 2026 (30 jours)",
+  "releve": "21 nov. 2026, 18 h",
+  "periode": "22 oct. au 20 nov. 2026 (30 jours)",
   "source": "Google Ads, compte Contech Bâtiment (relevé dans l'interface)",
   "geree": "Hamak",
   "conversion": "Achat formation",
   "totaux": {
-   "impressions": 11423,
-   "clics": 702,
-   "cout": 1610.36,
-   "conversions": 11.0,
-   "valeur": 8370.0
+   "impressions": 11789,
+   "clics": 704,
+   "cout": 1594.44,
+   "conversions": 14,
+   "valeur": 7645
   },
   "campagnes": [
    {
@@ -1873,10 +1862,10 @@
     "type": "Recherche",
     "statut": "Diffusion limitée (volume de recherche)",
     "budget": "19 $/j (budget partagé de 38 $/j)",
-    "impressions": 1217,
-    "clics": 263,
-    "cout": 949.57,
-    "conversions": 5.67,
+    "impressions": 1263,
+    "clics": 260,
+    "cout": 949.73,
+    "conversions": 4.67,
     "valeur": 5226.67
    },
    {
@@ -1885,9 +1874,9 @@
     "type": "Recherche",
     "statut": "Diffusion limitée (volume de recherche)",
     "budget": "19 $/j (budget partagé de 38 $/j)",
-    "impressions": 909,
-    "clics": 116,
-    "cout": 416.78,
+    "impressions": 946,
+    "clics": 115,
+    "cout": 393.01,
     "conversions": 2.33,
     "valeur": 1278.33
    },
@@ -1897,10 +1886,10 @@
     "type": "Recherche",
     "statut": "Éligible",
     "budget": "6 $/j",
-    "impressions": 436,
-    "clics": 159,
-    "cout": 91.05,
-    "conversions": 3.0,
+    "impressions": 422,
+    "clics": 158,
+    "cout": 90.56,
+    "conversions": 7,
     "valeur": 1865.0
    },
    {
@@ -1909,9 +1898,9 @@
     "type": "Display",
     "statut": "Éligible · certaines annonces refusées",
     "budget": "5 $/j",
-    "impressions": 8861,
-    "clics": 164,
-    "cout": 152.95,
+    "impressions": 9158,
+    "clics": 171,
+    "cout": 161.13,
     "conversions": 0,
     "valeur": 0
    }
@@ -2191,13 +2180,13 @@
     {
      "id": "30j",
      "label": "30 derniers jours",
-     "du": "2026-10-20",
-     "au": "2026-11-18",
-     "depense": 1610.36,
-     "googleConv": 11.0,
-     "googleValeur": 8370.0,
-     "commandes": 5,
-     "ventesNettes": 3860.0,
+     "du": "2026-10-22",
+     "au": "2026-11-20",
+     "depense": 1594.44,
+     "googleConv": 14.0,
+     "googleValeur": 7645.0,
+     "commandes": 4,
+     "ventesNettes": 3135.0,
      "ventesTotales": 4438.04,
      "sessions": 652
     },
@@ -2205,9 +2194,9 @@
      "id": "annee",
      "label": "Depuis le 14 janv. (début Hamak)",
      "du": "2026-01-14",
-     "au": "2026-11-19",
-     "depense": 14193.78,
-     "googleConv": 525.56,
+     "au": "2026-11-20",
+     "depense": 14237.18,
+     "googleConv": 525.57,
      "googleValeur": null,
      "commandes": 37,
      "ventesNettes": 33245.75,
@@ -2280,24 +2269,24 @@
   }
  },
  "ventesCanaux": {
-  "releve": "19 nov. 2026, 23 h",
+  "releve": "21 nov. 2026, 18 h",
   "source": "Shopify, rapport « Performance par canal marketing » : ventes nettes avant taxes, attribuées au dernier clic qui n'est pas une visite directe. « Payé » : compte Google Ads.",
   "periodes": [
    {
     "id": "annee",
     "label": "Depuis le 14 janv.",
     "du": "2026-01-14",
-    "au": "2026-11-19",
+    "au": "2026-11-21",
     "total": {
-     "commandes": 730,
-     "ventes": 522614.5
+     "commandes": 732,
+     "ventes": 524094.5
     },
     "canaux": [
      {
       "canal": "Direct (adresse tapée, favoris)",
       "cle": "Direct",
-      "commandes": 187,
-      "ventes": 145246.25
+      "commandes": 188,
+      "ventes": 146726.25
      },
      {
       "canal": "Recherche Google (naturelle)",
@@ -2320,7 +2309,7 @@
      {
       "canal": "Non attribué",
       "cle": "Unattributed",
-      "commandes": 54,
+      "commandes": 55,
       "ventes": 39067.25
      },
      {
@@ -2328,7 +2317,7 @@
       "cle": "Google Ads",
       "commandes": 37,
       "ventes": 33245.75,
-      "paye": 14193.78
+      "paye": 14237.18
      },
      {
       "canal": "Lien « formation continue » (siteweb)",
@@ -2371,18 +2360,18 @@
    {
     "id": "30j",
     "label": "30 derniers jours",
-    "du": "2026-10-20",
-    "au": "2026-11-18",
+    "du": "2026-10-22",
+    "au": "2026-11-20",
     "total": {
-     "commandes": 84,
-     "ventes": 59785.0
+     "commandes": 82,
+     "ventes": 55560.0
     },
     "canaux": [
      {
       "canal": "Direct (adresse tapée, favoris)",
       "cle": "Direct",
       "commandes": 22,
-      "ventes": 14560.0
+      "ventes": 12695.0
      },
      {
       "canal": "Recherche Google (naturelle)",
@@ -2405,15 +2394,9 @@
      {
       "canal": "Google Ads (Hamak)",
       "cle": "Google Ads",
-      "commandes": 5,
-      "ventes": 3860.0,
-      "paye": 1610.36
-     },
-     {
-      "canal": "static",
-      "cle": "static",
-      "commandes": 5,
-      "ventes": 3710.0
+      "commandes": 4,
+      "ventes": 3135.0,
+      "paye": 1594.44
      },
      {
       "canal": "Site Groupe Contex",
@@ -2431,7 +2414,13 @@
       "canal": "Lien « formation continue » (siteweb)",
       "cle": "siteweb",
       "commandes": 3,
-      "ventes": 1450.0
+      "ventes": 1865.0
+     },
+     {
+      "canal": "static",
+      "cle": "static",
+      "commandes": 3,
+      "ventes": 1660.0
      },
      {
       "canal": "Recherche Ecosia",
@@ -2450,6 +2439,18 @@
       "cle": "Facebook",
       "commandes": 1,
       "ventes": 725.0
+     },
+     {
+      "canal": "Recherche Bing",
+      "cle": "Bing",
+      "commandes": 2,
+      "ventes": 415.0
+     },
+     {
+      "canal": "Non attribué",
+      "cle": "Unattributed",
+      "commandes": 4,
+      "ventes": 360.0
      }
     ]
    }
@@ -2460,7 +2461,7 @@
     "campagne": "Toutes les campagnes Google",
     "commandes": 37,
     "ventes": 33245.75,
-    "paye": 14193.78,
+    "paye": 14237.18,
     "note": "Google ne transmet pas le nom de la campagne à la boutique (suivi par gclid) : le détail par campagne Google vient du compte Google Ads."
    },
    {
@@ -2774,7 +2775,7 @@
   ]
  },
  "budgetMarketing": {
-  "releve": "19 nov. 2026, 23 h",
+  "releve": "21 nov. 2026, 18 h",
   "source": "Coûts et revenus Contech 2026 (SharePoint), onglet « Coût Marketing » : budget 5 000 $/mois publicité + 1 500 $/mois médias sociaux.",
   "fichier": "https://groupecontex.sharepoint.com/sites/GroupeContex/Shared Documents/Contech Bâtiment/Formations/00-Admin/Budget/2026/Coûts et revenus Contech 2026.xlsx",
   "annuel": 78000.0,
@@ -2783,8 +2784,8 @@
   "depenses": [
    {
     "poste": "Google Ads (Hamak) · dépense média",
-    "montant": 14193.78,
-    "source": "Compte Google Ads, 14 janv. au 19 nov."
+    "montant": 14237.18,
+    "source": "Compte Google Ads, 14 janv. au 20 nov."
    },
    {
     "poste": "Pubs Meta formations",
@@ -2800,7 +2801,7 @@
   "note": "Les lignes « dépenses réelles » du fichier sont encore vides : le restant est calculé avec les dépenses relevées dans les comptes publicitaires. Dès que le fichier est rempli, le tableau prend ses chiffres."
  },
  "ventesSemaines": {
-  "releve": "19 nov. 2026, 23 h",
+  "releve": "21 nov. 2026, 18 h",
   "source": "Shopify : ventes nettes avant taxes par semaine (lundi), remboursements déduits. La semaine en cours est partielle.",
   "semaines": [
    {
@@ -3280,13 +3281,13 @@
    },
    {
     "d": "2026-11-16",
-    "v": 6855.0,
-    "n": 13
+    "v": 8335.0,
+    "n": 15
    }
   ]
  },
  "ventesSemainesCanaux": {
-  "releve": "20 nov. 2026, 0 h",
+  "releve": "21 nov. 2026, 18 h",
   "source": "Shopify, rapport « Performance par canal marketing » : ventes nettes avant taxes, une semaine = lundi au dimanche, attribuées au dernier clic qui n'est pas une visite directe. Les remboursements sont déduits du canal de la vente d'origine.",
   "semaines": [
    {
@@ -3612,13 +3613,18 @@
    },
    {
     "lundi": "2026-11-16",
-    "ventes": 6855,
-    "commandes": 13,
+    "ventes": 8335.0,
+    "commandes": 15,
     "canaux": [
      {
       "canal": "Shopify",
       "ventes": 1985.0,
       "commandes": 4
+     },
+     {
+      "canal": "Direct",
+      "ventes": 1895.0,
+      "commandes": 5
      },
      {
       "canal": "Google Ads",
@@ -3639,11 +3645,6 @@
       "canal": "newsletter",
       "ventes": 725.0,
       "commandes": 1
-     },
-     {
-      "canal": "Direct",
-      "ventes": 415.0,
-      "commandes": 4
      },
      {
       "canal": "Google",
