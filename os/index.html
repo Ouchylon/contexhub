@@ -321,6 +321,8 @@ footer b{color:var(--ink)}
 @media(max-width:760px){.gan{grid-template-columns:1fr}.gan-i em{white-space:normal}}
 .vc{padding:18px 20px;margin-top:14px;min-width:0}#vc-o{overflow-x:auto}.vc .roi-h{min-width:0}.vc .cr-t{display:table;width:100%}.vc-s{margin:0 0 8px;font-size:14px}.vc-b td.vc-bar{width:32%}.vc-bar i{display:block;height:10px;background:#E8990F;border-radius:2px;min-width:2px}
 .vc-p td{background:#fbf3e4}.vc-h{margin:22px 0 2px;font:700 17px Machina,Helv,sans-serif}.vc-sc{max-height:420px;overflow:auto;margin-top:8px}.vc-c small{color:var(--mut);white-space:normal}
+.nlv td small{display:block;font-weight:400;color:var(--mut);font-size:12px;margin-top:2px}.nlv td:nth-child(2) small{display:inline;margin:0}.nlv tr.z td{color:var(--mut)}.nlv tr.z td b{font-weight:600}.nlv th:nth-child(n+2),.nlv td:nth-child(n+2){white-space:nowrap}.nlv{width:100%}.nlv td:first-child{white-space:normal}
+@media(max-width:760px){.nlv{table-layout:fixed}.nlv th:nth-child(2),.nlv td:nth-child(2){width:62px}.nlv th:nth-child(3),.nlv td:nth-child(3){width:84px;text-align:right}.nlv td:first-child,.nlv th:first-child{word-break:break-word;white-space:normal!important}.nlv td:nth-child(2) small{display:block}}
 @media(max-width:760px){.vc{padding:14px}.vc-b td.vc-bar{display:none}.vc-b th:nth-child(2){display:none}.vc-b th:nth-child(6),.vc-b td:nth-child(6){display:none}.vc-c td:nth-child(2),.vc-c th:nth-child(2){display:none}.vc .cr-t td{white-space:normal}.vc .cr-t td:nth-child(n+3){white-space:nowrap;font-size:12px}}
 .st-o{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
 .st-c{padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}.st-c b{font-size:15px;line-height:1.3}.st-c .v{font:700 20px/1.15 Machina,Helv,sans-serif;color:#b86f00}.st-c p{margin:0;font-size:13px;line-height:1.45;color:var(--mut)}
@@ -437,8 +439,20 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
     var per=VC.periodes.map(function(P){var c=P.canaux.filter(function(x){return x.cle===cle;})[0]||{commandes:0,ventes:0};return {label:P.label,du:P.du,au:P.au,c:c};});
     return '<div class="card roi rc"><div class="roi-h"><h4>'+esc(titre)+' '+tip('Les ventes de la boutique qui ont suivi un clic sur '+(cle==='newsletter'?'une infolettre':'une pub Meta')+' (dernier clic avant l’achat, selon Shopify). Chaque ligne du tableau = '+(cle==='newsletter'?'un envoi':'une pub')+', avec le nombre de ventes et le montant qu’il a amenés.')+'</h4><span class="k">Ventes Shopify · relevé '+esc(VC.releve)+'</span></div><div class="roi-g rc-g">'+
       per.map(function(p){return '<div class="roi-c"><span class="k">'+esc(p.label)+'</span><div class="v">'+int(p.c.commandes)+' ventes</div><div class="s"><b>'+money(p.c.ventes)+'</b> avant taxes · du '+fd(p.du)+' au '+fd(p.au)+'</div></div>';}).join('')+'</div>'+
-      (rows.length?'<div class="vc-sc"><table class="cr-t vc-c"><tr><th>'+(cle==='newsletter'?'Envoi':'Pub')+' qui a amené la vente</th><th>Ventes</th><th>Montant</th></tr>'+rows.map(function(c){return '<tr><td><b>'+esc(nomCamp(c.campagne))+'</b></td><td>'+int(c.commandes)+'</td><td><b>'+money(c.ventes)+'</b></td></tr>';}).join('')+'</table></div>':'')+
+      (cle==='newsletter'?nlVentes(D,rows,VC):rows.length?'<div class="vc-sc"><table class="cr-t vc-c"><tr><th>'+(cle==='newsletter'?'Envoi':'Pub')+' qui a amené la vente</th><th>Ventes</th><th>Montant</th></tr>'+rows.map(function(c){return '<tr><td><b>'+esc(nomCamp(c.campagne))+'</b></td><td>'+int(c.commandes)+'</td><td><b>'+money(c.ventes)+'</b></td></tr>';}).join('')+'</table></div>':'')+
       '<p class="gnote">Depuis le 14 janv. : même période pour tous les canaux, pour les comparer entre eux. Une vente est comptée pour l’envoi ou la pub du dernier clic avant l’achat (Shopify).</p></div>';}
+  function nlVentes(D,rows,VC){
+    var T=((D.infolettres||{}).tous||[]).filter(function(x){return x.categorie==='Formations';});
+    function dk(k){var m=/_(\d\d)_(\d\d)_(\d\d)$/.exec(k);return m?'20'+m[3]+'-'+m[2]+'-'+m[1]:null;}
+    var J=function(a,b){return Math.abs((new Date(a+'T12:00:00')-new Date(b+'T12:00:00'))/864e5);};
+    var pris={},L=T.map(function(s){var c=rows.filter(function(r){var k=dk(r.campagne);return !pris[r.campagne]&&/^hebdo_/.test(r.campagne)&&k&&J(k,s.date)<=1;})[0];if(c)pris[c.campagne]=1;return {date:s.date,nom:s.nom,ouv:s.ouverture,c:c};});
+    rows.forEach(function(r){if(!pris[r.campagne])L.push({date:dk(r.campagne)||'',nom:nomCamp(r.campagne),c:r,vieux:1});});
+    L.sort(function(a,b){return a.date<b.date?1:a.date>b.date?-1:0;});
+    var rel=(VC.periodes[0]||{}).au||'';
+    return '<div class="vc-sc"><table class="cr-t nlv"><tr><th>Infolettre (plus récente en haut)</th><th>Ventes</th><th>Montant</th></tr>'+L.map(function(x){
+      var n=x.c?x.c.commandes:0,rec=!n&&rel&&J(x.date,rel)<=7&&x.date<=rel;
+      return '<tr'+(n?'':' class="z"')+'><td><b>'+esc(x.nom)+'</b><small>'+(x.date?'Envoyée le '+fd(x.date):'')+(x.ouv!=null?' · ouverture '+pct(x.ouv):'')+'</small></td><td>'+(n?int(n):rec?'0 <small>pour l’instant</small>':'0')+'</td><td>'+(n?'<b>'+money(x.c.ventes)+'</b>':'—')+'</td></tr>';}).join('')+'</table></div>'+
+      '<p class="gnote">Seules les infolettres Formations sont listées : les infolettres Expo mènent aux inscriptions Eventmaker, pas à des ventes de la boutique. Une infolettre récente peut encore amener des ventes dans les jours qui suivent.</p>';}
   function tip(t){return '<span class="tip" tabindex="0" aria-label="Comment lire">?<span class="tip-b">'+t+'</span></span>';}
   function money(n){var s=(Math.round(n*100)/100).toFixed(n%1?2:0).replace(".",",");return s.replace(/\B(?=(\d{3})+(?!\d))/g," ")+" $";}
   function int(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g," ");}
