@@ -280,7 +280,7 @@
     "envoyes": 19730,
     "ouverture": 28.4,
     "clic": 3.9,
-    "desabonnements": 25
+    "desabonnements": 26
    },
    {
     "date": "2026-11-17",
@@ -396,7 +396,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-22T15:21-05:00",
+  "releve": "2026-11-22T17:23-05:00",
   "alertes": [],
   "tous": [
    {
@@ -407,7 +407,7 @@
     "envoyes": 19730,
     "ouverture": 28.4,
     "clic": 3.9,
-    "desabonnements": 25,
+    "desabonnements": 26,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
     "apercu": "nl/730127.html"
    },
