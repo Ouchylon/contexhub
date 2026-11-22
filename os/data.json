@@ -25,7 +25,7 @@
  },
  "formations": {
   "source": "Tableau de bord A2026, SharePoint",
-  "releve": "21 nov. 2026, 18 h",
+  "releve": "22 nov. 2026, 17 h",
   "items": [
    {
     "date": "2026-11-20",
@@ -1595,7 +1595,7 @@
   },
   "formations": {
    "mode": "manuel",
-   "quand": "2026-11-21T18:00",
+   "quand": "2026-11-22T17:00",
    "source": "Tableau de bord A2026 (SharePoint)"
   },
   "pubs": {
@@ -2695,7 +2695,7 @@
   ]
  },
  "strategie": {
-  "releve": "19 nov. 2026, 23 h",
+  "releve": "22 nov. 2026, 17 h",
   "observations": [
    {
     "titre": "Les infolettres : le canal qu'on pilote qui vend le plus",
@@ -2712,7 +2712,7 @@
    {
     "titre": "Google Ads ramène 2,34 $ pour 1 $ payé à Google",
     "chiffre": "37 ventes · 33 246 $",
-    "texte": "14 194 $ payés à Google depuis le 14 janv., avant les frais de gestion. Google annonce 526 conversions : se fier aux 37 ventes de Shopify.",
+    "texte": "14 237 $ payés à Google depuis le 14 janv., avant les frais de gestion. Google annonce 526 conversions : se fier aux 37 ventes de Shopify.",
     "source": "Shopify + Google Ads"
    },
    {
@@ -2722,9 +2722,9 @@
     "source": "Shopify"
    },
    {
-    "titre": "6 formations de décembre sont à 3 inscrits ou moins",
+    "titre": "5 formations de décembre sont à 3 inscrits ou moins",
     "chiffre": "0 à 3 inscrits",
-    "texte": "Murs végétaux 0/16, BIM 1/18, Inspection niveau 2 1/18, Quincaillerie 2/18, Toitures 3/22, Bâtiment durable 3/18.",
+    "texte": "Murs végétaux 0/16, Inspection niveau 2 1/18, Quincaillerie 2/18, Toitures 3/22, Bâtiment durable 3/18.",
     "source": "Tableau de bord A2026"
    }
   ],
@@ -2734,24 +2734,39 @@
     "role": "Marketing",
     "items": [
      {
-      "quoi": "Monter les infolettres Vendredi fou (27 nov.) et Cyber lundi (30 nov.)",
-      "quand": "d'ici le 25 nov.",
-      "pourquoi": "Les infolettres sont le canal qui vend le plus."
+      "quoi": "Pubs « Dernière chance » : prolonger jusqu'au 26 nov. 8 h et vérifier les 2 pubs Courriels efficaces (aucune diffusion du 17 au 21 nov.)",
+      "quand": "lun. 23 nov., matin",
+      "pourquoi": "Courriels efficaces (25 nov.) et Acoustique (26 nov.) sont à 5 inscrits sur 18. Coût : environ 70 $."
      },
      {
-      "quoi": "Lancer des pubs Meta de rappel pour les formations de décembre confirmées",
-      "quand": "pour les formations de décembre confirmées",
-      "pourquoi": "Les rappels font la majorité des ventes Meta."
+      "quoi": "Hebdo Formations : dernières places 24 au 27 nov. + avant-goût du Vendredi fou",
+      "quand": "mar. 24 nov., 8 h 30",
+      "pourquoi": "L'infolettre part chaque semaine; c'est le canal qu'on pilote qui vend le plus."
+     },
+     {
+      "quoi": "Infolettre Vendredi fou (−50 %) puis Cyber lundi, dernier appel",
+      "quand": "ven. 27 nov. 8 h et lun. 30 nov. 8 h",
+      "pourquoi": "La semaine du Vendredi fou 2025 a été la plus grosse de l'année : 68 675 $."
+     },
+     {
+      "quoi": "Versions ciblées du Vendredi fou pour les formations de décembre à peu d'inscrits, envoyées aux anciens participants du même sujet",
+      "quand": "ven. 27 nov. 8 h",
+      "pourquoi": "Toitures : entretien 3/22, Quincaillerie (devis) 2/18, Inspection niv. 2 1/18, Bâtiment durable 3/18, Murs végétaux 0/16."
+     },
+     {
+      "quoi": "Pubs Meta de rappel (visiteurs du site) pour les formations de décembre, avec la promo −50 %",
+      "quand": "27 nov. au 7 déc.",
+      "pourquoi": "Les rappels font la majorité des ventes Meta. Environ 25 $/jour, environ 300 $."
      },
      {
       "quoi": "Présenter à Hamak la liste « À optimiser » (Display, « formation batiment », « contech montreal », « maestro oiq »)",
-      "quand": "rencontre du 23 nov., 14 h",
+      "quand": "lun. 23 nov., 14 h",
       "pourquoi": "Environ 400 $ en 30 jours sans aucune conversion Google."
      },
      {
-      "quoi": "Ajouter la case d'abonnement au Bulletin Formation au paiement Shopify",
-      "quand": "décembre",
-      "pourquoi": "661 des 1 137 clients actifs n'ont jamais eu la question."
+      "quoi": "Mettre l'OS à jour chaque matin et présenter les chiffres à l'Hebdo Formations",
+      "quand": "chaque jour, lun. 10 h 30",
+      "pourquoi": "Inscriptions, ventes et résultats des pubs au même endroit."
      }
     ]
    }
@@ -2772,7 +2787,10 @@
     "texte": "Code de construction, Exploitation et inspection, Enveloppe du bâtiment, chacun relié à sa formation.",
     "mesure": "Clics Google et ventes venues des articles"
    }
-  ]
+  ],
+  "titreActions": "Plan de la semaine du 23 novembre",
+  "sousTitreActions": "Ce que le marketing fait cette semaine, avec le budget",
+  "budgetSemaine": "Budget pub de novembre : 5 000 $. Déjà engagé environ 2 600 $ (Google Ads 1 594 $ sur 30 jours; Meta formations environ 1 000 $ avec les campagnes Dernière chance, Teaser et Promo Vendredi fou déjà programmées). Ce plan ajoute environ 370 $ de Meta : on reste sous le budget."
  },
  "budgetMarketing": {
   "releve": "21 nov. 2026, 18 h",
@@ -2801,7 +2819,7 @@
   "note": "Les lignes « dépenses réelles » du fichier sont encore vides : le restant est calculé avec les dépenses relevées dans les comptes publicitaires. Dès que le fichier est rempli, le tableau prend ses chiffres."
  },
  "ventesSemaines": {
-  "releve": "21 nov. 2026, 18 h",
+  "releve": "22 nov. 2026, 17 h",
   "source": "Shopify : ventes nettes avant taxes par semaine (lundi), remboursements déduits. La semaine en cours est partielle.",
   "semaines": [
    {
@@ -3281,13 +3299,13 @@
    },
    {
     "d": "2026-11-16",
-    "v": 8335.0,
-    "n": 15
+    "v": 8750.0,
+    "n": 16
    }
   ]
  },
  "ventesSemainesCanaux": {
-  "releve": "21 nov. 2026, 18 h",
+  "releve": "22 nov. 2026, 17 h",
   "source": "Shopify, rapport « Performance par canal marketing » : ventes nettes avant taxes, une semaine = lundi au dimanche, attribuées au dernier clic qui n'est pas une visite directe. Les remboursements sont déduits du canal de la vente d'origine.",
   "semaines": [
    {
@@ -3613,8 +3631,8 @@
    },
    {
     "lundi": "2026-11-16",
-    "ventes": 8335.0,
-    "commandes": 15,
+    "ventes": 8750.0,
+    "commandes": 16,
     "canaux": [
      {
       "canal": "Shopify",
@@ -3644,6 +3662,11 @@
      {
       "canal": "newsletter",
       "ventes": 725.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Bing",
+      "ventes": 415.0,
       "commandes": 1
      },
      {

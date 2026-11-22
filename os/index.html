@@ -131,6 +131,7 @@ section{margin-bottom:44px}
 .nl-grp{padding:14px 20px 6px;font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--mut);border-bottom:1px solid var(--line)}
 .side{display:flex;flex-direction:column;gap:16px;min-width:0}
 .side .card,.nl-side .card{padding:18px 20px}
+.st-b{margin:0 0 12px;padding:12px 16px;background:#fbecd3;border-left:4px solid #E8990F;border-radius:4px;font-size:14px}
 details.more{margin-top:14px;border:1px solid var(--line);border-radius:6px;background:#fff;padding:0}details.more>summary{cursor:pointer;list-style:none;padding:14px 18px;font:700 14px Helv,sans-serif;display:flex;align-items:center;gap:10px}details.more>summary::-webkit-details-marker{display:none}details.more>summary::before{content:"+";display:inline-flex;align-items:center;justify-content:center;width:22px;height:22px;border-radius:50%;background:#E8990F;color:#111;font-weight:700;flex:none}details.more[open]>summary::before{content:"−"}details.more>summary:hover{background:#faf6ef}details.more[open]>summary{border-bottom:1px solid var(--line)}details.more>*:not(summary){margin-left:18px;margin-right:18px}details.more>*:last-child{margin-bottom:16px}.sh h2 .tip{vertical-align:middle;margin-left:6px}
 .big{font-family:Machina,Helv,sans-serif;font-size:36px;line-height:1;margin:8px 0 4px}
 .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 8px;margin-top:12px}
@@ -504,7 +505,7 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
     if(D.strategie){var ST=D.strategie;
       html+='<section id="strategie"><div class="sh"><h2><span class="o">Stratégie</span></h2><span class="k">Ce que disent les chiffres · qui fait quoi · relevé '+esc(ST.releve)+'</span></div>'+
         '<div class="st-o">'+ST.observations.map(function(o,i){return '<div class="card st-c"><span class="k">'+(i+1)+' · '+esc(o.source)+'</span><b>'+esc(o.titre)+'</b><div class="v">'+esc(o.chiffre)+'</div><p>'+esc(o.texte)+'</p></div>';}).join('')+'</div>'+
-        '<div class="sh2"><h3>Prochaines actions marketing</h3><span class="k">Ce que le marketing fait à partir de ces chiffres</span></div><div class="st-a">'+
+        '<div class="sh2"><h3>'+esc(ST.titreActions||'Prochaines actions marketing')+'</h3><span class="k">'+esc(ST.sousTitreActions||'Ce que le marketing fait à partir de ces chiffres')+'</span></div>'+(ST.budgetSemaine?'<p class="st-b">'+esc(ST.budgetSemaine)+'</p>':'')+'<div class="st-a">'+
         ST.actions.map(function(a){return '<div class="card st-p"><div class="st-ph"><b>'+esc(a.qui)+'</b><span>'+esc(a.role)+'</span></div><ul>'+a.items.map(function(x){return '<li><span class="st-q">'+esc(x.quoi)+'</span><span class="st-w"><em>'+esc(x.quand)+'</em> · '+esc(x.pourquoi)+'</span></li>';}).join('')+'</ul></div>';}).join('')+'</div>'+
         '<div class="sh2"><h3>Tests à lancer</h3><span class="k">Petits essais, résultat mesuré dans ce tableau</span></div><div class="st-t">'+
         ST.tests.map(function(t){return '<div class="card st-c"><b>'+esc(t.titre)+'</b><p>'+esc(t.texte)+'</p><span class="k">Mesure : '+esc(t.mesure)+'</span></div>';}).join('')+'</div></section>';}
