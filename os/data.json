@@ -1527,7 +1527,8 @@
     "titre": "Projet BIM – marché public",
     "participants": 1,
     "revenus": 675.0,
-    "profit": -1125.0
+    "profit": -1125.0,
+    "annulee": true
    },
    {
     "date": "2026-12-03",
