@@ -1,0 +1,18 @@
+PALETTE CONTECH BÂTIMENT (kit de marque 2027)
+
+Contech Yellow               #E8990F   RGB 232, 153, 15
+Pure Black                   #000000   RGB 0, 0, 0
+Isabelline (fond creme)      #F7F3ED   RGB 247, 243, 237
+Quadrille                    #E8E2D7   RGB 232, 226, 215
+Creme fonce (pastilles)      #ECE6DB   RGB 236, 230, 219
+Hiver                        #86B8CE   RGB 134, 184, 206
+Hiver texte                  #347096   RGB 52, 112, 150
+Printemps                    #86A397   RGB 134, 163, 151
+Printemps texte              #467858   RGB 70, 120, 88
+Nuit                         #0E0E0D   RGB 14, 14, 13
+Nuit quadrille               #222220   RGB 34, 34, 32
+Bleu Expo                    #86B5C9   RGB 134, 181, 201
+Bleu nuit Expo               #5C698C   RGB 92, 105, 140
+Rose Red                     #B9314F   RGB 185, 49, 79
+Ultra Violet                 #5B618A   RGB 91, 97, 138
+Crayola Pink                 #EF798A   RGB 239, 121, 138
