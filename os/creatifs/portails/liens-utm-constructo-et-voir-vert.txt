@@ -1,0 +1,38 @@
+LIENS À METTRE DERRIÈRE CHAQUE VISUEL (Constructo et Voir vert)
+utm_medium=display · utm_source=constructo ou voirvert · utm_content = format + sujet
+
+===== CONSTRUCTO =====
+Lancement hiver-printemps 2027
+  enveloppe 728x90 : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=728x90_enveloppe
+  enveloppe 300x250 : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=300x250_enveloppe
+  maintenance 728x90 : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=728x90_maintenance
+  maintenance 300x250 : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=300x250_maintenance
+  toitures-vegetalisees 728x90 : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=728x90_toitures-vegetalisees
+  toitures-vegetalisees 300x250 : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=300x250_toitures-vegetalisees
+  beton 728x90 : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=728x90_beton
+  beton 300x250 : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=300x250_beton
+  pop-up : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=popup
+Vendredi fou (27 au 30 nov.)
+  728x90 : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=vendredi_fou_2026&utm_content=728x90
+  300x250 : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=vendredi_fou_2026&utm_content=300x250
+  popup : https://contech.qc.ca/collections/formations?utm_source=constructo&utm_medium=display&utm_campaign=vendredi_fou_2026&utm_content=popup
+
+===== VOIR VERT =====
+Lancement hiver-printemps 2027
+  enveloppe 728x90 : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=728x90_enveloppe
+  enveloppe 300x250 : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=300x250_enveloppe
+  maintenance 728x90 : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=728x90_maintenance
+  maintenance 300x250 : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=300x250_maintenance
+  toitures-vegetalisees 728x90 : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=728x90_toitures-vegetalisees
+  toitures-vegetalisees 300x250 : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=300x250_toitures-vegetalisees
+  beton 728x90 : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=728x90_beton
+  beton 300x250 : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=300x250_beton
+  pop-up : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=lancement_hiver_2027&utm_content=popup
+Vendredi fou (27 au 30 nov.)
+  728x90 : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=vendredi_fou_2026&utm_content=728x90
+  300x250 : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=vendredi_fou_2026&utm_content=300x250
+  popup : https://contech.qc.ca/collections/formations?utm_source=voirvert&utm_medium=display&utm_campaign=vendredi_fou_2026&utm_content=popup
+
+===== POP-UP SUR CONTECH.QC.CA =====
+Lien sans UTM : https://contech.qc.ca/collections/formations
+(Un UTM sur notre propre site écraserait la vraie source de la visite dans Shopify.)
