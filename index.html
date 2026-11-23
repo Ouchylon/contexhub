@@ -352,7 +352,7 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
 .rc .cr-t{display:table;width:100%}
 .tip{position:relative;display:inline-grid;place-items:center;width:18px;height:18px;border-radius:50%;border:1.5px solid var(--mut);color:var(--mut);font:700 11px Helv,sans-serif;cursor:help;vertical-align:middle;margin-left:4px}
 .tip-b{display:none;position:absolute;z-index:20;left:50%;top:24px;transform:translateX(-50%);width:300px;max-width:80vw;background:#1d1b18;color:#fff;font:400 12.5px/1.5 Helv,sans-serif;text-align:left;padding:10px 12px;border-radius:6px;box-shadow:0 6px 20px rgba(0,0,0,.2);letter-spacing:0;text-transform:none}
-.tip-b b{color:#f3b84a}.tip:hover .tip-b,.tip:focus .tip-b{display:block}.tip:focus{outline:2px solid #E8990F;outline-offset:2px}
+.tip-b b{color:#f3b84a}.tip:hover .tip-b,.tip:focus .tip-b,.tip:focus-within .tip-b,.tip.open .tip-b{display:block}.tip-b::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}.tip-b a{color:#f3b84a;text-decoration:underline;text-underline-offset:2px;font-weight:700}.tip-b .tsrc{display:block;margin-top:8px;padding-top:8px;border-top:1px solid rgba(255,255,255,.18)}.sh .k a.srcl{color:inherit;text-decoration:underline;text-underline-offset:2px;font-weight:700}.sh .k a.srcl:hover{color:#E8990F}.tip:focus{outline:2px solid #E8990F;outline-offset:2px}
 @media(max-width:760px){.tip-b{position:fixed;left:16px;right:16px;top:auto;bottom:84px;width:auto;max-width:none;transform:none;font-size:14px;z-index:80}}
 #app > section{border-top:4px solid #E8990F;padding-top:22px;margin-bottom:52px;scroll-margin-top:12px}
 #app > section:first-of-type{border-top:0;padding-top:0}
@@ -517,7 +517,7 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
     if(D.ventesSemaines){html+='<section id="semaines"><div class="sh"><h2>Ventes <span class="o">par semaine</span></h2><span class="k">Toutes les ventes de la boutique, semaine par semaine</span></div>'+(D.ventesSemaines?'<div class="card ws"><div class="roi-h"><h4>2026 vs 2025 '+tip('Chaque point = les ventes de la boutique pendant une semaine (lundi au dimanche), avant taxes. <b>Ligne orange</b> : 2026. <b>Pointillé gris</b> : la même semaine en 2025, pour comparer. Passez la souris sur le graphique pour voir le détail d’une semaine. Une semaine sous zéro = plus de remboursements que de ventes.')+'</h4><span class="k">Shopify · relevé '+esc(D.ventesSemaines.releve)+'</span></div><div id="ws-k" class="ws-k"></div><div class="ws-lg"><span><i class="a"></i>2026</span><span><i class="b"></i>2025 (même semaine)</span></div><div id="ws-c" class="ws-c"></div><p class="gnote">'+esc(D.ventesSemaines.source)+'</p></div>':'')+(D.ventesSemainesCanaux?'<div class="card wc"><div class="roi-h"><h4>D’où viennent les ventes, semaine par semaine '+tip('Chaque colonne = une semaine (lundi au dimanche). Les couleurs montrent <b>le canal du dernier clic avant l’achat</b> (Shopify). <b>Google Ads</b> : campagnes gérées par Hamak. <b>Pubs Meta</b> : nos pubs Facebook et Instagram. <b>Direct</b> : la personne a tapé l’adresse ou n’a pas laissé de trace. Un remboursement est retiré du canal de la vente d’origine, d’où parfois un montant négatif. Cliquez sur une semaine pour voir son détail.')+'</h4><span class="k">Shopify · relevé '+esc(D.ventesSemainesCanaux.releve)+'</span></div><div id="wc-o"></div><p class="gnote">'+esc(D.ventesSemainesCanaux.source)+'</p></div>':'')+'</section>';}
     /* 1b. Ventes */
     if(D.ventes){
-      html+='<section id="ventes"><div class="sh"><h2>Ventes <span class="o">formations</span></h2><span class="k">Coûts et revenus 2026 · relevé le '+esc(D.ventes.releve)+'</span></div>'+
+      html+='<section id="ventes"><div class="sh"><h2>Ventes <span class="o">formations</span></h2><span class="k">relevé le '+esc(D.ventes.releve)+'</span></div>'+
         '<div class="vt-bar"><div class="tabs vt-per">'+[["sem","Cette semaine"],["sem-1","Semaine passée"],["mois","Ce mois"],["mois-1","Mois passé"],["annee","Année 2026"],["perso","Période…"]].map(function(a,i){return '<button type="button" data-p="'+a[0]+'"'+(a[0]==="mois"?' class="on"':'')+'>'+a[1]+'</button>';}).join('')+'</div>'+
         '<span class="vt-perso" hidden><label>Du <input type="date" id="vt-du" value="2026-11-01"></label> <label>au <input type="date" id="vt-au" value="2026-11-30"></label></span></div>'+
         '<div id="vt-out"></div><p class="gnote">'+esc(D.ventes.note)+'</p>'+
@@ -580,7 +580,7 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
     })();
 
     /* 2. Formations */
-    html+='<section id="formations"><div class="sh"><h2>Formations <span class="o">à venir</span></h2><span class="k">Tableau de bord A2026 · relevé le '+esc(D.formations.releve)+'</span></div>';
+    html+='<section id="formations"><div class="sh"><h2>Formations <span class="o">à venir</span></h2><span class="k">relevé le '+esc(D.formations.releve)+'</span></div>';
     html+='<div class="card"><div class="band"></div><table class="tbl"><thead><tr><th class="k">Date</th><th class="k">Formation</th><th class="k">Inscrits / max</th></tr></thead><tbody>';
     F.forEach(function(x){
       var lo=x.inscrits<=seuil, w=x.max?Math.min(100,x.inscrits/x.max*100):0;
@@ -788,9 +788,15 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
         parcours:'Comment les acheteurs nous trouvent avant d’acheter (Google, pub, infolettre…).',
         strategie:'Ce que les chiffres nous apprennent, en clair, et ce que le marketing va faire ensuite.',
         calendrier:'Le mois en un coup d’œil : pubs, infolettres et formations, jour par jour.'};
-      Object.keys(AIDE).forEach(function(id){var h=document.querySelector('#'+id+' > .sh h2');if(h&&!h.querySelector('.tip'))h.insertAdjacentHTML('beforeend',' '+tip(AIDE[id]));});
+      document.addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('.tip');if(e.target.closest&&e.target.closest('.tip-b a'))return;document.querySelectorAll('.tip.open').forEach(function(o){if(o!==t)o.classList.remove('open');});if(t)t.classList.toggle('open');});
+      var SRC=D.sources||{};
+      function srcA(x,cls){return x.url?'<a'+(cls?' class="'+cls+'"':'')+' href="'+esc(x.url)+'" target="_blank" rel="noopener">'+esc(x.nom)+'</a>':esc(x.nom);}
+      function srcTip(id){var L=SRC[id];if(!L||!L.length)return '';return '<span class="tsrc"><b>D’où ça vient :</b><br>'+L.map(function(x){return srcA(x)+(x.ou?' · '+esc(x.ou):'');}).join('<br>')+'</span>';}
+      Object.keys(AIDE).concat(Object.keys(SRC)).filter(function(v,i,a){return a.indexOf(v)===i;}).forEach(function(id){var h=document.querySelector('#'+id+' > .sh h2');if(h&&!h.querySelector('.tip'))h.insertAdjacentHTML('beforeend',' '+tip((AIDE[id]||'')+srcTip(id)));
+        var k=document.querySelector('#'+id+' > .sh .k'),L=SRC[id];if(k&&L&&L.length&&!k.querySelector('.srcl')){var pre=k.innerHTML.trim().split(' · ').filter(function(seg){var t=seg.replace(/<[^>]+>/g,'').trim();return !L.some(function(x){return x.nom.indexOf(t)===0;});}).join(' · ');k.innerHTML='Source : '+L.slice(0,2).map(function(x){return srcA(x,'srcl');}).join(' · ')+(pre?' · '+pre:'');}});
       var TT={'Revenus de':'L’argent des formations données ce mois-ci, comparé à ce qui était prévu au budget pour le mois.','Dépense pubs':'Ce que les pubs coûtent chaque jour en ce moment, toutes plateformes ensemble.','Prochaine infolettre':'Le prochain envoi prévu dans Dialog Insight.','Places à combler':'Toutes les places encore libres dans les formations à venir. « Non confirmées » = pas assez d’inscrits pour être sûres d’avoir lieu.'};
-      document.querySelectorAll('#aujourdhui .tile > .k').forEach(function(k){Object.keys(TT).forEach(function(t){if(k.textContent.indexOf(t)===0&&!k.querySelector('.tip'))k.insertAdjacentHTML('beforeend',' '+tip(TT[t]));});});
+      var TS={'Revenus de':[0],'Dépense pubs':[1],'Prochaine infolettre':[2],'Places à combler':[3]},AJ=SRC.aujourdhui||[];
+      document.querySelectorAll('#aujourdhui .tile > .k').forEach(function(k){Object.keys(TT).forEach(function(t){if(k.textContent.indexOf(t)===0&&!k.querySelector('.tip')){var xs=TS[t].map(function(i){return AJ[i];}).filter(Boolean);k.insertAdjacentHTML('beforeend',' '+tip(TT[t]+(xs.length?'<span class="tsrc"><b>D’où ça vient :</b><br>'+xs.map(function(x){return srcA(x)+(x.ou?' · '+esc(x.ou):'');}).join('<br>')+'</span>':'')));}});});
     })();
     window.__SH=D.shopify||null;
     if(D.ventesSemainesCanaux&&document.getElementById('wc-o'))(function(W){
@@ -903,16 +909,29 @@ window.vtInit=function(V,todayIso){
     while(d<=end){var m=d.getMonth(),dim=new Date(d.getFullYear(),m+1,0).getDate();s+=(V.budgetMensuel[m]||0)/dim;d.setDate(d.getDate()+1);}
     return s;
   }
+  function fraisFor(a,b){ // frais fixes Illuxi au prorata des jours (comme le fichier de Ping)
+    var f=V.fraisMensuel||0,s=0,d=P(a),end=P(b);if(!f)return 0;
+    while(d<=end){var dim=new Date(d.getFullYear(),d.getMonth()+1,0).getDate();s+=f/dim;d.setDate(d.getDate()+1);}
+    return s;
+  }
+  function fullMonths(a,b){ // la période couvre-t-elle des mois complets de 2026? → totaux de Ping
+    var A=P(a),B=P(b);if(A.getDate()!==1||A.getFullYear()!==2026||B.getFullYear()!==2026)return null;
+    var nx=new Date(B);nx.setDate(nx.getDate()+1);if(nx.getDate()!==1)return null;
+    var r=[];for(var m=A.getMonth();m<=B.getMonth();m++)r.push(m);return r;
+  }
   function draw(p){
     var r=range(p),a=r[0],b=r[1];
     var L=V.lignes.filter(function(x){return x.date>=a&&x.date<=b;});
     var rev=L.reduce(function(s,x){return s+x.revenus;},0), pro=L.reduce(function(s,x){return s+x.profit;},0),
         par=L.reduce(function(s,x){return s+x.participants;},0), fut=L.filter(function(x){return x.date>todayIso;}).length;
+    var fm=fullMonths(a,b);
+    if(fm&&V.profitMensuel){rev=0;pro=0;par=0;fm.forEach(function(i){rev+=V.reelMensuel[i]||0;pro+=V.profitMensuel[i]||0;par+=(V.participantsMensuel||[])[i]||0;});}
+    else pro-=fraisFor(a,b);
     var bud=budgetFor(a,b), pct=bud?Math.round(100*rev/bud):null;
     var k='<div class="vt-kpis">'+
       '<div class="card"><span class="k">Revenus (formations données)</span><div class="v">'+$(rev)+'</div><span class="s">'+fd(a)+' → '+fd(b)+' · selon la date de la formation</span></div>'+
       '<div class="card"><span class="k">Vs budget</span><div class="v">'+(pct==null?"—":pct+" %")+'</div><span class="s">Budget de la période : '+$(bud)+' (au prorata des jours)</span></div>'+
-      '<div class="card"><span class="k">Profit</span><div class="v">'+$(pro)+'</div><span class="s">'+(rev?Math.round(100*pro/rev)+" % de marge":"—")+'</span></div>'+
+      '<div class="card"><span class="k">Profit</span><div class="v">'+$(pro)+'</div><span class="s">'+(rev?Math.round(100*pro/rev)+" % de marge":"—")+' · après formateurs et frais Illuxi</span></div>'+
       (window.__SH?(function(){var J=window.__SH.jours.filter(function(x){return x.date>=a&&x.date<=b;});var ht=J.reduce(function(s,x){return s+x.ht;},0),nc=J.reduce(function(s,x){return s+x.commandes;},0);
         return '<div class="card"><span class="k">Encaissé (Shopify)</span><div class="v">'+$(ht)+'</div><span class="s">Avant taxes · '+nc+' commande'+(nc>1?'s':'')+' payée'+(nc>1?'s':'')+' dans la période</span></div>';})():'')+
       '<div class="card"><span class="k">Participants</span><div class="v">'+par+'</div><span class="s">'+L.length+' formation'+(L.length>1?"s":"")+(fut?' · dont '+fut+' à venir':'')+'</span></div></div>';

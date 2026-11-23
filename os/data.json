@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-19T17:00:00-05:00",
- "today": "2026-11-19",
+ "updated": "2026-11-23T12:00:00-05:00",
+ "today": "2026-11-23",
  "seuilConfirmation": 5,
  "kpis": {
   "achats": {
@@ -25,7 +25,7 @@
  },
  "formations": {
   "source": "Tableau de bord A2026, SharePoint",
-  "releve": "22 nov. 2026, 17 h",
+  "releve": "23 nov. 2026, 12 h",
   "items": [
    {
     "date": "2026-11-20",
@@ -52,14 +52,14 @@
     "date": "2026-11-26",
     "titre": "Acoustique et insonorisation",
     "formateur": "Steve Davidson",
-    "inscrits": 5,
+    "inscrits": 6,
     "max": 18
    },
    {
     "date": "2026-11-27",
     "titre": "Devis sur plan",
     "formateur": "Louis Réjean Gagné",
-    "inscrits": 16,
+    "inscrits": 17,
     "max": 22
    },
    {
@@ -73,7 +73,7 @@
     "date": "2026-12-03",
     "titre": "Chantier : administration du marché et surveillance des travaux 1/2",
     "formateur": "Louis Réjean Gagné",
-    "inscrits": 6,
+    "inscrits": 7,
     "max": 22
    },
    {
@@ -101,7 +101,7 @@
     "date": "2026-12-09",
     "titre": "Systèmes de murs-rideaux 1/2",
     "formateur": "Louis Fortin",
-    "inscrits": 5,
+    "inscrits": 6,
     "max": 18
    },
    {
@@ -817,8 +817,8 @@
  "note": "Infolettres : relevé automatique aux 30 min (Dialog Insight). Inscriptions et pubs : relevé du 19 nov., 17 h.",
  "ventes": {
   "source": "Coûts et revenus Contech 2026 (SharePoint, Formations › 00-Admin › Budget)",
-  "releve": "19 nov. 2026, 17 h",
-  "note": "Revenus comptés à la date de la formation (inscriptions payées). Décembre = inscriptions à ce jour.",
+  "releve": "23 nov. 2026, 12 h",
+  "note": "Mois complets et année : totaux mensuels du fichier de Ping (lignes « Frais mensuel »). Profit = revenus − honoraires des formateurs − frais Illuxi (1 373,35 $/mois). Semaine ou période libre : additionnées formation par formation. Décembre = inscriptions à ce jour.",
   "budgetMensuel": [
    82160,
    137085,
@@ -844,8 +844,8 @@
    0,
    38690,
    36745.37,
-   102499.63,
-   17775
+   104054.63,
+   19225
   ],
   "budgetAnnuel": 1092260,
   "objectifAnnulation": 873808,
@@ -1483,9 +1483,9 @@
    {
     "date": "2026-11-20",
     "titre": "Dommages structuraux",
-    "participants": 14,
-    "revenus": 5710.0,
-    "profit": 4810.0
+    "participants": 15,
+    "revenus": 6125.0,
+    "profit": 5225.0
    },
    {
     "date": "2026-11-24",
@@ -1504,16 +1504,16 @@
    {
     "date": "2026-11-26",
     "titre": "Acoustique et insonorisation",
-    "participants": 5,
-    "revenus": 3475.0,
-    "profit": 1575.0
+    "participants": 6,
+    "revenus": 4200.0,
+    "profit": 2300.0
    },
    {
     "date": "2026-11-27",
     "titre": "Devis sur plan",
-    "participants": 16,
-    "revenus": 6025.0,
-    "profit": 4825.0
+    "participants": 17,
+    "revenus": 6440.0,
+    "profit": 5240.0
    },
    {
     "date": "2026-12-01",
@@ -1539,9 +1539,9 @@
    {
     "date": "2026-12-03",
     "titre": "Chantier : administration et surveillance 1/2",
-    "participants": 6,
-    "revenus": 4300.0,
-    "profit": 2500.0
+    "participants": 7,
+    "revenus": 5025.0,
+    "profit": 3225.0
    },
    {
     "date": "2026-12-04",
@@ -1560,9 +1560,9 @@
    {
     "date": "2026-12-09",
     "titre": "Systèmes de murs-rideaux 1/2",
-    "participants": 5,
-    "revenus": 2175.0,
-    "profit": -125.0
+    "participants": 6,
+    "revenus": 2900.0,
+    "profit": 600.0
    },
    {
     "date": "2026-12-10",
@@ -1585,17 +1585,46 @@
     "revenus": 725.0,
     "profit": -375.0
    }
+  ],
+  "fraisMensuel": 1373.35,
+  "profitMensuel": [
+   40874.15,
+   91746.65,
+   64021.65,
+   40064.15,
+   70804.15,
+   51497.9,
+   -1373.35,
+   -1373.35,
+   26516.65,
+   22022.02,
+   79681.28,
+   976.65
+  ],
+  "participantsMensuel": [
+   135,
+   201,
+   157,
+   112,
+   160,
+   145,
+   0,
+   0,
+   59,
+   57,
+   155,
+   30
   ]
  },
  "fraicheur": {
   "ventes": {
    "mode": "manuel",
-   "quand": "2026-11-19T17:00",
+   "quand": "2026-11-23T12:00",
    "source": "Coûts et revenus Contech 2026 (SharePoint)"
   },
   "formations": {
    "mode": "manuel",
-   "quand": "2026-11-22T17:00",
+   "quand": "2026-11-23T12:00",
    "source": "Tableau de bord A2026 (SharePoint)"
   },
   "pubs": {
@@ -3676,6 +3705,133 @@
      }
     ],
     "enCours": true
+   }
+  ]
+ },
+ "sources": {
+  "semaines": [
+   {
+    "nom": "Rapports Shopify",
+    "url": "https://admin.shopify.com/store/groupe-contech/analytics/reports",
+    "ou": "ventes nettes avant taxes, par semaine"
+   }
+  ],
+  "ventes": [
+   {
+    "nom": "Coûts et revenus Contech 2026",
+    "url": "https://groupecontex.sharepoint.com/sites/GroupeContex/Shared%20Documents/Contech%20B%C3%A2timent/Formations/00-Admin/Budget/2026/Co%C3%BBts%20et%20revenus%20Contech%202026.xlsx",
+    "ou": "SharePoint · fichier tenu par Ping · onglets « Budget 2026 » et « Formations 2026 »"
+   }
+  ],
+  "pubs": [
+   {
+    "nom": "Meta Ads Manager",
+    "url": "https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=2957431290951167",
+    "ou": "compte pub Contech"
+   },
+   {
+    "nom": "Google Ads",
+    "url": "https://ads.google.com/aw/overview?ocid=7943998512",
+    "ou": "compte Contech Bâtiment (géré par Hamak)"
+   },
+   {
+    "nom": "Coûts et revenus Contech 2026",
+    "url": "https://groupecontex.sharepoint.com/sites/GroupeContex/Shared%20Documents/Contech%20B%C3%A2timent/Formations/00-Admin/Budget/2026/Co%C3%BBts%20et%20revenus%20Contech%202026.xlsx",
+    "ou": "onglet « Coût Marketing » (budget)"
+   }
+  ],
+  "reseaux": [
+   {
+    "nom": "Meta Business Suite",
+    "url": "https://business.facebook.com/latest/insights/overview?asset_id=583689035016826",
+    "ou": "page Facebook Contech"
+   },
+   {
+    "nom": "LinkedIn",
+    "url": "",
+    "ou": "page Contech › Analytique (relevé à la main)"
+   }
+  ],
+  "infolettres": [
+   {
+    "nom": "Dialog Insight",
+    "url": "",
+    "ou": "relevé automatique par l’API, chaque matin"
+   },
+   {
+    "nom": "Rapports Shopify",
+    "url": "https://admin.shopify.com/store/groupe-contech/analytics/reports",
+    "ou": "ventes attribuées aux infolettres (UTM)"
+   }
+  ],
+  "formations": [
+   {
+    "nom": "Tableau de bord A2026",
+    "url": "https://groupecontex.sharepoint.com/sites/GroupeContex/Shared%20Documents/Contech%20B%C3%A2timent/Formations/Tableau%20de%20bord%20A2026.xlsx",
+    "ou": "SharePoint · onglet A2026"
+   }
+  ],
+  "parcours": [
+   {
+    "nom": "Rapports Shopify",
+    "url": "https://admin.shopify.com/store/groupe-contech/analytics/reports",
+    "ou": "« Performance par canal marketing »"
+   }
+  ],
+  "strategie": [
+   {
+    "nom": "Coûts et revenus Contech 2026",
+    "url": "https://groupecontex.sharepoint.com/sites/GroupeContex/Shared%20Documents/Contech%20B%C3%A2timent/Formations/00-Admin/Budget/2026/Co%C3%BBts%20et%20revenus%20Contech%202026.xlsx",
+    "ou": "SharePoint · fichier tenu par Ping"
+   },
+   {
+    "nom": "Tableau de bord A2026",
+    "url": "https://groupecontex.sharepoint.com/sites/GroupeContex/Shared%20Documents/Contech%20B%C3%A2timent/Formations/Tableau%20de%20bord%20A2026.xlsx",
+    "ou": "SharePoint · onglet A2026"
+   },
+   {
+    "nom": "Rapports Shopify",
+    "url": "https://admin.shopify.com/store/groupe-contech/analytics/reports",
+    "ou": "ventes par canal"
+   }
+  ],
+  "calendrier": [
+   {
+    "nom": "Tableau de bord A2026",
+    "url": "https://groupecontex.sharepoint.com/sites/GroupeContex/Shared%20Documents/Contech%20B%C3%A2timent/Formations/Tableau%20de%20bord%20A2026.xlsx",
+    "ou": "SharePoint · onglet A2026"
+   },
+   {
+    "nom": "Dialog Insight",
+    "url": "",
+    "ou": "envois prévus"
+   },
+   {
+    "nom": "Meta Ads Manager",
+    "url": "https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=2957431290951167",
+    "ou": "compte pub Contech"
+   }
+  ],
+  "aujourdhui": [
+   {
+    "nom": "Coûts et revenus Contech 2026",
+    "url": "https://groupecontex.sharepoint.com/sites/GroupeContex/Shared%20Documents/Contech%20B%C3%A2timent/Formations/00-Admin/Budget/2026/Co%C3%BBts%20et%20revenus%20Contech%202026.xlsx",
+    "ou": "SharePoint · fichier tenu par Ping"
+   },
+   {
+    "nom": "Meta Ads Manager",
+    "url": "https://adsmanager.facebook.com/adsmanager/manage/campaigns?act=2957431290951167",
+    "ou": "compte pub Contech"
+   },
+   {
+    "nom": "Dialog Insight",
+    "url": "",
+    "ou": "prochain envoi"
+   },
+   {
+    "nom": "Tableau de bord A2026",
+    "url": "https://groupecontex.sharepoint.com/sites/GroupeContex/Shared%20Documents/Contech%20B%C3%A2timent/Formations/Tableau%20de%20bord%20A2026.xlsx",
+    "ou": "SharePoint · onglet A2026"
    }
   ]
  }
