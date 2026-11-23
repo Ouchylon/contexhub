@@ -879,4 +879,117 @@ box.addEventListener('click',e=>{if(e.target===box)close();if(e.target.closest('
 document.addEventListener('keydown',e=>{if(e.key==='/'&&box.hidden&&!/INPUT|TEXTAREA/.test(document.activeElement.tagName)){e.preventDefault();open()}else if(!box.hidden){const L=[...r.querySelectorAll('a')];if(e.key==='Escape')close();else if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();if(!L.length)return;L[sel]&&L[sel].classList.remove('on');sel=(sel+(e.key==='ArrowDown'?1:-1)+L.length)%L.length;L[sel].classList.add('on');L[sel].scrollIntoView({block:'nearest'})}else if(e.key==='Enter'&&L[sel]){e.preventDefault();location.hash=L[sel].getAttribute('href').slice(1);close()}}});
 const tt=document.getElementById('totop');addEventListener('scroll',()=>tt.classList.toggle('on',scrollY>900),{passive:true});tt.onclick=()=>scrollTo({top:0,behavior:'smooth'});
 })();</script>
-<script>document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#reco-"]');if(!a)return;var id=a.getAttribute('href').slice(1),el=document.getElementById(id);if(!el)return;e.preventDefault();if(location.hash!=='#'+id){history.pushState(null,'','#'+id)}var pg=el.closest('.pg');if(pg&&!pg.classList.contains('on')){location.hash=id;return}el.scrollIntoView({behavior:'smooth',block:'start'})});</script></body></html>
+<script>document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#reco-"]');if(!a)return;var id=a.getAttribute('href').slice(1),el=document.getElementById(id);if(!el)return;e.preventDefault();if(location.hash!=='#'+id){history.pushState(null,'','#'+id)}var pg=el.closest('.pg');if(pg&&!pg.classList.contains('on')){location.hash=id;return}el.scrollIntoView({behavior:'smooth',block:'start'})});</script><script>(function(){
+var css=document.createElement('style');css.textContent=
+'.qt{position:relative;display:inline-grid;place-items:center;width:19px;height:19px;border-radius:50%;border:1.5px solid #8a8478;color:#6b665d;font:700 11.5px Helvetica,Arial,sans-serif;cursor:help;vertical-align:middle;margin-left:6px;background:#fff;letter-spacing:0;text-transform:none;font-style:normal;line-height:1}'+
+'.qt:hover,.qt:focus,.qt.open{border-color:#E8990F;color:#111;background:#E8990F;outline:none}'+
+'.qb{display:none;position:absolute;z-index:60;left:50%;top:26px;transform:translateX(-50%);width:310px;max-width:82vw;background:#1d1b18;color:#fff;font:400 13px/1.5 Helvetica,Arial,sans-serif;text-align:left;padding:12px 14px;border-radius:8px;box-shadow:0 8px 24px rgba(0,0,0,.25);white-space:normal}'+
+'.qb::before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}.qb b{color:#f3b84a}.qb i{color:#cfc9bd;font-style:normal;display:block;margin-top:6px;font-size:12px}'+
+'.qt:hover .qb,.qt:focus .qb,.qt.open .qb{display:block}'+
+'.tile .k .qt,.tile .k+.qt{margin-left:4px}'+
+'.mode{background:#fff;border:1.5px solid #111;border-radius:10px;padding:18px 20px;margin:18px 0}.mode h3{margin:0 0 8px;font-size:18px}.mode ol{margin:8px 0 0 18px;padding:0}.mode li{margin:5px 0;line-height:1.5}'+
+'@media(max-width:760px){.qb{position:fixed;left:16px;right:16px;top:auto;bottom:80px;width:auto;max-width:none;transform:none;font-size:14px}}';
+document.head.appendChild(css);
+function tip(t){return '<span class="qt" tabindex="0" role="button" aria-label="Explication">?<span class="qb">'+t+'</span></span>';}
+document.addEventListener('click',function(e){var q=e.target.closest&&e.target.closest('.qt');document.querySelectorAll('.qt.open').forEach(function(o){if(o!==q)o.classList.remove('open');});if(q&&!e.target.closest('.qb a'))q.classList.toggle('open');});
+var EM='<i>Source : Eventmaker (la plateforme d’inscription des Expos), relevé après chaque Expo.</i>';
+var T={
+'Québec · visiteurs inscrits':'Le nombre de personnes qui se sont inscrites pour visiter l’Expo de Québec. Plus c’est haut, mieux c’est. Le petit texte en dessous compare avec l’an dernier.'+EM,
+'Québec · visiteurs présents':'Les personnes inscrites qui sont vraiment venues (on a scanné leur badge à l’entrée).'+EM,
+'Montréal · visiteurs inscrits':'Le nombre de personnes inscrites pour visiter l’Expo de Montréal. Le petit texte compare avec l’an dernier, avec les mêmes règles de calcul.'+EM,
+'Montréal · visiteurs présents':'Les inscrits qui sont vraiment venus à Montréal (badge scanné à l’entrée).'+EM,
+'Coût par inscription Facebook · Montréal':'Combien on a payé en pub Facebook pour chaque personne qui s’est inscrite grâce à ces pubs. Plus c’est bas, mieux c’est.<i>Source : Meta Ads Manager (colonne « Inscriptions »).</i>',
+'Visiteurs inscrits':'Les personnes inscrites pour visiter, sans les étudiants. Le texte gris compare avec l’an dernier.'+EM,
+'Visiteurs présents':'Les inscrits qui sont vraiment venus (badge scanné à l’entrée).'+EM,
+'Taux de présence':'Sur 100 personnes inscrites, combien sont venues pour vrai. Exemple : 47 % veut dire que 47 inscrits sur 100 se sont présentés.'+EM,
+'Étudiants inscrits':'Les étudiants, comptés à part pour ne pas gonfler les chiffres des visiteurs.'+EM,
+'Dernière semaine':'Les inscriptions faites dans les 7 derniers jours avant l’Expo. Beaucoup de gens s’inscrivent à la dernière minute.'+EM,
+'Pubs Expos dépensées':'Tout l’argent dépensé en publicité payée pour les Expos (Facebook, Instagram, LinkedIn).<i>Source : Meta Ads Manager et LinkedIn Campaign Manager.</i>',
+'Pas dépensé (Facebook)':'Le budget Facebook prévu qui n’a pas été utilisé : c’est de l’argent qui reste.<i>Source : Meta Ads Manager vs budget prévu.</i>',
+'Inscriptions Facebook':'Les inscriptions que Facebook attribue à nos pubs (quelqu’un a cliqué sur une pub puis s’est inscrit).<i>Source : Meta Ads Manager.</i>',
+'Coût par personne venue':'Le coût total divisé par le nombre de personnes qui sont vraiment venues. C’est le meilleur chiffre pour juger si ça valait la peine.',
+'Coût par inscription':'Combien ça a coûté pour chaque inscription. Plus c’est bas, mieux c’est.',
+'Pubs seulement, par personne venue':'Seulement l’argent des pubs, divisé par les personnes venues.',
+'Publications Expos':'Le nombre de publications sur nos pages (Facebook et LinkedIn) qui parlaient des Expos.<i>Source : Meta Business Suite et LinkedIn.</i>',
+'Vues au total':'Combien de fois nos publications ont été vues à l’écran, toutes ensemble.<i>Source : Meta Business Suite.</i>',
+'Réactions par publication':'En moyenne, combien de « j’aime », commentaires et partages chaque publication a reçus.',
+'Partages':'Combien de fois des gens ont partagé nos publications à leurs contacts. Un partage = de la publicité gratuite.',
+'Campagnes Meta':'Le nombre de campagnes de pubs payées sur Facebook et Instagram.<i>Source : Meta Ads Manager.</i>',
+'Impressions LinkedIn':'Combien de fois nos pubs LinkedIn ont été vues.<i>Source : LinkedIn Campaign Manager.</i>',
+'Infolettres Expo':'Le nombre de courriels envoyés pour faire la promotion des Expos.<i>Source : Dialog Insight.</i>',
+'Publications RS en octobre':'Les publications sur les réseaux sociaux en octobre, le mois avant les Expos.',
+'Facebook · publications Expos':'Le nombre de publications Facebook sur les Expos.<i>Source : Meta Business Suite.</i>',
+'Facebook · vues':'Combien de fois nos publications Facebook ont été vues.<i>Source : Meta Business Suite.</i>',
+'LinkedIn · impressions':'Combien de fois nos publications LinkedIn ont été vues.<i>Source : page LinkedIn Contech, onglet Analytique.</i>',
+'LinkedIn · réactions':'Les « j’aime » et commentaires sur LinkedIn.<i>Source : page LinkedIn Contech.</i>',
+'Visiteurs · Montréal':'Le nombre de visiteurs de Montréal qui ont répondu au sondage après l’Expo.<i>Source : les sondages envoyés après l’Expo.</i>',
+'Visiteurs · Québec':'Le nombre de visiteurs de Québec qui ont répondu au sondage.<i>Source : les sondages envoyés après l’Expo.</i>',
+'Exposants · Montréal':'Le nombre d’exposants de Montréal qui ont répondu au sondage.',
+'Exposants · Québec':'Le nombre d’exposants de Québec qui ont répondu au sondage.',
+'Conférences · Montréal':'Le nombre de réponses au sondage sur les conférences de Montréal.',
+'Visiteurs satisfaits · Montréal':'Sur 100 visiteurs qui ont répondu, combien ont dit être satisfaits ou très satisfaits.',
+'Visiteurs satisfaits · Québec':'Sur 100 visiteurs qui ont répondu, combien ont dit être satisfaits ou très satisfaits.',
+'Exposants satisfaits · Montréal':'Sur 100 exposants qui ont répondu, combien ont dit être satisfaits.',
+'Conférences appréciées · Montréal':'Sur 100 personnes qui ont répondu, combien ont aimé les conférences.'
+};
+var H={
+'resume':'La page de départ : les résultats des deux Expos en un coup d’œil. Lis les grands chiffres en haut, puis « Ce qu’il faut retenir ».',
+'postmortem':'Le résumé pour la rencontre du 1er décembre : un bloc par sujet, avec les décisions à prendre.',
+'quebec':'Les chiffres de chaque Expo (Québec, puis Montréal), comparés à l’an dernier avec les mêmes règles. Passe la souris sur une barre pour voir le chiffre exact.',
+'comparaison':'Ce qu’on a fait différemment en 2026 par rapport à 2025, et l’effet que ça a eu.',
+'actions':'Tout ce qu’on a fait en marketing pour les Expos : pubs, vidéos, courriels, partenaires, dans l’ordre.',
+'infolettres':'Chaque courriel envoyé, tel que les gens l’ont reçu. Clique sur un courriel pour le voir en grand.',
+'reseaux':'Nos publications Facebook et LinkedIn non payées, et comment les gens ont réagi.',
+'budget':'Combien on avait prévu pour les pubs, combien on a dépensé, et ce que ça a donné par personne venue.',
+'sondages':'Ce que les visiteurs, exposants et participants aux conférences ont répondu aux sondages après les Expos.',
+'constats':'Ce qui a bien marché (✓) et ce qui a moins bien marché (△), avec ce qu’on change pour 2027.'
+};
+var C={
+'2025 vs 2026':'Barres grises = l’an dernier, barres orange = cette année. Si l’orange est plus haute, on a fait mieux. Passe la souris sur une barre pour voir le chiffre.',
+'Le rythme des inscriptions':'La ligne montre le total des inscriptions jour après jour avant l’Expo. Ligne pointillée = l’an dernier. Si la ligne orange est au-dessus, on est en avance.',
+'D’où viennent les inscriptions 2026':'Par où les gens sont arrivés pour s’inscrire : un courriel, une pub, notre site, un partenaire…',
+"D'où viennent les inscriptions 2026":'Par où les gens sont arrivés pour s’inscrire : un courriel, une pub, notre site, un partenaire…',
+"D'où viennent les chiffres":'Comment chaque chiffre a été calculé, et dans quel outil le retrouver. Tu peux refaire le calcul toi-même.',
+'Comment refaire le calcul':'Les étapes exactes pour retrouver le même chiffre dans Eventmaker.',
+'Tous les scénarios : « et si on compte aussi… ? »':'Le même chiffre calculé de plusieurs façons (avec ou sans étudiants, exposants, etc.). Ça explique pourquoi deux personnes peuvent avoir des chiffres différents.',
+'Qui est venu? Explorer par métier':'Choisis un métier pour voir combien de gens de ce métier sont venus.',
+'Ce qui a changé entre 2025 et 2026':'Les grandes différences dans notre façon de faire d’une année à l’autre.',
+'Les dépenses, côte à côte':'L’argent dépensé en 2025 et en 2026, poste par poste.',
+'Le coût complet des Expos 2026, et ce que ça donne par personne':'Toutes les dépenses marketing additionnées, puis divisées par le nombre de personnes venues.',
+'Les infolettres Expo, envoi par envoi':'Chaque courriel : la date, à qui il a été envoyé, combien l’ont ouvert et cliqué.',
+'Résumé des résultats':'Les résultats principaux en quelques lignes.',
+"Ce qu'il faut retenir":'Les 3 ou 4 leçons les plus importantes.',
+'Pour 2027':'Ce qu’on propose de faire l’an prochain.',
+'Questions fréquentes':'Les questions qu’on nous pose le plus souvent, avec la réponse. Clique sur une question pour l’ouvrir.',
+'Ordre du jour proposé (2 heures)':'Le déroulement proposé pour la rencontre, minute par minute.',
+'Les décisions à prendre pendant la rencontre':'Les choix qu’on doit faire ensemble, avec qui décide.',
+'La pub, en chiffres':'Le résumé des pubs payées : dépensé, vu, cliqué, inscrit.',
+'Google Ads':'Les pubs sur Google, gérées par l’agence Hamak.','✓ Ce qui a bien fonctionné':'Les choses qui ont donné de bons résultats et qu’on garde pour 2027.',
+'△ Ce qui a moins bien fonctionné':'Les choses qui ont moins bien marché, avec ce qu’on change pour 2027.',
+"Ce qu'ils ont aimé":'Les réponses positives les plus fréquentes dans les sondages.',
+"Ce qu'ils veulent qu'on améliore":'Les suggestions qui reviennent le plus souvent dans les sondages.',
+'Résultats et coûts':'Les chiffres principaux et ce qu’ils ont coûté, pour la rencontre.',
+'Inscrits, présents et jour J':'Combien se sont inscrits, combien sont venus, et ce qui s’est passé le jour de l’Expo.',
+'Budget pub':'Ce qu’on avait prévu en pubs et ce qu’on a vraiment dépensé.',
+'Infolettres et attestations':'Les courriels envoyés et les attestations de présence remises aux visiteurs.',
+'Exposants et ventes':'Les exposants présents et les ventes de kiosques.',
+'Logistique':'Ce qui s’est passé sur place : installation, badges, accueil.',
+'Conférences':'Les conférences présentées et la participation.',
+'Les courriels envoyés par Eventmaker':'Les courriels automatiques d’inscription, de rappel et de badge envoyés par Eventmaker.',
+"Ce qui n'est pas parti, ou pas à temps : pourquoi, et la suite":'Les courriels prévus qui ne sont pas partis, la raison, et ce qu’on fait pour que ça n’arrive plus.',
+'Les questionnaires, tels que les gens les ont reçus':'Les sondages exactement comme les gens les ont vus.'
+};
+document.querySelectorAll('.tile .k').forEach(function(k){var t=k.textContent.trim();if(T[t]&&!k.querySelector('.qt'))k.insertAdjacentHTML('beforeend',tip(T[t]));});
+Object.keys(H).forEach(function(id){var s=document.getElementById(id);if(!s)return;var h=s.querySelector('h1.titre');if(h&&!h.querySelector('.qt'))h.insertAdjacentHTML('beforeend',tip(H[id]));});
+document.querySelectorAll('.card h3, h2.titre, h2.sec').forEach(function(h){if(h.querySelector('.qt'))return;var t=h.textContent.trim(),txt=C[t];
+  if(!txt){var card=h.closest('.card'),n=card&&card.querySelector('p.note');if(n&&/^Source/i.test(n.textContent.trim()))txt='Comment lire : regarde le titre, puis les chiffres en gras. Passe la souris sur un graphique pour voir le chiffre exact.<i>'+n.textContent.trim().replace(/</g,'&lt;')+'</i>';}
+  if(txt)h.insertAdjacentHTML('beforeend',tip(txt));});
+var r=document.getElementById('resume');if(r&&!document.querySelector('.mode')){var hd=r.querySelector('header');var box='<div class="mode"><h3>Comment lire ce bilan</h3><ol>'+
+'<li><b>Les onglets</b> en haut séparent les sujets : chaque Expo, les pubs, les courriels, les réseaux sociaux, les sondages, puis ce qu’on retient.</li>'+
+'<li><b>Les petits ronds '+tip('Comme celui-ci! Passe la souris dessus (ou touche-le sur un téléphone) pour lire l’explication. Clique ailleurs pour le fermer.')+'</b> : passe la souris dessus pour savoir ce que veut dire un chiffre, comment le lire et d’où il vient.</li>'+
+'<li><b>Les grands chiffres</b> sont ceux de 2026. Le petit texte gris en dessous les compare à 2025, avec les mêmes règles de calcul.</li>'+
+'<li><b>Les graphiques</b> : gris = l’an dernier, orange = cette année. Passe la souris sur une barre pour voir le chiffre exact.</li>'+
+'<li><b>Les sources</b> sont écrites sous chaque graphique (« Source : … »). L’onglet Québec et Montréal explique comment refaire chaque calcul.</li></ol></div>';
+if(hd)hd.insertAdjacentHTML('afterend',box);}
+})();
+</script></body></html>
