@@ -231,9 +231,12 @@ details.more{margin-top:14px;border:1px solid var(--line);border-radius:6px;back
 .vt-empty{padding:16px;color:var(--mut);font-size:14px}
 .gal.nlgal{grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
 .gc.nl .bd{flex:0 0 auto}
-.nlv{height:520px;overflow-y:auto;margin:0 14px;border:1px solid var(--line);border-radius:4px;background:#fff}
+.nlv{position:relative;height:340px;overflow:hidden;margin:12px 14px 0;border:1px solid var(--line);border-radius:4px;background:#fff}
 .nlv img{display:block;width:100%;height:auto}
-.nlv iframe{display:block;width:100%;height:100%;border:0}
+.nlv iframe{display:block;width:200%;height:200%;border:0;transform:scale(.5);transform-origin:0 0;pointer-events:none}
+.nlbig.nlcov{position:absolute;inset:0;margin:0;width:100%;height:100%;text-decoration:none;cursor:zoom-in;display:flex;align-items:flex-end;justify-content:flex-end;padding:8px;background:linear-gradient(transparent 70%,rgba(247,243,237,.9))}
+.nlcov span{background:#111;color:#fff;font:700 12px Helv,sans-serif;padding:5px 9px;border-radius:4px;opacity:.85}
+.nlcov:hover span{opacity:1;background:#E8990F;color:#111}
 .nlwait{font-size:12.5px;color:var(--mut);padding:10px 12px;margin:0}
 .nlbig{align-self:flex-start;margin:10px 14px 14px;background:none;border:0;padding:0;font:700 13px Helv,sans-serif;text-decoration:underline;cursor:pointer;color:var(--ink)}
 .lbx{position:fixed;inset:0;background:rgba(0,0,0,.72);display:flex;align-items:center;justify-content:center;z-index:999;padding:16px}
@@ -679,6 +682,7 @@ i.a{background:#E8990F}i.b{background:#8f8a80}.ws-c{position:relative}.ws-s{widt
         (x.ouverture!=null?'<span class="st"><b>'+pc(x.ouverture)+'</b> ouverture · <b>'+pc(x.clic)+'</b> clics'+(x.desabonnements!=null?' · <b>'+int(x.desabonnements)+'</b> désab.':'')+'</span>':'')+
         (x.categorie==='Formations'?(function(){var c=NM.par[x.id||x.date+x.nom],n=c?c.commandes:0,rec=!n&&NM.rel&&x.date>NM.rel?'pas encore relevé':!n&&NM.rel&&NM.J(x.date,NM.rel)<=7?'pour l’instant':'';
           return '<div class="nl-v'+(n?' ok':'')+'">'+(n?'<b>'+int(n)+' vente'+(n>1?'s':'')+'</b> · <b>'+money(c.ventes)+'</b> avant taxes':'<b>0 vente</b> '+rec)+'</div>';})():'')+'</div>'+
+        '<div class="nlv'+(x.capture?' im':'')+'">'+view+(big?'<button class="nlbig nlcov" type="button" aria-label="Agrandir l’infolettre" data-src=\"'+esc(rp(big))+'" data-kind="'+(x.capture?'i':'f')+'" data-t="'+esc(x.nom)+'"><span>Agrandir ⤢</span></button>':'')+'</div>'+
         (big?'<button class="nlbig" type="button" data-src=\"'+esc(rp(big))+'" data-kind="'+(x.capture?'i':'f')+'" data-t="'+esc(x.nom)+'">Voir l’infolettre</button>':'')+'</div>';
     };
     var TF=T.filter(function(x){return x.categorie==='Formations';}), TX=T.filter(function(x){return x.categorie!=='Formations';});
