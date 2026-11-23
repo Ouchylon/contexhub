@@ -981,7 +981,7 @@ var C={
 };
 document.querySelectorAll('.tile .k').forEach(function(k){var t=k.textContent.trim();if(T[t]&&!k.querySelector('.qt'))k.insertAdjacentHTML('beforeend',tip(T[t]));});
 Object.keys(H).forEach(function(id){var s=document.getElementById(id);if(!s)return;var h=s.querySelector('h1.titre');if(h&&!h.querySelector('.qt'))h.insertAdjacentHTML('beforeend',tip(H[id]));});
-document.querySelectorAll('.card h3, h2.titre, h2.sec').forEach(function(h){if(h.querySelector('.qt'))return;var t=h.textContent.trim(),txt=C[t];
+document.querySelectorAll('section.pg h3, h2.titre, h2.sec').forEach(function(h){if(h.querySelector('.qt')||h.closest('.mode'))return;var t=h.textContent.trim(),txt=C[t];
   if(!txt){var card=h.closest('.card'),n=card&&card.querySelector('p.note');if(n&&/^Source/i.test(n.textContent.trim()))txt='Comment lire : regarde le titre, puis les chiffres en gras. Passe la souris sur un graphique pour voir le chiffre exact.<i>'+n.textContent.trim().replace(/</g,'&lt;')+'</i>';}
   if(txt)h.insertAdjacentHTML('beforeend',tip(txt));});
 var r=document.getElementById('resume');if(r&&!document.querySelector('.mode')){var hd=r.querySelector('header');var box='<div class="mode"><h3>Comment lire ce bilan</h3><ol>'+
