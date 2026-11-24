@@ -310,7 +310,7 @@
     "date": "2026-11-10",
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Entrepreneurs",
     "envoyes": 3298,
-    "ouverture": 34.0,
+    "ouverture": 34.1,
     "clic": 1.5,
     "desabonnements": 4
    },
@@ -396,7 +396,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-24T01:19-05:00",
+  "releve": "2026-11-24T04:49-05:00",
   "alertes": [],
   "tous": [
    {
@@ -479,7 +479,7 @@
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Entrepreneurs",
     "categorie": "Expos",
     "envoyes": 3298,
-    "ouverture": 34.0,
+    "ouverture": 34.1,
     "clic": 1.5,
     "desabonnements": 4,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
@@ -556,7 +556,7 @@
     "nom": "Expo MTL 2 nov. 2026 (J-10)",
     "categorie": "Expos",
     "envoyes": 19009,
-    "ouverture": 31.7,
+    "ouverture": 31.8,
     "clic": 1.6,
     "desabonnements": 21,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
