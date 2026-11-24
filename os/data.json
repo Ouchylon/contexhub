@@ -278,17 +278,17 @@
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "envoyes": 19730,
-    "ouverture": 30.6,
+    "ouverture": 30.8,
     "clic": 3.9,
-    "desabonnements": 26
+    "desabonnements": 27
    },
    {
     "date": "2026-11-17",
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "envoyes": 19762,
-    "ouverture": 32.8,
+    "ouverture": 32.9,
     "clic": 4.3,
-    "desabonnements": 27
+    "desabonnements": 28
    },
    {
     "date": "2026-11-11",
@@ -296,7 +296,7 @@
     "envoyes": 19707,
     "ouverture": 30.7,
     "clic": 1.7,
-    "desabonnements": 17
+    "desabonnements": 18
    },
    {
     "date": "2026-11-10",
@@ -352,7 +352,7 @@
     "envoyes": 1137,
     "ouverture": 55.8,
     "clic": 11.7,
-    "desabonnements": 1
+    "desabonnements": 2
    },
    {
     "date": "2026-11-05",
@@ -368,7 +368,7 @@
     "envoyes": 19809,
     "ouverture": 30.9,
     "clic": 1.5,
-    "desabonnements": 36
+    "desabonnements": 37
    }
   ],
   "base": {
@@ -378,7 +378,7 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 31.7,
+   "ouverture": 31.8,
    "clics": 4.1,
    "ctor": 12.9,
    "desabonnements": 0.1
@@ -396,7 +396,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-23T17:32-05:00",
+  "releve": "2026-11-24T01:19-05:00",
   "alertes": [],
   "tous": [
    {
@@ -405,9 +405,9 @@
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "categorie": "Formations",
     "envoyes": 19730,
-    "ouverture": 30.6,
+    "ouverture": 30.8,
     "clic": 3.9,
-    "desabonnements": 26,
+    "desabonnements": 27,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
     "apercu": "nl/730127.html"
    },
@@ -417,9 +417,9 @@
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "categorie": "Formations",
     "envoyes": 19762,
-    "ouverture": 32.8,
+    "ouverture": 32.9,
     "clic": 4.3,
-    "desabonnements": 27,
+    "desabonnements": 28,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2665/IGwG33/lancement-hp2027-entete-v3.gif",
     "apercu": "nl/730126.html"
    },
@@ -431,7 +431,7 @@
     "envoyes": 19707,
     "ouverture": 30.7,
     "clic": 1.7,
-    "desabonnements": 17,
+    "desabonnements": 18,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2645/cXejm5/hebdo11nov-entete-v2.gif",
     "apercu": "nl/730124.html"
    },
@@ -520,7 +520,7 @@
     "envoyes": 1137,
     "ouverture": 55.8,
     "clic": 11.7,
-    "desabonnements": 1,
+    "desabonnements": 2,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
     "apercu": "nl/730117.html",
     "capture": "../bilan/img/infolettres/2026-11-06-mtl-j6-inscrits.jpg"
@@ -546,7 +546,7 @@
     "envoyes": 19809,
     "ouverture": 30.9,
     "clic": 1.5,
-    "desabonnements": 36,
+    "desabonnements": 37,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2543/3nvMo2/nl27oct-bandeau-art-de-negocier-niv1-9nov-suzanne.png",
     "apercu": "nl/730115.html"
    },
@@ -558,7 +558,7 @@
     "envoyes": 19009,
     "ouverture": 31.7,
     "clic": 1.6,
-    "desabonnements": 20,
+    "desabonnements": 21,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
     "apercu": "nl/730113.html",
     "capture": "../bilan/img/infolettres/2026-11-02-mtl-j10.jpg"
@@ -584,7 +584,7 @@
     "envoyes": 18978,
     "ouverture": 31.5,
     "clic": 1.1,
-    "desabonnements": 20,
+    "desabonnements": 21,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2532/Nj29J4/nl20oct-banniere-inspection-generale-5nov-v4.jpg",
     "apercu": "nl/730109.html"
    },
@@ -622,7 +622,7 @@
     "envoyes": 19058,
     "ouverture": 29.4,
     "clic": 1.2,
-    "desabonnements": 18,
+    "desabonnements": 19,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2532/Nj29J4/nl20oct-banniere-inspection-generale-5nov-v4.jpg",
     "apercu": "nl/730107.html"
    },
@@ -634,7 +634,7 @@
     "envoyes": 19080,
     "ouverture": 28.9,
     "clic": 1.3,
-    "desabonnements": 22,
+    "desabonnements": 23,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2493/fXCnpa/nl13oct-banniere-quincaillerie-3nov.jpg",
     "apercu": "nl/730103.html"
    },
@@ -659,7 +659,7 @@
     "envoyes": 19108,
     "ouverture": 30.8,
     "clic": 1.1,
-    "desabonnements": 28,
+    "desabonnements": 29,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2475/XfHa71/nl06-banniere-chantier-14-21oct.png",
     "apercu": "nl/730101.html"
    },
@@ -684,7 +684,7 @@
     "envoyes": 19160,
     "ouverture": 29.9,
     "clic": 1.6,
-    "desabonnements": 35,
+    "desabonnements": 36,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2447/Vzlutv/nl29-banniere-rapport-expertise-8oct.png",
     "apercu": "nl/730097.html"
    },
@@ -708,7 +708,7 @@
     "envoyes": 19189,
     "ouverture": 33.6,
     "clic": 1.9,
-    "desabonnements": 23,
+    "desabonnements": 24,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2403/CQkHlN/gestion-prio-oct26.png",
     "apercu": "nl/730092.html"
    },
