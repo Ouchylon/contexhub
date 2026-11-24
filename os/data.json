@@ -275,11 +275,19 @@
  "infolettres": {
   "derniers": [
    {
+    "date": "2026-11-24",
+    "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
+    "envoyes": 19680,
+    "ouverture": 18.4,
+    "clic": 3.6,
+    "desabonnements": 10
+   },
+   {
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "envoyes": 19730,
-    "ouverture": 30.8,
-    "clic": 3.9,
+    "ouverture": 31.0,
+    "clic": 4.0,
     "desabonnements": 27
    },
    {
@@ -361,14 +369,6 @@
     "ouverture": 30.2,
     "clic": 1.4,
     "desabonnements": 24
-   },
-   {
-    "date": "2026-11-03",
-    "nom": "Hebdo Formations – 3 nov. 2026",
-    "envoyes": 19809,
-    "ouverture": 30.9,
-    "clic": 1.5,
-    "desabonnements": 37
    }
   ],
   "base": {
@@ -378,9 +378,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 31.8,
-   "clics": 4.1,
-   "ctor": 12.9,
+   "ouverture": 27.5,
+   "clics": 3.9,
+   "ctor": 14.3,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -396,17 +396,29 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-24T04:49-05:00",
+  "releve": "2026-11-24T16:04-05:00",
   "alertes": [],
   "tous": [
+   {
+    "id": 730128,
+    "date": "2026-11-24",
+    "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
+    "categorie": "Formations",
+    "envoyes": 19680,
+    "ouverture": 18.4,
+    "clic": 3.6,
+    "desabonnements": 10,
+    "vignette": null,
+    "apercu": "nl/730128.html"
+   },
    {
     "id": 730127,
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "categorie": "Formations",
     "envoyes": 19730,
-    "ouverture": 30.8,
-    "clic": 3.9,
+    "ouverture": 31.0,
+    "clic": 4.0,
     "desabonnements": 27,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
     "apercu": "nl/730127.html"
@@ -607,7 +619,7 @@
     "nom": "Infolettre Expo 21 octobre (veille QC)",
     "categorie": "Expos",
     "envoyes": 38067,
-    "ouverture": 29.5,
+    "ouverture": 29.6,
     "clic": 1.2,
     "desabonnements": 37,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2341/MEUTMR/expos-contech-2026-mtl-qc-1200x630.jpg",
