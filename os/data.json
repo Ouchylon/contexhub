@@ -277,8 +277,8 @@
    {
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
-    "envoyes": 19681,
-    "ouverture": 24.6,
+    "envoyes": 19682,
+    "ouverture": 26.5,
     "clic": 3.7,
     "desabonnements": 11
    },
@@ -294,7 +294,7 @@
     "date": "2026-11-17",
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "envoyes": 19762,
-    "ouverture": 32.9,
+    "ouverture": 33.0,
     "clic": 4.3,
     "desabonnements": 28
    },
@@ -302,7 +302,7 @@
     "date": "2026-11-11",
     "nom": "Hebdo Formations – 11 nov. 2026",
     "envoyes": 19707,
-    "ouverture": 30.7,
+    "ouverture": 30.8,
     "clic": 1.7,
     "desabonnements": 18
    },
@@ -378,9 +378,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 29.6,
-   "clics": 4.0,
-   "ctor": 13.4,
+   "ouverture": 28.9,
+   "clics": 3.8,
+   "ctor": 13.2,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -396,7 +396,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-24T23:05-05:00",
+  "releve": "2026-11-25T03:25-05:00",
   "alertes": [],
   "tous": [
    {
@@ -404,8 +404,8 @@
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "categorie": "Formations",
-    "envoyes": 19681,
-    "ouverture": 24.6,
+    "envoyes": 19682,
+    "ouverture": 26.5,
     "clic": 3.7,
     "desabonnements": 11,
     "vignette": null,
@@ -429,7 +429,7 @@
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "categorie": "Formations",
     "envoyes": 19762,
-    "ouverture": 32.9,
+    "ouverture": 33.0,
     "clic": 4.3,
     "desabonnements": 28,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2665/IGwG33/lancement-hp2027-entete-v3.gif",
@@ -441,7 +441,7 @@
     "nom": "Hebdo Formations – 11 nov. 2026",
     "categorie": "Formations",
     "envoyes": 19707,
-    "ouverture": 30.7,
+    "ouverture": 30.8,
     "clic": 1.7,
     "desabonnements": 18,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2645/cXejm5/hebdo11nov-entete-v2.gif",
