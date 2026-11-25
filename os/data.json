@@ -277,18 +277,18 @@
    {
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
-    "envoyes": 19680,
-    "ouverture": 18.4,
-    "clic": 3.6,
-    "desabonnements": 10
+    "envoyes": 19681,
+    "ouverture": 24.6,
+    "clic": 3.7,
+    "desabonnements": 11
    },
    {
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "envoyes": 19730,
-    "ouverture": 31.0,
+    "ouverture": 31.2,
     "clic": 4.0,
-    "desabonnements": 27
+    "desabonnements": 28
    },
    {
     "date": "2026-11-17",
@@ -312,7 +312,7 @@
     "envoyes": 11963,
     "ouverture": 26.8,
     "clic": 1.2,
-    "desabonnements": 16
+    "desabonnements": 17
    },
    {
     "date": "2026-11-10",
@@ -378,9 +378,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 27.5,
-   "clics": 3.9,
-   "ctor": 14.3,
+   "ouverture": 29.6,
+   "clics": 4.0,
+   "ctor": 13.4,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -396,7 +396,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-24T16:04-05:00",
+  "releve": "2026-11-24T23:05-05:00",
   "alertes": [],
   "tous": [
    {
@@ -404,10 +404,10 @@
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "categorie": "Formations",
-    "envoyes": 19680,
-    "ouverture": 18.4,
-    "clic": 3.6,
-    "desabonnements": 10,
+    "envoyes": 19681,
+    "ouverture": 24.6,
+    "clic": 3.7,
+    "desabonnements": 11,
     "vignette": null,
     "apercu": "nl/730128.html"
    },
@@ -417,9 +417,9 @@
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "categorie": "Formations",
     "envoyes": 19730,
-    "ouverture": 31.0,
+    "ouverture": 31.2,
     "clic": 4.0,
-    "desabonnements": 27,
+    "desabonnements": 28,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
     "apercu": "nl/730127.html"
    },
@@ -506,7 +506,7 @@
     "envoyes": 11963,
     "ouverture": 26.8,
     "clic": 1.2,
-    "desabonnements": 16,
+    "desabonnements": 17,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
     "apercu": "nl/730120.html",
     "capture": "../bilan/img/infolettres/2026-11-10-mtl-j2-autres.jpg"
@@ -581,7 +581,7 @@
     "nom": "Expo MTL 29 oct. 2026 (J-14)",
     "categorie": "Expos",
     "envoyes": 19871,
-    "ouverture": 33.0,
+    "ouverture": 33.1,
     "clic": 1.5,
     "desabonnements": 27,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
