@@ -278,9 +278,9 @@
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "envoyes": 19682,
-    "ouverture": 28.9,
+    "ouverture": 29.1,
     "clic": 3.8,
-    "desabonnements": 17
+    "desabonnements": 18
    },
    {
     "date": "2026-11-19",
@@ -318,7 +318,7 @@
     "date": "2026-11-10",
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Entrepreneurs",
     "envoyes": 3298,
-    "ouverture": 34.1,
+    "ouverture": 34.2,
     "clic": 1.5,
     "desabonnements": 4
    },
@@ -378,7 +378,7 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 30.1,
+   "ouverture": 30.2,
    "clics": 3.9,
    "ctor": 12.8,
    "desabonnements": 0.1
@@ -396,7 +396,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-25T15:26-05:00",
+  "releve": "2026-11-25T17:51-05:00",
   "alertes": [],
   "tous": [
    {
@@ -405,10 +405,10 @@
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "categorie": "Formations",
     "envoyes": 19682,
-    "ouverture": 28.9,
+    "ouverture": 29.1,
     "clic": 3.8,
-    "desabonnements": 17,
-    "vignette": null,
+    "desabonnements": 18,
+    "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2716/lfHyft/hebdo24-intro-anim-v5.gif",
     "apercu": "nl/730128.html"
    },
    {
@@ -491,7 +491,7 @@
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Entrepreneurs",
     "categorie": "Expos",
     "envoyes": 3298,
-    "ouverture": 34.1,
+    "ouverture": 34.2,
     "clic": 1.5,
     "desabonnements": 4,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
@@ -644,7 +644,7 @@
     "nom": "Hebdo Formations – 13 oct. 2026",
     "categorie": "Formations",
     "envoyes": 19080,
-    "ouverture": 28.9,
+    "ouverture": 29.0,
     "clic": 1.3,
     "desabonnements": 23,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2493/fXCnpa/nl13oct-banniere-quincaillerie-3nov.jpg",
