@@ -278,15 +278,15 @@
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "envoyes": 19682,
-    "ouverture": 26.5,
+    "ouverture": 28.7,
     "clic": 3.7,
-    "desabonnements": 11
+    "desabonnements": 17
    },
    {
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "envoyes": 19730,
-    "ouverture": 31.2,
+    "ouverture": 31.3,
     "clic": 4.0,
     "desabonnements": 28
    },
@@ -310,7 +310,7 @@
     "date": "2026-11-10",
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Autres professionnels",
     "envoyes": 11963,
-    "ouverture": 26.8,
+    "ouverture": 26.9,
     "clic": 1.2,
     "desabonnements": 17
    },
@@ -334,7 +334,7 @@
     "date": "2026-11-10",
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Architectes et conception",
     "envoyes": 2553,
-    "ouverture": 37.0,
+    "ouverture": 37.1,
     "clic": 1.4,
     "desabonnements": 1
    },
@@ -378,9 +378,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 28.9,
-   "clics": 3.8,
-   "ctor": 13.2,
+   "ouverture": 30.0,
+   "clics": 3.9,
+   "ctor": 12.9,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -396,7 +396,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-25T03:25-05:00",
+  "releve": "2026-11-25T13:44-05:00",
   "alertes": [],
   "tous": [
    {
@@ -405,9 +405,9 @@
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "categorie": "Formations",
     "envoyes": 19682,
-    "ouverture": 26.5,
+    "ouverture": 28.7,
     "clic": 3.7,
-    "desabonnements": 11,
+    "desabonnements": 17,
     "vignette": null,
     "apercu": "nl/730128.html"
    },
@@ -417,7 +417,7 @@
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "categorie": "Formations",
     "envoyes": 19730,
-    "ouverture": 31.2,
+    "ouverture": 31.3,
     "clic": 4.0,
     "desabonnements": 28,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
@@ -466,7 +466,7 @@
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Architectes et conception",
     "categorie": "Expos",
     "envoyes": 2553,
-    "ouverture": 37.0,
+    "ouverture": 37.1,
     "clic": 1.4,
     "desabonnements": 1,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
@@ -504,7 +504,7 @@
     "nom": "Expo MTL 10 nov. 2026 (J-2) - Autres professionnels",
     "categorie": "Expos",
     "envoyes": 11963,
-    "ouverture": 26.8,
+    "ouverture": 26.9,
     "clic": 1.2,
     "desabonnements": 17,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
@@ -730,7 +730,7 @@
     "nom": "PUSH6_Focus Québec_2026",
     "categorie": "Expos",
     "envoyes": 19229,
-    "ouverture": 32.9,
+    "ouverture": 33.0,
     "clic": 2.0,
     "desabonnements": 40,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2341/MEUTMR/expos-contech-2026-mtl-qc-1200x630.jpg",
