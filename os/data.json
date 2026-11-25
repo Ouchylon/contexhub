@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-23T12:00:00-05:00",
- "today": "2026-11-23",
+ "updated": "2026-11-25T14:00:00-05:00",
+ "today": "2026-11-25",
  "seuilConfirmation": 5,
  "kpis": {
   "achats": {
@@ -25,7 +25,7 @@
  },
  "formations": {
   "source": "Tableau de bord A2026, SharePoint",
-  "releve": "23 nov. 2026, 12 h",
+  "releve": "25 nov. 2026, 14 h (fichier Coûts et revenus 2026)",
   "items": [
    {
     "date": "2026-11-20",
@@ -45,21 +45,21 @@
     "date": "2026-11-25",
     "titre": "Courriels efficaces : stratégies de gestion et outils numériques",
     "formateur": "Suzanne Saint-Laurent",
-    "inscrits": 5,
+    "inscrits": 6,
     "max": 18
    },
    {
     "date": "2026-11-26",
     "titre": "Acoustique et insonorisation",
     "formateur": "Steve Davidson",
-    "inscrits": 6,
+    "inscrits": 12,
     "max": 18
    },
    {
     "date": "2026-11-27",
     "titre": "Devis sur plan",
     "formateur": "Louis Réjean Gagné",
-    "inscrits": 17,
+    "inscrits": 19,
     "max": 22
    },
    {
@@ -80,7 +80,7 @@
     "date": "2026-12-03",
     "titre": "Rédaction de devis des groupes de quincaillerie mécanique et électrifiée",
     "formateur": "Serge Lalancette",
-    "inscrits": 2,
+    "inscrits": 3,
     "max": 18
    },
    {
@@ -94,7 +94,7 @@
     "date": "2026-12-09",
     "titre": "Inspection des grands bâtiments – niveau 2",
     "formateur": "Claude Latulippe",
-    "inscrits": 1,
+    "inscrits": 2,
     "max": 18
    },
    {
@@ -122,7 +122,7 @@
     "date": "2026-12-17",
     "titre": "Toitures : gestion des eaux pluviales",
     "formateur": "Guy Lalonde, Vincent Chartier",
-    "inscrits": 1,
+    "inscrits": 3,
     "max": 22
    }
   ]
@@ -829,7 +829,7 @@
  "note": "Infolettres : relevé automatique aux 30 min (Dialog Insight). Inscriptions et pubs : relevé du 19 nov., 17 h.",
  "ventes": {
   "source": "Coûts et revenus Contech 2026 (SharePoint, Formations › 00-Admin › Budget)",
-  "releve": "23 nov. 2026, 12 h",
+  "releve": "25 nov. 2026, 14 h",
   "note": "Mois complets et année : totaux mensuels du fichier de Ping (lignes « Frais mensuel »). Profit = revenus − honoraires des formateurs − frais Illuxi (1 373,35 $/mois). Semaine ou période libre : additionnées formation par formation. Décembre = inscriptions à ce jour.",
   "budgetMensuel": [
    82160,
@@ -856,8 +856,8 @@
    0,
    38690,
    36745.37,
-   104054.63,
-   19225
+   109959.63,
+   19795.0
   ],
   "budgetAnnuel": 1092260,
   "objectifAnnulation": 873808,
@@ -1509,23 +1509,23 @@
    {
     "date": "2026-11-25",
     "titre": "Courriels efficaces",
-    "participants": 5,
-    "revenus": 3525.0,
-    "profit": 1675.0
+    "participants": 6,
+    "revenus": 4250.0,
+    "profit": 2400.0
    },
    {
     "date": "2026-11-26",
     "titre": "Acoustique et insonorisation",
-    "participants": 6,
-    "revenus": 4200.0,
-    "profit": 2300.0
+    "participants": 12,
+    "revenus": 8550.0,
+    "profit": 6650.0
    },
    {
     "date": "2026-11-27",
     "titre": "Devis sur plan",
-    "participants": 17,
-    "revenus": 6440.0,
-    "profit": 5240.0
+    "participants": 19,
+    "revenus": 7270.0,
+    "profit": 6070.0
    },
    {
     "date": "2026-12-01",
@@ -1537,17 +1537,17 @@
    {
     "date": "2026-12-02",
     "titre": "Projet BIM – marché public",
-    "participants": 1,
-    "revenus": 675.0,
-    "profit": -1125.0,
+    "participants": 0,
+    "revenus": 0.0,
+    "profit": 0.0,
     "annulee": true
    },
    {
     "date": "2026-12-03",
     "titre": "Rédaction de devis – quincaillerie",
-    "participants": 2,
-    "revenus": 1350.0,
-    "profit": -400.0
+    "participants": 3,
+    "revenus": 2075.0,
+    "profit": 325.0
    },
    {
     "date": "2026-12-03",
@@ -1566,7 +1566,7 @@
    {
     "date": "2026-12-09",
     "titre": "Inspection de grands bâtiments – niveau 2",
-    "participants": 1,
+    "participants": 2,
     "revenus": 725.0,
     "profit": -975.0
    },
@@ -1594,9 +1594,9 @@
    {
     "date": "2026-12-17",
     "titre": "Toitures : gestion des eaux pluviales",
-    "participants": 1,
-    "revenus": 725.0,
-    "profit": -375.0
+    "participants": 3,
+    "revenus": 1245.0,
+    "profit": 145.0
    }
   ],
   "fraisMensuel": 1373.35,
