@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-25T14:00:00-05:00",
+ "updated": "2026-11-25T14:15:00-05:00",
  "today": "2026-11-25",
  "seuilConfirmation": 5,
  "kpis": {
@@ -131,7 +131,7 @@
   "campagnes": [
    {
     "nom": "BOF ET TOF – Dernière chance NOV26",
-    "statut": "Active",
+    "statut": "Terminée (24 nov.)",
     "debut": "2026-11-19T06:00",
     "fin": "2026-11-24T23:59",
     "budgetJour": 35,
@@ -146,7 +146,7 @@
    },
    {
     "nom": "BOF ET TOF – TEASER Vendredi fou NOV26",
-    "statut": "Programmée",
+    "statut": "Active",
     "debut": "2026-11-23T06:00",
     "fin": "2026-11-26T23:59",
     "budgetJour": 37.5,
@@ -171,7 +171,7 @@
   ],
   "creatifs": {
    "campagne": "BOF ET TOF – Dernière chance NOV26",
-   "releve": "depuis le début, 17 au 19 nov. (relevé 19 nov., 22 h)",
+   "releve": "campagne complète, 17 au 24 nov. (relevé 25 nov., 14 h)",
    "sujets": [
     {
      "sujet": "Moisissures",
@@ -184,23 +184,23 @@
       {
        "nom": "TOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577753554390696/",
-       "portee": 249,
-       "impressions": 355,
-       "clics": 4,
-       "depense": 7.23,
-       "visites": 4,
-       "paniers": 1,
-       "achats": 0
+       "portee": 1394,
+       "impressions": 3898,
+       "clics": 44,
+       "depense": 66.56,
+       "visites": 40,
+       "paniers": 2,
+       "achats": 1
       },
       {
        "nom": "BOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577751837724201/",
-       "portee": 186,
-       "impressions": 275,
-       "clics": 7,
-       "depense": 5.25,
-       "visites": 4,
-       "paniers": 0,
+       "portee": 1006,
+       "impressions": 2521,
+       "clics": 37,
+       "depense": 42.38,
+       "visites": 28,
+       "paniers": 3,
        "achats": 0
       }
      ]
@@ -216,22 +216,22 @@
       {
        "nom": "TOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577752934390758/",
-       "portee": 49,
-       "impressions": 56,
-       "clics": 0,
-       "depense": 0.42,
-       "visites": 0,
-       "paniers": 0,
+       "portee": 455,
+       "impressions": 767,
+       "clics": 7,
+       "depense": 12.07,
+       "visites": 6,
+       "paniers": 1,
        "achats": 0
       },
       {
        "nom": "BOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577751277724257/",
-       "portee": 73,
-       "impressions": 111,
-       "clics": 2,
-       "depense": 1.28,
-       "visites": 1,
+       "portee": 331,
+       "impressions": 581,
+       "clics": 5,
+       "depense": 9.27,
+       "visites": 3,
        "paniers": 0,
        "achats": 0
       }
@@ -248,24 +248,24 @@
       {
        "nom": "TOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577753241057394/",
-       "portee": 391,
-       "impressions": 529,
-       "clics": 5,
-       "depense": 6.29,
-       "visites": 5,
-       "paniers": 0,
-       "achats": 0
+       "portee": 831,
+       "impressions": 1704,
+       "clics": 17,
+       "depense": 23.16,
+       "visites": 15,
+       "paniers": 4,
+       "achats": 1
       },
       {
        "nom": "BOF",
        "post": "https://www.facebook.com/100064681987485/posts/1577752464390805/",
-       "portee": 181,
-       "impressions": 218,
-       "clics": 4,
-       "depense": 3.1,
-       "visites": 3,
-       "paniers": 0,
-       "achats": 0
+       "portee": 1358,
+       "impressions": 2836,
+       "clics": 46,
+       "depense": 44.7,
+       "visites": 43,
+       "paniers": 12,
+       "achats": 7
       }
      ]
     }
@@ -1885,17 +1885,17 @@
   ]
  },
  "googleAds": {
-  "releve": "21 nov. 2026, 18 h",
-  "periode": "22 oct. au 20 nov. 2026 (30 jours)",
+  "releve": "25 nov. 2026, 14 h",
+  "periode": "26 oct. au 24 nov. 2026 (30 jours)",
   "source": "Google Ads, compte Contech Bâtiment (relevé dans l'interface)",
   "geree": "Hamak",
   "conversion": "Achat formation",
   "totaux": {
-   "impressions": 11789,
-   "clics": 704,
-   "cout": 1594.44,
-   "conversions": 14,
-   "valeur": 7645
+   "impressions": 12445,
+   "clics": 721,
+   "cout": 1578.31,
+   "conversions": 15,
+   "valeur": 8370
   },
   "campagnes": [
    {
@@ -1904,11 +1904,11 @@
     "type": "Recherche",
     "statut": "Diffusion limitée (volume de recherche)",
     "budget": "19 $/j (budget partagé de 38 $/j)",
-    "impressions": 1263,
-    "clics": 260,
-    "cout": 949.73,
+    "impressions": 1240,
+    "clics": 267,
+    "cout": 942.65,
     "conversions": 4.67,
-    "valeur": 5226.67
+    "valeur": 4501.67
    },
    {
     "nom": "Générique (formation bâtiment)",
@@ -1916,9 +1916,9 @@
     "type": "Recherche",
     "statut": "Diffusion limitée (volume de recherche)",
     "budget": "19 $/j (budget partagé de 38 $/j)",
-    "impressions": 946,
-    "clics": 115,
-    "cout": 393.01,
+    "impressions": 918,
+    "clics": 110,
+    "cout": 374.85,
     "conversions": 2.33,
     "valeur": 1278.33
    },
@@ -1928,11 +1928,11 @@
     "type": "Recherche",
     "statut": "Éligible",
     "budget": "6 $/j",
-    "impressions": 422,
-    "clics": 158,
-    "cout": 90.56,
-    "conversions": 7,
-    "valeur": 1865.0
+    "impressions": 434,
+    "clics": 162,
+    "cout": 96.67,
+    "conversions": 8,
+    "valeur": 2590.0
    },
    {
     "nom": "Display (bannières)",
@@ -1940,9 +1940,9 @@
     "type": "Display",
     "statut": "Éligible · certaines annonces refusées",
     "budget": "5 $/j",
-    "impressions": 9158,
-    "clics": 171,
-    "cout": 161.13,
+    "impressions": 9853,
+    "clics": 182,
+    "cout": 164.13,
     "conversions": 0,
     "valeur": 0
    }
@@ -2311,188 +2311,206 @@
   }
  },
  "ventesCanaux": {
-  "releve": "21 nov. 2026, 18 h",
+  "releve": "25 nov. 2026, 14 h",
   "source": "Shopify, rapport « Performance par canal marketing » : ventes nettes avant taxes, attribuées au dernier clic qui n'est pas une visite directe. « Payé » : compte Google Ads.",
   "periodes": [
    {
     "id": "annee",
     "label": "Depuis le 14 janv.",
     "du": "2026-01-14",
-    "au": "2026-11-21",
+    "au": "2026-11-25",
     "total": {
-     "commandes": 732,
-     "ventes": 524094.5
+     "commandes": 753,
+     "ventes": 534159.5
     },
     "canaux": [
      {
       "canal": "Direct (adresse tapée, favoris)",
       "cle": "Direct",
-      "commandes": 188,
-      "ventes": 146726.25
+      "commandes": 189,
+      "ventes": 147451.25
      },
      {
       "canal": "Recherche Google (naturelle)",
       "cle": "Google",
-      "commandes": 133,
-      "ventes": 85435.0
+      "commandes": 135,
+      "ventes": 86885
      },
      {
       "canal": "Infolettres",
       "cle": "newsletter",
-      "commandes": 119,
-      "ventes": 80838.75
+      "commandes": 121,
+      "ventes": 81978.75
      },
      {
       "canal": "Boutique Shopify (outils de la boutique)",
       "cle": "Shopify",
-      "commandes": 74,
-      "ventes": 43690.0
+      "commandes": 80,
+      "ventes": 47420
      },
      {
       "canal": "Non attribué",
       "cle": "Unattributed",
-      "commandes": 55,
-      "ventes": 39067.25
+      "commandes": 60,
+      "ventes": 40517.25
      },
      {
       "canal": "Google Ads (Hamak)",
       "cle": "Google Ads",
-      "commandes": 37,
-      "ventes": 33245.75,
-      "paye": 14237.18
+      "commandes": 38,
+      "ventes": 33260.75,
+      "paye": 14475.97
      },
      {
       "canal": "Lien « formation continue » (siteweb)",
       "cle": "siteweb",
-      "commandes": 44,
-      "ventes": 30595.0
+      "commandes": 45,
+      "ventes": 31010
      },
      {
       "canal": "Recherche Bing",
       "cle": "Bing",
-      "commandes": 25,
-      "ventes": 20110.0
+      "commandes": 27,
+      "ventes": 20525
      },
      {
       "canal": "Office / Outlook",
       "cle": "office",
       "commandes": 11,
-      "ventes": 9690.0
+      "ventes": 9690
      },
      {
       "canal": "static",
       "cle": "static",
       "commandes": 13,
-      "ventes": 9550.0
+      "ventes": 9550
      },
      {
       "canal": "Sites gouvernementaux",
       "cle": "gouv",
       "commandes": 6,
-      "ventes": 4040.0
+      "ventes": 4040
      },
      {
       "canal": "Pubs Meta",
       "cle": "Meta Ads",
       "commandes": 5,
-      "ventes": 2900.0
+      "ventes": 2900
+     },
+     {
+      "canal": "Site Groupe Contex",
+      "cle": "groupecontex",
+      "commandes": 1,
+      "ventes": 2700
+     },
+     {
+      "canal": "Recherche Ecosia",
+      "cle": "Ecosia",
+      "commandes": 2,
+      "ventes": 2465
+     },
+     {
+      "canal": "Facebook (organique)",
+      "cle": "Facebook",
+      "commandes": 2,
+      "ventes": 1450
      }
     ]
    },
    {
     "id": "30j",
     "label": "30 derniers jours",
-    "du": "2026-10-22",
-    "au": "2026-11-20",
+    "du": "2026-10-26",
+    "au": "2026-11-24",
     "total": {
-     "commandes": 82,
-     "ventes": 55560.0
+     "commandes": 94,
+     "ventes": 59460.0
     },
     "canaux": [
      {
       "canal": "Direct (adresse tapée, favoris)",
       "cle": "Direct",
       "commandes": 22,
-      "ventes": 12695.0
-     },
-     {
-      "canal": "Recherche Google (naturelle)",
-      "cle": "Google",
-      "commandes": 12,
-      "ventes": 9855.0
+      "ventes": 13760
      },
      {
       "canal": "Boutique Shopify (outils de la boutique)",
       "cle": "Shopify",
-      "commandes": 11,
-      "ventes": 9405.0
+      "commandes": 15,
+      "ventes": 10695
+     },
+     {
+      "canal": "Recherche Google (naturelle)",
+      "cle": "Google",
+      "commandes": 13,
+      "ventes": 9900
      },
      {
       "canal": "Infolettres",
       "cle": "newsletter",
-      "commandes": 14,
-      "ventes": 8290.0
-     },
-     {
-      "canal": "Google Ads (Hamak)",
-      "cle": "Google Ads",
-      "commandes": 4,
-      "ventes": 3135.0,
-      "paye": 1594.44
+      "commandes": 16,
+      "ventes": 9430
      },
      {
       "canal": "Site Groupe Contex",
       "cle": "groupecontex",
       "commandes": 1,
-      "ventes": 2700.0
+      "ventes": 2700
+     },
+     {
+      "canal": "Google Ads (Hamak)",
+      "cle": "Google Ads",
+      "commandes": 4,
+      "ventes": 2460,
+      "paye": 1578.31
      },
      {
       "canal": "Pubs Meta",
       "cle": "Meta Ads",
       "commandes": 3,
-      "ventes": 2175.0
+      "ventes": 2175
      },
      {
       "canal": "Lien « formation continue » (siteweb)",
       "cle": "siteweb",
       "commandes": 3,
-      "ventes": 1865.0
+      "ventes": 1865
      },
      {
-      "canal": "static",
-      "cle": "static",
-      "commandes": 3,
-      "ventes": 1660.0
+      "canal": "Facebook (organique)",
+      "cle": "Facebook",
+      "commandes": 2,
+      "ventes": 1450
      },
      {
       "canal": "Recherche Ecosia",
       "cle": "Ecosia",
       "commandes": 1,
-      "ventes": 1140.0
+      "ventes": 1140
      },
      {
       "canal": "Recherche Brave",
       "cle": "Brave",
       "commandes": 1,
-      "ventes": 1140.0
-     },
-     {
-      "canal": "Facebook (organique)",
-      "cle": "Facebook",
-      "commandes": 1,
-      "ventes": 725.0
-     },
-     {
-      "canal": "Recherche Bing",
-      "cle": "Bing",
-      "commandes": 2,
-      "ventes": 415.0
+      "ventes": 1140
      },
      {
       "canal": "Non attribué",
       "cle": "Unattributed",
-      "commandes": 4,
-      "ventes": 360.0
+      "commandes": 8,
+      "ventes": 1085
+     },
+     {
+      "canal": "Recherche Bing",
+      "cle": "Bing",
+      "commandes": 3,
+      "ventes": 830
+     },
+     {
+      "canal": "static",
+      "cle": "static",
+      "commandes": 2,
+      "ventes": 830
      }
     ]
    }
@@ -2501,9 +2519,9 @@
    {
     "canal": "Google Ads (Hamak)",
     "campagne": "Toutes les campagnes Google",
-    "commandes": 37,
-    "ventes": 33245.75,
-    "paye": 14237.18,
+    "commandes": 38,
+    "ventes": 33260.75,
+    "paye": 14475.97,
     "note": "Google ne transmet pas le nom de la campagne à la boutique (suivi par gclid) : le détail par campagne Google vient du compte Google Ads."
    },
    {
@@ -2835,7 +2853,7 @@
   "budgetSemaine": "Budget pub de novembre : 5 000 $. Déjà engagé environ 2 600 $ (Google Ads 1 594 $ sur 30 jours; Meta formations environ 1 000 $ avec les campagnes Dernière chance, Teaser et Promo Vendredi fou déjà programmées). Ce plan ajoute environ 370 $ de Meta : on reste sous le budget."
  },
  "budgetMarketing": {
-  "releve": "21 nov. 2026, 18 h",
+  "releve": "25 nov. 2026, 14 h",
   "source": "Coûts et revenus Contech 2026 (SharePoint), onglet « Coût Marketing » : budget 5 000 $/mois publicité + 1 500 $/mois médias sociaux.",
   "fichier": "https://groupecontex.sharepoint.com/sites/GroupeContex/Shared Documents/Contech Bâtiment/Formations/00-Admin/Budget/2026/Coûts et revenus Contech 2026.xlsx",
   "annuel": 78000.0,
@@ -2844,8 +2862,8 @@
   "depenses": [
    {
     "poste": "Google Ads (Hamak) · dépense média",
-    "montant": 14237.18,
-    "source": "Compte Google Ads, 14 janv. au 20 nov."
+    "montant": 14475.97,
+    "source": "Compte Google Ads, 14 janv. au 25 nov."
    },
    {
     "poste": "Pubs Meta formations",
@@ -3352,7 +3370,7 @@
   ]
  },
  "ventesSemainesCanaux": {
-  "releve": "22 nov. 2026, 17 h",
+  "releve": "25 nov. 2026, 14 h",
   "source": "Shopify, rapport « Performance par canal marketing » : ventes nettes avant taxes, une semaine = lundi au dimanche, attribuées au dernier clic qui n'est pas une visite directe. Les remboursements sont déduits du canal de la vente d'origine.",
   "semaines": [
    {
@@ -3385,8 +3403,7 @@
       "ventes": -310.0,
       "commandes": 1
      }
-    ],
-    "enCours": false
+    ]
    },
    {
     "lundi": "2026-10-05",
@@ -3438,8 +3455,7 @@
       "ventes": 725.0,
       "commandes": 1
      }
-    ],
-    "enCours": false
+    ]
    },
    {
     "lundi": "2026-10-12",
@@ -3476,8 +3492,7 @@
       "ventes": 415.0,
       "commandes": 1
      }
-    ],
-    "enCours": false
+    ]
    },
    {
     "lundi": "2026-10-19",
@@ -3524,8 +3539,7 @@
       "ventes": -415.0,
       "commandes": 0
      }
-    ],
-    "enCours": false
+    ]
    },
    {
     "lundi": "2026-10-26",
@@ -3582,8 +3596,7 @@
       "ventes": 725.0,
       "commandes": 2
      }
-    ],
-    "enCours": false
+    ]
    },
    {
     "lundi": "2026-11-02",
@@ -3625,8 +3638,7 @@
       "ventes": 360.0,
       "commandes": 1
      }
-    ],
-    "enCours": false
+    ]
    },
    {
     "lundi": "2026-11-09",
@@ -3673,8 +3685,7 @@
       "ventes": -415.0,
       "commandes": 0
      }
-    ],
-    "enCours": false
+    ]
    },
    {
     "lundi": "2026-11-16",
@@ -3719,6 +3730,58 @@
      {
       "canal": "Google",
       "ventes": 415.0,
+      "commandes": 1
+     }
+    ]
+   },
+   {
+    "lundi": "2026-11-23",
+    "ventes": 9650.0,
+    "commandes": 20,
+    "canaux": [
+     {
+      "canal": "Shopify",
+      "ventes": 3730.0,
+      "commandes": 6
+     },
+     {
+      "canal": "Unattributed",
+      "ventes": 1450.0,
+      "commandes": 5
+     },
+     {
+      "canal": "Google",
+      "ventes": 1450.0,
+      "commandes": 2
+     },
+     {
+      "canal": "newsletter",
+      "ventes": 1140.0,
+      "commandes": 2
+     },
+     {
+      "canal": "Facebook",
+      "ventes": 725.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Direct",
+      "ventes": 725.0,
+      "commandes": 1
+     },
+     {
+      "canal": "siteweb",
+      "ventes": 415.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Google Ads",
+      "ventes": 15.0,
+      "commandes": 1
+     },
+     {
+      "canal": "Bing",
+      "ventes": 0.0,
       "commandes": 1
      }
     ],
