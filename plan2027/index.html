@@ -14,7 +14,7 @@ h1,h2,h3{font-family:M,H,sans-serif;line-height:1.1;margin:0}
 h1{font-size:clamp(30px,5vw,46px)}h2{font-size:clamp(23px,3.4vw,30px);margin:46px 0 6px}h3{font-size:19px;margin-bottom:6px}
 .o{color:var(--y)}.k{font:700 12px H;letter-spacing:.16em;text-transform:uppercase;color:var(--mu)}
 .lead{font-size:18px;max-width:780px;margin:10px 0 0}
-.card{background:var(--ca);border:1px solid var(--li);border-bottom:5px solid var(--y);border-radius:10px;padding:18px 20px;margin-top:14px}
+.card{min-width:0;background:var(--ca);border:1px solid var(--li);border-bottom:5px solid var(--y);border-radius:10px;padding:18px 20px;margin-top:14px}
 .g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px}
 .g3{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
 ul{margin:6px 0 0;padding-left:20px}li{margin:4px 0}
@@ -30,16 +30,16 @@ th{font:700 12px H;letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
 nav.som{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
 nav.som a{font:700 13px H;color:var(--k);text-decoration:none;background:var(--ca);border:1px solid var(--li);border-radius:20px;padding:6px 12px}
 nav.som a.m{background:var(--y);color:var(--k);border-color:var(--y)}
-.mois{display:grid;grid-template-columns:150px 1fr;gap:0;background:var(--ca);border:1px solid var(--li);border-radius:10px;margin-top:16px;overflow:hidden}
+.mois{display:grid;grid-template-columns:170px minmax(0,1fr);gap:0;background:var(--ca);border:1px solid var(--li);border-radius:10px;margin-top:16px;overflow:hidden}
 .mois>.mh{background:#ECE6DB;color:var(--k);padding:18px 16px;border-right:4px solid var(--y)}
-.mois>.mh b{font-family:M;font-size:26px;display:block;line-height:1}
+.mois>.mh b{font-family:M;font-size:22px;display:block;line-height:1.1;overflow-wrap:anywhere}
 .mois>.mh .ph{display:inline-block;margin-top:10px;font:700 11px H;letter-spacing:.1em;text-transform:uppercase;background:var(--y);color:var(--k);padding:3px 7px;border-radius:4px}
 .mois>.mh .pct{font:700 12px H;color:var(--mu);margin-top:12px;display:block}
-.mois>.mb{padding:16px 20px}
+.mois>.mb{padding:16px 20px;min-width:0}
 .mois .obj{font-weight:700;font-size:17px}
 .mois .dates{margin-top:8px;font-size:14px;color:var(--mu)}
-.mois table td:first-child{white-space:nowrap;font-weight:700;width:120px}
-.mois table td.q{white-space:nowrap;width:140px;font-size:14px}
+.mois table td:first-child{font-weight:700;width:110px}
+.mois table td.q{width:130px;font-size:14px}
 .mesure{margin-top:10px;font-size:14px;background:#F7F3ED;border-radius:6px;padding:8px 12px}
 @media(max-width:700px){.mois{grid-template-columns:1fr}.mois table td.q,.mois table td:first-child{white-space:normal}}
 svg text{font-family:H,Helvetica,Arial,sans-serif}
