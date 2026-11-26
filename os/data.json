@@ -278,7 +278,7 @@
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "envoyes": 19682,
-    "ouverture": 29.1,
+    "ouverture": 29.4,
     "clic": 3.8,
     "desabonnements": 18
    },
@@ -378,9 +378,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 30.2,
+   "ouverture": 30.4,
    "clics": 3.9,
-   "ctor": 12.8,
+   "ctor": 12.7,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -396,7 +396,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-25T17:51-05:00",
+  "releve": "2026-11-25T22:00-05:00",
   "alertes": [],
   "tous": [
    {
@@ -405,7 +405,7 @@
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "categorie": "Formations",
     "envoyes": 19682,
-    "ouverture": 29.1,
+    "ouverture": 29.4,
     "clic": 3.8,
     "desabonnements": 18,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2716/lfHyft/hebdo24-intro-anim-v5.gif",
