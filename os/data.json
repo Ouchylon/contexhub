@@ -278,7 +278,7 @@
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "envoyes": 19682,
-    "ouverture": 29.4,
+    "ouverture": 29.9,
     "clic": 3.8,
     "desabonnements": 18
    },
@@ -286,7 +286,7 @@
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "envoyes": 19730,
-    "ouverture": 31.3,
+    "ouverture": 31.4,
     "clic": 4.0,
     "desabonnements": 28
    },
@@ -294,7 +294,7 @@
     "date": "2026-11-17",
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "envoyes": 19762,
-    "ouverture": 33.0,
+    "ouverture": 33.1,
     "clic": 4.3,
     "desabonnements": 28
    },
@@ -378,9 +378,9 @@
   },
   "sept_jours": {
    "livraison": 99.7,
-   "ouverture": 30.4,
+   "ouverture": 30.6,
    "clics": 3.9,
-   "ctor": 12.7,
+   "ctor": 12.6,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -396,7 +396,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-25T22:00-05:00",
+  "releve": "2026-11-26T03:09-05:00",
   "alertes": [],
   "tous": [
    {
@@ -405,7 +405,7 @@
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "categorie": "Formations",
     "envoyes": 19682,
-    "ouverture": 29.4,
+    "ouverture": 29.9,
     "clic": 3.8,
     "desabonnements": 18,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2716/lfHyft/hebdo24-intro-anim-v5.gif",
@@ -417,7 +417,7 @@
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "categorie": "Formations",
     "envoyes": 19730,
-    "ouverture": 31.3,
+    "ouverture": 31.4,
     "clic": 4.0,
     "desabonnements": 28,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
@@ -429,7 +429,7 @@
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "categorie": "Formations",
     "envoyes": 19762,
-    "ouverture": 33.0,
+    "ouverture": 33.1,
     "clic": 4.3,
     "desabonnements": 28,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2665/IGwG33/lancement-hp2027-entete-v3.gif",
