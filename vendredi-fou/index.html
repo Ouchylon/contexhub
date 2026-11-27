@@ -115,6 +115,20 @@ function render(D){
    g.innerHTML='<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline"><b style="font-size:17px">Total de la promo 2025 à battre : '+money(tot5)+'</b><span style="font-size:15px">2026 : <b>'+money(c6.ht)+'</b> ('+Math.round(c6.ht/tot5*100)+' %) · '+(reste>0?'il reste <b>'+money(reste)+'</b> pour dépasser 2025':'<b style="color:#2e7d32">2025 est dépassé de '+money(c6.ht-tot5)+'</b>')+'</span></div>'+
    '<div style="margin-top:12px;height:16px;background:#ece6db;border-radius:8px;overflow:hidden"><div style="height:100%;width:'+pr+'%;background:var(--or)"></div></div>'+
    '<p style="margin:8px 0 0;font-size:13px;color:#6b6b6b">2025 : vendredi 28 nov. au lundi 1er déc. · '+int(totc5)+' commandes · '+int(totq5)+' inscriptions · '+money(tott5)+' avec taxes. Le Cyber lundi avait fait 46 % du total.</p>'; }
+ { const DT=['27 nov.','28 nov.','29 nov.','30 nov.'], DT5=['28 nov. 2025','29 nov. 2025','30 nov. 2025','1er déc. 2025'];
+   let w=document.getElementById('jcards'); if(!w){w=document.createElement('div');w.id='jcards';(document.getElementById('goal')||document.getElementById('tiles')).after(w);}
+   w.style.cssText='display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:16px 0 0';
+   w.innerHTML=[0,1,2,3].map(i=>{const a=i*24*H,b=a+24*H,lim=Math.min(b,cut);
+     const s5=k=>sum(P5,k,h=>h.o>=a&&h.o<b), s6=k=>sum(P6,k,h=>h.o>=a&&h.o<b), s5h=k=>sum(P5,k,h=>h.o>=a&&h.o<lim), s6h=k=>sum(P6,k,h=>h.o>=a&&h.o<lim);
+     const etat=now<a?'avenir':now<b?'encours':'fini';
+     const e=etat==='avenir'?null:etat==='encours'?pct(s6h('ht'),s5h('ht')):pct(s6('ht'),s5('ht'));
+     const bord=etat==='encours'?'2px solid var(--or)':'1px solid rgba(0,0,0,.08)';
+     const tag=etat==='avenir'?'<span style="color:#8a8a8a">à venir</span>':etat==='encours'?'<span style="color:var(--or)">en cours</span>':'<span style="color:#2e7d32">terminé</span>';
+     const v26=etat==='avenir'?'<p style="margin:6px 0 0;font-size:22px;font-weight:700;color:#bdb6aa">—</p><p style="margin:2px 0 0;font-size:13px;color:#8a8a8a">Les chiffres 2026 s\'afficheront ici le '+DT[i]+'</p>'
+       :'<p style="margin:6px 0 0;font-size:26px;font-weight:800">'+money(s6('ht'))+' <span class="'+cls(e)+'" style="font-size:15px">'+fpct(e)+'</span></p><p style="margin:2px 0 0;font-size:13px">'+int(s6('commandes'))+' commandes · '+int(s6('qte'))+' inscriptions'+(etat==='encours'?'<br><span style="color:#6b6b6b">Heures complètes : '+money(s6h('ht'))+' vs '+money(s5h('ht'))+' en 2025</span>':'')+'</p>';
+     return '<div style="background:#fff;border:'+bord+';border-radius:14px;padding:16px 18px"><div style="display:flex;justify-content:space-between;align-items:baseline"><b style="font-size:16px">'+JOURS[i]+(i===3?' · Cyber lundi':'')+'</b><span style="font-size:12px;text-transform:uppercase;letter-spacing:.08em">'+tag+'</span></div>'+
+       '<p style="margin:2px 0 0;font-size:12px;color:#8a8a8a">'+DT[i]+' 2026</p>'+v26+
+       '<div style="margin-top:12px;padding-top:10px;border-top:1px dashed rgba(0,0,0,.15)"><p style="margin:0;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:#6b6b6b">2025 · '+DT5[i]+'</p><p style="margin:4px 0 0;font-size:18px;font-weight:700;color:#6b6b6b">'+money(s5('ht'))+'</p><p style="margin:2px 0 0;font-size:13px;color:#6b6b6b">'+int(s5('commandes'))+' commandes · '+int(s5('qte'))+' inscriptions · '+Math.round(s5('ht')/tot5*100)+' % de la promo</p></div></div>';}).join(''); }
  chart(P6,P5,now);
  // jour par jour
  const rows=[0,1,2,3].map(i=>{const a=i*24*H,b=a+24*H;
