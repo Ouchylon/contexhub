@@ -277,8 +277,8 @@
    {
     "date": "2026-11-26",
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
-    "envoyes": 19649,
-    "ouverture": 23.2,
+    "envoyes": 19650,
+    "ouverture": 25.8,
     "clic": 4.0,
     "desabonnements": 22
    },
@@ -286,7 +286,7 @@
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "envoyes": 19682,
-    "ouverture": 30.7,
+    "ouverture": 30.8,
     "clic": 3.8,
     "desabonnements": 20
    },
@@ -377,8 +377,8 @@
    "releve": "19 nov., 17 h"
   },
   "sept_jours": {
-   "livraison": 99.7,
-   "ouverture": 28.5,
+   "livraison": 99.6,
+   "ouverture": 28.3,
    "clics": 3.9,
    "ctor": 13.8,
    "desabonnements": 0.1
@@ -396,7 +396,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-26T21:45-05:00",
+  "releve": "2026-11-27T03:20-05:00",
   "alertes": [],
   "tous": [
    {
@@ -404,8 +404,8 @@
     "date": "2026-11-26",
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
     "categorie": "Expos",
-    "envoyes": 19649,
-    "ouverture": 23.2,
+    "envoyes": 19650,
+    "ouverture": 25.8,
     "clic": 4.0,
     "desabonnements": 22,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2741/Wjkcmf/vf26-avant-gout-site-portable-v5.gif",
@@ -417,7 +417,7 @@
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "categorie": "Formations",
     "envoyes": 19682,
-    "ouverture": 30.7,
+    "ouverture": 30.8,
     "clic": 3.8,
     "desabonnements": 20,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2716/lfHyft/hebdo24-intro-anim-v5.gif",
