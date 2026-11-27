@@ -107,6 +107,12 @@ function render(D){
   ['Objectif : battre 2025',Math.round(c6.ht/tot5*100)+' %','Total de la promo 2025 (4 jours) : '+money(tot5)+'. Le lundi (Cyber lundi) avait fait 46 % du total.']
  ];
  $('#tiles').innerHTML=tiles.map(t=>'<div class="tile"><p class="k">'+t[0]+'</p><p class="v">'+t[1]+'</p><p class="n">'+t[2]+'</p></div>').join('');
+ { const pr=Math.min(100,c6.ht/tot5*100), reste=Math.max(0,tot5-c6.ht);
+   let g=document.getElementById('goal'); if(!g){g=document.createElement('div');g.id='goal';document.getElementById('tiles').after(g);}
+   g.style.cssText='margin:16px 0 0;padding:18px 20px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:14px';
+   g.innerHTML='<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline"><b style="font-size:17px">Total de la promo 2025 à battre : '+money(tot5)+'</b><span style="font-size:15px">2026 : <b>'+money(c6.ht)+'</b> ('+Math.round(c6.ht/tot5*100)+' %) · '+(reste>0?'il reste <b>'+money(reste)+'</b> pour dépasser 2025':'<b style="color:#2e7d32">2025 est dépassé de '+money(c6.ht-tot5)+'</b>')+'</span></div>'+
+   '<div style="margin-top:12px;height:16px;background:#ece6db;border-radius:8px;overflow:hidden"><div style="height:100%;width:'+pr+'%;background:var(--or)"></div></div>'+
+   '<p style="margin:8px 0 0;font-size:13px;color:#6b6b6b">2025 : vendredi 28 nov. au lundi 1er déc., 206 commandes. Le Cyber lundi avait fait 46 % du total.</p>'; }
  chart(P6,P5,now);
  // jour par jour
  const rows=[0,1,2,3].map(i=>{const a=i*24*H,b=a+24*H;
