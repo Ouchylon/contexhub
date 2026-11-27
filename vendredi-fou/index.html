@@ -96,11 +96,13 @@ function render(D){
  const d=new Date(R);
  const hh=d.toLocaleTimeString('fr-CA',{hour:'numeric',minute:'2-digit',timeZone:'America/Toronto'}).replace(':',' h ').replace(' h 00',' h');
  $('#releve').textContent='Relevé à '+hh+' · '+d.toLocaleDateString('fr-CA',{weekday:'long',day:'numeric',month:'long',timeZone:'America/Toronto'});
- const p=pct(t6.ht,t5.ht), pc=pct(c6.ht,c5.ht);
+ // comparaison juste : heures complètes seulement, dans les deux années
+ const f6={ht:sum(P6,'ht',h=>h.o>=d0&&h.o<cut),c:sum(P6,'commandes',h=>h.o>=d0&&h.o<cut)}, g6=sum(P6,'ht',h=>h.o<cut);
+ const p=pct(f6.ht,t5.ht), pc=pct(g6,c5.ht);
  $('#take').innerHTML=JOURS[day]+' à '+hh+' : <b>'+money(t6.ht)+'</b> en ventes nettes et <b>'+int(t6.c)+' commandes</b>, soit <b class="'+cls(p)+'">'+fpct(p)+'</b> par rapport à la même heure l\'an passé. Depuis le début de la promo, on a déjà fait <b>'+Math.round(c6.ht/tot5*100)+' %</b> du total de la promo 2025 ('+money(tot5)+').';
  const tiles=[
   [JOURS[day]+' · ventes nettes',money(t6.ht),'<span class="'+cls(p)+'">'+fpct(p)+'</span> vs '+money(t5.ht)+' en 2025 à la même heure. La journée complète de 2025 : '+money(jour5)+'.'],
-  [JOURS[day]+' · commandes',int(t6.c),'<span class="'+cls(pct(t6.c,t5.c))+'">'+fpct(pct(t6.c,t5.c))+'</span> vs '+int(t5.c)+' en 2025 à la même heure · '+int(t6.q)+' inscriptions.'],
+  [JOURS[day]+' · commandes',int(t6.c),'<span class="'+cls(pct(f6.c,t5.c))+'">'+fpct(pct(f6.c,t5.c))+'</span> vs '+int(t5.c)+' en 2025 à la même heure · '+int(t6.q)+' inscriptions.'],
   ['Cumul de la promo',money(c6.ht),'<span class="'+cls(pc)+'">'+fpct(pc)+'</span> vs '+money(c5.ht)+' au même moment en 2025 · '+int(c6.c)+' commandes · '+money(c6.ttc)+' avec taxes.'],
   ['Objectif : battre 2025',Math.round(c6.ht/tot5*100)+' %','Total de la promo 2025 (4 jours) : '+money(tot5)+'. Le lundi (Cyber lundi) avait fait 46 % du total.']
  ];
@@ -150,4 +152,4 @@ charger(); setInterval(()=>{if(!document.hidden)charger();},60000);
 addEventListener('resize',()=>{if(D)render(D);});
 })();
 </script>
-</body></html>
+<script>(function(){function h(){try{parent.postMessage({vfH:document.documentElement.scrollHeight},"*")}catch(e){}}addEventListener("load",h);addEventListener("resize",h);setInterval(h,2000);})();</script></body></html>
