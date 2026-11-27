@@ -303,7 +303,7 @@
     "date": "2026-11-27",
     "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
     "envoyes": 19627,
-    "ouverture": 21.2,
+    "ouverture": 22.1,
     "clic": 1.6,
     "desabonnements": 22
    },
@@ -311,7 +311,7 @@
     "date": "2026-11-26",
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
     "envoyes": 19651,
-    "ouverture": 27.1,
+    "ouverture": 27.3,
     "clic": 4.1,
     "desabonnements": 24
    },
@@ -403,9 +403,9 @@
   },
   "sept_jours": {
    "livraison": 99.6,
-   "ouverture": 26.5,
+   "ouverture": 26.8,
    "clics": 3.2,
-   "ctor": 12.0,
+   "ctor": 11.9,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -421,7 +421,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-27T14:52-05:00",
+  "releve": "2026-11-27T17:33-05:00",
   "alertes": [],
   "tous": [
    {
@@ -430,7 +430,7 @@
     "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
     "categorie": "Formations",
     "envoyes": 19627,
-    "ouverture": 21.2,
+    "ouverture": 22.1,
     "clic": 1.6,
     "desabonnements": 22,
     "vignette": null,
@@ -442,7 +442,7 @@
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
     "categorie": "Expos",
     "envoyes": 19651,
-    "ouverture": 27.1,
+    "ouverture": 27.3,
     "clic": 4.1,
     "desabonnements": 24,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2741/Wjkcmf/vf26-avant-gout-site-portable-v5.gif",
@@ -592,7 +592,7 @@
     "nom": "Expo MTL 5 nov. 2026 (J-7)",
     "categorie": "Expos",
     "envoyes": 18643,
-    "ouverture": 30.2,
+    "ouverture": 30.3,
     "clic": 1.4,
     "desabonnements": 25,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2456/E9aYDi/expos-contech-2026-mtl-600x240.jpg",
@@ -681,7 +681,7 @@
     "nom": "Hebdo Formations – 20 oct. 2026",
     "categorie": "Formations",
     "envoyes": 19058,
-    "ouverture": 29.4,
+    "ouverture": 29.5,
     "clic": 1.2,
     "desabonnements": 19,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2532/Nj29J4/nl20oct-banniere-inspection-generale-5nov-v4.jpg",
@@ -1702,6 +1702,16 @@
    "mode": "manuel",
    "quand": "2026-11-21T18:15",
    "source": "Meta Business Suite · LinkedIn"
+  },
+  "ventesCanaux": {
+   "mode": "auto",
+   "src": "parcours",
+   "source": "Shopify (API)"
+  },
+  "parcours": {
+   "mode": "auto",
+   "src": "parcours",
+   "source": "Shopify + Google Analytics + Search Console (API)"
   }
  },
  "contenus": {
@@ -2360,266 +2370,166 @@
   }
  },
  "ventesCanaux": {
-  "releve": "25 nov. 2026, 14 h",
-  "source": "Shopify, rapport « Performance par canal marketing » : ventes nettes avant taxes, attribuées au dernier clic qui n'est pas une visite directe. « Payé » : compte Google Ads.",
+  "releve": "27 nov. 2026, 17 h 38",
+  "source": "Shopify (API, parcours des commandes) : ventes nettes avant taxes, attribuées au dernier clic qui n'est pas une visite directe. Mis à jour automatiquement.",
   "periodes": [
    {
     "id": "annee",
-    "label": "Depuis le 14 janv.",
-    "du": "2026-01-14",
-    "au": "2026-11-25",
+    "label": "Depuis le 1er janv.",
+    "du": "2026-01-01",
+    "au": "2026-11-27",
     "total": {
-     "commandes": 753,
-     "ventes": 534159.5
+     "commandes": 239,
+     "ventes": 166885.0
     },
     "canaux": [
      {
-      "canal": "Direct (adresse tapée, favoris)",
-      "cle": "Direct",
-      "commandes": 189,
-      "ventes": 147451.25
-     },
-     {
-      "canal": "Recherche Google (naturelle)",
-      "cle": "Google",
-      "commandes": 135,
-      "ventes": 86885
-     },
-     {
       "canal": "Infolettres",
       "cle": "newsletter",
-      "commandes": 121,
-      "ventes": 81978.75
+      "commandes": 71,
+      "ventes": 46237.5
      },
      {
-      "canal": "Boutique Shopify (outils de la boutique)",
-      "cle": "Shopify",
-      "commandes": 80,
-      "ventes": 47420
-     },
-     {
-      "canal": "Non attribué",
-      "cle": "Unattributed",
+      "canal": "Recherche (naturelle)",
+      "cle": "Google",
       "commandes": 60,
-      "ventes": 40517.25
+      "ventes": 44925.0
      },
      {
-      "canal": "Google Ads (Hamak)",
-      "cle": "Google Ads",
-      "commandes": 38,
-      "ventes": 33260.75,
-      "paye": 14475.97
-     },
-     {
-      "canal": "Lien « formation continue » (siteweb)",
+      "canal": "Sites référents",
       "cle": "siteweb",
       "commandes": 45,
-      "ventes": 31010
+      "ventes": 36115.0
      },
      {
-      "canal": "Recherche Bing",
-      "cle": "Bing",
-      "commandes": 27,
-      "ventes": 20525
-     },
-     {
-      "canal": "Office / Outlook",
-      "cle": "office",
-      "commandes": 11,
-      "ventes": 9690
-     },
-     {
-      "canal": "static",
-      "cle": "static",
-      "commandes": 13,
-      "ventes": 9550
-     },
-     {
-      "canal": "Sites gouvernementaux",
-      "cle": "gouv",
-      "commandes": 6,
-      "ventes": 4040
+      "canal": "Direct (adresse tapée, favoris)",
+      "cle": "Direct",
+      "commandes": 57,
+      "ventes": 35567.5
      },
      {
       "canal": "Pubs Meta",
       "cle": "Meta Ads",
       "commandes": 5,
-      "ventes": 2900
+      "ventes": 3315.0
      },
      {
-      "canal": "Site Groupe Contex",
-      "cle": "groupecontex",
-      "commandes": 1,
-      "ventes": 2700
-     },
-     {
-      "canal": "Recherche Ecosia",
-      "cle": "Ecosia",
-      "commandes": 2,
-      "ventes": 2465
-     },
-     {
-      "canal": "Facebook (organique)",
+      "canal": "Réseaux sociaux (organique)",
       "cle": "Facebook",
-      "commandes": 2,
-      "ventes": 1450
+      "commandes": 1,
+      "ventes": 725.0
      }
     ]
    },
    {
     "id": "30j",
     "label": "30 derniers jours",
-    "du": "2026-10-26",
-    "au": "2026-11-24",
+    "du": "2026-10-28",
+    "au": "2026-11-27",
     "total": {
-     "commandes": 94,
-     "ventes": 59460.0
+     "commandes": 174,
+     "ventes": 114500.0
     },
     "canaux": [
      {
-      "canal": "Direct (adresse tapée, favoris)",
-      "cle": "Direct",
-      "commandes": 22,
-      "ventes": 13760
-     },
-     {
-      "canal": "Boutique Shopify (outils de la boutique)",
-      "cle": "Shopify",
-      "commandes": 15,
-      "ventes": 10695
-     },
-     {
-      "canal": "Recherche Google (naturelle)",
-      "cle": "Google",
-      "commandes": 13,
-      "ventes": 9900
-     },
-     {
       "canal": "Infolettres",
       "cle": "newsletter",
-      "commandes": 16,
-      "ventes": 9430
+      "commandes": 67,
+      "ventes": 43647.5
      },
      {
-      "canal": "Site Groupe Contex",
-      "cle": "groupecontex",
-      "commandes": 1,
-      "ventes": 2700
+      "canal": "Recherche (naturelle)",
+      "cle": "Google",
+      "commandes": 36,
+      "ventes": 23940.0
      },
      {
-      "canal": "Google Ads (Hamak)",
-      "cle": "Google Ads",
-      "commandes": 4,
-      "ventes": 2460,
-      "paye": 1578.31
+      "canal": "Sites référents",
+      "cle": "siteweb",
+      "commandes": 29,
+      "ventes": 22385.0
+     },
+     {
+      "canal": "Direct (adresse tapée, favoris)",
+      "cle": "Direct",
+      "commandes": 37,
+      "ventes": 20902.5
      },
      {
       "canal": "Pubs Meta",
       "cle": "Meta Ads",
-      "commandes": 3,
-      "ventes": 2175
+      "commandes": 4,
+      "ventes": 2900.0
      },
      {
-      "canal": "Lien « formation continue » (siteweb)",
-      "cle": "siteweb",
-      "commandes": 3,
-      "ventes": 1865
-     },
-     {
-      "canal": "Facebook (organique)",
+      "canal": "Réseaux sociaux (organique)",
       "cle": "Facebook",
-      "commandes": 2,
-      "ventes": 1450
-     },
-     {
-      "canal": "Recherche Ecosia",
-      "cle": "Ecosia",
       "commandes": 1,
-      "ventes": 1140
+      "ventes": 725.0
+     }
+    ]
+   },
+   {
+    "id": "7j",
+    "label": "7 derniers jours",
+    "du": "2026-11-20",
+    "au": "2026-11-27",
+    "total": {
+     "commandes": 111,
+     "ventes": 70300.0
+    },
+    "canaux": [
+     {
+      "canal": "Infolettres",
+      "cle": "newsletter",
+      "commandes": 54,
+      "ventes": 36082.5
      },
      {
-      "canal": "Recherche Brave",
-      "cle": "Brave",
+      "canal": "Recherche (naturelle)",
+      "cle": "Google",
+      "commandes": 22,
+      "ventes": 12565.0
+     },
+     {
+      "canal": "Sites référents",
+      "cle": "siteweb",
+      "commandes": 18,
+      "ventes": 11995.0
+     },
+     {
+      "canal": "Direct (adresse tapée, favoris)",
+      "cle": "Direct",
+      "commandes": 16,
+      "ventes": 8932.5
+     },
+     {
+      "canal": "Réseaux sociaux (organique)",
+      "cle": "Facebook",
       "commandes": 1,
-      "ventes": 1140
-     },
-     {
-      "canal": "Non attribué",
-      "cle": "Unattributed",
-      "commandes": 8,
-      "ventes": 1085
-     },
-     {
-      "canal": "Recherche Bing",
-      "cle": "Bing",
-      "commandes": 3,
-      "ventes": 830
-     },
-     {
-      "canal": "static",
-      "cle": "static",
-      "commandes": 2,
-      "ventes": 830
+      "ventes": 725.0
      }
     ]
    }
   ],
   "campagnes": [
    {
-    "canal": "Google Ads (Hamak)",
-    "campagne": "Toutes les campagnes Google",
-    "commandes": 38,
-    "ventes": 33260.75,
-    "paye": 14475.97,
-    "note": "Google ne transmet pas le nom de la campagne à la boutique (suivi par gclid) : le détail par campagne Google vient du compte Google Ads."
+    "canal": "Infolettres",
+    "campagne": "teaser_vendredi_fou_26_11_26",
+    "commandes": 20,
+    "ventes": 15135.0
    },
    {
     "canal": "Infolettres",
-    "campagne": "hebdo_13_01_26",
-    "commandes": 6,
-    "ventes": 7445.0
+    "campagne": "vendredi_fou_27_11_26",
+    "commandes": 26,
+    "ventes": 14305.0
    },
    {
     "canal": "Infolettres",
-    "campagne": "hebdo_28_04_26",
-    "commandes": 6,
-    "ventes": 7240.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_20_01_26",
-    "commandes": 9,
-    "ventes": 6585.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_05_05_26",
-    "commandes": 12,
-    "ventes": 5600.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_10_02_26",
-    "commandes": 5,
-    "ventes": 5340.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_27_01_26",
-    "commandes": 6,
-    "ventes": 4350.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_07_04_26",
-    "commandes": 6,
-    "ventes": 3730.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_21_04_26",
-    "commandes": 5,
-    "ventes": 3420.0
+    "campagne": "hebdo_03_11_26",
+    "commandes": 4,
+    "ventes": 3605.0
    },
    {
     "canal": "Infolettres",
@@ -2629,45 +2539,15 @@
    },
    {
     "canal": "Infolettres",
-    "campagne": "hebdo_03_02_26",
-    "commandes": 5,
-    "ventes": 3005.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_11_08_26",
+    "campagne": "hebdo_27_10_26",
     "commandes": 4,
-    "ventes": 2900.0
+    "ventes": 2217.5
    },
    {
-    "canal": "Infolettres",
-    "campagne": "hebdo_01_09_26",
-    "commandes": 2,
-    "ventes": 2590.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_02_06_26",
-    "commandes": 4,
-    "ventes": 2486.25
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "QC_15_01_26",
-    "commandes": 1,
-    "ventes": 2050.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_17_02_26",
-    "commandes": 7,
-    "ventes": 2025.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_24_03_26",
-    "commandes": 4,
-    "ventes": 1865.0
+    "canal": "Pubs Meta",
+    "campagne": "formation05112026",
+    "commandes": 3,
+    "ventes": 2175.0
    },
    {
     "canal": "Infolettres",
@@ -2677,57 +2557,15 @@
    },
    {
     "canal": "Infolettres",
-    "campagne": "hebdo_18_08_26",
+    "campagne": "hebdo_24_11_26",
     "commandes": 2,
-    "ventes": 1865.0
+    "ventes": 1687.5
    },
    {
     "canal": "Infolettres",
-    "campagne": "hebdo_27_10_26",
+    "campagne": "hebdo_17_11_26",
     "commandes": 3,
-    "ventes": 1555.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_17_03_26",
-    "commandes": 3,
-    "ventes": 1555.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_03_11_26",
-    "commandes": 3,
-    "ventes": 1555.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_03_03_26",
-    "commandes": 2,
-    "ventes": 1450.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_13_10_26",
-    "commandes": 2,
-    "ventes": 1450.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_24_02_26",
-    "commandes": 2,
-    "ventes": 1450.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "VV_15_04_26",
-    "commandes": 1,
-    "ventes": 1450.0
-   },
-   {
-    "canal": "Pubs Meta",
-    "campagne": "formation05112026",
-    "commandes": 2,
-    "ventes": 1450.0
+    "ventes": 1517.5
    },
    {
     "canal": "Infolettres",
@@ -2737,13 +2575,7 @@
    },
    {
     "canal": "Infolettres",
-    "campagne": "hebdo_10_03_26",
-    "commandes": 2,
-    "ventes": 725.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_04_08_26",
+    "campagne": "hebdo_13_10_26",
     "commandes": 1,
     "ventes": 725.0
    },
@@ -2754,52 +2586,16 @@
     "ventes": 725.0
    },
    {
-    "canal": "Pubs Meta",
-    "campagne": "120240737223510302",
+    "canal": "Infolettres",
+    "campagne": "hebdo_19_11_26",
     "commandes": 1,
     "ventes": 725.0
    },
    {
-    "canal": "Infolettres",
-    "campagne": "hebdo_31_03_26",
-    "commandes": 1,
-    "ventes": 675.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_22_09_26",
-    "commandes": 1,
-    "ventes": 415.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_14_04_26",
-    "commandes": 1,
-    "ventes": 415.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_09_06_26",
-    "commandes": 1,
-    "ventes": 415.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "hebdo_16_06_26",
-    "commandes": 1,
-    "ventes": 0.0
-   },
-   {
-    "canal": "Infolettres",
-    "campagne": "Expos 2026",
-    "commandes": 1,
-    "ventes": 0.0
-   },
-   {
     "canal": "Pubs Meta",
-    "campagne": "selectionOCT26",
+    "campagne": "formation27102026",
     "commandes": 1,
-    "ventes": 0.0
+    "ventes": 415.0
    }
   ]
  },
@@ -3921,16 +3717,10 @@
   ]
  },
  "shopify": {
-  "releve": "2026-11-27T14:57-05:00",
+  "releve": "2026-11-27T17:38-05:00",
   "source": "Shopify (API, lecture seule)",
   "note": "Commandes payées, annulations et remboursements déduits. HT = avant taxes.",
   "jours": [
-   {
-    "date": "2026-09-28",
-    "ht": 725.0,
-    "ttc": 833.57,
-    "commandes": 1
-   },
    {
     "date": "2026-09-29",
     "ht": 3420.0,
@@ -4203,27 +3993,27 @@
    },
    {
     "date": "2026-11-27",
-    "ht": 49242.5,
-    "ttc": 56617.05,
-    "commandes": 75
+    "ht": 56030.0,
+    "ttc": 64421.06,
+    "commandes": 87
    }
   ],
   "produits": [
    {
     "titre": "2027-02-03***Mise aux normes des bâtiments existants",
-    "inscriptions": 23
+    "inscriptions": 25
    },
    {
     "titre": "2026-11-03***Quincaillerie électrifiée pour l’implantation d’un contrôle d’accès",
     "inscriptions": 16
    },
    {
-    "titre": "2026-11-27***Devis sur plan",
+    "titre": "2026-12-17***Mécanique des sols",
     "inscriptions": 15
    },
    {
-    "titre": "2026-12-17***Mécanique des sols",
-    "inscriptions": 14
+    "titre": "2026-11-27***Devis sur plan",
+    "inscriptions": 15
    },
    {
     "titre": "2026-11-20***Dommages structuraux",
@@ -4236,6 +4026,10 @@
    {
     "titre": "2027-01-14***Enveloppe du bâtiment : notions fondamentales et critères de performance",
     "inscriptions": 12
+   },
+   {
+    "titre": "2027-01-20***Partie 9: les incontournables",
+    "inscriptions": 10
    },
    {
     "titre": "2026-12-03***Chantier : administration du marché et surveillance des travaux (formation sur 2 jours)",
@@ -4259,19 +4053,23 @@
    },
    {
     "titre": "2027-02-02***Introduction à la structure de bâtiments",
-    "inscriptions": 7
-   },
-   {
-    "titre": "2027-01-20***Partie 9: les incontournables",
-    "inscriptions": 7
-   },
-   {
-    "titre": "2026-12-10***Bâtiment durable, cycle de vie et choix de matériaux",
-    "inscriptions": 7
+    "inscriptions": 8
    },
    {
     "titre": "2026-12-09***Systèmes de murs-rideaux : conception, conformité et performance (Formation sur 2 jours)",
     "inscriptions": 7
+   },
+   {
+    "titre": "2027-05-20***Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
+    "inscriptions": 6
+   },
+   {
+    "titre": "2027-05-27***Programme fonctionnel et technique : fondement essentiel du projet",
+    "inscriptions": 6
+   },
+   {
+    "titre": "2026-12-10***Bâtiment durable, cycle de vie et choix de matériaux",
+    "inscriptions": 6
    },
    {
     "titre": "2026-12-09***Inspection de grands bâtiments – niveau 2 : les pathologies du bâtiment et la Loi 122",
@@ -4294,11 +4092,15 @@
     "inscriptions": 6
    },
    {
-    "titre": "2027-05-20***Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
+    "titre": "2027-02-05***Mezzanines et aires communicantes, en toute conformité",
     "inscriptions": 5
    },
    {
-    "titre": "2027-05-27***Programme fonctionnel et technique : fondement essentiel du projet",
+    "titre": "2027-03-17***Toitures végétalisées : de la conception à la construction (Formation sur 2 jours)",
+    "inscriptions": 5
+   },
+   {
+    "titre": "2027-01-15***Moyens d’évacuation, CCQ 2020",
     "inscriptions": 5
    },
    {
@@ -4318,7 +4120,11 @@
     "inscriptions": 5
    },
    {
-    "titre": "2027-03-17***Toitures végétalisées : de la conception à la construction (Formation sur 2 jours)",
+    "titre": "2027-02-04***Devis sur plan",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2027-03-09***Humidité dans l’enveloppe du bâtiment - Causes, conséquences et prévention",
     "inscriptions": 4
    },
    {
@@ -4330,15 +4136,7 @@
     "inscriptions": 4
    },
    {
-    "titre": "2027-02-05***Mezzanines et aires communicantes, en toute conformité",
-    "inscriptions": 4
-   },
-   {
     "titre": "2027-04-14***Maîtriser les projets de cuisines de la conception à l’installation",
-    "inscriptions": 4
-   },
-   {
-    "titre": "2027-01-15***Moyens d’évacuation, CCQ 2020",
     "inscriptions": 4
    },
    {
@@ -4362,7 +4160,15 @@
     "inscriptions": 4
    },
    {
-    "titre": "2027-03-09***Humidité dans l’enveloppe du bâtiment - Causes, conséquences et prévention",
+    "titre": "2027-02-23***Quincaillerie électrifiée pour l’implantation d’un contrôle d’accès",
+    "inscriptions": 3
+   },
+   {
+    "titre": "2027-05-13***Courriels efficaces : Stratégies de gestion et outils numériques",
+    "inscriptions": 3
+   },
+   {
+    "titre": "2027-03-31***Analyse, conception et mise en œuvre de réparations de béton (niveau 2)",
     "inscriptions": 3
    },
    {
@@ -4378,19 +4184,15 @@
     "inscriptions": 3
    },
    {
+    "titre": "2027-06-15***Inspection, entretien, diagnostic et réparation de béton (niveau 1)",
+    "inscriptions": 2
+   },
+   {
+    "titre": "2027-03-18***Gestion de la maintenance",
+    "inscriptions": 2
+   },
+   {
     "titre": "2027-02-24***Rapport d’expertise et témoignage au tribunal",
-    "inscriptions": 2
-   },
-   {
-    "titre": "2027-05-13***Courriels efficaces : Stratégies de gestion et outils numériques",
-    "inscriptions": 2
-   },
-   {
-    "titre": "2026-06-09***Bâtiments, énergie et climat : comment prioriser les interventions?",
-    "inscriptions": 2
-   },
-   {
-    "titre": "2027-02-23***Quincaillerie électrifiée pour l’implantation d’un contrôle d’accès",
     "inscriptions": 2
    },
    {
@@ -4402,20 +4204,16 @@
     "inscriptions": 2
    },
    {
-    "titre": "2027-02-04***Devis sur plan",
-    "inscriptions": 2
-   },
-   {
-    "titre": "2027-03-31***Analyse, conception et mise en œuvre de réparations de béton (niveau 2)",
-    "inscriptions": 2
-   },
-   {
     "titre": "2026-12-01***Toitures : entretien et maintenance",
     "inscriptions": 2
    },
    {
     "titre": "2026-10-29***Toitures : Matériaux et systèmes",
     "inscriptions": 2
+   },
+   {
+    "titre": "2027-04-02***La force du travail collaboratif",
+    "inscriptions": 1
    },
    {
     "titre": "2027-02-19***Appel d’offres et soumissions : processus efficient et efficace",
@@ -4446,19 +4244,11 @@
     "inscriptions": 1
    },
    {
-    "titre": "2027-06-15***Inspection, entretien, diagnostic et réparation de béton (niveau 1)",
-    "inscriptions": 1
-   },
-   {
     "titre": "2027-02-09***Art de négocier - Niveau 2",
     "inscriptions": 1
    },
    {
     "titre": "2026-12-04***Murs végétaux : design et intégration",
-    "inscriptions": 1
-   },
-   {
-    "titre": "2027-03-18***Gestion de la maintenance",
     "inscriptions": 1
    },
    {
@@ -4480,6 +4270,426 @@
    {
     "titre": "2026-10-01***Gestion de projet appliquée",
     "inscriptions": 1
+   }
+  ]
+ },
+ "parcours": {
+  "releve": "2026-11-27T17:38-05:00",
+  "source": "Shopify (parcours client des commandes, lecture seule)",
+  "depuis": "2026-01-01",
+  "commandes": 239,
+  "sansParcours": 12,
+  "premiereVisite": [
+   {
+    "canal": "Meta (pub)",
+    "commandes": 7,
+    "inscriptions": 7,
+    "ht": 4765.0
+   },
+   {
+    "canal": "Courriel",
+    "commandes": 76,
+    "inscriptions": 125,
+    "ht": 51642.5
+   },
+   {
+    "canal": "Recherche Google (SEO)",
+    "commandes": 65,
+    "inscriptions": 94,
+    "ht": 49260.0
+   },
+   {
+    "canal": "Réseaux sociaux (organique)",
+    "commandes": 1,
+    "inscriptions": 1,
+    "ht": 725.0
+   },
+   {
+    "canal": "Sites référents",
+    "commandes": 21,
+    "inscriptions": 28,
+    "ht": 15807.5
+   },
+   {
+    "canal": "Direct / inconnu",
+    "commandes": 69,
+    "inscriptions": 98,
+    "ht": 44685.0
+   }
+  ],
+  "derniereVisite": [
+   {
+    "canal": "Meta (pub)",
+    "commandes": 4,
+    "inscriptions": 4,
+    "ht": 2900.0
+   },
+   {
+    "canal": "Courriel",
+    "commandes": 57,
+    "inscriptions": 86,
+    "ht": 34282.5
+   },
+   {
+    "canal": "Recherche Google (SEO)",
+    "commandes": 40,
+    "inscriptions": 56,
+    "ht": 29480.0
+   },
+   {
+    "canal": "Sites référents",
+    "commandes": 43,
+    "inscriptions": 66,
+    "ht": 33000.0
+   },
+   {
+    "canal": "Direct / inconnu",
+    "commandes": 95,
+    "inscriptions": 141,
+    "ht": 67222.5
+   }
+  ],
+  "parMois": [
+   {
+    "mois": "2026-09",
+    "canaux": {
+     "Direct / inconnu": 4,
+     "Sites référents": 1,
+     "Recherche Google (SEO)": 1
+    }
+   },
+   {
+    "mois": "2026-10",
+    "canaux": {
+     "Recherche Google (SEO)": 16,
+     "Direct / inconnu": 29,
+     "Sites référents": 15,
+     "Courriel": 6,
+     "Meta (pub)": 1
+    }
+   },
+   {
+    "mois": "2026-11",
+    "canaux": {
+     "Recherche Google (SEO)": 23,
+     "Meta (pub)": 3,
+     "Direct / inconnu": 62,
+     "Sites référents": 27,
+     "Courriel": 51
+    }
+   }
+  ],
+  "delaiMedianJours": 1,
+  "visitesMedianes": 2,
+  "campagnes": [
+   {
+    "canal": "Courriel",
+    "campagne": "vendredi_fou_27_11_26",
+    "commandes": 23
+   },
+   {
+    "canal": "Courriel",
+    "campagne": "teaser_vendredi_fou_26_11_26",
+    "commandes": 15
+   },
+   {
+    "canal": "Sites référents",
+    "campagne": "Contech",
+    "commandes": 8
+   },
+   {
+    "canal": "Courriel",
+    "campagne": "hebdo_11_11_26",
+    "commandes": 4
+   },
+   {
+    "canal": "Courriel",
+    "campagne": "hebdo_06_10_26",
+    "commandes": 3
+   },
+   {
+    "canal": "Courriel",
+    "campagne": "hebdo_27_10_26",
+    "commandes": 3
+   },
+   {
+    "canal": "Meta (pub)",
+    "campagne": "formation05112026",
+    "commandes": 3
+   },
+   {
+    "canal": "Courriel",
+    "campagne": "hebdo_03_11_26",
+    "commandes": 3
+   },
+   {
+    "canal": "Courriel",
+    "campagne": "hebdo_20_10_26",
+    "commandes": 2
+   },
+   {
+    "canal": "Courriel",
+    "campagne": "hebdo_17_11_26",
+    "commandes": 2
+   },
+   {
+    "canal": "Courriel",
+    "campagne": "hebdo_13_10_26",
+    "commandes": 1
+   },
+   {
+    "canal": "Meta (pub)",
+    "campagne": "formation03112026",
+    "commandes": 1
+   },
+   {
+    "canal": "Courriel",
+    "campagne": "hebdo_19_11_26",
+    "commandes": 1
+   }
+  ],
+  "pagesArrivee": [
+   {
+    "page": "/collections/formations",
+    "commandes": 72
+   },
+   {
+    "page": "/",
+    "commandes": 46
+   },
+   {
+    "page": "/collections/formations/products/2026-11-20-dommages-structuraux",
+    "commandes": 8
+   },
+   {
+    "page": "/collections/formations/products/2026-11-03-quincaillerie-electrifiee-pour-l-implantation-d-un-controle-d-acces",
+    "commandes": 5
+   },
+   {
+    "page": "/products/2026-11-05-inspection-generale-d-un-immeuble",
+    "commandes": 5
+   },
+   {
+    "page": "/collections/formations/products/2026-11-18-systemes-de-murs-massifs-et-parement-de-maconnerie",
+    "commandes": 5
+   },
+   {
+    "page": "/products/2026-11-26-acoustique-et-insonorisation",
+    "commandes": 5
+   },
+   {
+    "page": "/products/2027-01-14-enveloppe-du-batiment-notions-fondamentales-et-criteres-de-performance",
+    "commandes": 5
+   },
+   {
+    "page": "/collections/formations/products/2026-11-05-inspection-generale-d-un-immeuble",
+    "commandes": 4
+   },
+   {
+    "page": "/collections/formations/products/2026-11-27-devis-sur-plan",
+    "commandes": 4
+   }
+  ],
+  "formationsParCanal": [
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2027-02-03***Mise aux normes des bâtiments existants",
+    "inscriptions": 11
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-12-17***Mécanique des sols",
+    "inscriptions": 10
+   },
+   {
+    "canal": "Courriel",
+    "formation": "2027-02-03***Mise aux normes des bâtiments existants",
+    "inscriptions": 10
+   },
+   {
+    "canal": "Sites référents",
+    "formation": "2026-11-27***Devis sur plan",
+    "inscriptions": 9
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-10-28***Inspection, entretien, diagnostic et réparation de béton (niveau 1)",
+    "inscriptions": 6
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-11-05***Inspection générale d’un immeuble",
+    "inscriptions": 6
+   },
+   {
+    "canal": "Courriel",
+    "formation": "2027-01-14***Enveloppe du bâtiment : notions fondamentales et critères de performance",
+    "inscriptions": 6
+   },
+   {
+    "canal": "Sites référents",
+    "formation": "2026-11-03***Quincaillerie électrifiée pour l’implantation d’un contrôle d’accès",
+    "inscriptions": 5
+   },
+   {
+    "canal": "Recherche Google (SEO)",
+    "formation": "2026-11-20***Dommages structuraux",
+    "inscriptions": 5
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-11-03***Quincaillerie électrifiée pour l’implantation d’un contrôle d’accès",
+    "inscriptions": 5
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-11-26***Acoustique et insonorisation",
+    "inscriptions": 5
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2027-06-07***Art de négocier - Niveau 1",
+    "inscriptions": 5
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2027-05-27***Programme fonctionnel et technique : fondement essentiel du projet",
+    "inscriptions": 5
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-11-20***Dommages structuraux",
+    "inscriptions": 4
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-10-29***Coordination 3D de la conception et de la construction dans un projet BIM",
+    "inscriptions": 4
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-11-18***Systèmes de murs massifs et parement de maçonnerie (Formation sur 2 jours)",
+    "inscriptions": 4
+   },
+   {
+    "canal": "Courriel",
+    "formation": "2026-11-18***Systèmes de murs massifs et parement de maçonnerie (Formation sur 2 jours)",
+    "inscriptions": 4
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-12-03***Chantier : administration du marché et surveillance des travaux (formation sur 2 jours)",
+    "inscriptions": 4
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-11-27***Devis sur plan",
+    "inscriptions": 4
+   },
+   {
+    "canal": "Sites référents",
+    "formation": "2026-12-03***Rédaction de devis des groupes de quincaillerie mécanique et électrifiée pour l’architecture et l’ingénierie",
+    "inscriptions": 4
+   },
+   {
+    "canal": "Courriel",
+    "formation": "2026-12-17***Mécanique des sols",
+    "inscriptions": 4
+   },
+   {
+    "canal": "Courriel",
+    "formation": "2026-12-10***Bâtiment durable, cycle de vie et choix de matériaux",
+    "inscriptions": 4
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2027-02-02***Introduction à la structure de bâtiments",
+    "inscriptions": 4
+   },
+   {
+    "canal": "Courriel",
+    "formation": "2027-01-20***Partie 9: les incontournables",
+    "inscriptions": 4
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-12-09***Systèmes de murs-rideaux : conception, conformité et performance (Formation sur 2 jours)",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-11-19***Gestion de la maintenance",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Sites référents",
+    "formation": "2026-11-06***Moyens d’évacuation, CCQ 2020",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-11-24***Moisissures : contamination, investigation et réhabilitation",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Recherche Google (SEO)",
+    "formation": "2026-11-03***Quincaillerie électrifiée pour l’implantation d’un contrôle d’accès",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-11-09***Art de négocier - Niveau 1",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Sites référents",
+    "formation": "2026-11-26***Acoustique et insonorisation",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Sites référents",
+    "formation": "2026-10-29***Coordination 3D de la conception et de la construction dans un projet BIM",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Meta (pub)",
+    "formation": "2026-11-05***Inspection générale d’un immeuble",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Courriel",
+    "formation": "2026-11-20***Dommages structuraux",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Recherche Google (SEO)",
+    "formation": "2026-11-19***Gestion de la maintenance",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2027-01-20***Partie 9: les incontournables",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2027-03-16***Inspection générale d’un immeuble",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2027-05-13***Courriels efficaces : Stratégies de gestion et outils numériques",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Courriel",
+    "formation": "2027-01-19***Maintenance des bâtiments - exigences réglementaires",
+    "inscriptions": 3
+   },
+   {
+    "canal": "Courriel",
+    "formation": "2027-01-15***Moyens d’évacuation, CCQ 2020",
+    "inscriptions": 3
    }
   ]
  }
