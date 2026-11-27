@@ -143,6 +143,12 @@ bloc = {
     "pagesArrivee": [{"page": k, "commandes": v} for k, v in arrivees.most_common(10)],
     "formationsParCanal": [{"canal": k[0], "formation": k[1], "inscriptions": v} for k, v in produits.most_common(40)],
 }
+def canal_v(v):
+    if "gclid=" in (v.get("landingPage") or "") and not (v.get("utmParameters") or {}).get("source"):
+        return "Google Ads"  # clic payé Google (suivi par gclid, sans UTM)
+    return canal(v.get("utmParameters"), v.get("referrerUrl"), v.get("source"))
+
+
 # --- Ventes par canal et par envoi (auto) : remplace le relevé manuel du rapport Shopify ---
 NOMS = {"Courriel": ("Infolettres", "newsletter"), "Meta (pub)": ("Pubs Meta", "Meta Ads"),
         "Google Ads": ("Google Ads (Hamak)", "Google Ads"), "LinkedIn (pub)": ("Pubs LinkedIn", "LinkedIn Ads"),
@@ -150,9 +156,10 @@ NOMS = {"Courriel": ("Infolettres", "newsletter"), "Meta (pub)": ("Pubs Meta", "
         "Réseaux sociaux (organique)": ("Réseaux sociaux (organique)", "Facebook"), "Sites référents": ("Sites référents", "siteweb"),
         "Direct / inconnu": ("Direct (adresse tapée, favoris)", "Direct")}
 maintenant = dt.datetime.now(TZ)
-PER = [("annee", "Depuis le 1er janv.", dt.datetime.fromisoformat(DEPUIS).replace(tzinfo=TZ)),
-       ("30j", "30 derniers jours", maintenant - dt.timedelta(days=30)),
-       ("7j", "7 derniers jours", maintenant - dt.timedelta(days=7))]
+# Shopify ne donne que les 60 derniers jours de commandes sans la portée read_all_orders : pas de période « année » ici.
+PER = [("30j", "30 derniers jours", maintenant - dt.timedelta(days=30)),
+       ("7j", "7 derniers jours", maintenant - dt.timedelta(days=7)),
+       ("vf", "Vendredi fou (depuis le 27 nov.)", dt.datetime(2026, 11, 27, tzinfo=TZ))]
 agg = {p[0]: defaultdict(lambda: [0, 0.0]) for p in PER}
 camps = defaultdict(lambda: [0, 0.0])
 for c in commandes:
@@ -163,9 +170,9 @@ for c in commandes:
     fv, lv = j.get("firstVisit"), j.get("lastVisit") or j.get("firstVisit")
     vis = None
     if lv:
-        cl = canal(lv.get("utmParameters"), lv.get("referrerUrl"), lv.get("source")); vis = lv
+        cl = canal_v(lv); vis = lv
         if cl == "Direct / inconnu" and fv:  # dernier clic qui n'est pas une visite directe, comme Shopify
-            cf = canal(fv.get("utmParameters"), fv.get("referrerUrl"), fv.get("source"))
+            cf = canal_v(fv)
             if cf != "Direct / inconnu":
                 cl, vis = cf, fv
     else:
