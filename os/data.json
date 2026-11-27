@@ -275,18 +275,26 @@
  "infolettres": {
   "derniers": [
    {
+    "date": "2026-11-27",
+    "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
+    "envoyes": 19627,
+    "ouverture": 20.8,
+    "clic": 1.6,
+    "desabonnements": 22
+   },
+   {
     "date": "2026-11-26",
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
-    "envoyes": 19650,
-    "ouverture": 25.8,
-    "clic": 4.0,
-    "desabonnements": 22
+    "envoyes": 19651,
+    "ouverture": 27.0,
+    "clic": 4.1,
+    "desabonnements": 24
    },
    {
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "envoyes": 19682,
-    "ouverture": 30.8,
+    "ouverture": 31.0,
     "clic": 3.8,
     "desabonnements": 20
    },
@@ -294,7 +302,7 @@
     "date": "2026-11-19",
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "envoyes": 19730,
-    "ouverture": 31.5,
+    "ouverture": 31.6,
     "clic": 4.0,
     "desabonnements": 31
    },
@@ -302,7 +310,7 @@
     "date": "2026-11-17",
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "envoyes": 19762,
-    "ouverture": 33.1,
+    "ouverture": 33.2,
     "clic": 4.3,
     "desabonnements": 30
    },
@@ -361,14 +369,6 @@
     "ouverture": 30.4,
     "clic": 1.5,
     "desabonnements": 14
-   },
-   {
-    "date": "2026-11-06",
-    "nom": "Expo MTL 6 nov. 2026 (J-6) - Inscrits",
-    "envoyes": 1137,
-    "ouverture": 55.8,
-    "clic": 11.7,
-    "desabonnements": 2
    }
   ],
   "base": {
@@ -378,9 +378,9 @@
   },
   "sept_jours": {
    "livraison": 99.6,
-   "ouverture": 28.3,
-   "clics": 3.9,
-   "ctor": 13.8,
+   "ouverture": 26.3,
+   "clics": 3.2,
+   "ctor": 12.0,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -396,18 +396,30 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-27T03:20-05:00",
+  "releve": "2026-11-27T13:55-05:00",
   "alertes": [],
   "tous": [
+   {
+    "id": 730129,
+    "date": "2026-11-27",
+    "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
+    "categorie": "Formations",
+    "envoyes": 19627,
+    "ouverture": 20.8,
+    "clic": 1.6,
+    "desabonnements": 22,
+    "vignette": null,
+    "apercu": "nl/730129.html"
+   },
    {
     "id": 730131,
     "date": "2026-11-26",
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
     "categorie": "Expos",
-    "envoyes": 19650,
-    "ouverture": 25.8,
-    "clic": 4.0,
-    "desabonnements": 22,
+    "envoyes": 19651,
+    "ouverture": 27.0,
+    "clic": 4.1,
+    "desabonnements": 24,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2741/Wjkcmf/vf26-avant-gout-site-portable-v5.gif",
     "apercu": "nl/730131.html"
    },
@@ -417,7 +429,7 @@
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "categorie": "Formations",
     "envoyes": 19682,
-    "ouverture": 30.8,
+    "ouverture": 31.0,
     "clic": 3.8,
     "desabonnements": 20,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2716/lfHyft/hebdo24-intro-anim-v5.gif",
@@ -429,7 +441,7 @@
     "nom": "Hebdo Formations – 19 nov. 2026 · Dernières places",
     "categorie": "Formations",
     "envoyes": 19730,
-    "ouverture": 31.5,
+    "ouverture": 31.6,
     "clic": 4.0,
     "desabonnements": 31,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2697/dQUiXW/hebdo19-entete-anim.gif",
@@ -441,7 +453,7 @@
     "nom": "Hebdo Formations – 17 nov. 2026 · Lancement hiver-printemps 2027",
     "categorie": "Formations",
     "envoyes": 19762,
-    "ouverture": 33.1,
+    "ouverture": 33.2,
     "clic": 4.3,
     "desabonnements": 30,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2665/IGwG33/lancement-hp2027-entete-v3.gif",
@@ -1643,9 +1655,9 @@
  },
  "fraicheur": {
   "ventes": {
-   "mode": "manuel",
-   "quand": "2026-11-23T12:00",
-   "source": "Coûts et revenus Contech 2026 (SharePoint)"
+   "mode": "auto",
+   "src": "shopify",
+   "source": "Shopify (API) + Coûts et revenus 2026 (SharePoint)"
   },
   "formations": {
    "mode": "manuel",
@@ -3880,6 +3892,565 @@
     "nom": "Tableau de bord A2026",
     "url": "https://groupecontex.sharepoint.com/sites/GroupeContex/Shared%20Documents/Contech%20B%C3%A2timent/Formations/Tableau%20de%20bord%20A2026.xlsx",
     "ou": "SharePoint · onglet A2026"
+   }
+  ]
+ },
+ "shopify": {
+  "releve": "2026-11-27T14:00-05:00",
+  "source": "Shopify (API, lecture seule)",
+  "note": "Commandes payées, annulations et remboursements déduits. HT = avant taxes.",
+  "jours": [
+   {
+    "date": "2026-09-28",
+    "ht": 725.0,
+    "ttc": 833.57,
+    "commandes": 1
+   },
+   {
+    "date": "2026-09-29",
+    "ht": 3420.0,
+    "ttc": 3932.15,
+    "commandes": 4
+   },
+   {
+    "date": "2026-09-30",
+    "ht": 2050.0,
+    "ttc": 2356.99,
+    "commandes": 2
+   },
+   {
+    "date": "2026-10-01",
+    "ht": 415.0,
+    "ttc": 477.15,
+    "commandes": 1
+   },
+   {
+    "date": "2026-10-05",
+    "ht": 4410.0,
+    "ttc": 5070.41,
+    "commandes": 4
+   },
+   {
+    "date": "2026-10-06",
+    "ht": 4305.0,
+    "ttc": 4949.68,
+    "commandes": 5
+   },
+   {
+    "date": "2026-10-07",
+    "ht": 1555.0,
+    "ttc": 1787.86,
+    "commandes": 2
+   },
+   {
+    "date": "2026-10-08",
+    "ht": 2280.0,
+    "ttc": 2621.44,
+    "commandes": 4
+   },
+   {
+    "date": "2026-10-09",
+    "ht": 2445.0,
+    "ttc": 2811.14,
+    "commandes": 2
+   },
+   {
+    "date": "2026-10-13",
+    "ht": 3915.0,
+    "ttc": 4501.28,
+    "commandes": 5
+   },
+   {
+    "date": "2026-10-14",
+    "ht": 4850.0,
+    "ttc": 5576.29,
+    "commandes": 5
+   },
+   {
+    "date": "2026-10-15",
+    "ht": 1450.0,
+    "ttc": 1667.14,
+    "commandes": 2
+   },
+   {
+    "date": "2026-10-16",
+    "ht": 1140.0,
+    "ttc": 1310.72,
+    "commandes": 2
+   },
+   {
+    "date": "2026-10-19",
+    "ht": 1140.0,
+    "ttc": 1302.52,
+    "commandes": 2
+   },
+   {
+    "date": "2026-10-20",
+    "ht": 4330.0,
+    "ttc": 4978.43,
+    "commandes": 6
+   },
+   {
+    "date": "2026-10-21",
+    "ht": 725.0,
+    "ttc": 833.57,
+    "commandes": 1
+   },
+   {
+    "date": "2026-10-22",
+    "ht": 725.0,
+    "ttc": 833.57,
+    "commandes": 1
+   },
+   {
+    "date": "2026-10-23",
+    "ht": 5815.0,
+    "ttc": 6685.8,
+    "commandes": 6
+   },
+   {
+    "date": "2026-10-26",
+    "ht": 1865.0,
+    "ttc": 2144.29,
+    "commandes": 3
+   },
+   {
+    "date": "2026-10-27",
+    "ht": 3270.0,
+    "ttc": 3759.69,
+    "commandes": 4
+   },
+   {
+    "date": "2026-10-28",
+    "ht": 2280.0,
+    "ttc": 2621.44,
+    "commandes": 4
+   },
+   {
+    "date": "2026-10-29",
+    "ht": 2385.0,
+    "ttc": 2742.17,
+    "commandes": 6
+   },
+   {
+    "date": "2026-10-30",
+    "ht": 1450.0,
+    "ttc": 1667.14,
+    "commandes": 2
+   },
+   {
+    "date": "2026-11-01",
+    "ht": 725.0,
+    "ttc": 833.57,
+    "commandes": 1
+   },
+   {
+    "date": "2026-11-02",
+    "ht": 7625.0,
+    "ttc": 8766.84,
+    "commandes": 6
+   },
+   {
+    "date": "2026-11-03",
+    "ht": 4455.0,
+    "ttc": 5013.58,
+    "commandes": 7
+   },
+   {
+    "date": "2026-11-04",
+    "ht": 3005.0,
+    "ttc": 3455.01,
+    "commandes": 5
+   },
+   {
+    "date": "2026-11-05",
+    "ht": 1865.0,
+    "ttc": 2144.29,
+    "commandes": 3
+   },
+   {
+    "date": "2026-11-06",
+    "ht": 1450.0,
+    "ttc": 1667.14,
+    "commandes": 2
+   },
+   {
+    "date": "2026-11-08",
+    "ht": 725.0,
+    "ttc": 833.57,
+    "commandes": 1
+   },
+   {
+    "date": "2026-11-09",
+    "ht": 2775.0,
+    "ttc": 3190.56,
+    "commandes": 3
+   },
+   {
+    "date": "2026-11-10",
+    "ht": 1140.0,
+    "ttc": 1310.72,
+    "commandes": 2
+   },
+   {
+    "date": "2026-11-11",
+    "ht": 3730.0,
+    "ttc": 4288.58,
+    "commandes": 6
+   },
+   {
+    "date": "2026-11-12",
+    "ht": 4150.0,
+    "ttc": 4771.46,
+    "commandes": 3
+   },
+   {
+    "date": "2026-11-13",
+    "ht": 1865.0,
+    "ttc": 2144.29,
+    "commandes": 2
+   },
+   {
+    "date": "2026-11-16",
+    "ht": 1140.0,
+    "ttc": 1310.72,
+    "commandes": 2
+   },
+   {
+    "date": "2026-11-17",
+    "ht": 3745.0,
+    "ttc": 4305.83,
+    "commandes": 5
+   },
+   {
+    "date": "2026-11-18",
+    "ht": 1555.0,
+    "ttc": 1787.87,
+    "commandes": 2
+   },
+   {
+    "date": "2026-11-19",
+    "ht": 415.0,
+    "ttc": 477.15,
+    "commandes": 4
+   },
+   {
+    "date": "2026-11-20",
+    "ht": 0.0,
+    "ttc": 0.0,
+    "commandes": 1
+   },
+   {
+    "date": "2026-11-21",
+    "ht": 1480.0,
+    "ttc": 1701.64,
+    "commandes": 1
+   },
+   {
+    "date": "2026-11-22",
+    "ht": 415.0,
+    "ttc": 477.15,
+    "commandes": 1
+   },
+   {
+    "date": "2026-11-23",
+    "ht": 2900.0,
+    "ttc": 3319.96,
+    "commandes": 5
+   },
+   {
+    "date": "2026-11-24",
+    "ht": 4870.0,
+    "ttc": 5599.3,
+    "commandes": 11
+   },
+   {
+    "date": "2026-11-25",
+    "ht": 1830.0,
+    "ttc": 2104.05,
+    "commandes": 4
+   },
+   {
+    "date": "2026-11-26",
+    "ht": 2775.0,
+    "ttc": 3190.56,
+    "commandes": 2
+   },
+   {
+    "date": "2026-11-27",
+    "ht": 45727.5,
+    "ttc": 52575.64,
+    "commandes": 72
+   }
+  ],
+  "produits": [
+   {
+    "titre": "2027-02-03***Mise aux normes des bâtiments existants",
+    "inscriptions": 23
+   },
+   {
+    "titre": "2026-11-03***Quincaillerie électrifiée pour l’implantation d’un contrôle d’accès",
+    "inscriptions": 16
+   },
+   {
+    "titre": "2026-11-27***Devis sur plan",
+    "inscriptions": 15
+   },
+   {
+    "titre": "2026-11-20***Dommages structuraux",
+    "inscriptions": 14
+   },
+   {
+    "titre": "2026-12-17***Mécanique des sols",
+    "inscriptions": 13
+   },
+   {
+    "titre": "2026-11-05***Inspection générale d’un immeuble",
+    "inscriptions": 13
+   },
+   {
+    "titre": "2027-01-14***Enveloppe du bâtiment : notions fondamentales et critères de performance",
+    "inscriptions": 12
+   },
+   {
+    "titre": "2026-11-26***Acoustique et insonorisation",
+    "inscriptions": 10
+   },
+   {
+    "titre": "2026-11-18***Systèmes de murs massifs et parement de maçonnerie (Formation sur 2 jours)",
+    "inscriptions": 10
+   },
+   {
+    "titre": "2026-11-06***Moyens d’évacuation, CCQ 2020",
+    "inscriptions": 9
+   },
+   {
+    "titre": "2026-10-29***Coordination 3D de la conception et de la construction dans un projet BIM",
+    "inscriptions": 9
+   },
+   {
+    "titre": "2026-12-03***Chantier : administration du marché et surveillance des travaux (formation sur 2 jours)",
+    "inscriptions": 8
+   },
+   {
+    "titre": "2027-01-20***Partie 9: les incontournables",
+    "inscriptions": 7
+   },
+   {
+    "titre": "2026-12-10***Bâtiment durable, cycle de vie et choix de matériaux",
+    "inscriptions": 7
+   },
+   {
+    "titre": "2026-12-09***Systèmes de murs-rideaux : conception, conformité et performance (Formation sur 2 jours)",
+    "inscriptions": 7
+   },
+   {
+    "titre": "2027-02-02***Introduction à la structure de bâtiments",
+    "inscriptions": 6
+   },
+   {
+    "titre": "2026-12-09***Inspection de grands bâtiments – niveau 2 : les pathologies du bâtiment et la Loi 122",
+    "inscriptions": 6
+   },
+   {
+    "titre": "2027-01-19***Maintenance des bâtiments - exigences réglementaires",
+    "inscriptions": 6
+   },
+   {
+    "titre": "2026-11-19***Gestion de la maintenance",
+    "inscriptions": 6
+   },
+   {
+    "titre": "2026-10-28***Inspection, entretien, diagnostic et réparation de béton (niveau 1)",
+    "inscriptions": 6
+   },
+   {
+    "titre": "2026-10-20***Humidité dans l’enveloppe du bâtiment - Causes, conséquences et prévention",
+    "inscriptions": 6
+   },
+   {
+    "titre": "2027-02-18***Estimation et planification budgétaire",
+    "inscriptions": 5
+   },
+   {
+    "titre": "2026-11-24***Moisissures : contamination, investigation et réhabilitation",
+    "inscriptions": 5
+   },
+   {
+    "titre": "2026-11-09***Art de négocier - Niveau 1",
+    "inscriptions": 5
+   },
+   {
+    "titre": "2027-03-16***Droit de la construction (Formation sur 2 jours)",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2027-03-24***Dommages structuraux",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2027-02-05***Mezzanines et aires communicantes, en toute conformité",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2027-05-20***Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2027-04-14***Maîtriser les projets de cuisines de la conception à l’installation",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2027-01-15***Moyens d’évacuation, CCQ 2020",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2027-03-16***Inspection générale d’un immeuble",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2027-05-27***Programme fonctionnel et technique : fondement essentiel du projet",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2027-06-07***Art de négocier - Niveau 1",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2026-12-03***Rédaction de devis des groupes de quincaillerie mécanique et électrifiée pour l’architecture et l’ingénierie",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2026-11-10***Partie 3 du Code de construction – chapitre 1, Bâtiment (CNB-2020 QC) (Formation sur 2 jours)",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2026-11-04***Le programme fonctionnel et technique : fondement essentiel du projet",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2026-10-16***Infiltrations d'eau par une couverture - diagnostic, conséquences et interventions",
+    "inscriptions": 4
+   },
+   {
+    "titre": "2027-03-09***Humidité dans l’enveloppe du bâtiment - Causes, conséquences et prévention",
+    "inscriptions": 3
+   },
+   {
+    "titre": "2027-03-17***Toitures végétalisées : de la conception à la construction (Formation sur 2 jours)",
+    "inscriptions": 3
+   },
+   {
+    "titre": "2027-04-20***Mieux gérer vos priorités",
+    "inscriptions": 3
+   },
+   {
+    "titre": "2026-12-17***Toitures: Gestion des eaux pluviales (toits verts/toits bleus)",
+    "inscriptions": 3
+   },
+   {
+    "titre": "2026-10-30***Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
+    "inscriptions": 3
+   },
+   {
+    "titre": "2027-02-23***Quincaillerie électrifiée pour l’implantation d’un contrôle d’accès",
+    "inscriptions": 2
+   },
+   {
+    "titre": "2027-01-22***Infiltrations d'eau par une couverture - diagnostic, conséquences et interventions",
+    "inscriptions": 2
+   },
+   {
+    "titre": "2027-02-10***Partie 3 du Code de construction – chapitre 1, Bâtiment (CNB-2020 QC) (Formation sur 2 jours)",
+    "inscriptions": 2
+   },
+   {
+    "titre": "2027-02-04***Devis sur plan",
+    "inscriptions": 2
+   },
+   {
+    "titre": "2027-03-31***Analyse, conception et mise en œuvre de réparations de béton (niveau 2)",
+    "inscriptions": 2
+   },
+   {
+    "titre": "2026-12-01***Toitures : entretien et maintenance",
+    "inscriptions": 2
+   },
+   {
+    "titre": "2026-10-29***Toitures : Matériaux et systèmes",
+    "inscriptions": 2
+   },
+   {
+    "titre": "2027-02-19***Appel d’offres et soumissions : processus efficient et efficace",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-02-24***Rapport d’expertise et témoignage au tribunal",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-02-17***Devis – principes fondamentaux (Formation sur 2 jours)",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-01-29***Signalétique : intégration à l'architecture et mise en valeur du lieu",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-06-11***Cuisines institutionnelles et commerciales – principes de conception",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-01-27***Quincaillerie architecturale et construction des portes et des cadres – section 08",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-02-12***Toitures : Matériaux et systèmes",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-04-28***Radiographie de votre bâtiment – Formation mise à jour en fonction du Code de sécurité du Québec, Chapitre VIII, Bâtiment (CNPI 2020 modifié QC)",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-06-15***Inspection, entretien, diagnostic et réparation de béton (niveau 1)",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-02-09***Art de négocier - Niveau 2",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2026-12-04***Murs végétaux : design et intégration",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-03-18***Gestion de la maintenance",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-03-11***Systèmes de murs massifs et parement de maçonnerie (Formation sur 2 jours)",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-01-19***Management humain dans la gestion de projet",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-05-13***Courriels efficaces : Stratégies de gestion et outils numériques",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2027-05-05***Acoustique et insonorisation",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2026-11-25***Courriels efficaces : Stratégies de gestion et outils numériques",
+    "inscriptions": 1
+   },
+   {
+    "titre": "2026-10-01***Gestion de projet appliquée",
+    "inscriptions": 1
    }
   ]
  }
