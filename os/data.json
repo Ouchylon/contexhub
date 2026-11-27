@@ -1,6 +1,6 @@
 {
- "updated": "2026-11-25T14:15:00-05:00",
- "today": "2026-11-25",
+ "updated": "2026-11-27T17:30:00-05:00",
+ "today": "2026-11-27",
  "seuilConfirmation": 5,
  "kpis": {
   "achats": {
@@ -25,7 +25,7 @@
  },
  "formations": {
   "source": "Tableau de bord A2026, SharePoint",
-  "releve": "25 nov. 2026, 14 h (fichier Coûts et revenus 2026)",
+  "releve": "27 nov. 2026, 17 h 30 (Coûts et revenus 2026 + ventes Shopify du Vendredi fou)",
   "items": [
    {
     "date": "2026-11-20",
@@ -73,49 +73,49 @@
     "date": "2026-12-03",
     "titre": "Chantier : administration du marché et surveillance des travaux 1/2",
     "formateur": "Louis Réjean Gagné",
-    "inscrits": 7,
+    "inscrits": 11,
     "max": 22
    },
    {
     "date": "2026-12-03",
     "titre": "Rédaction de devis des groupes de quincaillerie mécanique et électrifiée",
     "formateur": "Serge Lalancette",
-    "inscrits": 3,
+    "inscrits": 4,
     "max": 18
    },
    {
     "date": "2026-12-04",
     "titre": "Murs végétaux – designs et intégrations",
     "formateur": "Antoine Trottier",
-    "inscrits": 0,
+    "inscrits": 1,
     "max": 16
    },
    {
     "date": "2026-12-09",
     "titre": "Inspection des grands bâtiments – niveau 2",
     "formateur": "Claude Latulippe",
-    "inscrits": 2,
+    "inscrits": 6,
     "max": 18
    },
    {
     "date": "2026-12-09",
     "titre": "Systèmes de murs-rideaux 1/2",
     "formateur": "Louis Fortin",
-    "inscrits": 6,
+    "inscrits": 9,
     "max": 18
    },
    {
     "date": "2026-12-10",
     "titre": "Bâtiment durable, cycle de vie et choix de matériaux",
     "formateur": "Josée Lupien",
-    "inscrits": 3,
+    "inscrits": 7,
     "max": 18
    },
    {
     "date": "2026-12-17",
     "titre": "Mécanique des sols",
     "formateur": "Benoît Rioux",
-    "inscrits": 6,
+    "inscrits": 16,
     "max": 16
    },
    {
@@ -146,7 +146,7 @@
    },
    {
     "nom": "BOF ET TOF – TEASER Vendredi fou NOV26",
-    "statut": "Active",
+    "statut": "Terminée (26 nov.)",
     "debut": "2026-11-23T06:00",
     "fin": "2026-11-26T23:59",
     "budgetJour": 37.5,
@@ -157,16 +157,41 @@
     "calendrier": "Teaser"
    },
    {
-    "nom": "Promo Vendredi fou",
-    "statut": "À venir",
-    "debut": "2026-11-27",
-    "fin": "2026-11-30",
-    "budgetTotal": 340,
-    "objectif": "−50 % sur toutes les formations",
-    "ensembles": [],
-    "pubs": "",
-    "utm": "",
-    "calendrier": "Promo −50 %"
+    "nom": "BOF ET TOF – Vendredi fou + Cyber lundi NOV26",
+    "statut": "Active",
+    "debut": "2026-11-27T00:00",
+    "fin": "2026-11-30T23:59",
+    "budgetTotal": 2500,
+    "objectif": "Ventes (achat)",
+    "ensembles": [
+     "TOF Québec Advantage+",
+     "BOF reciblage (visiteurs, paniers, acheteurs, liste courriel)"
+    ],
+    "pubs": "Vidéos 4:5 et 9:16 Vendredi fou, bouton « Acheter »",
+    "utm": "utm_campaign=vendredi_fou_nov26",
+    "calendrier": "Vendredi fou",
+    "note": "Budget de 2 500 $ approuvé par Lita (27 nov.)."
+   },
+   {
+    "nom": "Formations DÉC26 – par formation (achat)",
+    "statut": "En préparation",
+    "debut": "2026-12-01T00:00",
+    "fin": "2026-12-16T23:59",
+    "budgetTotal": 600,
+    "objectif": "Ventes (achat)",
+    "ensembles": [
+     "Murs végétaux",
+     "Eaux pluviales",
+     "Devis quincaillerie",
+     "Inspection niveau 2",
+     "Bâtiment durable",
+     "Murs-rideaux",
+     "Chantier"
+    ],
+    "pubs": "Un ensemble par formation, arrêté la veille du cours",
+    "utm": "utm_campaign=formations_dec26",
+    "calendrier": "Décembre",
+    "note": "Environ 600 $, plafond de 1 000 $ pour décembre (Lita, 27 nov.)."
    }
   ],
   "creatifs": {
@@ -1661,12 +1686,12 @@
   },
   "formations": {
    "mode": "manuel",
-   "quand": "2026-11-23T12:00",
+   "quand": "2026-11-27T17:30",
    "source": "Tableau de bord A2026 (SharePoint)"
   },
   "pubs": {
    "mode": "manuel",
-   "quand": "2026-11-21T18:10",
+   "quand": "2026-11-27T17:30",
    "source": "Meta Ads Manager"
   },
   "infolettres": {
