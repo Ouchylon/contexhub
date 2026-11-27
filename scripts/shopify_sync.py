@@ -6,14 +6,26 @@ Lit les commandes de la boutique (lecture seule) et n'écrit que des totaux :
 Aucune donnée client (nom, courriel, adresse) n'est écrite.
 Le jeton vient du secret GitHub SHOPIFY_TOKEN; sans jeton, le script s'arrête sans rien changer.
 """
-import json, os, sys, re, time, datetime as dt, urllib.request, urllib.error
+import json, os, sys, urllib.parse, re, time, datetime as dt, urllib.request, urllib.error
 from zoneinfo import ZoneInfo
 
-TOKEN = os.environ.get("SHOPIFY_TOKEN")
+def _jeton():
+    t = os.environ.get("SHOPIFY_TOKEN")
+    if t: return t
+    cid, sec = os.environ.get("SHOPIFY_CLIENT_ID"), os.environ.get("SHOPIFY_CLIENT_SECRET")
+    if not (cid and sec): return None
+    shop = os.environ.get("SHOPIFY_SHOP") or "groupe-contech.myshopify.com"
+    if not shop.endswith(".myshopify.com"): shop += ".myshopify.com"
+    body = urllib.parse.urlencode({"grant_type": "client_credentials", "client_id": cid, "client_secret": sec}).encode()
+    req = urllib.request.Request(f"https://{shop}/admin/oauth/access_token", data=body, headers={"Content-Type": "application/x-www-form-urlencoded"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return json.loads(r.read().decode())["access_token"]
+TOKEN = _jeton()
 if not TOKEN:
     print("SHOPIFY_TOKEN absent : relevé Shopify sauté.")
     sys.exit(0)
 SHOP = os.environ.get("SHOPIFY_SHOP") or "groupe-contech.myshopify.com"
+if not SHOP.endswith(".myshopify.com"): SHOP += ".myshopify.com"
 VER = os.environ.get("SHOPIFY_API_VERSION") or "2026-07"
 DEPUIS = os.environ.get("SHOPIFY_DEPUIS") or "2026-01-01"
 TZ = ZoneInfo("America/Toronto")
