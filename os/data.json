@@ -278,7 +278,7 @@
     "date": "2026-11-27",
     "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
     "envoyes": 19627,
-    "ouverture": 20.8,
+    "ouverture": 21.2,
     "clic": 1.6,
     "desabonnements": 22
    },
@@ -286,7 +286,7 @@
     "date": "2026-11-26",
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
     "envoyes": 19651,
-    "ouverture": 27.0,
+    "ouverture": 27.1,
     "clic": 4.1,
     "desabonnements": 24
    },
@@ -294,7 +294,7 @@
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "envoyes": 19682,
-    "ouverture": 31.0,
+    "ouverture": 31.1,
     "clic": 3.8,
     "desabonnements": 20
    },
@@ -378,7 +378,7 @@
   },
   "sept_jours": {
    "livraison": 99.6,
-   "ouverture": 26.3,
+   "ouverture": 26.5,
    "clics": 3.2,
    "ctor": 12.0,
    "desabonnements": 0.1
@@ -396,7 +396,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-27T13:55-05:00",
+  "releve": "2026-11-27T14:52-05:00",
   "alertes": [],
   "tous": [
    {
@@ -405,7 +405,7 @@
     "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
     "categorie": "Formations",
     "envoyes": 19627,
-    "ouverture": 20.8,
+    "ouverture": 21.2,
     "clic": 1.6,
     "desabonnements": 22,
     "vignette": null,
@@ -417,7 +417,7 @@
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
     "categorie": "Expos",
     "envoyes": 19651,
-    "ouverture": 27.0,
+    "ouverture": 27.1,
     "clic": 4.1,
     "desabonnements": 24,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2741/Wjkcmf/vf26-avant-gout-site-portable-v5.gif",
@@ -429,7 +429,7 @@
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "categorie": "Formations",
     "envoyes": 19682,
-    "ouverture": 31.0,
+    "ouverture": 31.1,
     "clic": 3.8,
     "desabonnements": 20,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2716/lfHyft/hebdo24-intro-anim-v5.gif",
@@ -3896,7 +3896,7 @@
   ]
  },
  "shopify": {
-  "releve": "2026-11-27T14:00-05:00",
+  "releve": "2026-11-27T14:57-05:00",
   "source": "Shopify (API, lecture seule)",
   "note": "Commandes payées, annulations et remboursements déduits. HT = avant taxes.",
   "jours": [
@@ -4178,9 +4178,9 @@
    },
    {
     "date": "2026-11-27",
-    "ht": 45727.5,
-    "ttc": 52575.64,
-    "commandes": 72
+    "ht": 49242.5,
+    "ttc": 56617.05,
+    "commandes": 75
    }
   ],
   "produits": [
@@ -4197,12 +4197,12 @@
     "inscriptions": 15
    },
    {
-    "titre": "2026-11-20***Dommages structuraux",
+    "titre": "2026-12-17***Mécanique des sols",
     "inscriptions": 14
    },
    {
-    "titre": "2026-12-17***Mécanique des sols",
-    "inscriptions": 13
+    "titre": "2026-11-20***Dommages structuraux",
+    "inscriptions": 14
    },
    {
     "titre": "2026-11-05***Inspection générale d’un immeuble",
@@ -4211,6 +4211,10 @@
    {
     "titre": "2027-01-14***Enveloppe du bâtiment : notions fondamentales et critères de performance",
     "inscriptions": 12
+   },
+   {
+    "titre": "2026-12-03***Chantier : administration du marché et surveillance des travaux (formation sur 2 jours)",
+    "inscriptions": 10
    },
    {
     "titre": "2026-11-26***Acoustique et insonorisation",
@@ -4229,8 +4233,8 @@
     "inscriptions": 9
    },
    {
-    "titre": "2026-12-03***Chantier : administration du marché et surveillance des travaux (formation sur 2 jours)",
-    "inscriptions": 8
+    "titre": "2027-02-02***Introduction à la structure de bâtiments",
+    "inscriptions": 7
    },
    {
     "titre": "2027-01-20***Partie 9: les incontournables",
@@ -4243,10 +4247,6 @@
    {
     "titre": "2026-12-09***Systèmes de murs-rideaux : conception, conformité et performance (Formation sur 2 jours)",
     "inscriptions": 7
-   },
-   {
-    "titre": "2027-02-02***Introduction à la structure de bâtiments",
-    "inscriptions": 6
    },
    {
     "titre": "2026-12-09***Inspection de grands bâtiments – niveau 2 : les pathologies du bâtiment et la Loi 122",
@@ -4269,6 +4269,18 @@
     "inscriptions": 6
    },
    {
+    "titre": "2027-05-20***Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
+    "inscriptions": 5
+   },
+   {
+    "titre": "2027-05-27***Programme fonctionnel et technique : fondement essentiel du projet",
+    "inscriptions": 5
+   },
+   {
+    "titre": "2027-06-07***Art de négocier - Niveau 1",
+    "inscriptions": 5
+   },
+   {
     "titre": "2027-02-18***Estimation et planification budgétaire",
     "inscriptions": 5
    },
@@ -4279,6 +4291,10 @@
    {
     "titre": "2026-11-09***Art de négocier - Niveau 1",
     "inscriptions": 5
+   },
+   {
+    "titre": "2027-03-17***Toitures végétalisées : de la conception à la construction (Formation sur 2 jours)",
+    "inscriptions": 4
    },
    {
     "titre": "2027-03-16***Droit de la construction (Formation sur 2 jours)",
@@ -4293,10 +4309,6 @@
     "inscriptions": 4
    },
    {
-    "titre": "2027-05-20***Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
-    "inscriptions": 4
-   },
-   {
     "titre": "2027-04-14***Maîtriser les projets de cuisines de la conception à l’installation",
     "inscriptions": 4
    },
@@ -4306,14 +4318,6 @@
    },
    {
     "titre": "2027-03-16***Inspection générale d’un immeuble",
-    "inscriptions": 4
-   },
-   {
-    "titre": "2027-05-27***Programme fonctionnel et technique : fondement essentiel du projet",
-    "inscriptions": 4
-   },
-   {
-    "titre": "2027-06-07***Art de négocier - Niveau 1",
     "inscriptions": 4
    },
    {
@@ -4337,10 +4341,6 @@
     "inscriptions": 3
    },
    {
-    "titre": "2027-03-17***Toitures végétalisées : de la conception à la construction (Formation sur 2 jours)",
-    "inscriptions": 3
-   },
-   {
     "titre": "2027-04-20***Mieux gérer vos priorités",
     "inscriptions": 3
    },
@@ -4351,6 +4351,18 @@
    {
     "titre": "2026-10-30***Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
     "inscriptions": 3
+   },
+   {
+    "titre": "2027-02-24***Rapport d’expertise et témoignage au tribunal",
+    "inscriptions": 2
+   },
+   {
+    "titre": "2027-05-13***Courriels efficaces : Stratégies de gestion et outils numériques",
+    "inscriptions": 2
+   },
+   {
+    "titre": "2026-06-09***Bâtiments, énergie et climat : comment prioriser les interventions?",
+    "inscriptions": 2
    },
    {
     "titre": "2027-02-23***Quincaillerie électrifiée pour l’implantation d’un contrôle d’accès",
@@ -4382,10 +4394,6 @@
    },
    {
     "titre": "2027-02-19***Appel d’offres et soumissions : processus efficient et efficace",
-    "inscriptions": 1
-   },
-   {
-    "titre": "2027-02-24***Rapport d’expertise et témoignage au tribunal",
     "inscriptions": 1
    },
    {
@@ -4434,10 +4442,6 @@
    },
    {
     "titre": "2027-01-19***Management humain dans la gestion de projet",
-    "inscriptions": 1
-   },
-   {
-    "titre": "2027-05-13***Courriels efficaces : Stratégies de gestion et outils numériques",
     "inscriptions": 1
    },
    {
