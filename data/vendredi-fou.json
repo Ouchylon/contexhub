@@ -1,5 +1,5 @@
 {
- "releve": "2026-11-27T12:05-05:00",
+ "releve": "2026-11-27T13:32-05:00",
  "source": "Shopify (rapports Analytics) · ventes nettes = après le rabais de 50 %, avant taxes",
  "periodes": {
   "2026": {
@@ -59,6 +59,20 @@
      "ht": 7900.0,
      "ttc": 9083.11,
      "qte": 22
+    },
+    {
+     "t": "2026-11-27T12:00-05:00",
+     "commandes": 9,
+     "ht": 6757.5,
+     "ttc": 7769.49,
+     "qte": 18
+    },
+    {
+     "t": "2026-11-27T13:00-05:00",
+     "commandes": 2,
+     "ht": 1732.5,
+     "ttc": 1991.97,
+     "qte": 6
     }
    ]
   },
@@ -371,8 +385,8 @@
   {
    "titre": "Enveloppe du bâtiment : notions fondamentales et critères de performance",
    "date": "2027-01-14",
-   "inscriptions": 10,
-   "ht": 3700.0
+   "inscriptions": 12,
+   "ht": 4440.0
   },
   {
    "titre": "Mécanique des sols",
@@ -381,16 +395,22 @@
    "ht": 2537.5
   },
   {
-   "titre": "Maintenance des bâtiments - exigences réglementaires",
-   "date": "2027-01-19",
+   "titre": "Introduction à la structure de bâtiments",
+   "date": "2027-02-02",
+   "inscriptions": 6,
+   "ht": 2220.0
+  },
+  {
+   "titre": "Partie 9: les incontournables",
+   "date": "2027-01-20",
    "inscriptions": 5,
    "ht": 1850.0
   },
   {
-   "titre": "Introduction à la structure de bâtiments",
-   "date": "2027-02-02",
-   "inscriptions": 4,
-   "ht": 1480.0
+   "titre": "Maintenance des bâtiments - exigences réglementaires",
+   "date": "2027-01-19",
+   "inscriptions": 5,
+   "ht": 1850.0
   },
   {
    "titre": "Bâtiment durable, cycle de vie et choix de matériaux",
@@ -399,28 +419,22 @@
    "ht": 1450.0
   },
   {
+   "titre": "Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
+   "date": "2027-05-20",
+   "inscriptions": 4,
+   "ht": 830.0
+  },
+  {
    "titre": "Inspection de grands bâtiments – niveau 2 : les pathologies du bâtiment et la Loi 122",
    "date": "2026-12-09",
    "inscriptions": 4,
    "ht": 1450.0
   },
   {
-   "titre": "Partie 9: les incontournables",
-   "date": "2027-01-20",
-   "inscriptions": 3,
-   "ht": 1110.0
-  },
-  {
-   "titre": "Maîtriser les projets de cuisines de la conception à l’installation",
-   "date": "2027-04-14",
-   "inscriptions": 3,
-   "ht": 1110.0
-  },
-  {
-   "titre": "Systèmes de murs-rideaux : conception, conformité et performance (Formation sur 2 jours)",
-   "date": "2026-12-09",
-   "inscriptions": 3,
-   "ht": 1087.5
+   "titre": "Mezzanines et aires communicantes, en toute conformité",
+   "date": "2027-02-05",
+   "inscriptions": 4,
+   "ht": 830.0
   }
  ]
 }
