@@ -1,5 +1,5 @@
 {
- "releve": "2026-11-27T13:55-05:00",
+ "releve": "2026-11-27T17:32-05:00",
  "source": "Shopify (commandes, relevé automatique) · ventes nettes = après le rabais de 50 %, avant taxes",
  "periodes": {
   "2026": {
@@ -73,6 +73,27 @@
      "ht": 3135.0,
      "ttc": 3604.5,
      "qte": 9
+    },
+    {
+     "t": "2026-11-27T14:00-05:00",
+     "commandes": 4,
+     "ht": 3885.0,
+     "ttc": 4466.82,
+     "qte": 11
+    },
+    {
+     "t": "2026-11-27T15:00-05:00",
+     "commandes": 6,
+     "ht": 3167.5,
+     "ttc": 3641.86,
+     "qte": 9
+    },
+    {
+     "t": "2026-11-27T16:00-05:00",
+     "commandes": 5,
+     "ht": 3250.0,
+     "ttc": 3736.74,
+     "qte": 11
     }
    ]
   },
@@ -379,8 +400,8 @@
   {
    "titre": "Mise aux normes des bâtiments existants",
    "date": "2027-02-03",
-   "inscriptions": 22,
-   "ht": 8140.0
+   "inscriptions": 24,
+   "ht": 8880.0
   },
   {
    "titre": "Enveloppe du bâtiment : notions fondamentales et critères de performance",
@@ -389,22 +410,34 @@
    "ht": 4440.0
   },
   {
-   "titre": "Mécanique des sols",
-   "date": "2026-12-17",
-   "inscriptions": 7,
-   "ht": 2537.5
-  },
-  {
    "titre": "Partie 9: les incontournables",
    "date": "2027-01-20",
-   "inscriptions": 6,
-   "ht": 2220.0
+   "inscriptions": 9,
+   "ht": 3330.0
+  },
+  {
+   "titre": "Mécanique des sols",
+   "date": "2026-12-17",
+   "inscriptions": 9,
+   "ht": 3262.5
   },
   {
    "titre": "Introduction à la structure de bâtiments",
    "date": "2027-02-02",
+   "inscriptions": 8,
+   "ht": 2960.0
+  },
+  {
+   "titre": "Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
+   "date": "2027-05-20",
    "inscriptions": 6,
-   "ht": 2220.0
+   "ht": 1245.0
+  },
+  {
+   "titre": "Toitures végétalisées : de la conception à la construction (Formation sur 2 jours)",
+   "date": "2027-03-17",
+   "inscriptions": 5,
+   "ht": 1850.0
   },
   {
    "titre": "Maintenance des bâtiments - exigences réglementaires",
@@ -413,28 +446,16 @@
    "ht": 1850.0
   },
   {
-   "titre": "Maîtriser les projets de cuisines de la conception à l’installation",
-   "date": "2027-04-14",
-   "inscriptions": 4,
-   "ht": 1480.0
+   "titre": "Mezzanines et aires communicantes, en toute conformité",
+   "date": "2027-02-05",
+   "inscriptions": 5,
+   "ht": 1037.5
   },
   {
-   "titre": "Bâtiment durable, cycle de vie et choix de matériaux",
-   "date": "2026-12-10",
-   "inscriptions": 4,
-   "ht": 1450.0
-  },
-  {
-   "titre": "Inspection de grands bâtiments – niveau 2 : les pathologies du bâtiment et la Loi 122",
-   "date": "2026-12-09",
-   "inscriptions": 4,
-   "ht": 1450.0
-  },
-  {
-   "titre": "Dommages structuraux",
-   "date": "2027-03-24",
-   "inscriptions": 4,
-   "ht": 830.0
+   "titre": "Moyens d’évacuation, CCQ 2020",
+   "date": "2027-01-15",
+   "inscriptions": 5,
+   "ht": 1037.5
   }
  ]
 }
