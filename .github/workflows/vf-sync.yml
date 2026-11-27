@@ -1,0 +1,25 @@
+name: Vendredi fou en direct (Shopify)
+on:
+  schedule:
+    - cron: "*/15 * 27-30 11 *"   # aux 15 min, du 27 au 30 nov. (UTC)
+    - cron: "*/15 0-5 1 12 *"     # jusqu'à minuit le lundi 30 nov. (heure de Montréal)
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: vf-sync
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Relever les commandes Vendredi fou
+        env:
+          SHOPIFY_TOKEN: ${{ secrets.SHOPIFY_TOKEN }}
+          SHOPIFY_SHOP: ${{ secrets.SHOPIFY_SHOP }}
+        run: python3 scripts/vf_sync.py
+      - name: Publier si changé
+        run: |
+          git config user.name "os-marketing"
+          git config user.email "os-marketing@users.noreply.github.com"
+          git add data/vendredi-fou.json
+          git diff --cached --quiet || (git commit -m "Vendredi fou : relevé auto" && git pull --rebase -X theirs origin main && git push)
