@@ -1,5 +1,5 @@
 {
- "releve": "2026-11-27T17:38-05:00",
+ "releve": "2026-11-27T17:42-05:00",
  "source": "Shopify (commandes, relevé automatique) · ventes nettes = après le rabais de 50 %, avant taxes",
  "periodes": {
   "2026": {
@@ -94,6 +94,13 @@
      "ht": 3250.0,
      "ttc": 3736.74,
      "qte": 11
+    },
+    {
+     "t": "2026-11-27T17:00-05:00",
+     "commandes": 1,
+     "ht": 577.5,
+     "ttc": 663.99,
+     "qte": 2
     }
    ]
   },
@@ -430,8 +437,8 @@
   {
    "titre": "Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
    "date": "2027-05-20",
-   "inscriptions": 6,
-   "ht": 1245.0
+   "inscriptions": 7,
+   "ht": 1452.5
   },
   {
    "titre": "Toitures végétalisées : de la conception à la construction (Formation sur 2 jours)",

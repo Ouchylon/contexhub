@@ -303,7 +303,7 @@
     "date": "2026-11-27",
     "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
     "envoyes": 19627,
-    "ouverture": 22.1,
+    "ouverture": 22.2,
     "clic": 1.6,
     "desabonnements": 22
    },
@@ -421,7 +421,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-27T17:33-05:00",
+  "releve": "2026-11-27T17:38-05:00",
   "alertes": [],
   "tous": [
    {
@@ -430,7 +430,7 @@
     "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
     "categorie": "Formations",
     "envoyes": 19627,
-    "ouverture": 22.1,
+    "ouverture": 22.2,
     "clic": 1.6,
     "desabonnements": 22,
     "vignette": null,
@@ -2370,65 +2370,17 @@
   }
  },
  "ventesCanaux": {
-  "releve": "27 nov. 2026, 17 h 38",
+  "releve": "27 nov. 2026, 17 h 42",
   "source": "Shopify (API, parcours des commandes) : ventes nettes avant taxes, attribuées au dernier clic qui n'est pas une visite directe. Mis à jour automatiquement.",
   "periodes": [
-   {
-    "id": "annee",
-    "label": "Depuis le 1er janv.",
-    "du": "2026-01-01",
-    "au": "2026-11-27",
-    "total": {
-     "commandes": 239,
-     "ventes": 166885.0
-    },
-    "canaux": [
-     {
-      "canal": "Infolettres",
-      "cle": "newsletter",
-      "commandes": 71,
-      "ventes": 46237.5
-     },
-     {
-      "canal": "Recherche (naturelle)",
-      "cle": "Google",
-      "commandes": 60,
-      "ventes": 44925.0
-     },
-     {
-      "canal": "Sites référents",
-      "cle": "siteweb",
-      "commandes": 45,
-      "ventes": 36115.0
-     },
-     {
-      "canal": "Direct (adresse tapée, favoris)",
-      "cle": "Direct",
-      "commandes": 57,
-      "ventes": 35567.5
-     },
-     {
-      "canal": "Pubs Meta",
-      "cle": "Meta Ads",
-      "commandes": 5,
-      "ventes": 3315.0
-     },
-     {
-      "canal": "Réseaux sociaux (organique)",
-      "cle": "Facebook",
-      "commandes": 1,
-      "ventes": 725.0
-     }
-    ]
-   },
    {
     "id": "30j",
     "label": "30 derniers jours",
     "du": "2026-10-28",
     "au": "2026-11-27",
     "total": {
-     "commandes": 174,
-     "ventes": 114500.0
+     "commandes": 175,
+     "ventes": 115077.5
     },
     "canaux": [
      {
@@ -2452,8 +2404,8 @@
      {
       "canal": "Direct (adresse tapée, favoris)",
       "cle": "Direct",
-      "commandes": 37,
-      "ventes": 20902.5
+      "commandes": 38,
+      "ventes": 21480.0
      },
      {
       "canal": "Pubs Meta",
@@ -2475,8 +2427,8 @@
     "du": "2026-11-20",
     "au": "2026-11-27",
     "total": {
-     "commandes": 111,
-     "ventes": 70300.0
+     "commandes": 112,
+     "ventes": 70877.5
     },
     "canaux": [
      {
@@ -2500,14 +2452,50 @@
      {
       "canal": "Direct (adresse tapée, favoris)",
       "cle": "Direct",
-      "commandes": 16,
-      "ventes": 8932.5
+      "commandes": 17,
+      "ventes": 9510.0
      },
      {
       "canal": "Réseaux sociaux (organique)",
       "cle": "Facebook",
       "commandes": 1,
       "ventes": 725.0
+     }
+    ]
+   },
+   {
+    "id": "vf",
+    "label": "Vendredi fou (depuis le 27 nov.)",
+    "du": "2026-11-27",
+    "au": "2026-11-27",
+    "total": {
+     "commandes": 88,
+     "ventes": 56607.5
+    },
+    "canaux": [
+     {
+      "canal": "Infolettres",
+      "cle": "newsletter",
+      "commandes": 51,
+      "ventes": 32892.5
+     },
+     {
+      "canal": "Recherche (naturelle)",
+      "cle": "Google",
+      "commandes": 16,
+      "ventes": 9285.0
+     },
+     {
+      "canal": "Direct (adresse tapée, favoris)",
+      "cle": "Direct",
+      "commandes": 11,
+      "ventes": 7305.0
+     },
+     {
+      "canal": "Sites référents",
+      "cle": "siteweb",
+      "commandes": 10,
+      "ventes": 7125.0
      }
     ]
    }
@@ -3717,7 +3705,7 @@
   ]
  },
  "shopify": {
-  "releve": "2026-11-27T17:38-05:00",
+  "releve": "2026-11-27T17:42-05:00",
   "source": "Shopify (API, lecture seule)",
   "note": "Commandes payées, annulations et remboursements déduits. HT = avant taxes.",
   "jours": [
@@ -3993,9 +3981,9 @@
    },
    {
     "date": "2026-11-27",
-    "ht": 56030.0,
-    "ttc": 64421.06,
-    "commandes": 87
+    "ht": 56607.5,
+    "ttc": 65085.05,
+    "commandes": 88
    }
   ],
   "produits": [
@@ -4056,12 +4044,12 @@
     "inscriptions": 8
    },
    {
-    "titre": "2026-12-09***Systèmes de murs-rideaux : conception, conformité et performance (Formation sur 2 jours)",
+    "titre": "2027-05-20***Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
     "inscriptions": 7
    },
    {
-    "titre": "2027-05-20***Enjeux climatiques : impact sur le patrimoine bâti, atténuation et adaptation",
-    "inscriptions": 6
+    "titre": "2026-12-09***Systèmes de murs-rideaux : conception, conformité et performance (Formation sur 2 jours)",
+    "inscriptions": 7
    },
    {
     "titre": "2027-05-27***Programme fonctionnel et technique : fondement essentiel du projet",
@@ -4090,6 +4078,10 @@
    {
     "titre": "2026-10-20***Humidité dans l’enveloppe du bâtiment - Causes, conséquences et prévention",
     "inscriptions": 6
+   },
+   {
+    "titre": "2027-03-16***Inspection générale d’un immeuble",
+    "inscriptions": 5
    },
    {
     "titre": "2027-02-05***Mezzanines et aires communicantes, en toute conformité",
@@ -4137,10 +4129,6 @@
    },
    {
     "titre": "2027-04-14***Maîtriser les projets de cuisines de la conception à l’installation",
-    "inscriptions": 4
-   },
-   {
-    "titre": "2027-03-16***Inspection générale d’un immeuble",
     "inscriptions": 4
    },
    {
@@ -4274,11 +4262,11 @@
   ]
  },
  "parcours": {
-  "releve": "2026-11-27T17:38-05:00",
+  "releve": "2026-11-27T17:42-05:00",
   "source": "Shopify (parcours client des commandes, lecture seule)",
   "depuis": "2026-01-01",
-  "commandes": 239,
-  "sansParcours": 12,
+  "commandes": 240,
+  "sansParcours": 13,
   "premiereVisite": [
    {
     "canal": "Meta (pub)",
@@ -4312,9 +4300,9 @@
    },
    {
     "canal": "Direct / inconnu",
-    "commandes": 69,
-    "inscriptions": 98,
-    "ht": 44685.0
+    "commandes": 70,
+    "inscriptions": 100,
+    "ht": 45262.5
    }
   ],
   "derniereVisite": [
@@ -4344,9 +4332,9 @@
    },
    {
     "canal": "Direct / inconnu",
-    "commandes": 95,
-    "inscriptions": 141,
-    "ht": 67222.5
+    "commandes": 96,
+    "inscriptions": 143,
+    "ht": 67800.0
    }
   ],
   "parMois": [
@@ -4373,7 +4361,7 @@
     "canaux": {
      "Recherche Google (SEO)": 23,
      "Meta (pub)": 3,
-     "Direct / inconnu": 62,
+     "Direct / inconnu": 63,
      "Sites référents": 27,
      "Courriel": 51
     }
@@ -4592,6 +4580,11 @@
     "inscriptions": 4
    },
    {
+    "canal": "Direct / inconnu",
+    "formation": "2027-03-16***Inspection générale d’un immeuble",
+    "inscriptions": 4
+   },
+   {
     "canal": "Courriel",
     "formation": "2026-12-17***Mécanique des sols",
     "inscriptions": 4
@@ -4669,11 +4662,6 @@
    {
     "canal": "Direct / inconnu",
     "formation": "2027-01-20***Partie 9: les incontournables",
-    "inscriptions": 3
-   },
-   {
-    "canal": "Direct / inconnu",
-    "formation": "2027-03-16***Inspection générale d’un immeuble",
     "inscriptions": 3
    },
    {
