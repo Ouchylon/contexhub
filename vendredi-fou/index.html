@@ -100,11 +100,13 @@ function render(D){
  const f6={ht:sum(P6,'ht',h=>h.o>=d0&&h.o<cut),c:sum(P6,'commandes',h=>h.o>=d0&&h.o<cut)}, g6=sum(P6,'ht',h=>h.o<cut);
  const p=pct(f6.ht,t5.ht), pc=pct(g6,c5.ht);
  $('#take').innerHTML=JOURS[day]+' à '+hh+' : <b>'+money(t6.ht)+'</b> en ventes nettes et <b>'+int(t6.c)+' commandes</b>, soit <b class="'+cls(p)+'">'+fpct(p)+'</b> par rapport à la même heure l\'an passé. Depuis le début de la promo, on a déjà fait <b>'+Math.round(c6.ht/tot5*100)+' %</b> du total de la promo 2025 ('+money(tot5)+').';
+ const totc5=sum(P5,'commandes',()=>1), totq5=sum(P5,'qte',()=>1), tott5=sum(P5,'ttc',()=>1);
+ const jourc5=sum(P5,'commandes',h=>h.o>=d0&&h.o<d0+24*H), jourq5=sum(P5,'qte',h=>h.o>=d0&&h.o<d0+24*H);
  const tiles=[
-  [JOURS[day]+' · ventes nettes',money(t6.ht),'<span class="'+cls(p)+'">'+fpct(p)+'</span> vs '+money(t5.ht)+' en 2025 à la même heure. La journée complète de 2025 : '+money(jour5)+'.'],
-  [JOURS[day]+' · commandes',int(t6.c),'<span class="'+cls(pct(f6.c,t5.c))+'">'+fpct(pct(f6.c,t5.c))+'</span> vs '+int(t5.c)+' en 2025 à la même heure · '+int(t6.q)+' inscriptions.'],
-  ['Cumul de la promo',money(c6.ht),'<span class="'+cls(pc)+'">'+fpct(pc)+'</span> vs '+money(c5.ht)+' au même moment en 2025 · '+int(c6.c)+' commandes · '+money(c6.ttc)+' avec taxes.'],
-  ['Objectif : battre 2025',Math.round(c6.ht/tot5*100)+' %','Total de la promo 2025 (4 jours) : '+money(tot5)+'. Le lundi (Cyber lundi) avait fait 46 % du total.']
+  [JOURS[day]+' · ventes nettes',money(t6.ht),'<span class="'+cls(p)+'">'+fpct(p)+'</span> vs '+money(t5.ht)+' en 2025 à la même heure.<br><b>Journée complète 2025 : '+money(jour5)+'</b>'],
+  [JOURS[day]+' · commandes',int(t6.c),'<span class="'+cls(pct(f6.c,t5.c))+'">'+fpct(pct(f6.c,t5.c))+'</span> vs '+int(t5.c)+' en 2025 à la même heure · '+int(t6.q)+' inscriptions.<br><b>Journée complète 2025 : '+int(jourc5)+' commandes, '+int(jourq5)+' inscriptions</b>'],
+  ['Cumul de la promo',money(c6.ht),'<span class="'+cls(pc)+'">'+fpct(pc)+'</span> vs '+money(c5.ht)+' au même moment en 2025 · '+int(c6.c)+' commandes · '+int(c6.q)+' inscriptions · '+money(c6.ttc)+' avec taxes.<br><b>Total 2025 : '+money(tot5)+' · '+int(totc5)+' commandes · '+int(totq5)+' inscriptions</b>'],
+  ['Objectif : battre 2025',Math.round(c6.ht/tot5*100)+' %','Ventes : '+money(c6.ht)+' sur '+money(tot5)+'<br>Commandes : '+int(c6.c)+' sur '+int(totc5)+' ('+Math.round(c6.c/totc5*100)+' %)<br>Inscriptions : '+int(c6.q)+' sur '+int(totq5)+' ('+Math.round(c6.q/totq5*100)+' %)']
  ];
  $('#tiles').innerHTML=tiles.map(t=>'<div class="tile"><p class="k">'+t[0]+'</p><p class="v">'+t[1]+'</p><p class="n">'+t[2]+'</p></div>').join('');
  { const pr=Math.min(100,c6.ht/tot5*100), reste=Math.max(0,tot5-c6.ht);
@@ -112,7 +114,7 @@ function render(D){
    g.style.cssText='margin:16px 0 0;padding:18px 20px;background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:14px';
    g.innerHTML='<div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;align-items:baseline"><b style="font-size:17px">Total de la promo 2025 à battre : '+money(tot5)+'</b><span style="font-size:15px">2026 : <b>'+money(c6.ht)+'</b> ('+Math.round(c6.ht/tot5*100)+' %) · '+(reste>0?'il reste <b>'+money(reste)+'</b> pour dépasser 2025':'<b style="color:#2e7d32">2025 est dépassé de '+money(c6.ht-tot5)+'</b>')+'</span></div>'+
    '<div style="margin-top:12px;height:16px;background:#ece6db;border-radius:8px;overflow:hidden"><div style="height:100%;width:'+pr+'%;background:var(--or)"></div></div>'+
-   '<p style="margin:8px 0 0;font-size:13px;color:#6b6b6b">2025 : vendredi 28 nov. au lundi 1er déc., 206 commandes. Le Cyber lundi avait fait 46 % du total.</p>'; }
+   '<p style="margin:8px 0 0;font-size:13px;color:#6b6b6b">2025 : vendredi 28 nov. au lundi 1er déc. · '+int(totc5)+' commandes · '+int(totq5)+' inscriptions · '+money(tott5)+' avec taxes. Le Cyber lundi avait fait 46 % du total.</p>'; }
  chart(P6,P5,now);
  // jour par jour
  const rows=[0,1,2,3].map(i=>{const a=i*24*H,b=a+24*H;
