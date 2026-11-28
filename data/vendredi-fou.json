@@ -1,5 +1,5 @@
 {
- "releve": "2026-11-27T21:37-05:00",
+ "releve": "2026-11-27T23:12-05:00",
  "source": "Shopify (commandes, relevé automatique) · ventes nettes = après le rabais de 50 %, avant taxes",
  "periodes": {
   "2026": {
@@ -100,6 +100,13 @@
      "commandes": 1,
      "ht": 577.5,
      "ttc": 663.99,
+     "qte": 2
+    },
+    {
+     "t": "2026-11-27T21:00-05:00",
+     "commandes": 1,
+     "ht": 1032.5,
+     "ttc": 1187.12,
      "qte": 2
     }
    ]
@@ -419,8 +426,8 @@
   {
    "titre": "Partie 9: les incontournables",
    "date": "2027-01-20",
-   "inscriptions": 9,
-   "ht": 3330.0
+   "inscriptions": 10,
+   "ht": 3700.0
   },
   {
    "titre": "Mécanique des sols",
