@@ -1,5 +1,5 @@
 {
- "releve": "2026-11-28T02:41-05:00",
+ "releve": "2026-11-28T08:07-05:00",
  "source": "Shopify (commandes, relevé automatique) · ventes nettes = après le rabais de 50 %, avant taxes",
  "periodes": {
   "2026": {
@@ -121,6 +121,13 @@
      "commandes": 1,
      "ht": 415.0,
      "ttc": 477.16,
+     "qte": 2
+    },
+    {
+     "t": "2026-11-28T07:00-05:00",
+     "commandes": 1,
+     "ht": 740.0,
+     "ttc": 850.82,
      "qte": 2
     }
    ]
@@ -462,14 +469,14 @@
    "ht": 1452.5
   },
   {
-   "titre": "Toitures végétalisées : de la conception à la construction (Formation sur 2 jours)",
-   "date": "2027-03-17",
-   "inscriptions": 5,
-   "ht": 1850.0
-  },
-  {
    "titre": "Maintenance des bâtiments - exigences réglementaires",
    "date": "2027-01-19",
+   "inscriptions": 6,
+   "ht": 2220.0
+  },
+  {
+   "titre": "Toitures végétalisées : de la conception à la construction (Formation sur 2 jours)",
+   "date": "2027-03-17",
    "inscriptions": 5,
    "ht": 1850.0
   },
