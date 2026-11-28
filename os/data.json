@@ -302,8 +302,8 @@
    {
     "date": "2026-11-27",
     "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
-    "envoyes": 19627,
-    "ouverture": 22.2,
+    "envoyes": 19628,
+    "ouverture": 22.9,
     "clic": 1.6,
     "desabonnements": 22
    },
@@ -311,7 +311,7 @@
     "date": "2026-11-26",
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
     "envoyes": 19651,
-    "ouverture": 27.3,
+    "ouverture": 27.5,
     "clic": 4.1,
     "desabonnements": 24
    },
@@ -319,7 +319,7 @@
     "date": "2026-11-24",
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "envoyes": 19682,
-    "ouverture": 31.1,
+    "ouverture": 31.2,
     "clic": 3.8,
     "desabonnements": 20
    },
@@ -403,9 +403,9 @@
   },
   "sept_jours": {
    "livraison": 99.6,
-   "ouverture": 26.8,
+   "ouverture": 27.2,
    "clics": 3.2,
-   "ctor": 11.9,
+   "ctor": 11.7,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -421,7 +421,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-27T17:38-05:00",
+  "releve": "2026-11-27T21:35-05:00",
   "alertes": [],
   "tous": [
    {
@@ -429,8 +429,8 @@
     "date": "2026-11-27",
     "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
     "categorie": "Formations",
-    "envoyes": 19627,
-    "ouverture": 22.2,
+    "envoyes": 19628,
+    "ouverture": 22.9,
     "clic": 1.6,
     "desabonnements": 22,
     "vignette": null,
@@ -442,7 +442,7 @@
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
     "categorie": "Expos",
     "envoyes": 19651,
-    "ouverture": 27.3,
+    "ouverture": 27.5,
     "clic": 4.1,
     "desabonnements": 24,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2741/Wjkcmf/vf26-avant-gout-site-portable-v5.gif",
@@ -454,7 +454,7 @@
     "nom": "Hebdo Formations – 24 nov. 2026 · Dernières places avant les fêtes",
     "categorie": "Formations",
     "envoyes": 19682,
-    "ouverture": 31.1,
+    "ouverture": 31.2,
     "clic": 3.8,
     "desabonnements": 20,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2716/lfHyft/hebdo24-intro-anim-v5.gif",
@@ -2370,7 +2370,7 @@
   }
  },
  "ventesCanaux": {
-  "releve": "27 nov. 2026, 17 h 42",
+  "releve": "27 nov. 2026, 21 h 37",
   "source": "Shopify (API, parcours des commandes) : ventes nettes avant taxes, attribuées au dernier clic qui n'est pas une visite directe. Mis à jour automatiquement.",
   "periodes": [
    {
@@ -2386,8 +2386,8 @@
      {
       "canal": "Infolettres",
       "cle": "newsletter",
-      "commandes": 67,
-      "ventes": 43647.5
+      "commandes": 68,
+      "ventes": 44225.0
      },
      {
       "canal": "Recherche (naturelle)",
@@ -2398,14 +2398,14 @@
      {
       "canal": "Sites référents",
       "cle": "siteweb",
-      "commandes": 29,
-      "ventes": 22385.0
+      "commandes": 31,
+      "ventes": 23695.0
      },
      {
       "canal": "Direct (adresse tapée, favoris)",
       "cle": "Direct",
-      "commandes": 38,
-      "ventes": 21480.0
+      "commandes": 35,
+      "ventes": 19592.5
      },
      {
       "canal": "Pubs Meta",
@@ -2434,8 +2434,14 @@
      {
       "canal": "Infolettres",
       "cle": "newsletter",
-      "commandes": 54,
-      "ventes": 36082.5
+      "commandes": 55,
+      "ventes": 36660.0
+     },
+     {
+      "canal": "Sites référents",
+      "cle": "siteweb",
+      "commandes": 20,
+      "ventes": 13305.0
      },
      {
       "canal": "Recherche (naturelle)",
@@ -2444,16 +2450,10 @@
       "ventes": 12565.0
      },
      {
-      "canal": "Sites référents",
-      "cle": "siteweb",
-      "commandes": 18,
-      "ventes": 11995.0
-     },
-     {
       "canal": "Direct (adresse tapée, favoris)",
       "cle": "Direct",
-      "commandes": 17,
-      "ventes": 9510.0
+      "commandes": 14,
+      "ventes": 7622.5
      },
      {
       "canal": "Réseaux sociaux (organique)",
@@ -2476,8 +2476,8 @@
      {
       "canal": "Infolettres",
       "cle": "newsletter",
-      "commandes": 51,
-      "ventes": 32892.5
+      "commandes": 52,
+      "ventes": 33470.0
      },
      {
       "canal": "Recherche (naturelle)",
@@ -2486,16 +2486,16 @@
       "ventes": 9285.0
      },
      {
-      "canal": "Direct (adresse tapée, favoris)",
-      "cle": "Direct",
-      "commandes": 11,
-      "ventes": 7305.0
-     },
-     {
       "canal": "Sites référents",
       "cle": "siteweb",
-      "commandes": 10,
-      "ventes": 7125.0
+      "commandes": 12,
+      "ventes": 8435.0
+     },
+     {
+      "canal": "Direct (adresse tapée, favoris)",
+      "cle": "Direct",
+      "commandes": 8,
+      "ventes": 5417.5
      }
     ]
    }
@@ -2504,8 +2504,8 @@
    {
     "canal": "Infolettres",
     "campagne": "teaser_vendredi_fou_26_11_26",
-    "commandes": 20,
-    "ventes": 15135.0
+    "commandes": 21,
+    "ventes": 15712.5
    },
    {
     "canal": "Infolettres",
@@ -3705,7 +3705,7 @@
   ]
  },
  "shopify": {
-  "releve": "2026-11-27T17:42-05:00",
+  "releve": "2026-11-27T21:37-05:00",
   "source": "Shopify (API, lecture seule)",
   "note": "Commandes payées, annulations et remboursements déduits. HT = avant taxes.",
   "jours": [
@@ -4262,11 +4262,11 @@
   ]
  },
  "parcours": {
-  "releve": "2026-11-27T17:42-05:00",
+  "releve": "2026-11-27T21:37-05:00",
   "source": "Shopify (parcours client des commandes, lecture seule)",
   "depuis": "2026-01-01",
   "commandes": 240,
-  "sansParcours": 13,
+  "sansParcours": 10,
   "premiereVisite": [
    {
     "canal": "Meta (pub)",
@@ -4276,15 +4276,21 @@
    },
    {
     "canal": "Courriel",
-    "commandes": 76,
-    "inscriptions": 125,
-    "ht": 51642.5
+    "commandes": 77,
+    "inscriptions": 127,
+    "ht": 52220.0
    },
    {
     "canal": "Recherche Google (SEO)",
     "commandes": 65,
     "inscriptions": 94,
     "ht": 49260.0
+   },
+   {
+    "canal": "IA (ChatGPT, etc.)",
+    "commandes": 1,
+    "inscriptions": 2,
+    "ht": 577.5
    },
    {
     "canal": "Réseaux sociaux (organique)",
@@ -4300,9 +4306,9 @@
    },
    {
     "canal": "Direct / inconnu",
-    "commandes": 70,
-    "inscriptions": 100,
-    "ht": 45262.5
+    "commandes": 68,
+    "inscriptions": 96,
+    "ht": 44107.5
    }
   ],
   "derniereVisite": [
@@ -4326,15 +4332,15 @@
    },
    {
     "canal": "Sites référents",
-    "commandes": 43,
-    "inscriptions": 66,
-    "ht": 33000.0
+    "commandes": 45,
+    "inscriptions": 70,
+    "ht": 34310.0
    },
    {
     "canal": "Direct / inconnu",
-    "commandes": 96,
-    "inscriptions": 143,
-    "ht": 67800.0
+    "commandes": 94,
+    "inscriptions": 139,
+    "ht": 66490.0
    }
   ],
   "parMois": [
@@ -4361,14 +4367,14 @@
     "canaux": {
      "Recherche Google (SEO)": 23,
      "Meta (pub)": 3,
-     "Direct / inconnu": 63,
-     "Sites référents": 27,
+     "Direct / inconnu": 61,
+     "Sites référents": 29,
      "Courriel": 51
     }
    }
   ],
-  "delaiMedianJours": 1,
-  "visitesMedianes": 2,
+  "delaiMedianJours": 1.0,
+  "visitesMedianes": 2.0,
   "campagnes": [
    {
     "canal": "Courriel",
@@ -4434,16 +4440,21 @@
     "canal": "Courriel",
     "campagne": "hebdo_19_11_26",
     "commandes": 1
+   },
+   {
+    "canal": "Sites référents",
+    "campagne": "vendredi_fou_2026",
+    "commandes": 1
    }
   ],
   "pagesArrivee": [
    {
     "page": "/collections/formations",
-    "commandes": 72
+    "commandes": 73
    },
    {
     "page": "/",
-    "commandes": 46
+    "commandes": 47
    },
    {
     "page": "/collections/formations/products/2026-11-20-dommages-structuraux",
@@ -4482,11 +4493,6 @@
    {
     "canal": "Direct / inconnu",
     "formation": "2027-02-03***Mise aux normes des bâtiments existants",
-    "inscriptions": 11
-   },
-   {
-    "canal": "Direct / inconnu",
-    "formation": "2026-12-17***Mécanique des sols",
     "inscriptions": 10
    },
    {
@@ -4497,6 +4503,11 @@
    {
     "canal": "Sites référents",
     "formation": "2026-11-27***Devis sur plan",
+    "inscriptions": 9
+   },
+   {
+    "canal": "Direct / inconnu",
+    "formation": "2026-12-17***Mécanique des sols",
     "inscriptions": 9
    },
    {
