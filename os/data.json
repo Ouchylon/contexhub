@@ -303,7 +303,7 @@
     "date": "2026-11-27",
     "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
     "envoyes": 19628,
-    "ouverture": 22.9,
+    "ouverture": 24.2,
     "clic": 1.6,
     "desabonnements": 22
    },
@@ -311,7 +311,7 @@
     "date": "2026-11-26",
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
     "envoyes": 19651,
-    "ouverture": 27.5,
+    "ouverture": 27.7,
     "clic": 4.1,
     "desabonnements": 24
    },
@@ -403,9 +403,9 @@
   },
   "sept_jours": {
    "livraison": 99.6,
-   "ouverture": 27.2,
+   "ouverture": 27.7,
    "clics": 3.2,
-   "ctor": 11.7,
+   "ctor": 11.5,
    "desabonnements": 0.1
   },
   "prochains": [
@@ -421,7 +421,7 @@
    }
   ],
   "source": "Dialog Insight (API, relevé automatique)",
-  "releve": "2026-11-27T21:35-05:00",
+  "releve": "2026-11-28T02:40-05:00",
   "alertes": [],
   "tous": [
    {
@@ -430,7 +430,7 @@
     "nom": "Vendredi fou – 27 nov. 2026 · −50 % sur toutes nos formations",
     "categorie": "Formations",
     "envoyes": 19628,
-    "ouverture": 22.9,
+    "ouverture": 24.2,
     "clic": 1.6,
     "desabonnements": 22,
     "vignette": null,
@@ -442,7 +442,7 @@
     "nom": "Avant-goût Vendredi fou – 26 nov. 2026 · −50 % dès vendredi",
     "categorie": "Expos",
     "envoyes": 19651,
-    "ouverture": 27.5,
+    "ouverture": 27.7,
     "clic": 4.1,
     "desabonnements": 24,
     "vignette": "https://cdn.ofsys.com/T/OFSYS/H/C256/2741/Wjkcmf/vf26-avant-gout-site-portable-v5.gif",
@@ -2370,30 +2370,30 @@
   }
  },
  "ventesCanaux": {
-  "releve": "27 nov. 2026, 21 h 37",
+  "releve": "28 nov. 2026, 2 h 41",
   "source": "Shopify (API, parcours des commandes) : ventes nettes avant taxes, attribuées au dernier clic qui n'est pas une visite directe. Mis à jour automatiquement.",
   "periodes": [
    {
     "id": "30j",
     "label": "30 derniers jours",
-    "du": "2026-10-28",
-    "au": "2026-11-27",
+    "du": "2026-10-29",
+    "au": "2026-11-28",
     "total": {
-     "commandes": 175,
-     "ventes": 115077.5
+     "commandes": 178,
+     "ventes": 117265.0
     },
     "canaux": [
      {
       "canal": "Infolettres",
       "cle": "newsletter",
-      "commandes": 68,
-      "ventes": 44225.0
+      "commandes": 70,
+      "ventes": 45997.5
      },
      {
       "canal": "Recherche (naturelle)",
       "cle": "Google",
-      "commandes": 36,
-      "ventes": 23940.0
+      "commandes": 37,
+      "ventes": 24355.0
      },
      {
       "canal": "Sites référents",
@@ -2424,18 +2424,18 @@
    {
     "id": "7j",
     "label": "7 derniers jours",
-    "du": "2026-11-20",
-    "au": "2026-11-27",
+    "du": "2026-11-21",
+    "au": "2026-11-28",
     "total": {
-     "commandes": 112,
-     "ventes": 70877.5
+     "commandes": 115,
+     "ventes": 73065.0
     },
     "canaux": [
      {
       "canal": "Infolettres",
       "cle": "newsletter",
-      "commandes": 55,
-      "ventes": 36660.0
+      "commandes": 57,
+      "ventes": 38432.5
      },
      {
       "canal": "Sites référents",
@@ -2446,8 +2446,8 @@
      {
       "canal": "Recherche (naturelle)",
       "cle": "Google",
-      "commandes": 22,
-      "ventes": 12565.0
+      "commandes": 23,
+      "ventes": 12980.0
      },
      {
       "canal": "Direct (adresse tapée, favoris)",
@@ -2467,23 +2467,23 @@
     "id": "vf",
     "label": "Vendredi fou (depuis le 27 nov.)",
     "du": "2026-11-27",
-    "au": "2026-11-27",
+    "au": "2026-11-28",
     "total": {
-     "commandes": 88,
-     "ventes": 56607.5
+     "commandes": 91,
+     "ventes": 58795.0
     },
     "canaux": [
      {
       "canal": "Infolettres",
       "cle": "newsletter",
-      "commandes": 52,
-      "ventes": 33470.0
+      "commandes": 54,
+      "ventes": 35242.5
      },
      {
       "canal": "Recherche (naturelle)",
       "cle": "Google",
-      "commandes": 16,
-      "ventes": 9285.0
+      "commandes": 17,
+      "ventes": 9700.0
      },
      {
       "canal": "Sites référents",
@@ -2504,14 +2504,14 @@
    {
     "canal": "Infolettres",
     "campagne": "teaser_vendredi_fou_26_11_26",
-    "commandes": 21,
-    "ventes": 15712.5
+    "commandes": 22,
+    "ventes": 16745.0
    },
    {
     "canal": "Infolettres",
     "campagne": "vendredi_fou_27_11_26",
-    "commandes": 26,
-    "ventes": 14305.0
+    "commandes": 27,
+    "ventes": 15045.0
    },
    {
     "canal": "Infolettres",
@@ -3705,7 +3705,7 @@
   ]
  },
  "shopify": {
-  "releve": "2026-11-27T21:37-05:00",
+  "releve": "2026-11-28T02:41-05:00",
   "source": "Shopify (API, lecture seule)",
   "note": "Commandes payées, annulations et remboursements déduits. HT = avant taxes.",
   "jours": [
@@ -3981,9 +3981,15 @@
    },
    {
     "date": "2026-11-27",
-    "ht": 56607.5,
-    "ttc": 65085.05,
-    "commandes": 88
+    "ht": 58380.0,
+    "ttc": 67122.99,
+    "commandes": 90
+   },
+   {
+    "date": "2026-11-28",
+    "ht": 415.0,
+    "ttc": 477.16,
+    "commandes": 1
    }
   ],
   "produits": [
@@ -4017,7 +4023,7 @@
    },
    {
     "titre": "2027-01-20***Partie 9: les incontournables",
-    "inscriptions": 10
+    "inscriptions": 11
    },
    {
     "titre": "2026-12-03***Chantier : administration du marché et surveillance des travaux (formation sur 2 jours)",
@@ -4052,6 +4058,10 @@
     "inscriptions": 7
    },
    {
+    "titre": "2027-03-16***Inspection générale d’un immeuble",
+    "inscriptions": 6
+   },
+   {
     "titre": "2027-05-27***Programme fonctionnel et technique : fondement essentiel du projet",
     "inscriptions": 6
    },
@@ -4080,10 +4090,6 @@
     "inscriptions": 6
    },
    {
-    "titre": "2027-03-16***Inspection générale d’un immeuble",
-    "inscriptions": 5
-   },
-   {
     "titre": "2027-02-05***Mezzanines et aires communicantes, en toute conformité",
     "inscriptions": 5
    },
@@ -4110,6 +4116,10 @@
    {
     "titre": "2026-11-09***Art de négocier - Niveau 1",
     "inscriptions": 5
+   },
+   {
+    "titre": "2027-02-23***Quincaillerie électrifiée pour l’implantation d’un contrôle d’accès",
+    "inscriptions": 4
    },
    {
     "titre": "2027-02-04***Devis sur plan",
@@ -4148,7 +4158,11 @@
     "inscriptions": 4
    },
    {
-    "titre": "2027-02-23***Quincaillerie électrifiée pour l’implantation d’un contrôle d’accès",
+    "titre": "2027-01-22***Infiltrations d'eau par une couverture - diagnostic, conséquences et interventions",
+    "inscriptions": 3
+   },
+   {
+    "titre": "2027-02-10***Partie 3 du Code de construction – chapitre 1, Bâtiment (CNB-2020 QC) (Formation sur 2 jours)",
     "inscriptions": 3
    },
    {
@@ -4172,6 +4186,10 @@
     "inscriptions": 3
    },
    {
+    "titre": "2027-02-12***Toitures : Matériaux et systèmes",
+    "inscriptions": 2
+   },
+   {
     "titre": "2027-06-15***Inspection, entretien, diagnostic et réparation de béton (niveau 1)",
     "inscriptions": 2
    },
@@ -4181,14 +4199,6 @@
    },
    {
     "titre": "2027-02-24***Rapport d’expertise et témoignage au tribunal",
-    "inscriptions": 2
-   },
-   {
-    "titre": "2027-01-22***Infiltrations d'eau par une couverture - diagnostic, conséquences et interventions",
-    "inscriptions": 2
-   },
-   {
-    "titre": "2027-02-10***Partie 3 du Code de construction – chapitre 1, Bâtiment (CNB-2020 QC) (Formation sur 2 jours)",
     "inscriptions": 2
    },
    {
@@ -4221,10 +4231,6 @@
    },
    {
     "titre": "2027-01-27***Quincaillerie architecturale et construction des portes et des cadres – section 08",
-    "inscriptions": 1
-   },
-   {
-    "titre": "2027-02-12***Toitures : Matériaux et systèmes",
     "inscriptions": 1
    },
    {
@@ -4262,10 +4268,10 @@
   ]
  },
  "parcours": {
-  "releve": "2026-11-27T21:37-05:00",
+  "releve": "2026-11-28T02:41-05:00",
   "source": "Shopify (parcours client des commandes, lecture seule)",
   "depuis": "2026-01-01",
-  "commandes": 240,
+  "commandes": 243,
   "sansParcours": 10,
   "premiereVisite": [
    {
@@ -4276,15 +4282,15 @@
    },
    {
     "canal": "Courriel",
-    "commandes": 77,
-    "inscriptions": 127,
-    "ht": 52220.0
+    "commandes": 79,
+    "inscriptions": 131,
+    "ht": 53992.5
    },
    {
     "canal": "Recherche Google (SEO)",
-    "commandes": 65,
-    "inscriptions": 94,
-    "ht": 49260.0
+    "commandes": 66,
+    "inscriptions": 96,
+    "ht": 49675.0
    },
    {
     "canal": "IA (ChatGPT, etc.)",
@@ -4320,15 +4326,15 @@
    },
    {
     "canal": "Courriel",
-    "commandes": 57,
-    "inscriptions": 86,
-    "ht": 34282.5
+    "commandes": 59,
+    "inscriptions": 90,
+    "ht": 36055.0
    },
    {
     "canal": "Recherche Google (SEO)",
-    "commandes": 40,
-    "inscriptions": 56,
-    "ht": 29480.0
+    "commandes": 41,
+    "inscriptions": 58,
+    "ht": 29895.0
    },
    {
     "canal": "Sites référents",
@@ -4365,26 +4371,26 @@
    {
     "mois": "2026-11",
     "canaux": {
-     "Recherche Google (SEO)": 23,
+     "Recherche Google (SEO)": 24,
      "Meta (pub)": 3,
      "Direct / inconnu": 61,
      "Sites référents": 29,
-     "Courriel": 51
+     "Courriel": 53
     }
    }
   ],
-  "delaiMedianJours": 1.0,
-  "visitesMedianes": 2.0,
+  "delaiMedianJours": 1,
+  "visitesMedianes": 2,
   "campagnes": [
    {
     "canal": "Courriel",
     "campagne": "vendredi_fou_27_11_26",
-    "commandes": 23
+    "commandes": 24
    },
    {
     "canal": "Courriel",
     "campagne": "teaser_vendredi_fou_26_11_26",
-    "commandes": 15
+    "commandes": 16
    },
    {
     "canal": "Sites référents",
@@ -4450,7 +4456,7 @@
   "pagesArrivee": [
    {
     "page": "/collections/formations",
-    "commandes": 73
+    "commandes": 75
    },
    {
     "page": "/",
@@ -4481,11 +4487,11 @@
     "commandes": 5
    },
    {
-    "page": "/collections/formations/products/2026-11-05-inspection-generale-d-un-immeuble",
-    "commandes": 4
+    "page": "/products/2027-01-19-maintenance-des-batiments-exigences-reglementaires-copy",
+    "commandes": 5
    },
    {
-    "page": "/collections/formations/products/2026-11-27-devis-sur-plan",
+    "page": "/collections/formations/products/2026-11-05-inspection-generale-d-un-immeuble",
     "commandes": 4
    }
   ],
@@ -4556,6 +4562,11 @@
     "inscriptions": 5
    },
    {
+    "canal": "Courriel",
+    "formation": "2027-01-20***Partie 9: les incontournables",
+    "inscriptions": 5
+   },
+   {
     "canal": "Direct / inconnu",
     "formation": "2026-11-20***Dommages structuraux",
     "inscriptions": 4
@@ -4608,11 +4619,6 @@
    {
     "canal": "Direct / inconnu",
     "formation": "2027-02-02***Introduction à la structure de bâtiments",
-    "inscriptions": 4
-   },
-   {
-    "canal": "Courriel",
-    "formation": "2027-01-20***Partie 9: les incontournables",
     "inscriptions": 4
    },
    {
